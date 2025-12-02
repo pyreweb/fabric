@@ -106,13 +106,17 @@ export default {
     },
     labelClasses() {
       const baseClasses = 'ml-2 text-sm text-gray-800 select-none'
-      const disabledClasses = this.disabled ? 'text-gray-400' : ''
-      const errorClasses = this.error ? 'text-red-500' : ''
+
+      let stateClasses = ''
+      if (this.disabled) {
+        stateClasses = 'text-gray-400'
+      } else if (this.error) {
+        stateClasses = 'text-red-500'
+      }
 
       return [
         baseClasses,
-        disabledClasses,
-        errorClasses
+        stateClasses
       ].filter(Boolean).join(' ')
     }
   },
