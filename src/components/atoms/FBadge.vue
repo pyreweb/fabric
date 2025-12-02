@@ -3,7 +3,9 @@
     :class="badgeClasses"
     :aria-label="ariaLabel"
   >
-    <slot v-if="!dot">{{ content }}</slot>
+    <template v-if="!dot">
+      <slot>{{ content }}</slot>
+    </template>
   </span>
 </template>
 
