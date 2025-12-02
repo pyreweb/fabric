@@ -3,6 +3,7 @@ import FCheckbox from './FCheckbox.vue'
 import FInput from './FInput.vue'
 import FRadio from './FRadio.vue'
 import FTextarea from './FTextarea.vue'
+import FToggle from './FToggle.vue'
 import FTypography from './FTypography.vue'
 
 export {
@@ -11,5 +12,6 @@ export {
   FInput,
   FRadio,
   FTextarea,
+  FToggle,
   FTypography
 }
