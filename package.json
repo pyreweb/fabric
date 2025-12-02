@@ -1,0 +1,39 @@
+{
+  "name": "@fabric/components",
+  "version": "1.0.0",
+  "description": "A VueJS 2 component library inspired by Atomic Design System",
+  "type": "module",
+  "main": "dist/fabric.cjs.js",
+  "module": "dist/fabric.esm.js",
+  "unpkg": "dist/fabric.min.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "keywords": [
+    "vue",
+    "components",
+    "atomic-design",
+    "ui-library"
+  ],
+  "author": "Agence Pyre Web",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^2.6.0 || ^2.7.0"
+  },
+  "devDependencies": {
+    "vue": "^2.7.16",
+    "vue-template-compiler": "^2.7.16",
+    "rollup": "^3.29.5",
+    "rollup-plugin-vue": "^5.1.9",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "@rollup/plugin-terser": "^0.4.4"
+  }
+}
