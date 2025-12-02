@@ -54,7 +54,7 @@ export default {
         ? 'w-2 h-2 rounded-full'
         : this.shape === 'circle'
           ? 'w-5 h-5 text-xs rounded-full'
-          : 'px-2 py-0.5 text-xs rounded-full'
+          : 'px-2 py-0.5 text-xs rounded-lg'
 
       return [
         baseClasses,
