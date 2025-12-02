@@ -26,8 +26,7 @@ export default {
       exports: 'named',
       globals: {
         vue: 'Vue'
-      },
-      plugins: isProduction ? [terser()] : []
+      }
     }
   ],
   external: ['vue'],
@@ -38,6 +37,7 @@ export default {
       css: true,
       compileTemplate: true
     }),
-    postcss()
-  ]
+    postcss(),
+    isProduction && terser()
+  ].filter(Boolean)
 }

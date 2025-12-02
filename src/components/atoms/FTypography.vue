@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="computedTag"
     :class="['f-typography', `f-typography--${variant}`, { 'f-typography--truncate': truncate }]"
   >
     <slot />

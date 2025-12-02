@@ -32,8 +32,6 @@
 <script>
 import FInput from '../atoms/FInput.vue'
 
-let idCounter = 0
-
 export default {
   name: 'FFormField',
   components: {
@@ -81,9 +79,9 @@ export default {
       default: ''
     }
   },
-  data() {
-    return {
-      inputId: `f-form-field-${++idCounter}`
+  computed: {
+    inputId() {
+      return `f-form-field-${this._uid}`
     }
   }
 }

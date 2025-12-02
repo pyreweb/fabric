@@ -2,6 +2,7 @@
   "name": "@fabric/components",
   "version": "1.0.0",
   "description": "A VueJS 2 component library inspired by Atomic Design System",
+  "type": "module",
   "main": "dist/fabric.cjs.js",
   "module": "dist/fabric.esm.js",
   "unpkg": "dist/fabric.min.js",
@@ -28,7 +29,7 @@
   "devDependencies": {
     "vue": "^2.7.16",
     "vue-template-compiler": "^2.7.16",
-    "rollup": "^2.79.2",
+    "rollup": "^3.29.5",
     "rollup-plugin-vue": "^5.1.9",
     "@rollup/plugin-node-resolve": "^15.3.1",
     "@rollup/plugin-commonjs": "^28.0.2",
