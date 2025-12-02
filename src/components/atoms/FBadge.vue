@@ -45,7 +45,7 @@ export default {
       const variantClasses = {
         primary: 'bg-blue-500 text-white',
         success: 'bg-green-500 text-white',
-        warning: 'bg-yellow-500 text-white',
+        warning: 'bg-yellow-600 text-white',
         error: 'bg-red-500 text-white',
         neutral: 'bg-gray-500 text-white'
       }
