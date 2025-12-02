@@ -7,8 +7,6 @@
       :class="inputClasses"
       :checked="value"
       :disabled="disabled"
-      :aria-checked="value"
-      :aria-disabled="disabled"
       :aria-invalid="error"
       @change="handleChange"
       @focus="$emit('focus', $event)"
