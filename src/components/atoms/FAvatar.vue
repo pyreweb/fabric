@@ -1,7 +1,7 @@
 <template>
   <div
     :class="avatarClasses"
-    role="img"
+    :role="showImage ? undefined : 'img'"
     :aria-label="ariaLabel"
   >
     <img
