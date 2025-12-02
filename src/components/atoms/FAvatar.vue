@@ -108,7 +108,7 @@ export default {
       ].filter(Boolean).join(' ')
     },
     initialsClasses() {
-      const baseFontClasses = 'font-sans font-medium uppercase select-none'
+      const baseFontClasses = 'font-sans font-medium select-none'
 
       const fontSizeClasses = {
         xs: 'text-xs',
