@@ -105,7 +105,7 @@ export default {
     size: {
       type: String,
       default: 'md',
-      validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value) || /^\d+(px|rem|em)?$/.test(value)
+      validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value) || /^\d+(\.\d+)?(px|rem|em|%|vh|vw)?$/.test(value)
     },
     color: {
       type: String,
