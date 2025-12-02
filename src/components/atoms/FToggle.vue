@@ -98,7 +98,7 @@ export default {
       ].filter(Boolean).join(' ')
     },
     labelClasses() {
-      const baseClasses = 'ml-3 text-sm text-gray-800 select-none'
+      const baseClasses = 'ml-2 text-sm text-gray-800 select-none'
 
       const disabledClasses = this.disabled ? 'text-gray-400' : ''
 
