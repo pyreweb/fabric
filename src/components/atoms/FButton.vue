@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="['f-button', `f-button--${variant}`, `f-button--${size}`, { 'f-button--disabled': disabled }]"
+    :class="buttonClasses"
     :disabled="disabled"
     :type="type"
     @click="handleClick"
@@ -33,6 +33,33 @@ export default {
       default: false
     }
   },
+  computed: {
+    buttonClasses() {
+      const baseClasses = 'inline-flex items-center justify-center font-medium rounded cursor-pointer transition-all duration-200 border-2 border-transparent'
+      
+      const sizeClasses = {
+        small: 'py-1.5 px-3 text-xs',
+        medium: 'py-2.5 px-5 text-sm',
+        large: 'py-3.5 px-7 text-base'
+      }
+      
+      const variantClasses = {
+        primary: 'bg-blue-500 text-white border-blue-500 hover:bg-blue-600 hover:border-blue-600',
+        secondary: 'bg-gray-500 text-white border-gray-500 hover:bg-gray-600 hover:border-gray-600',
+        outline: 'bg-transparent text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white',
+        text: 'bg-transparent text-blue-500 border-transparent hover:bg-blue-500/10'
+      }
+      
+      const disabledClasses = this.disabled ? 'opacity-50 cursor-not-allowed' : ''
+      
+      return [
+        baseClasses,
+        sizeClasses[this.size],
+        variantClasses[this.variant],
+        disabledClasses
+      ].filter(Boolean).join(' ')
+    }
+  },
   methods: {
     handleClick(event) {
       if (!this.disabled) {
@@ -42,80 +69,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.f-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: inherit;
-  font-weight: 500;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 2px solid transparent;
-}
-
-.f-button--small {
-  padding: 6px 12px;
-  font-size: 12px;
-}
-
-.f-button--medium {
-  padding: 10px 20px;
-  font-size: 14px;
-}
-
-.f-button--large {
-  padding: 14px 28px;
-  font-size: 16px;
-}
-
-.f-button--primary {
-  background-color: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
-}
-
-.f-button--primary:hover:not(.f-button--disabled) {
-  background-color: #2563eb;
-  border-color: #2563eb;
-}
-
-.f-button--secondary {
-  background-color: #6b7280;
-  color: white;
-  border-color: #6b7280;
-}
-
-.f-button--secondary:hover:not(.f-button--disabled) {
-  background-color: #4b5563;
-  border-color: #4b5563;
-}
-
-.f-button--outline {
-  background-color: transparent;
-  color: #3b82f6;
-  border-color: #3b82f6;
-}
-
-.f-button--outline:hover:not(.f-button--disabled) {
-  background-color: #3b82f6;
-  color: white;
-}
-
-.f-button--text {
-  background-color: transparent;
-  color: #3b82f6;
-  border-color: transparent;
-}
-
-.f-button--text:hover:not(.f-button--disabled) {
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-.f-button--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-</style>

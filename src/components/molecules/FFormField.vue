@@ -1,9 +1,9 @@
 <template>
-  <div class="f-form-field">
+  <div class="flex flex-col gap-1.5">
     <label
       v-if="label"
       :for="inputId"
-      :class="['f-form-field__label', { 'f-form-field__label--required': required }]"
+      :class="['text-sm font-medium text-gray-700', { 'after:content-[\'_*\'] after:text-red-500': required }]"
     >
       {{ label }}
     </label>
@@ -20,10 +20,10 @@
       @focus="$emit('focus', $event)"
       @blur="$emit('blur', $event)"
     />
-    <span v-if="errorMessage" class="f-form-field__error">
+    <span v-if="errorMessage" class="text-xs text-red-500">
       {{ errorMessage }}
     </span>
-    <span v-else-if="hint" class="f-form-field__hint">
+    <span v-else-if="hint" class="text-xs text-gray-500">
       {{ hint }}
     </span>
   </div>
@@ -86,32 +86,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.f-form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.f-form-field__label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #374151;
-}
-
-.f-form-field__label--required::after {
-  content: ' *';
-  color: #ef4444;
-}
-
-.f-form-field__hint {
-  font-size: 12px;
-  color: #6b7280;
-}
-
-.f-form-field__error {
-  font-size: 12px;
-  color: #ef4444;
-}
-</style>
