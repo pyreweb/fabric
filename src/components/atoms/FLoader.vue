@@ -61,10 +61,8 @@ export default {
       return this.label
     },
     wrapperClasses() {
-      if (this.overlay) {
-        return 'fixed inset-0 flex items-center justify-center bg-black/50 z-50'
-      }
-      return ''
+      const overlayClasses = this.overlay ? 'fixed inset-0 flex items-center justify-center bg-black/50 z-50' : ''
+      return [overlayClasses].filter(Boolean).join(' ')
     },
     containerClasses() {
       const baseClasses = 'inline-flex items-center justify-center'
