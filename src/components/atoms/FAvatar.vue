@@ -9,6 +9,7 @@
       :src="src"
       :alt="alt"
       class="w-full h-full object-cover"
+      loading="lazy"
       @error="handleImageError"
     />
     <span
