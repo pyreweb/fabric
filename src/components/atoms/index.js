@@ -2,6 +2,7 @@ import FAvatar from './FAvatar.vue'
 import FBadge from './FBadge.vue'
 import FButton from './FButton.vue'
 import FCheckbox from './FCheckbox.vue'
+import FDivider from './FDivider.vue'
 import FIcon from './FIcon.vue'
 import FInput from './FInput.vue'
 import FLoader from './FLoader.vue'
@@ -15,6 +16,7 @@ export {
   FBadge,
   FButton,
   FCheckbox,
+  FDivider,
   FIcon,
   FInput,
   FLoader,
