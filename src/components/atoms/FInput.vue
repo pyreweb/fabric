@@ -1,6 +1,6 @@
 <template>
   <input
-    :class="['f-input', `f-input--${size}`, { 'f-input--error': error, 'f-input--disabled': disabled }]"
+    :class="inputClasses"
     :type="type"
     :value="value"
     :placeholder="placeholder"
@@ -46,6 +46,30 @@ export default {
       default: false
     }
   },
+  computed: {
+    inputClasses() {
+      const baseClasses = 'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2'
+      
+      const sizeClasses = {
+        small: 'py-1.5 px-2.5 text-xs',
+        medium: 'py-2.5 px-3.5 text-sm',
+        large: 'py-3.5 px-4.5 text-base'
+      }
+      
+      const stateClasses = this.error
+        ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
+        : 'border-gray-300 focus:border-blue-500 focus:ring-blue-500/20'
+      
+      const disabledClasses = this.disabled ? 'bg-gray-100 cursor-not-allowed opacity-70' : ''
+      
+      return [
+        baseClasses,
+        sizeClasses[this.size],
+        stateClasses,
+        disabledClasses
+      ].join(' ')
+    }
+  },
   methods: {
     handleInput(event) {
       this.$emit('input', event.target.value)
@@ -53,51 +77,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.f-input {
-  display: block;
-  width: 100%;
-  font-family: inherit;
-  border: 1px solid #d1d5db;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  box-sizing: border-box;
-}
-
-.f-input:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-.f-input--small {
-  padding: 6px 10px;
-  font-size: 12px;
-}
-
-.f-input--medium {
-  padding: 10px 14px;
-  font-size: 14px;
-}
-
-.f-input--large {
-  padding: 14px 18px;
-  font-size: 16px;
-}
-
-.f-input--error {
-  border-color: #ef4444;
-}
-
-.f-input--error:focus {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-.f-input--disabled {
-  background-color: #f3f4f6;
-  cursor: not-allowed;
-  opacity: 0.7;
-}
-</style>

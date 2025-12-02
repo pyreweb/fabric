@@ -1,3 +1,4 @@
+import './styles/tailwind.css'
 import { FButton, FInput, FTypography } from './components/atoms'
 import { FFormField, FCard } from './components/molecules'
 import { FForm } from './components/organisms'

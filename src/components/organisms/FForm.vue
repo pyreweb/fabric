@@ -1,7 +1,7 @@
 <template>
-  <form class="f-form" @submit.prevent="handleSubmit">
+  <form class="flex flex-col gap-4" @submit.prevent="handleSubmit">
     <slot />
-    <div v-if="$slots.actions" class="f-form__actions">
+    <div v-if="$slots.actions" class="flex gap-2 mt-2">
       <slot name="actions" />
     </div>
   </form>
@@ -17,17 +17,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.f-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.f-form__actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
-}
-</style>

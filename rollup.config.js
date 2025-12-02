@@ -3,6 +3,8 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
 import terser from '@rollup/plugin-terser'
+import tailwindcss from '@tailwindcss/postcss'
+import autoprefixer from 'autoprefixer'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -37,7 +39,13 @@ export default {
       css: true,
       compileTemplate: true
     }),
-    postcss(),
+    postcss({
+      extract: 'fabric.css',
+      plugins: [
+        tailwindcss(),
+        autoprefixer()
+      ]
+    }),
     isProduction && terser()
   ].filter(Boolean)
 }
