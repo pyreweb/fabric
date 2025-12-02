@@ -165,7 +165,7 @@ export default {
       }
       
       if (this.isCustomSize) {
-        const size = /^\d+$/.test(this.size) ? `${this.size}px` : this.size
+        const size = /^\d+(px|rem|em)?$/.test(this.size) ? ( /^\d+$/.test(this.size) ? `${this.size}px` : this.size ) : this.size
         style.width = size
         style.height = size
       }
