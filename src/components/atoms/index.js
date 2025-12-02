@@ -4,6 +4,7 @@ import FButton from './FButton.vue'
 import FCheckbox from './FCheckbox.vue'
 import FIcon from './FIcon.vue'
 import FInput from './FInput.vue'
+import FLoader from './FLoader.vue'
 import FRadio from './FRadio.vue'
 import FTextarea from './FTextarea.vue'
 import FToggle from './FToggle.vue'
@@ -16,6 +17,7 @@ export {
   FCheckbox,
   FIcon,
   FInput,
+  FLoader,
   FRadio,
   FTextarea,
   FToggle,
