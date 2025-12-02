@@ -67,7 +67,7 @@ export default {
         sizeClasses[this.size],
         stateClasses,
         disabledClasses
-      ].join(' ')
+      ].filter(Boolean).join(' ')
     }
   },
   methods: {

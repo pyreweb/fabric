@@ -57,7 +57,7 @@ export default {
         sizeClasses[this.size],
         variantClasses[this.variant],
         disabledClasses
-      ].join(' ')
+      ].filter(Boolean).join(' ')
     }
   },
   methods: {

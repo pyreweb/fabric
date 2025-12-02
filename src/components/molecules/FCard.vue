@@ -50,7 +50,7 @@ export default {
       const borderedClasses = this.bordered ? 'border border-gray-200' : ''
       const clickableClasses = this.clickable ? 'cursor-pointer hover:shadow-lg hover:-translate-y-0.5' : ''
       
-      return [baseClasses, borderedClasses, clickableClasses].join(' ')
+      return [baseClasses, borderedClasses, clickableClasses].filter(Boolean).join(' ')
     }
   },
   methods: {

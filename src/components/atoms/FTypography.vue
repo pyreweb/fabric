@@ -62,7 +62,7 @@ export default {
         baseClasses,
         variantClasses[this.variant],
         truncateClasses
-      ].join(' ')
+      ].filter(Boolean).join(' ')
     }
   }
 }
