@@ -89,7 +89,26 @@ export default {
       return thicknessClasses[this.thickness]
     },
     colorClass() {
-      return `bg-${this.color}`
+      const colorClasses = {
+        'gray-100': 'bg-gray-100',
+        'gray-200': 'bg-gray-200',
+        'gray-300': 'bg-gray-300',
+        'gray-400': 'bg-gray-400',
+        'gray-500': 'bg-gray-500',
+        'blue-300': 'bg-blue-300',
+        'blue-400': 'bg-blue-400',
+        'blue-500': 'bg-blue-500',
+        'red-300': 'bg-red-300',
+        'red-400': 'bg-red-400',
+        'red-500': 'bg-red-500',
+        'green-300': 'bg-green-300',
+        'green-400': 'bg-green-400',
+        'green-500': 'bg-green-500',
+        'yellow-300': 'bg-yellow-300',
+        'yellow-400': 'bg-yellow-400',
+        'yellow-500': 'bg-yellow-500'
+      }
+      return colorClasses[this.color]
     },
     simpleLineClasses() {
       const fullSize = this.orientation === 'vertical' ? 'h-full' : 'w-full'
