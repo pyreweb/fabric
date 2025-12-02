@@ -14,13 +14,9 @@
       @focus="$emit('focus', $event)"
       @blur="$emit('blur', $event)"
     />
-    <span
-      v-if="label"
-      :class="labelClasses"
-    >
-      {{ label }}
-    </span>
-    <slot v-else />
+    <slot>
+      <span v-if="label !== ''" :class="labelClasses">{{ label }}</span>
+    </slot>
   </label>
 </template>
 
