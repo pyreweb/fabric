@@ -1,3 +1,4 @@
+import FBadge from './FBadge.vue'
 import FButton from './FButton.vue'
 import FCheckbox from './FCheckbox.vue'
 import FIcon from './FIcon.vue'
@@ -8,6 +9,7 @@ import FToggle from './FToggle.vue'
 import FTypography from './FTypography.vue'
 
 export {
+  FBadge,
   FButton,
   FCheckbox,
   FIcon,
