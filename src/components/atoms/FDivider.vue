@@ -16,6 +16,17 @@
 </template>
 
 <script>
+const ALLOWED_COLORS = [
+  'gray-100', 'gray-200', 'gray-300', 'gray-400', 'gray-500',
+  'blue-300', 'blue-400', 'blue-500',
+  'red-300', 'red-400', 'red-500',
+  'green-300', 'green-400', 'green-500',
+  'yellow-300', 'yellow-400', 'yellow-500'
+]
+
+const CONTENT_OFFSET_WIDTH = 'w-4'
+const CONTENT_OFFSET_HEIGHT = 'h-4'
+
 export default {
   name: 'FDivider',
   props: {
@@ -31,7 +42,8 @@ export default {
     },
     color: {
       type: String,
-      default: 'gray-300'
+      default: 'gray-300',
+      validator: (value) => ALLOWED_COLORS.includes(value)
     },
     margin: {
       type: String,
@@ -89,47 +101,31 @@ export default {
       ].filter(Boolean).join(' ')
     },
     startLineClasses() {
+      const offsetClass = this.orientation === 'vertical' ? CONTENT_OFFSET_HEIGHT : CONTENT_OFFSET_WIDTH
+
       const alignGrow = {
-        left: 'flex-none w-4',
+        left: `flex-none ${offsetClass}`,
         center: 'flex-1',
         right: 'flex-1'
       }
-
-      const verticalAlignGrow = {
-        left: 'flex-none h-4',
-        center: 'flex-1',
-        right: 'flex-1'
-      }
-
-      const grow = this.orientation === 'vertical'
-        ? verticalAlignGrow[this.align]
-        : alignGrow[this.align]
 
       return [
-        grow,
+        alignGrow[this.align],
         this.thicknessClass,
         this.colorClass
       ].filter(Boolean).join(' ')
     },
     endLineClasses() {
+      const offsetClass = this.orientation === 'vertical' ? CONTENT_OFFSET_HEIGHT : CONTENT_OFFSET_WIDTH
+
       const alignGrow = {
         left: 'flex-1',
         center: 'flex-1',
-        right: 'flex-none w-4'
+        right: `flex-none ${offsetClass}`
       }
-
-      const verticalAlignGrow = {
-        left: 'flex-1',
-        center: 'flex-1',
-        right: 'flex-none h-4'
-      }
-
-      const grow = this.orientation === 'vertical'
-        ? verticalAlignGrow[this.align]
-        : alignGrow[this.align]
 
       return [
-        grow,
+        alignGrow[this.align],
         this.thicknessClass,
         this.colorClass
       ].filter(Boolean).join(' ')
