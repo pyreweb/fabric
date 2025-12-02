@@ -2,7 +2,7 @@
   <div
     :class="avatarClasses"
     :role="showImage ? undefined : 'img'"
-    :aria-label="ariaLabel"
+    :aria-label="showImage ? undefined : ariaLabel"
   >
     <img
       v-if="showImage"
