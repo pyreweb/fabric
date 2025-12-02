@@ -1,10 +1,11 @@
 import './styles/tailwind.css'
-import { FButton, FInput, FRadio, FTypography } from './components/atoms'
+import { FButton, FCheckbox, FInput, FRadio, FTypography } from './components/atoms'
 import { FFormField, FCard } from './components/molecules'
 import { FForm } from './components/organisms'
 
 const components = {
   FButton,
+  FCheckbox,
   FInput,
   FRadio,
   FTypography,
@@ -29,6 +30,7 @@ export default {
 
 export {
   FButton,
+  FCheckbox,
   FInput,
   FRadio,
   FTypography,
