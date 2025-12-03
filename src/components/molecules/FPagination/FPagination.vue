@@ -67,8 +67,8 @@
 </template>
 
 <script>
-import FButton from '../atoms/FButton.vue'
-import FIcon from '../atoms/FIcon.vue'
+import FButton from '../../atoms/FButton/FButton.vue'
+import FIcon from '../../atoms/FIcon/FIcon.vue'
 
 export default {
   name: 'FPagination',

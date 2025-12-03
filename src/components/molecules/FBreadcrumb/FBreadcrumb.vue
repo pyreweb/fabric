@@ -46,8 +46,8 @@
 </template>
 
 <script>
-import FIcon from '../atoms/FIcon.vue'
-import FTypography from '../atoms/FTypography.vue'
+import FIcon from '../../atoms/FIcon/FIcon.vue'
+import FTypography from '../../atoms/FTypography/FTypography.vue'
 
 export default {
   name: 'FBreadcrumb',

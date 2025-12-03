@@ -39,9 +39,9 @@
 </template>
 
 <script>
-import FIcon from '../atoms/FIcon.vue'
-import FTypography from '../atoms/FTypography.vue'
-import FButton from '../atoms/FButton.vue'
+import FIcon from '../../atoms/FIcon/FIcon.vue'
+import FTypography from '../../atoms/FTypography/FTypography.vue'
+import FButton from '../../atoms/FButton/FButton.vue'
 
 const VARIANT_COLORS = {
   success: {

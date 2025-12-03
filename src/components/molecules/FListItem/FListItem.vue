@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import FTypography from '../atoms/FTypography.vue'
+import FTypography from '../../atoms/FTypography/FTypography.vue'
 
 export default {
   name: 'FListItem',
