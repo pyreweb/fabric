@@ -1,5 +1,5 @@
 <template>
-  <div :class="containerClasses">
+  <div :class="containerClasses" role="status" aria-live="polite">
     <f-icon
       :name="icon"
       size="xl"
