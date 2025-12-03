@@ -146,7 +146,7 @@ Composant de navigation hiérarchique (fil d'Ariane) permettant à l'utilisateur
   <!-- Fil d'Ariane avec séparateur personnalisé -->
   <FBreadcrumb 
     :items="breadcrumbItems"
-    separatorIcon="chevron-right"
+    separatorIcon="arrow-right"
     ariaLabel="Navigation"
   />
 </template>
