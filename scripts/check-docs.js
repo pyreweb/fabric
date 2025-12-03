@@ -84,11 +84,11 @@ function analyzeVueFile(vuePath) {
   
   const content = readFileSync(vuePath, 'utf-8');
   
-  // Check for $emit calls
-  const hasEmits = /\$emit\s*\(/.test(content);
+  // Check for $emit calls (Vue 2 patterns: this.$emit, $emit)
+  const hasEmits = /(\$emit\s*\(|this\.\$emit\s*\()/.test(content);
   
-  // Check for slot usage
-  const hasSlots = /<slot[\s>]/.test(content);
+  // Check for slot usage (matches <slot>, <slot/>, <slot:name>, etc.)
+  const hasSlots = /<slot(\s|\/|>)/.test(content);
   
   return { hasEmits, hasSlots };
 }
@@ -120,9 +120,6 @@ function validateComponent(componentPath, componentName) {
   // Check for events section only if component emits events
   if (hasEmits && !hasSection(content, REQUIRED_SECTIONS.events)) {
     issues.push('Missing Événements/Events section (component uses $emit)');
-  } else if (!hasEmits && !hasSection(content, REQUIRED_SECTIONS.events)) {
-    // Not an error if component doesn't emit events
-    warnings.push('No Événements/Events section (verify if component emits events)');
   }
   
   // Check for slots section only if component uses slots
@@ -155,7 +152,6 @@ function checkDocumentation() {
   let totalComponents = 0;
   let validComponents = 0;
   let invalidComponents = 0;
-  const allIssues = [];
   
   for (const category of CATEGORIES) {
     const categoryPath = join(COMPONENTS_ROOT, category);
@@ -182,7 +178,6 @@ function checkDocumentation() {
         
         for (const issue of result.issues) {
           console.log(`    ${COLORS.red}└─ ${issue}${COLORS.reset}`);
-          allIssues.push({ category, component, issue });
         }
       }
       
