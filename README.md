@@ -9,7 +9,7 @@
 <h3 align="center">Fabric</h3>
 
 <p align="center">
-	Bibliothèque de composants VueJS 2
+	Système de design et bibliothèque de composants VueJS de la société Pyréweb.
 	<br />
 	<br />
 	<a href="https://fabric.pyreweb.com"><strong>Explorer la documentation »</strong></a>
