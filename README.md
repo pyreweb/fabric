@@ -3,7 +3,7 @@
 <div align="center">
 
 <a href="https://github.com/agencepyreweb/fabric">
-	<img src="./.github/logos/3.png" alt="Logo" height="160">
+	<img src="./.github/logos/7.png" alt="Logo" height="160">
 </a>
 
 <h3 align="center">Fabric</h3>
