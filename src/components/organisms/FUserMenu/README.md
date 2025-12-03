@@ -13,6 +13,7 @@ Composant organisme de menu utilisateur conçu pour s'intégrer dans une barre d
 | `avatarSrc` | `String` | `''` | URL de l'image de l'avatar |
 | `avatarAlt` | `String` | `''` | Texte alternatif de l'avatar |
 | `avatarInitials` | `String` | `''` | Initiales de l'avatar (si pas d'image) |
+| `avatarName` | `String` | `''` | Nom pour calculer les initiales (utilise userName si non fourni) |
 | `avatarSize` | `String` | `'md'` | Taille de l'avatar : `xs`, `sm`, `md`, `lg`, `xl` |
 | `avatarStatus` | `String` | `null` | Indicateur de statut : `online`, `busy`, `away`, `offline` |
 | `showUserName` | `Boolean` | `false` | Affiche le nom à côté de l'avatar dans le déclencheur |

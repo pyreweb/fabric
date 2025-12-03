@@ -17,7 +17,7 @@
         :src="avatarSrc"
         :alt="avatarAlt"
         :initials="avatarInitials"
-        :name="userName"
+        :name="computedAvatarName"
         :size="avatarSize"
         :status="avatarStatus"
       />
@@ -166,6 +166,13 @@ export default {
       default: ''
     },
     /**
+     * Avatar name (used to compute initials if no initials provided)
+     */
+    avatarName: {
+      type: String,
+      default: ''
+    },
+    /**
      * Avatar size
      */
     avatarSize: {
@@ -270,6 +277,12 @@ export default {
      */
     hasMenuItems() {
       return this.menuItems.length > 0 || this.$slots['menu-items']
+    },
+    /**
+     * Computed avatar name (falls back to userName if not provided)
+     */
+    computedAvatarName() {
+      return this.avatarName || this.userName
     },
     /**
      * Trigger button classes
