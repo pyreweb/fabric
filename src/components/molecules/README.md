@@ -15,6 +15,7 @@ Les **molécules** sont des groupes d'atomes liés ensemble pour former des comp
 
 Les molécules sont construites à partir d'atomes. Par exemple :
 
+- **FAccordionItem** utilise `FTypography` pour le titre et `FIcon` pour le chevron indicatif.
 - **FAlert** utilise `FIcon` pour l'icône et `FButton` pour les actions.
 - **FBreadcrumb** utilise `FTypography` pour le texte et `FIcon` pour les séparateurs.
 - **FButtonGroup** regroupe plusieurs `FButton` pour créer des barres d'outils ou des sélecteurs.
@@ -30,6 +31,7 @@ Les molécules sont construites à partir d'atomes. Par exemple :
 
 | Composant | Description |
 |-----------|-------------|
+| [FAccordionItem](./FAccordionItem/README.md) | Panneau interactif pliable/dépliable pour masquer ou afficher du contenu. |
 | [FAlert](./FAlert/README.md) | Messages d'alerte avec icône, texte et bouton de fermeture optionnel. |
 | [FBreadcrumb](./FBreadcrumb/README.md) | Composant de navigation hiérarchique (fil d'Ariane). |
 | [FButtonGroup](./FButtonGroup/README.md) | Groupe de boutons adjacents pour barres d'outils ou sélecteurs toggle. |
