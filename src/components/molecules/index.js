@@ -1,5 +1,6 @@
 import FAlert from './FAlert/FAlert.vue'
 import FBreadcrumb from './FBreadcrumb/FBreadcrumb.vue'
+import FButtonGroup from './FButtonGroup/FButtonGroup.vue'
 import FEmptyState from './FEmptyState/FEmptyState.vue'
 import FFormField from './FFormField/FFormField.vue'
 import FCard from './FCard/FCard.vue'
@@ -10,6 +11,7 @@ import FPagination from './FPagination/FPagination.vue'
 export {
   FAlert,
   FBreadcrumb,
+  FButtonGroup,
   FEmptyState,
   FFormField,
   FCard,
