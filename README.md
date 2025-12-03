@@ -23,3 +23,17 @@
 </div>
 
 <br />
+
+## Composants de la bibliothèque
+
+### Atomes
+
+Les composants de type "atoms" sont disponible dans la page [src/components/atoms](https://github.com/agencepyreweb/fabric/tree/main/src/components/atoms).
+
+### Molécules
+
+Les composants de type "molecules" sont disponible [src/components/molecules](https://github.com/agencepyreweb/fabric/tree/main/src/components/molecules).
+
+### Organismes
+
+Les composants de type "organisms" sont disponible [src/components/organisms](https://github.com/agencepyreweb/fabric/tree/main/src/components/organisms).
