@@ -1,6 +1,7 @@
 <template>
   <aside
     :class="sidebarClasses"
+    :style="getSidebarStyle()"
     :aria-hidden="!isOpen"
     role="complementary"
     aria-label="Barre latérale de filtres"
@@ -309,7 +310,16 @@ export default {
      * Get desktop position classes
      */
     getDesktopPositionClasses() {
-      return `relative flex-shrink-0`
+      return 'relative flex-shrink-0'
+    },
+    /**
+     * Get sidebar inline styles
+     */
+    getSidebarStyle() {
+      if (!this.isMobile) {
+        return { width: this.width }
+      }
+      return {}
     },
     /**
      * Get mobile position classes
