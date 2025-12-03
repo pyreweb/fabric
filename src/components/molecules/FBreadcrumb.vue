@@ -58,7 +58,11 @@ export default {
     items: {
       type: Array,
       required: true,
-      validator: (value) => value.every(item => typeof item.label === 'string')
+      validator: (value) => value.every(item => 
+        typeof item.label === 'string' &&
+        (item.href === undefined || typeof item.href === 'string') &&
+        (item.icon === undefined || typeof item.icon === 'string')
+      )
     },
     separatorIcon: {
       type: String,
