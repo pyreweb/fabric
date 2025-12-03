@@ -12,11 +12,9 @@
 	Bibliothèque de composants VueJS 2
 	<br />
 	<br />
-	<a href="https://github.com/agencepyreweb/fabric/discussions"><strong>Explorer la documentation »</strong></a>
+	<a href="https://fabric.pyreweb.com"><strong>Explorer la documentation »</strong></a>
 	<br />
 	<br />
-	<a href="https://fabric.pyreweb.com">Voir les exemples</a>
-	·
 	<a href="https://github.com/agencepyreweb/fabric/issues">Reporter une anomalie ou demander une nouveauté</a>
 </p>
 
