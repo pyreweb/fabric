@@ -19,11 +19,12 @@
         
         <!-- Breadcrumb Item -->
         <component
-          :is="isCurrentItem(index) ? 'span' : 'a'"
-          :href="isCurrentItem(index) ? undefined : item.href"
+          :is="isCurrentItem(index) ? 'span' : (item.href ? 'a' : 'button')"
+          v-bind="!isCurrentItem(index) && item.href ? { href: item.href } : {}"
           :class="getItemClasses(index)"
           :aria-current="isCurrentItem(index) ? 'page' : undefined"
           @click="handleItemClick($event, item, index)"
+          v-if="!isCurrentItem(index) || isCurrentItem(index)"
         >
           <f-icon
             v-if="item.icon"
