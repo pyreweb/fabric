@@ -96,6 +96,7 @@ export default {
     toggle() {
       this.isOpen = !this.isOpen
       this.$emit('toggle', this.isOpen)
+      this.$emit('input', this.isOpen)
     },
     updateContentHeight() {
       if (this.$refs.contentInner) {
