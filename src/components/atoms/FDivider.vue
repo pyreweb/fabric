@@ -1,166 +1,123 @@
 <template>
-  <div
-    role="separator"
-    :aria-orientation="orientation"
-    :class="dividerClasses"
-  >
-    <template v-if="hasContent">
-      <span :class="startLineClasses"></span>
-      <span :class="contentClasses">
-        <slot />
-      </span>
-      <span :class="endLineClasses"></span>
-    </template>
-    <span v-else :class="simpleLineClasses"></span>
-  </div>
+	<div
+		role="separator"
+		:aria-orientation="orientation"
+		:class="containerClasses"
+	>
+		<template v-if="hasContent">
+			<span :class="lineClasses('start')"></span>
+			<span :class="textClasses">
+				<slot />
+			</span>
+			<span :class="lineClasses('end')"></span>
+		</template>
+		<span v-else :class="lineClasses('full')"></span>
+	</div>
 </template>
 
 <script>
-const ALLOWED_COLORS = [
-  'gray-100', 'gray-200', 'gray-300', 'gray-400', 'gray-500',
-  'blue-300', 'blue-400', 'blue-500',
-  'red-300', 'red-400', 'red-500',
-  'green-300', 'green-400', 'green-500',
-  'yellow-300', 'yellow-400', 'yellow-500'
-]
-
-const CONTENT_OFFSET_WIDTH = 'w-4'
-const CONTENT_OFFSET_HEIGHT = 'h-4'
-
 export default {
-  name: 'FDivider',
-  props: {
-    orientation: {
-      type: String,
-      default: 'horizontal',
-      validator: (value) => ['horizontal', 'vertical'].includes(value)
-    },
-    align: {
-      type: String,
-      default: 'center',
-      validator: (value) => ['left', 'center', 'right'].includes(value)
-    },
-    color: {
-      type: String,
-      default: 'gray-300',
-      validator: (value) => ALLOWED_COLORS.includes(value)
-    },
-    margin: {
-      type: String,
-      default: 'md',
-      validator: (value) => ['none', 'sm', 'md', 'lg'].includes(value)
-    },
-    thickness: {
-      type: String,
-      default: 'thin',
-      validator: (value) => ['thin', 'medium', 'thick'].includes(value)
-    }
-  },
-  computed: {
-    hasContent() {
-      return !!this.$slots.default
-    },
-    dividerClasses() {
-      const baseClasses = 'flex items-center'
+	name: 'FDivider',
+	props: {
+		orientation: {
+			type: String,
+			default: 'horizontal',
+			validator: (v) => ['horizontal', 'vertical'].includes(v)
+		},
+		align: {
+			type: String,
+			default: 'center',
+			validator: (v) => ['left', 'center', 'right'].includes(v)
+		},
+		color: {
+			type: String,
+			default: 'gray-300'
+		},
+		textColor: {
+			type: String,
+			default: 'gray-500'
+		},
+		textSize: {
+			type: String,
+			default: 'sm'
+		},
+		margin: {
+			type: String,
+			default: 'md',
+			validator: (v) => ['none', 'sm', 'md', 'lg'].includes(v)
+		},
+		thickness: {
+			type: String,
+			default: 'thin',
+			validator: (v) => ['thin', 'medium', 'thick'].includes(v)
+		}
+	},
+	computed: {
+		hasContent() {
+			return !!this.$slots.default;
+		},
+		isVertical() {
+			return this.orientation === 'vertical';
+		},
+		containerClasses() {
+			const margins = {
+				none: '',
+				sm: this.isVertical ? 'mx-2' : 'my-2',
+				md: this.isVertical ? 'mx-4' : 'my-4',
+				lg: this.isVertical ? 'mx-6' : 'my-6'
+			};
 
-      const orientationClasses = this.orientation === 'vertical'
-        ? 'flex-col h-full'
-        : 'flex-row w-full'
+			return [
+				'flex items-center',
+				this.isVertical ? 'flex-col h-full' : 'flex-row w-full',
+				margins[this.margin]
+			];
+		},
+		baseLineClasses() {
+			const thicknessMap = {
+				thin: 'px',
+				medium: '0.5',
+				thick: '1'
+			};
+			const size = thicknessMap[this.thickness];
 
-      const marginClasses = {
-        none: '',
-        sm: this.orientation === 'vertical' ? 'mx-2' : 'my-2',
-        md: this.orientation === 'vertical' ? 'mx-4' : 'my-4',
-        lg: this.orientation === 'vertical' ? 'mx-6' : 'my-6'
-      }
+			return [
+				`bg-${this.color}`,
+				this.isVertical ? `w-${size}` : `h-${size}`
+			];
+		},
+		textClasses() {
+			return [
+				'font-sans',
+				`text-${this.textSize}`,
+				`text-${this.textColor}`,
+				this.isVertical ? 'py-2' : 'px-3'
+			];
+		}
+	},
+	methods: {
+		lineClasses(position) {
+			if (position === 'full') {
+				return [
+					this.isVertical ? 'h-full' : 'w-full',
+					...this.baseLineClasses
+				];
+			}
 
-      return [
-        baseClasses,
-        orientationClasses,
-        marginClasses[this.margin]
-      ].filter(Boolean).join(' ')
-    },
-    thicknessClass() {
-      const thicknessClasses = {
-        thin: this.orientation === 'vertical' ? 'w-px' : 'h-px',
-        medium: this.orientation === 'vertical' ? 'w-0.5' : 'h-0.5',
-        thick: this.orientation === 'vertical' ? 'w-1' : 'h-1'
-      }
-      return thicknessClasses[this.thickness]
-    },
-    colorClass() {
-      const colorClasses = {
-        'gray-100': 'bg-gray-100',
-        'gray-200': 'bg-gray-200',
-        'gray-300': 'bg-gray-300',
-        'gray-400': 'bg-gray-400',
-        'gray-500': 'bg-gray-500',
-        'blue-300': 'bg-blue-300',
-        'blue-400': 'bg-blue-400',
-        'blue-500': 'bg-blue-500',
-        'red-300': 'bg-red-300',
-        'red-400': 'bg-red-400',
-        'red-500': 'bg-red-500',
-        'green-300': 'bg-green-300',
-        'green-400': 'bg-green-400',
-        'green-500': 'bg-green-500',
-        'yellow-300': 'bg-yellow-300',
-        'yellow-400': 'bg-yellow-400',
-        'yellow-500': 'bg-yellow-500'
-      }
-      return colorClasses[this.color]
-    },
-    simpleLineClasses() {
-      const fullSize = this.orientation === 'vertical' ? 'h-full' : 'w-full'
+			const offset = this.isVertical ? 'h-4' : 'w-4';
+			const grow = 'flex-1';
+			const fixed = `flex-none ${offset}`;
 
-      return [
-        fullSize,
-        this.thicknessClass,
-        this.colorClass
-      ].filter(Boolean).join(' ')
-    },
-    startLineClasses() {
-      const offsetClass = this.orientation === 'vertical' ? CONTENT_OFFSET_HEIGHT : CONTENT_OFFSET_WIDTH
+			let sizing = grow;
 
-      const alignGrow = {
-        left: `flex-none ${offsetClass}`,
-        center: 'flex-1',
-        right: 'flex-1'
-      }
+			if (this.align === 'left') {
+				sizing = position === 'start' ? fixed : grow;
+			} else if (this.align === 'right') {
+				sizing = position === 'start' ? grow : fixed;
+			}
 
-      return [
-        alignGrow[this.align],
-        this.thicknessClass,
-        this.colorClass
-      ].filter(Boolean).join(' ')
-    },
-    endLineClasses() {
-      const offsetClass = this.orientation === 'vertical' ? CONTENT_OFFSET_HEIGHT : CONTENT_OFFSET_WIDTH
-
-      const alignGrow = {
-        left: 'flex-1',
-        center: 'flex-1',
-        right: `flex-none ${offsetClass}`
-      }
-
-      return [
-        alignGrow[this.align],
-        this.thicknessClass,
-        this.colorClass
-      ].filter(Boolean).join(' ')
-    },
-    contentClasses() {
-      const baseClasses = 'font-sans text-sm text-gray-500'
-
-      const spacingClasses = this.orientation === 'vertical'
-        ? 'py-2'
-        : 'px-3'
-
-      return [
-        baseClasses,
-        spacingClasses
-      ].filter(Boolean).join(' ')
-    }
-  }
-}
+			return [sizing, ...this.baseLineClasses];
+		}
+	}
+};
 </script>
