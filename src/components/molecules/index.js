@@ -2,6 +2,7 @@ import FAlert from './FAlert/FAlert.vue'
 import FBreadcrumb from './FBreadcrumb/FBreadcrumb.vue'
 import FButtonGroup from './FButtonGroup/FButtonGroup.vue'
 import FEmptyState from './FEmptyState/FEmptyState.vue'
+import FFilePreview from './FFilePreview/FFilePreview.vue'
 import FFormField from './FFormField/FFormField.vue'
 import FCard from './FCard/FCard.vue'
 import FSearchBar from './FSearchBar/FSearchBar.vue'
@@ -13,6 +14,7 @@ export {
   FBreadcrumb,
   FButtonGroup,
   FEmptyState,
+  FFilePreview,
   FFormField,
   FCard,
   FSearchBar,
