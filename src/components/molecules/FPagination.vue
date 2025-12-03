@@ -154,7 +154,9 @@ export default {
       }
 
       for (let i = start; i <= end; i++) {
-        if (i >= 1 && i <= total && !pages.includes(i)) {
+        if (i >= 1 && i <= total) {
+          // Skip page 1 if already added in the first block
+          if (i === 1 && start > 1) continue
           pages.push(i)
         }
       }
@@ -163,9 +165,7 @@ export default {
         if (end < total - 1) {
           pages.push('...')
         }
-        if (!pages.includes(total)) {
-          pages.push(total)
-        }
+        pages.push(total)
       }
 
       return pages
