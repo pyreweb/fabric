@@ -1,6 +1,6 @@
 import './styles/tailwind.css'
 import { FAvatar, FBadge, FButton, FCheckbox, FDivider, FIcon, FInput, FRadio, FTextarea, FToggle, FTypography } from './components/atoms'
-import { FAlert, FFormField, FCard, FSearchBar } from './components/molecules'
+import { FAlert, FFormField, FCard, FSearchBar, FPagination } from './components/molecules'
 import { FForm } from './components/organisms'
 
 const components = {
@@ -19,7 +19,8 @@ const components = {
   FFormField,
   FCard,
   FForm,
-  FSearchBar
+  FSearchBar,
+  FPagination
 }
 
 const install = (Vue) => {
@@ -52,5 +53,6 @@ export {
   FFormField,
   FCard,
   FForm,
-  FSearchBar
+  FSearchBar,
+  FPagination
 }
