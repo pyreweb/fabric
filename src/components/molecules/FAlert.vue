@@ -33,6 +33,7 @@
       @click="handleClose"
     >
       <f-icon name="close" size="sm" />
+      <span class="sr-only">Fermer l'alerte</span>
     </f-button>
   </div>
 </template>
