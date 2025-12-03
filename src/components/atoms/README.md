@@ -33,6 +33,14 @@ Affichage d'avatars utilisateur avec image ou initiales en fallback.
 | `name` | `String` | `''` | Nom complet (utilisé pour générer les initiales automatiquement) |
 | `size` | `String` | `'md'` | Taille : `xs`, `sm`, `md`, `lg`, `xl` |
 | `shape` | `String` | `'circle'` | Forme : `circle`, `square` |
+| `status` | `String` | `null` | Indicateur de statut : `online`, `busy`, `away`, `offline` |
+| `placeholderClass` | `String` | `'bg-gray-400 text-white'` | Classes CSS pour le placeholder (fallback) |
+
+#### Événements
+
+| Événement | Description |
+|-----------|-------------|
+| `click` | Émis lors d'un clic sur l'avatar |
 
 #### Exemple d'utilisation
 
@@ -46,6 +54,12 @@ Affichage d'avatars utilisateur avec image ou initiales en fallback.
 
   <!-- Avatar généré à partir du nom -->
   <FAvatar name="Jean Dupont" size="sm" />
+
+  <!-- Avatar avec indicateur de statut -->
+  <FAvatar name="Jean Dupont" size="md" status="online" />
+
+  <!-- Avatar cliquable -->
+  <FAvatar name="Jean Dupont" @click="handleAvatarClick" />
 </template>
 ```
 
@@ -61,8 +75,17 @@ Indicateurs visuels pour statuts, notifications ou compteurs.
 |------|------|--------|-------------|
 | `content` | `String \| Number` | `''` | Contenu du badge (texte ou nombre) |
 | `variant` | `String` | `'primary'` | Variante : `primary`, `success`, `warning`, `error`, `neutral` |
-| `shape` | `String` | `'pill'` | Forme : `pill`, `circle` |
+| `shape` | `String` | `'pill'` | Forme : `pill`, `circle`, `rounded` |
+| `size` | `String` | `'md'` | Taille : `sm`, `md`, `lg` |
 | `dot` | `Boolean` | `false` | Affiche un simple point indicateur |
+| `outlined` | `Boolean` | `false` | Affiche un badge avec bordure et fond transparent |
+| `tag` | `String` | `'span'` | Balise HTML à utiliser pour le composant |
+
+#### Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu personnalisé (remplace `content`) |
 
 #### Exemple d'utilisation
 
@@ -76,6 +99,17 @@ Indicateurs visuels pour statuts, notifications ou compteurs.
 
   <!-- Badge point (notification) -->
   <FBadge dot variant="error" />
+
+  <!-- Badge outlined -->
+  <FBadge content="Beta" variant="primary" :outlined="true" />
+
+  <!-- Badge avec taille personnalisée -->
+  <FBadge content="Important" size="lg" variant="warning" />
+
+  <!-- Badge avec slot -->
+  <FBadge variant="success">
+    <FIcon name="check" size="xs" /> Validé
+  </FBadge>
 </template>
 ```
 
@@ -83,22 +117,36 @@ Indicateurs visuels pour statuts, notifications ou compteurs.
 
 ### FButton
 
-Boutons d'action avec variantes et tailles multiples.
+Boutons d'action avec variantes et tailles multiples. Supporte les liens et le routage.
 
 #### Props
 
 | Prop | Type | Défaut | Description |
 |------|------|--------|-------------|
-| `variant` | `String` | `'primary'` | Style : `primary`, `secondary`, `outline`, `text` |
-| `size` | `String` | `'medium'` | Taille : `small`, `medium`, `large` |
+| `variant` | `String` | `'primary'` | Style : `primary`, `secondary`, `danger`, `success`, `outline`, `ghost`, `link` |
+| `size` | `String` | `'medium'` | Taille : `xs`, `small`, `medium`, `large`, `xl` |
 | `type` | `String` | `'button'` | Type HTML : `button`, `submit`, `reset` |
 | `disabled` | `Boolean` | `false` | Désactive le bouton |
+| `loading` | `Boolean` | `false` | Affiche un indicateur de chargement |
+| `loadingText` | `String` | `''` | Texte à afficher pendant le chargement |
+| `block` | `Boolean` | `false` | Affiche le bouton en largeur complète |
+| `to` | `String \| Object` | `null` | Route pour `router-link` (Vue Router) |
+| `href` | `String` | `null` | URL pour lien externe (rendu en `<a>`) |
+| `target` | `String` | `null` | Attribut target pour les liens (ex: `_blank`) |
 
 #### Événements
 
 | Événement | Description |
 |-----------|-------------|
-| `click` | Émis lors d'un clic (si non désactivé) |
+| `click` | Émis lors d'un clic (si non désactivé et non en chargement) |
+
+#### Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu du bouton |
+| `iconLeft` | Icône à gauche du texte |
+| `iconRight` | Icône à droite du texte |
 
 #### Exemple d'utilisation
 
@@ -118,6 +166,34 @@ Boutons d'action avec variantes et tailles multiples.
   <FButton type="submit" variant="primary" :disabled="isLoading">
     Envoyer
   </FButton>
+
+  <!-- Bouton avec indicateur de chargement -->
+  <FButton variant="primary" :loading="isSubmitting" loadingText="Envoi...">
+    Envoyer
+  </FButton>
+
+  <!-- Bouton pleine largeur -->
+  <FButton variant="primary" :block="true">
+    Action principale
+  </FButton>
+
+  <!-- Bouton avec icônes -->
+  <FButton variant="primary">
+    <template #iconLeft>
+      <FIcon name="plus" size="sm" />
+    </template>
+    Ajouter
+  </FButton>
+
+  <!-- Bouton comme lien externe -->
+  <FButton variant="link" href="https://example.com" target="_blank">
+    Voir plus
+  </FButton>
+
+  <!-- Bouton avec Vue Router -->
+  <FButton variant="primary" :to="{ name: 'profile' }">
+    Mon profil
+  </FButton>
 </template>
 ```
 
@@ -131,7 +207,7 @@ Cases à cocher pour sélections multiples.
 
 | Prop | Type | Défaut | Description |
 |------|------|--------|-------------|
-| `value` | `Boolean` | `false` | État coché/non coché (v-model) |
+| `checked` | `Boolean` | `false` | État coché/non coché (v-model) |
 | `label` | `String` | `''` | Texte du label |
 | `disabled` | `Boolean` | `false` | Désactive la checkbox |
 | `error` | `Boolean` | `false` | Affiche un état d'erreur |
@@ -140,10 +216,15 @@ Cases à cocher pour sélections multiples.
 
 | Événement | Description |
 |-----------|-------------|
-| `input` | Émis lors du changement d'état (pour v-model) |
-| `change` | Émis lors du changement d'état |
+| `change` | Émis lors du changement d'état (pour v-model) |
 | `focus` | Émis lors du focus |
 | `blur` | Émis lors de la perte du focus |
+
+#### Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu personnalisé du label (remplace `label`) |
 
 #### Exemple d'utilisation
 
@@ -154,6 +235,11 @@ Cases à cocher pour sélections multiples.
   <FCheckbox v-model="newsletter" label="Recevoir la newsletter" :disabled="true" />
 
   <FCheckbox v-model="required" label="Champ obligatoire" :error="hasError" />
+
+  <!-- Avec slot pour contenu personnalisé -->
+  <FCheckbox v-model="terms">
+    J'accepte les <a href="/terms">conditions d'utilisation</a>
+  </FCheckbox>
 </template>
 ```
 
@@ -169,9 +255,17 @@ Séparateurs visuels entre sections de contenu.
 |------|------|--------|-------------|
 | `orientation` | `String` | `'horizontal'` | Orientation : `horizontal`, `vertical` |
 | `align` | `String` | `'center'` | Alignement du contenu : `left`, `center`, `right` |
-| `color` | `String` | `'gray-300'` | Couleur (classes Tailwind : `gray-100` à `gray-500`, `blue-300` à `blue-500`, `red-300` à `red-500`, `green-300` à `green-500`, `yellow-300` à `yellow-500`) |
+| `color` | `String` | `'gray-300'` | Couleur de la ligne (classes Tailwind) |
+| `textColor` | `String` | `'gray-500'` | Couleur du texte (classes Tailwind) |
+| `textSize` | `String` | `'sm'` | Taille du texte (classes Tailwind) |
 | `margin` | `String` | `'md'` | Espacement : `none`, `sm`, `md`, `lg` |
 | `thickness` | `String` | `'thin'` | Épaisseur : `thin`, `medium`, `thick` |
+
+#### Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu à afficher au centre du divider |
 
 #### Exemple d'utilisation
 
@@ -188,6 +282,9 @@ Séparateurs visuels entre sections de contenu.
 
   <!-- Divider coloré et épais -->
   <FDivider color="blue-500" thickness="medium" />
+
+  <!-- Divider avec couleur de texte personnalisée -->
+  <FDivider textColor="blue-600" textSize="xs">Section</FDivider>
 </template>
 ```
 
