@@ -386,17 +386,22 @@ export default {
     processFiles(files) {
       this.clearAlert()
 
-      // Check max files limit
-      if (this.maxFiles > 0) {
-        const totalFiles = this.internalFiles.length + files.length
+      // Handle empty files array
+      if (!files || files.length === 0) {
+        return
+      }
+
+      // If not multiple, only take the first file
+      const filesToProcess = this.multiple ? files : [files[0]]
+
+      // Check max files limit (only for multiple mode)
+      if (this.multiple && this.maxFiles > 0) {
+        const totalFiles = this.internalFiles.length + filesToProcess.length
         if (totalFiles > this.maxFiles) {
           this.showError(this.errorMaxFilesMessage)
           return
         }
       }
-
-      // If not multiple, only take the first file
-      const filesToProcess = this.multiple ? files : [files[0]]
 
       const validFiles = []
       for (const file of filesToProcess) {
