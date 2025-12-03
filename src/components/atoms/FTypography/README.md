@@ -10,6 +10,12 @@
 | `tag` | `String` | `null` | Balise HTML personnalisée (surcharge le défaut) |
 | `truncate` | `Boolean` | `false` | Tronque le texte avec ellipsis |
 
+## Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu textuel du composant |
+
 ## Exemple d'utilisation
 
 ```vue

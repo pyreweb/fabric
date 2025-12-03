@@ -12,6 +12,12 @@ Icônes SVG avec support de tailles et couleurs personnalisées.
 | `decorative` | `Boolean` | `true` | Indique si l'icône est décorative (aria-hidden) |
 | `label` | `String` | `''` | Label d'accessibilité (si non décoratif) |
 
+## Slots
+
+| Slot | Description |
+|------|-------------|
+| `default` | Contenu SVG personnalisé (remplace l'icône par défaut) |
+
 ## Icônes disponibles
 
 **Navigation** : `chevron-up`, `chevron-down`, `chevron-left`, `chevron-right`, `arrow-up`, `arrow-down`, `arrow-left`, `arrow-right`
