@@ -170,7 +170,7 @@ export default {
       for (let i = start; i <= end; i++) {
         if (i >= 1 && i <= total) {
           // Skip page 1 if already added in the first block
-          if (i === 1 && start > 1) continue
+          // (removed unreachable condition)
           pages.push(i)
         }
       }
