@@ -7,7 +7,6 @@
     <f-icon
       :name="variant"
       size="md"
-      :aria-hidden="true"
     />
     <div class="flex-1 min-w-0">
       <f-typography
