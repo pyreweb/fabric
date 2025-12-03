@@ -3,6 +3,7 @@
     <f-icon
       :name="icon"
       size="xl"
+      :decorative="true"
       :class="iconClasses"
     />
     <f-typography
