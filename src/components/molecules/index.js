@@ -9,6 +9,7 @@ import FCard from './FCard/FCard.vue'
 import FSearchBar from './FSearchBar/FSearchBar.vue'
 import FListItem from './FListItem/FListItem.vue'
 import FPagination from './FPagination/FPagination.vue'
+import FStatCard from './FStatCard/FStatCard.vue'
 
 export {
   FAccordionItem,
@@ -21,5 +22,6 @@ export {
   FCard,
   FSearchBar,
   FListItem,
-  FPagination
+  FPagination,
+  FStatCard
 }
