@@ -5,7 +5,7 @@
         v-if="iconPosition === 'inside' && !buttonMode"
         name="search"
         :size="iconSize"
-        class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+        :class="insideIconClasses"
       />
       <input
         ref="input"
@@ -54,7 +54,7 @@ export default {
   },
   props: {
     value: {
-      type: String,
+      type: [String, Number],
       default: ''
     },
     placeholder: {
@@ -141,6 +141,20 @@ export default {
         large: 'lg'
       }
       return sizeMap[this.size]
+    },
+    insideIconClasses() {
+      const baseClasses = 'absolute top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none'
+      
+      const leftPositionClasses = {
+        small: 'left-2.5',
+        medium: 'left-3',
+        large: 'left-4'
+      }
+      
+      return [
+        baseClasses,
+        leftPositionClasses[this.size]
+      ].filter(Boolean).join(' ')
     }
   },
   methods: {
