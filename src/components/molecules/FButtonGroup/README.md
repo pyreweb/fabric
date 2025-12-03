@@ -6,22 +6,13 @@ Composant molécule permettant de regrouper visuellement des boutons adjacents e
 
 - **Composition** : Regroupe une série de composants `FButton` adjacents.
 - **Style visuel** : Les boutons sont collés (pas de marge entre eux), avec gestion automatique des bordures arrondies et des doubles bordures.
-- **Mode toggle** : Support de la sélection unique ou multiple.
+- **Mode toggle** : Support de la sélection unique ou multiple via la gestion d'état dans le composant parent.
 
 ## Props
 
 | Prop | Type | Défaut | Description |
 |------|------|--------|-------------|
-| `value` | `String \| Number \| Array` | `null` | Valeur sélectionnée (String/Number pour single, Array pour multiple) |
-| `multiple` | `Boolean` | `false` | Active le mode de sélection multiple |
 | `ariaLabel` | `String` | `'Groupe de boutons'` | Label d'accessibilité pour le groupe |
-
-## Événements
-
-| Événement | Description |
-|-----------|-------------|
-| `input` | Émis lors d'un changement de sélection (pour v-model) |
-| `change` | Émis lors d'un changement de sélection |
 
 ## Slots
 
@@ -56,19 +47,23 @@ Le composant applique automatiquement les styles CSS suivants aux boutons enfant
 
 ```vue
 <template>
-  <f-button-group v-model="selectedView">
+  <f-button-group aria-label="Sélecteur de vue">
     <f-button 
       :variant="selectedView === 'list' ? 'primary' : 'outline'"
       @click="selectedView = 'list'"
     >
-      <f-icon name="list" size="sm" />
+      <template #iconLeft>
+        <f-icon name="list" size="sm" />
+      </template>
       Liste
     </f-button>
     <f-button 
       :variant="selectedView === 'grid' ? 'primary' : 'outline'"
       @click="selectedView = 'grid'"
     >
-      <f-icon name="grid" size="sm" />
+      <template #iconLeft>
+        <f-icon name="grid" size="sm" />
+      </template>
       Grille
     </f-button>
   </f-button-group>
@@ -89,7 +84,7 @@ export default {
 
 ```vue
 <template>
-  <f-button-group v-model="selectedFilters" :multiple="true">
+  <f-button-group aria-label="Filtres">
     <f-button 
       v-for="filter in filters"
       :key="filter.value"
@@ -131,15 +126,21 @@ export default {
 
 ```vue
 <template>
-  <f-button-group aria-label="Options d'affichage">
+  <f-button-group aria-label="Options de formatage">
     <f-button variant="outline" size="small">
-      <f-icon name="bold" size="sm" />
+      <template #iconLeft>
+        <f-icon name="bold" size="sm" />
+      </template>
     </f-button>
     <f-button variant="outline" size="small">
-      <f-icon name="italic" size="sm" />
+      <template #iconLeft>
+        <f-icon name="italic" size="sm" />
+      </template>
     </f-button>
     <f-button variant="outline" size="small">
-      <f-icon name="underline" size="sm" />
+      <template #iconLeft>
+        <f-icon name="underline" size="sm" />
+      </template>
     </f-button>
   </f-button-group>
 </template>
