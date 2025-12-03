@@ -222,10 +222,7 @@ export default {
      * Title section classes (avatar + title)
      */
     titleSectionClasses() {
-      const baseClasses = 'flex items-center gap-4 min-w-0'
-      const flexClasses = this.showAvatar ? 'flex-1' : ''
-      
-      return [baseClasses, flexClasses].filter(Boolean).join(' ')
+      return 'flex items-center gap-4 min-w-0 flex-1'
     },
     /**
      * Actions section classes
