@@ -1,9 +1,11 @@
 import FAlert from './FAlert.vue'
 import FFormField from './FFormField.vue'
 import FCard from './FCard.vue'
+import FSearchBar from './FSearchBar.vue'
 
 export {
   FAlert,
   FFormField,
-  FCard
+  FCard,
+  FSearchBar
 }
