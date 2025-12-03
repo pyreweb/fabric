@@ -62,7 +62,7 @@ export default {
     actionVariant: {
       type: String,
       default: 'primary',
-      validator: (value) => ['primary', 'secondary', 'outline', 'ghost'].includes(value)
+      validator: (value) => ['primary', 'secondary', 'danger', 'success', 'outline', 'ghost', 'link'].includes(value)
     }
   },
   computed: {
