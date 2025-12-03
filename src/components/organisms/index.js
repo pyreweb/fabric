@@ -4,6 +4,7 @@ import FFileUpload from './FFileUpload/FFileUpload.vue'
 import FPageHeader from './FPageHeader/FPageHeader.vue'
 import FModal from './FModal/FModal.vue'
 import FUserMenu from './FUserMenu/FUserMenu.vue'
+import FOnboardingStepper from './FOnboardingStepper/FOnboardingStepper.vue'
 
 export {
   FForm,
@@ -11,5 +12,6 @@ export {
   FFileUpload,
   FPageHeader,
   FModal,
-  FUserMenu
+  FUserMenu,
+  FOnboardingStepper
 }
