@@ -69,7 +69,7 @@ export default {
   props: {
     /**
      * Controls the visibility of the modal.
-     * Use v-model or .sync modifier for two-way binding.
+     * Use v-model for two-way binding.
      */
     value: {
       type: Boolean,
