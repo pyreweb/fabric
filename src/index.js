@@ -1,7 +1,7 @@
 import './styles/tailwind.css'
 import { FAvatar, FBadge, FButton, FCheckbox, FDivider, FIcon, FInput, FLoader, FRadio, FTextarea, FToggle, FTypography } from './components/atoms'
 import { FAlert, FBreadcrumb, FButtonGroup, FEmptyState, FFilePreview, FFormField, FCard, FSearchBar, FListItem, FPagination } from './components/molecules'
-import { FForm, FDataTable } from './components/organisms'
+import { FForm, FDataTable, FPageHeader } from './components/organisms'
 
 const components = {
   FAlert,
@@ -19,6 +19,7 @@ const components = {
   FInput,
   FListItem,
   FLoader,
+  FPageHeader,
   FRadio,
   FTextarea,
   FToggle,
@@ -60,6 +61,7 @@ export {
   FInput,
   FListItem,
   FLoader,
+  FPageHeader,
   FRadio,
   FTextarea,
   FToggle,
