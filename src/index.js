@@ -1,6 +1,6 @@
 import './styles/tailwind.css'
-import { FAvatar, FBadge, FButton, FCheckbox, FDivider, FIcon, FInput, FRadio, FTextarea, FToggle, FTypography } from './components/atoms'
-import { FAlert, FBreadcrumb, FButtonGroup, FEmptyState, FFormField, FCard, FSearchBar, FPagination } from './components/molecules'
+import { FAvatar, FBadge, FButton, FCheckbox, FDivider, FIcon, FInput, FLoader, FRadio, FTextarea, FToggle, FTypography } from './components/atoms'
+import { FAlert, FBreadcrumb, FButtonGroup, FEmptyState, FFilePreview, FFormField, FCard, FSearchBar, FListItem, FPagination } from './components/molecules'
 import { FForm } from './components/organisms'
 
 const components = {
@@ -13,8 +13,11 @@ const components = {
   FCheckbox,
   FDivider,
   FEmptyState,
+  FFilePreview,
   FIcon,
   FInput,
+  FListItem,
+  FLoader,
   FRadio,
   FTextarea,
   FToggle,
@@ -50,8 +53,11 @@ export {
   FCheckbox,
   FDivider,
   FEmptyState,
+  FFilePreview,
   FIcon,
   FInput,
+  FListItem,
+  FLoader,
   FRadio,
   FTextarea,
   FToggle,
