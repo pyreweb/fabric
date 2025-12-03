@@ -27,7 +27,7 @@
         </span>
         <f-button
           v-else
-          :key="page"
+          :key="'page-' + page"
           :variant="page === currentPage ? activeVariant : buttonVariant"
           :size="size"
           :aria-current="page === currentPage ? 'page' : undefined"
