@@ -13,8 +13,7 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "test": "echo \"No tests configured\" && exit 0",
-    "check:docs": "node scripts/check-docs.js"
+    "test": "echo \"No tests configured\" && exit 0"
   },
   "keywords": [
     "vue",
