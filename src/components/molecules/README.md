@@ -449,7 +449,7 @@ Composant de navigation permettant le découpage de données volumineuses en pag
 |------|------|--------|-------------|
 | `value` | `Number` | `1` | Page courante (v-model) |
 | `totalPages` | `Number` | **requis** | Nombre total de pages |
-| `maxVisiblePages` | `Number` | `5` | Nombre maximum de pages visibles (min: 3) |
+| `maxVisiblePages` | `Number` | `5` | Nombre maximum de pages dans la fenêtre centrale (min: 3). Les première et dernière pages sont toujours affichées en plus. |
 | `size` | `String` | `'medium'` | Taille des boutons : `small`, `medium`, `large` |
 | `variant` | `String` | `'outline'` | Variante des boutons : `outline`, `ghost` |
 | `previousLabel` | `String` | `'Précédent'` | Texte du bouton précédent |
