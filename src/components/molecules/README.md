@@ -16,6 +16,7 @@ Les **molécules** sont des groupes d'atomes liés ensemble pour former des comp
 Les molécules sont construites à partir d'atomes. Par exemple :
 
 - **FAlert** utilise `FIcon` pour l'icône et `FButton` pour les actions.
+- **FBreadcrumb** utilise `FTypography` pour le texte et `FIcon` pour les séparateurs.
 - **FFormField** combine `FInput` avec un label et des messages.
 - **FCard** utilise `FTypography` pour le titre et le sous-titre.
 - **FSearchBar** combine `FInput`, `FIcon` et `FButton` pour créer une barre de recherche fonctionnelle.
@@ -88,6 +89,84 @@ export default {
   methods: {
     handleClose() {
       console.log('Alerte fermée')
+    }
+  }
+}
+</script>
+```
+
+---
+
+### FBreadcrumb
+
+Composant de navigation hiérarchique (fil d'Ariane) permettant à l'utilisateur de visualiser sa position dans l'arborescence de l'application et de naviguer vers les niveaux supérieurs.
+
+#### Props
+
+| Prop | Type | Défaut | Description |
+|------|------|--------|-------------|
+| `items` | `Array` | **requis** | Liste des éléments du fil d'Ariane. Chaque élément doit avoir un `label` (String), et peut avoir un `href` (String) et un `icon` (String). |
+| `separatorIcon` | `String` | `'chevron-right'` | Nom de l'icône utilisée comme séparateur entre les éléments |
+| `ariaLabel` | `String` | `'Fil d\'Ariane'` | Label ARIA pour l'accessibilité |
+
+#### Événements
+
+| Événement | Description |
+|-----------|-------------|
+| `navigate` | Émis lors d'un clic sur un élément parent. Retourne un objet `{ item, index, event }` |
+
+#### Exemple d'utilisation
+
+```vue
+<template>
+  <!-- Fil d'Ariane simple -->
+  <FBreadcrumb 
+    :items="[
+      { label: 'Accueil', href: '/' },
+      { label: 'Produits', href: '/produits' },
+      { label: 'Détails du produit' }
+    ]"
+  />
+
+  <!-- Fil d'Ariane avec icônes -->
+  <FBreadcrumb 
+    :items="[
+      { label: 'Accueil', href: '/', icon: 'home' },
+      { label: 'Utilisateurs', href: '/utilisateurs', icon: 'user' },
+      { label: 'Profil' }
+    ]"
+  />
+
+  <!-- Fil d'Ariane avec navigation programmatique -->
+  <FBreadcrumb 
+    :items="breadcrumbItems"
+    @navigate="handleNavigate"
+  />
+
+  <!-- Fil d'Ariane avec séparateur personnalisé -->
+  <FBreadcrumb 
+    :items="breadcrumbItems"
+    separatorIcon="chevron-right"
+    ariaLabel="Navigation"
+  />
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      breadcrumbItems: [
+        { label: 'Tableau de bord', href: '/dashboard' },
+        { label: 'Paramètres', href: '/dashboard/settings' },
+        { label: 'Compte' }
+      ]
+    }
+  },
+  methods: {
+    handleNavigate({ item, index, event }) {
+      console.log('Navigation vers:', item.label)
+      // Navigation programmatique avec vue-router par exemple
+      // this.$router.push(item.href)
     }
   }
 }
