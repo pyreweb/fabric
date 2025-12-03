@@ -1,3 +1,4 @@
+import FAccordionItem from './FAccordionItem/FAccordionItem.vue'
 import FAlert from './FAlert/FAlert.vue'
 import FBreadcrumb from './FBreadcrumb/FBreadcrumb.vue'
 import FButtonGroup from './FButtonGroup/FButtonGroup.vue'
@@ -10,6 +11,7 @@ import FListItem from './FListItem/FListItem.vue'
 import FPagination from './FPagination/FPagination.vue'
 
 export {
+  FAccordionItem,
   FAlert,
   FBreadcrumb,
   FButtonGroup,
