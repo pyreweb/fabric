@@ -130,9 +130,9 @@ export default {
         return this.range(1, total)
       }
 
-      const half = Math.floor(max / 2)
+      const half = Math.floor((max - 1) / 2)
       let start = current - half
-      let end = current + half
+      let end = current + (max - 1 - half)
 
       if (start < 1) {
         start = 1
