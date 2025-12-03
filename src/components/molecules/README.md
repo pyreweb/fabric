@@ -318,7 +318,7 @@ Composant de ligne standardisé pour l'affichage riche d'entités (utilisateurs,
     </template>
     <template #right>
       <FButton variant="text" size="small">
-        <FIcon name="more" />
+        <FIcon name="menu" />
       </FButton>
     </template>
   </FListItem>
