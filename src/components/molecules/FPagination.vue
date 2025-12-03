@@ -25,16 +25,30 @@
         >
           ...
         </span>
-        <f-button
-          v-else
-          :key="'page-' + page"
-          :variant="page === currentPage ? activeVariant : buttonVariant"
-          :size="size"
-          :aria-current="page === currentPage ? 'page' : undefined"
-          @click="goToPage(page)"
-        >
-          {{ page }}
-        </f-button>
+        <template v-else>
+          <span
+            v-if="page === currentPage"
+            :key="page"
+            aria-current="page"
+          >
+            <f-button
+              :variant="activeVariant"
+              :size="size"
+              @click="goToPage(page)"
+            >
+              {{ page }}
+            </f-button>
+          </span>
+          <f-button
+            v-else
+            :key="page"
+            :variant="buttonVariant"
+            :size="size"
+            @click="goToPage(page)"
+          >
+            {{ page }}
+          </f-button>
+        </template>
       </template>
     </div>
 
