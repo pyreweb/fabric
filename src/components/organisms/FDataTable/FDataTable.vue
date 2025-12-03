@@ -440,9 +440,13 @@ export default {
       const end = Math.min(this.internalPage * this.perPage, this.computedTotalItems)
       return `${start} - ${end} sur ${this.computedTotalItems}`
     },
+    // Set for efficient key lookups
+    selectedKeysSet() {
+      return new Set(this.selectedKeys)
+    },
     // Selection state
     selectedItems() {
-      return this.data.filter(row => this.selectedKeys.includes(this.getRowKey(row)))
+      return this.data.filter(row => this.selectedKeysSet.has(this.getRowKey(row)))
     },
     isAllSelected() {
       if (this.paginatedData.length === 0) return false
@@ -450,8 +454,11 @@ export default {
     }
   },
   watch: {
-    page(newVal) {
-      this.internalPage = newVal
+    page: {
+      handler(newVal) {
+        this.internalPage = newVal
+      },
+      immediate: true
     },
     internalPage(newVal) {
       this.$emit('update:page', newVal)
@@ -460,7 +467,8 @@ export default {
       handler(newVal) {
         this.selectedKeys = [...newVal]
       },
-      deep: true
+      deep: true,
+      immediate: true
     },
     selectedKeys: {
       handler(newVal) {
@@ -541,12 +549,12 @@ export default {
       this.$emit('row-click', row)
     },
     isRowSelected(row) {
-      return this.selectedKeys.includes(this.getRowKey(row))
+      return this.selectedKeysSet.has(this.getRowKey(row))
     },
     handleRowSelect(row, checked) {
       const key = this.getRowKey(row)
       if (checked) {
-        if (!this.selectedKeys.includes(key)) {
+        if (!this.selectedKeysSet.has(key)) {
           this.selectedKeys = [...this.selectedKeys, key]
         }
       } else {
