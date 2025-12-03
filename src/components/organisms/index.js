@@ -1,4 +1,4 @@
-import FForm from './FForm.vue'
+import FForm from './FForm/FForm.vue'
 
 export {
   FForm

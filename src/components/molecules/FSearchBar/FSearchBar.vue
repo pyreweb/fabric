@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import FIcon from '../atoms/FIcon.vue'
-import FButton from '../atoms/FButton.vue'
+import FIcon from '../../atoms/FIcon/FIcon.vue'
+import FButton from '../../atoms/FButton/FButton.vue'
 
 export default {
   name: 'FSearchBar',

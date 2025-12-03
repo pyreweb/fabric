@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import FInput from '../atoms/FInput.vue'
+import FInput from '../../atoms/FInput/FInput.vue'
 
 export default {
   name: 'FFormField',
