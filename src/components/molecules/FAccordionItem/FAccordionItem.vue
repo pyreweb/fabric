@@ -25,7 +25,7 @@
       :aria-labelledby="headerId"
       role="region"
     >
-      <div class="p-4">
+      <div ref="contentInner" class="p-4">
         <slot />
       </div>
     </div>
@@ -98,11 +98,8 @@ export default {
       this.$emit('toggle', this.isOpen)
     },
     updateContentHeight() {
-      if (this.$refs.content) {
-        const contentInner = this.$refs.content.querySelector('div')
-        if (contentInner) {
-          this.contentHeight = contentInner.scrollHeight
-        }
+      if (this.$refs.contentInner) {
+        this.contentHeight = this.$refs.contentInner.scrollHeight
       }
     }
   }
