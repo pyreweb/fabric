@@ -59,11 +59,11 @@ const FILE_TYPE_ICONS = {
   svg: 'image',
   webp: 'image',
   bmp: 'image',
-  zip: 'folder',
-  rar: 'folder',
-  '7z': 'folder',
-  tar: 'folder',
-  gz: 'folder',
+  zip: 'document',
+  rar: 'document',
+  '7z': 'document',
+  tar: 'document',
+  gz: 'document',
   default: 'document'
 }
 
