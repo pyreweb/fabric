@@ -126,23 +126,23 @@ export default {
 
 ```vue
 <template>
-  <f-button-group aria-label="Options de formatage">
-    <f-button variant="outline" size="small">
+  <FButtonGroup aria-label="Options de formatage">
+    <FButton variant="outline" size="small">
       <template #iconLeft>
-        <f-icon name="bold" size="sm" />
+        <FIcon name="bold" size="sm" />
       </template>
-    </f-button>
-    <f-button variant="outline" size="small">
+    </FButton>
+    <FButton variant="outline" size="small">
       <template #iconLeft>
-        <f-icon name="italic" size="sm" />
+        <FIcon name="italic" size="sm" />
       </template>
-    </f-button>
-    <f-button variant="outline" size="small">
+    </FButton>
+    <FButton variant="outline" size="small">
       <template #iconLeft>
-        <f-icon name="underline" size="sm" />
+        <FIcon name="underline" size="sm" />
       </template>
-    </f-button>
-  </f-button-group>
+    </FButton>
+  </FButtonGroup>
 </template>
 ```
 
