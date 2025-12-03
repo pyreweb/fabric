@@ -17,6 +17,7 @@ Les molécules sont construites à partir d'atomes. Par exemple :
 
 - **FAlert** utilise `FIcon` pour l'icône et `FButton` pour les actions.
 - **FBreadcrumb** utilise `FTypography` pour le texte et `FIcon` pour les séparateurs.
+- **FEmptyState** combine `FIcon`, `FTypography` et `FButton` pour afficher les états vides.
 - **FFormField** combine `FInput` avec un label et des messages.
 - **FCard** utilise `FTypography` pour le titre et le sous-titre.
 - **FSearchBar** combine `FInput`, `FIcon` et `FButton` pour créer une barre de recherche fonctionnelle.
@@ -31,6 +32,7 @@ Les molécules sont construites à partir d'atomes. Par exemple :
 | [FAlert](./FAlert/README.md) | Messages d'alerte avec icône, texte et bouton de fermeture optionnel. |
 | [FBreadcrumb](./FBreadcrumb/README.md) | Composant de navigation hiérarchique (fil d'Ariane). |
 | [FCard](./FCard/README.md) | Conteneurs de contenu avec en-tête, corps, zone média et actions. |
+| [FEmptyState](./FEmptyState/README.md) | Composant visuel pour les états vides avec icône, message et action. |
 | [FFormField](./FFormField/README.md) | Champs de formulaire complets avec label, input, message d'erreur et indication. |
 | [FListItem](./FListItem/README.md) | Composant de ligne standardisé pour l'affichage riche d'entités. |
 | [FPagination](./FPagination/README.md) | Composant de navigation permettant le découpage de données en pages. |
