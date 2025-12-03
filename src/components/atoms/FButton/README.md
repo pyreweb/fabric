@@ -69,7 +69,7 @@ Boutons d'action avec variantes et tailles multiples. Supporte les liens et le r
   </FButton>
 
   <!-- Bouton comme lien externe -->
-  <FButton variant="link" href="https://example.com" target="_blank">
+  <FButton variant="link" href="https://example.com" target="_blank" rel="noopener noreferrer">
     Voir plus
   </FButton>
 
