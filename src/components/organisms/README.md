@@ -25,6 +25,7 @@ Les organismes s'appuient sur les molécules et les atomes :
 | Composant | Description |
 |-----------|-------------|
 | [FForm](./FForm/README.md) | Formulaire complet avec gestion de la soumission et structure automatique. |
+| [FModal](./FModal/README.md) | Fenêtre modale de dialogue pour les confirmations et interactions utilisateur. |
 
 ---
 
