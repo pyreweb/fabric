@@ -14,7 +14,7 @@ const stubs = {
 
 describe('FDataTable', () => {
 	const columns = [
-		{ key: 'id', label: 'ID' },
+		{ key: 'id', label: 'ID', sortable: false },
 		{ key: 'name', label: 'Name', sortable: true }
 	];
 
