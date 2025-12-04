@@ -35,12 +35,18 @@
 <script>
 import FInput from '../../atoms/FInput/FInput.vue';
 
+let idCounter = 0;
+
 export default {
 	name: 'FFormField',
 	components: {
 		FInput
 	},
 	props: {
+		id: {
+			type: String,
+			default: ''
+		},
 		label: {
 			type: String,
 			default: ''
@@ -82,9 +88,19 @@ export default {
 			default: ''
 		}
 	},
+	data() {
+		return {
+			generatedId: ''
+		};
+	},
 	computed: {
 		inputId() {
-			return `f-form-field-${this._uid}`;
+			return this.id || this.generatedId;
+		}
+	},
+	created() {
+		if (!this.id) {
+			this.generatedId = `f-form-field-${++idCounter}`;
 		}
 	}
 };
