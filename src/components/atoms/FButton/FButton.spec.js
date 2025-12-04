@@ -70,4 +70,28 @@ describe('FButton', () => {
 			expect(wrapper.emitted('click')).toBeFalsy();
 		});
 	});
+
+	describe('loading prop', () => {
+		it('renders FLoader component when loading is true', () => {
+			const wrapper = mount(FButton, {
+				propsData: { loading: true }
+			});
+			expect(wrapper.findComponent({ name: 'FLoader' }).exists()).toBe(true);
+		});
+
+		it('does not render FLoader component when loading is false', () => {
+			const wrapper = mount(FButton, {
+				propsData: { loading: false }
+			});
+			expect(wrapper.findComponent({ name: 'FLoader' }).exists()).toBe(false);
+		});
+
+		it('does not emit click event when loading', async () => {
+			const wrapper = mount(FButton, {
+				propsData: { loading: true }
+			});
+			await wrapper.trigger('click');
+			expect(wrapper.emitted('click')).toBeFalsy();
+		});
+	});
 });
