@@ -80,6 +80,8 @@ const components: ComponentsRecord = {
 
 const install = (Vue: VueConstructor): void => {
 	Object.keys(components).forEach((name) => {
+		// Type assertion is necessary because Vue 2's component registration
+		// doesn't have perfect TypeScript support for dynamic component maps
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		Vue.component(name, components[name] as any);
 	});
