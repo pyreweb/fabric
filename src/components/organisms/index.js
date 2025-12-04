@@ -7,6 +7,7 @@ import FPageHeader from './FPageHeader/FPageHeader.vue'
 import FModal from './FModal/FModal.vue'
 import FUserMenu from './FUserMenu/FUserMenu.vue'
 import FOnboardingStepper from './FOnboardingStepper/FOnboardingStepper.vue'
+import FProfileSection from './FProfileSection/FProfileSection.vue'
 
 export {
   FForm,
@@ -17,5 +18,6 @@ export {
   FPageHeader,
   FModal,
   FUserMenu,
-  FOnboardingStepper
+  FOnboardingStepper,
+  FProfileSection
 };

@@ -32,7 +32,8 @@ import {
 	FPageHeader,
 	FModal,
 	FUserMenu,
-	FOnboardingStepper
+	FOnboardingStepper,
+	FProfileSection
 } from './components/organisms';
 
 const components = {
@@ -55,6 +56,7 @@ const components = {
 	FModal,
 	FOnboardingStepper,
 	FPageHeader,
+	FProfileSection,
 	FRadio,
 	FTextarea,
 	FToggle,
@@ -101,6 +103,7 @@ export {
 	FModal,
 	FOnboardingStepper,
 	FPageHeader,
+	FProfileSection,
 	FRadio,
 	FTextarea,
 	FToggle,
