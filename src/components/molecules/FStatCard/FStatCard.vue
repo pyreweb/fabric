@@ -29,7 +29,7 @@ const VARIANT_COLORS = {
 		iconContainer: 'bg-danger-100 text-danger-600'
 	},
 	info: {
-		iconContainer: 'bg-cyan-100 text-cyan-600'
+		iconContainer: 'bg-primary-100 text-primary-600'
 	}
 };
 

@@ -68,8 +68,8 @@ export default {
 					? 'bg-warning-500 focus:ring-warning-500/20'
 					: 'bg-neutral-300 focus:ring-warning-500/20',
 				purple: this.value
-					? 'bg-purple-500 focus:ring-purple-500/20'
-					: 'bg-neutral-300 focus:ring-purple-500/20'
+					? 'bg-primary-500 focus:ring-primary-500/20'
+					: 'bg-neutral-300 focus:ring-primary-500/20'
 			};
 
 			const disabledClasses = this.disabled
