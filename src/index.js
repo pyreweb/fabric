@@ -26,6 +26,7 @@ import {
 	FPagination
 } from './components/molecules';
 import {
+	FActivityFeed,
 	FForm,
 	FDataTable,
 	FFileUpload,
@@ -37,6 +38,7 @@ import {
 } from './components/organisms';
 
 const components = {
+	FActivityFeed,
 	FAlert,
 	FAvatar,
 	FBadge,
@@ -84,6 +86,7 @@ export default {
 };
 
 export {
+	FActivityFeed,
 	FAlert,
 	FAvatar,
 	FBadge,

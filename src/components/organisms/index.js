@@ -1,3 +1,4 @@
+import FActivityFeed from './FActivityFeed/FActivityFeed.vue'
 import FForm from './FForm/FForm.vue'
 import FDataTable from './FDataTable/FDataTable.vue'
 import FFileUpload from './FFileUpload/FFileUpload.vue'
@@ -10,6 +11,7 @@ import FOnboardingStepper from './FOnboardingStepper/FOnboardingStepper.vue'
 import FProfileSection from './FProfileSection/FProfileSection.vue'
 
 export {
+  FActivityFeed,
   FForm,
   FDataTable,
   FFileUpload,
