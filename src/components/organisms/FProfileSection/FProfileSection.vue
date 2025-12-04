@@ -56,7 +56,7 @@
 							<button
 								v-if="avatarEditable"
 								type="button"
-								class="absolute bottom-0 right-0 bg-blue-600 text-white rounded-full p-1.5 hover:bg-blue-700 transition-colors"
+								class="absolute bottom-0 right-0 bg-primary-600 text-white rounded-full p-1.5 hover:bg-primary-700 transition-colors"
 								@click="handleAvatarEdit"
 							>
 								<svg
@@ -98,9 +98,9 @@
 									v-if="field.label"
 									:for="`field-${field.name}`"
 									:class="[
-										'text-sm font-medium text-gray-700',
+										'text-sm font-medium text-neutral-700',
 										{
-											'after:content-[\'_*\'] after:text-red-500':
+											'after:content-[\'_*\'] after:text-danger-500':
 												field.required
 										}
 									]"
@@ -180,7 +180,7 @@
 							:key="field.name"
 							class="flex flex-col"
 						>
-							<f-typography variant="caption" class="text-gray-500">
+							<f-typography variant="caption" class="text-neutral-500">
 								{{ field.label }}
 							</f-typography>
 							<f-typography variant="body">

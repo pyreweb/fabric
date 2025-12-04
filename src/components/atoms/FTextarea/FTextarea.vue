@@ -91,8 +91,8 @@ export default {
 			return 'flex flex-col';
 		},
 		labelClasses() {
-			const baseClasses = 'font-sans text-sm text-gray-700 mb-1';
-			const errorClasses = this.error ? 'text-red-500' : '';
+			const baseClasses = 'font-sans text-sm text-neutral-700 mb-1';
+			const errorClasses = this.error ? 'text-danger-500' : '';
 
 			return [baseClasses, errorClasses].filter(Boolean).join(' ');
 		},
@@ -101,11 +101,11 @@ export default {
 				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 resize-y';
 
 			const stateClasses = this.error
-				? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-				: 'border-gray-300 focus:border-blue-500 focus:ring-blue-500/20';
+				? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500/20'
+				: 'border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20';
 
 			const disabledClasses = this.disabled
-				? 'bg-gray-100 cursor-not-allowed opacity-70'
+				? 'bg-neutral-100 cursor-not-allowed opacity-70'
 				: '';
 
 			const paddingClasses = 'py-2.5 px-3.5 text-sm';
@@ -118,11 +118,11 @@ export default {
 			return 'flex justify-between items-center mt-1';
 		},
 		errorMessageClasses() {
-			return 'font-sans text-xs text-red-500';
+			return 'font-sans text-xs text-danger-500';
 		},
 		counterClasses() {
 			const baseClasses = 'font-sans text-xs';
-			const stateClasses = this.isOverLimit ? 'text-red-500' : 'text-gray-500';
+			const stateClasses = this.isOverLimit ? 'text-danger-500' : 'text-neutral-500';
 
 			return [baseClasses, stateClasses].filter(Boolean).join(' ');
 		},

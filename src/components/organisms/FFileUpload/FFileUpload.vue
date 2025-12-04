@@ -26,7 +26,7 @@
 					{{ dropZoneLabel }}
 				</slot>
 			</f-typography>
-			<f-typography v-if="hint" variant="caption" class="text-gray-500">
+			<f-typography v-if="hint" variant="caption" class="text-neutral-500">
 				{{ hint }}
 			</f-typography>
 			<f-button
@@ -71,16 +71,16 @@
 		<!-- Progress bar for overall upload -->
 		<div v-if="showProgress && isUploading" class="mt-3">
 			<div class="flex items-center justify-between mb-1">
-				<f-typography variant="caption" class="text-gray-600">
+				<f-typography variant="caption" class="text-neutral-600">
 					{{ progressLabel }}
 				</f-typography>
-				<f-typography variant="caption" class="text-gray-600">
+				<f-typography variant="caption" class="text-neutral-600">
 					{{ uploadProgress }}%
 				</f-typography>
 			</div>
-			<div class="w-full bg-gray-200 rounded-full h-2">
+			<div class="w-full bg-neutral-200 rounded-full h-2">
 				<div
-					class="bg-blue-600 h-2 rounded-full transition-all duration-300"
+					class="bg-primary-600 h-2 rounded-full transition-all duration-300"
 					:style="{ width: `${uploadProgress}%` }"
 				/>
 			</div>
@@ -284,8 +284,8 @@ export default {
 			const baseClasses =
 				'flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg cursor-pointer transition-colors duration-200';
 			const stateClasses = this.isDragging
-				? 'border-blue-500 bg-blue-50'
-				: 'border-gray-300 hover:border-gray-400 bg-gray-50';
+				? 'border-primary-500 bg-primary-50'
+				: 'border-neutral-300 hover:border-neutral-400 bg-neutral-50';
 			const disabledClasses = this.disabled
 				? 'opacity-50 cursor-not-allowed pointer-events-none'
 				: '';
@@ -298,13 +298,13 @@ export default {
 		 * Icon classes
 		 */
 		iconClasses() {
-			return this.isDragging ? 'text-blue-500' : 'text-gray-400';
+			return this.isDragging ? 'text-primary-500' : 'text-neutral-400';
 		},
 		/**
 		 * Text classes
 		 */
 		textClasses() {
-			return this.isDragging ? 'text-blue-600' : 'text-gray-600';
+			return this.isDragging ? 'text-primary-600' : 'text-neutral-600';
 		}
 	},
 	methods: {

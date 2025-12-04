@@ -50,7 +50,7 @@ export default {
 			return tagMap[this.variant] || 'p';
 		},
 		typographyClasses() {
-			const baseClasses = 'm-0 font-sans text-gray-800';
+			const baseClasses = 'm-0 font-sans text-neutral-800';
 
 			const variantClasses = {
 				h1: 'text-4xl font-bold leading-tight',
@@ -60,9 +60,9 @@ export default {
 				h5: 'text-lg font-medium leading-relaxed',
 				h6: 'text-base font-medium leading-normal',
 				body: 'text-base font-normal leading-relaxed',
-				caption: 'text-sm font-normal leading-normal text-gray-500',
+				caption: 'text-sm font-normal leading-normal text-neutral-500',
 				overline:
-					'text-xs font-semibold leading-normal uppercase tracking-wider text-gray-500'
+					'text-xs font-semibold leading-normal uppercase tracking-wider text-neutral-500'
 			};
 
 			const truncateClasses = this.truncate

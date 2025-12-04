@@ -17,7 +17,7 @@
 				<span
 					v-if="page === '...'"
 					:key="'ellipsis-' + index"
-					class="px-2 text-gray-400"
+					class="px-2 text-neutral-400"
 				>
 					...
 				</span>

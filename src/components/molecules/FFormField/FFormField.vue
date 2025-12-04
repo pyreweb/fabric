@@ -4,8 +4,8 @@
 			v-if="label"
 			:for="inputId"
 			:class="[
-				'text-sm font-medium text-gray-700',
-				{ 'after:content-[\'_*\'] after:text-red-500': required }
+				'text-sm font-medium text-neutral-700',
+				{ 'after:content-[\'_*\'] after:text-danger-500': required }
 			]"
 		>
 			{{ label }}
@@ -23,10 +23,10 @@
 			@focus="$emit('focus', $event)"
 			@blur="$emit('blur', $event)"
 		/>
-		<span v-if="errorMessage" class="text-xs text-red-500">
+		<span v-if="errorMessage" class="text-xs text-danger-500">
 			{{ errorMessage }}
 		</span>
-		<span v-else-if="hint" class="text-xs text-gray-500">
+		<span v-else-if="hint" class="text-xs text-neutral-500">
 			{{ hint }}
 		</span>
 	</div>

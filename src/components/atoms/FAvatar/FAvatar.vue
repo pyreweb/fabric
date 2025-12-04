@@ -86,7 +86,7 @@ export default {
 		},
 		placeholderClass: {
 			type: String,
-			default: 'bg-gray-400 text-white'
+			default: 'bg-neutral-400 text-white'
 		}
 	},
 	data() {
@@ -151,10 +151,10 @@ export default {
 		},
 		statusClasses() {
 			const colors = {
-				online: 'bg-green-500',
-				busy: 'bg-red-500',
-				away: 'bg-yellow-500',
-				offline: 'bg-gray-500'
+				online: 'bg-success-500',
+				busy: 'bg-danger-500',
+				away: 'bg-warning-500',
+				offline: 'bg-neutral-500'
 			};
 
 			const position =

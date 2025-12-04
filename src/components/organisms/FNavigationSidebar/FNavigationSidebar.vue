@@ -48,7 +48,7 @@
 					<f-typography
 						v-if="!collapsed"
 						variant="overline"
-						class="text-gray-500"
+						class="text-neutral-500"
 					>
 						{{ item.label }}
 					</f-typography>
@@ -309,7 +309,7 @@ export default {
 		 */
 		sidebarClasses() {
 			const baseClasses =
-				'flex flex-col h-full bg-white border-gray-200 transition-all duration-300';
+				'flex flex-col h-full bg-white border-neutral-200 transition-all duration-300';
 			const borderClasses = this.position === 'left' ? 'border-r' : 'border-l';
 
 			return [baseClasses, borderClasses].filter(Boolean).join(' ');
@@ -327,7 +327,7 @@ export default {
 		 */
 		brandingClasses() {
 			const baseClasses =
-				'flex items-center border-b border-gray-200 transition-all duration-200';
+				'flex items-center border-b border-neutral-200 transition-all duration-200';
 			const paddingClasses = this.collapsed
 				? 'justify-center p-3'
 				: 'justify-between p-4';
@@ -345,7 +345,7 @@ export default {
 		 */
 		footerClasses() {
 			const baseClasses =
-				'border-t border-gray-200 transition-all duration-200';
+				'border-t border-neutral-200 transition-all duration-200';
 			const paddingClasses = this.collapsed ? 'p-2' : 'p-4';
 
 			return [baseClasses, paddingClasses].filter(Boolean).join(' ');
@@ -465,15 +465,15 @@ export default {
 			const paddingClasses = this.collapsed
 				? 'justify-center px-3 py-3'
 				: 'px-4 py-3';
-			const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : '';
+			const hoverClasses = !isDisabled ? 'hover:bg-neutral-50' : '';
 			const activeClasses = isActive
-				? 'bg-blue-50 text-blue-600'
-				: 'text-gray-700';
+				? 'bg-primary-50 text-primary-600'
+				: 'text-neutral-700';
 			const disabledClasses = isDisabled
 				? 'opacity-50 cursor-not-allowed'
 				: 'cursor-pointer';
 			const focusClasses =
-				'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset';
+				'focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:ring-inset';
 
 			return [
 				baseClasses,
@@ -495,15 +495,15 @@ export default {
 
 			const baseClasses =
 				'flex items-center w-full gap-3 pl-11 pr-4 py-2 transition-colors duration-200 text-sm';
-			const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : '';
+			const hoverClasses = !isDisabled ? 'hover:bg-neutral-50' : '';
 			const activeClasses = isActive
-				? 'bg-blue-50 text-blue-600 font-medium'
-				: 'text-gray-600';
+				? 'bg-primary-50 text-primary-600 font-medium'
+				: 'text-neutral-600';
 			const disabledClasses = isDisabled
 				? 'opacity-50 cursor-not-allowed'
 				: 'cursor-pointer';
 			const focusClasses =
-				'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset';
+				'focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:ring-inset';
 
 			return [
 				baseClasses,
@@ -520,14 +520,14 @@ export default {
 		 */
 		getIconClasses(item) {
 			const isActive = this.isItemActive(item) || this.hasActiveChild(item);
-			return isActive ? 'text-blue-600' : 'text-gray-400';
+			return isActive ? 'text-primary-600' : 'text-neutral-400';
 		},
 		/**
 		 * Get chevron classes for submenu indicators
 		 */
 		getChevronClasses(item) {
 			const isOpen = this.isSubmenuOpen(item);
-			const baseClasses = 'transition-transform duration-200 text-gray-400';
+			const baseClasses = 'transition-transform duration-200 text-neutral-400';
 			const rotateClasses = isOpen ? 'rotate-180' : 'rotate-0';
 
 			return `${baseClasses} ${rotateClasses}`;

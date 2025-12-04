@@ -83,13 +83,13 @@ export default {
 
 			if (index < this.currentStep) {
 				// Completed step
-				return [baseClasses, 'bg-green-600 text-white'].join(' ');
+				return [baseClasses, 'bg-success-600 text-white'].join(' ');
 			} else if (index === this.currentStep) {
 				// Current step
-				return [baseClasses, 'bg-blue-600 text-white'].join(' ');
+				return [baseClasses, 'bg-primary-600 text-white'].join(' ');
 			} else {
 				// Future step
-				return [baseClasses, 'bg-gray-200 text-gray-500'].join(' ');
+				return [baseClasses, 'bg-neutral-200 text-neutral-500'].join(' ');
 			}
 		},
 		/**
@@ -101,13 +101,13 @@ export default {
 
 			if (index < this.currentStep) {
 				// Completed step
-				return [baseClasses, 'text-green-600'].join(' ');
+				return [baseClasses, 'text-success-600'].join(' ');
 			} else if (index === this.currentStep) {
 				// Current step
-				return [baseClasses, 'text-blue-600'].join(' ');
+				return [baseClasses, 'text-primary-600'].join(' ');
 			} else {
 				// Future step
-				return [baseClasses, 'text-gray-500'].join(' ');
+				return [baseClasses, 'text-neutral-500'].join(' ');
 			}
 		},
 		/**
@@ -118,10 +118,10 @@ export default {
 
 			if (index < this.currentStep) {
 				// Connector before current step (completed)
-				return [baseClasses, 'bg-green-600'].join(' ');
+				return [baseClasses, 'bg-success-600'].join(' ');
 			} else {
 				// Connector at or after current step
-				return [baseClasses, 'bg-gray-200'].join(' ');
+				return [baseClasses, 'bg-neutral-200'].join(' ');
 			}
 		}
 	}

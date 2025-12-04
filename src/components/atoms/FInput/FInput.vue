@@ -58,11 +58,11 @@ export default {
 			};
 
 			const stateClasses = this.error
-				? 'border-red-500 focus:border-red-500 focus:ring-red-500/20'
-				: 'border-gray-300 focus:border-blue-500 focus:ring-blue-500/20';
+				? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500/20'
+				: 'border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20';
 
 			const disabledClasses = this.disabled
-				? 'bg-gray-100 cursor-not-allowed opacity-70'
+				? 'bg-neutral-100 cursor-not-allowed opacity-70'
 				: '';
 
 			return [

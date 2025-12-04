@@ -323,7 +323,7 @@ export default {
 		tableWrapperClasses() {
 			const baseClasses = 'relative overflow-x-auto';
 			const borderClasses = this.bordered
-				? 'border border-gray-200 rounded-lg'
+				? 'border border-neutral-200 rounded-lg'
 				: '';
 			return [baseClasses, borderClasses].filter(Boolean).join(' ');
 		},
@@ -340,7 +340,7 @@ export default {
 				large: 'px-6 py-4 text-base'
 			};
 			return [
-				'font-semibold text-gray-700 bg-gray-50 border-b border-gray-200',
+				'font-semibold text-neutral-700 bg-neutral-50 border-b border-neutral-200',
 				sizeClasses[this.size]
 			].join(' ');
 		},
@@ -351,7 +351,7 @@ export default {
 				large: 'px-6 py-4 text-base'
 			};
 			return [
-				'text-gray-600 border-b border-gray-100',
+				'text-neutral-600 border-b border-neutral-100',
 				sizeClasses[this.size]
 			].join(' ');
 		},
@@ -364,7 +364,7 @@ export default {
 				medium: 'text-sm',
 				large: 'text-base'
 			};
-			return ['text-gray-500', sizeClasses[this.size]].join(' ');
+			return ['text-neutral-500', sizeClasses[this.size]].join(' ');
 		},
 		showToolbar() {
 			return this.searchable || this.$slots.actions;
@@ -507,7 +507,7 @@ export default {
 			};
 			const sortableClasses =
 				column.sortable !== false
-					? 'cursor-pointer select-none hover:bg-gray-100'
+					? 'cursor-pointer select-none hover:bg-neutral-100'
 					: '';
 			return [
 				this.headerCellClasses,
@@ -529,9 +529,9 @@ export default {
 		},
 		getRowClasses(row) {
 			const baseClasses = 'transition-colors duration-150';
-			const hoverClasses = this.hoverable ? 'hover:bg-gray-50' : '';
-			const selectedClasses = this.isRowSelected(row) ? 'bg-blue-50' : '';
-			const stripedClasses = this.striped ? 'even:bg-gray-50/50' : '';
+			const hoverClasses = this.hoverable ? 'hover:bg-neutral-50' : '';
+			const selectedClasses = this.isRowSelected(row) ? 'bg-primary-50' : '';
+			const stripedClasses = this.striped ? 'even:bg-neutral-50/50' : '';
 			return [baseClasses, hoverClasses, selectedClasses, stripedClasses]
 				.filter(Boolean)
 				.join(' ');
@@ -542,7 +542,7 @@ export default {
 		},
 		getSortIconClasses(key) {
 			const isActive = this.sortKey === key;
-			return isActive ? 'text-blue-500' : 'text-gray-400';
+			return isActive ? 'text-primary-500' : 'text-neutral-400';
 		},
 		handleSort(key) {
 			if (this.sortKey === key) {

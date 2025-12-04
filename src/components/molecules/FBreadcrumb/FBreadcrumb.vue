@@ -69,7 +69,7 @@ export default {
 			return 'inline-flex';
 		},
 		separatorClasses() {
-			return 'mx-2 text-gray-400 flex-shrink-0';
+			return 'mx-2 text-neutral-400 flex-shrink-0';
 		}
 	},
 	methods: {
@@ -89,15 +89,15 @@ export default {
 				'hover:underline',
 				'focus:outline-none',
 				'focus:ring-2',
-				'focus:ring-blue-500/20',
+				'focus:ring-primary-500/20',
 				'focus:rounded'
 			].join(' ');
 		},
 		getTextClasses(index) {
 			if (this.isCurrentItem(index)) {
-				return 'font-semibold text-gray-800';
+				return 'font-semibold text-neutral-800';
 			}
-			return 'text-blue-600 hover:text-blue-800';
+			return 'text-primary-600 hover:text-primary-800';
 		},
 		handleItemClick(event, item, index) {
 			if (this.isCurrentItem(index)) {

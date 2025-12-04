@@ -17,7 +17,7 @@
 		<div :class="contentClasses">
 			<!-- Header -->
 			<div
-				class="flex items-center justify-between p-4 border-b border-gray-200"
+				class="flex items-center justify-between p-4 border-b border-neutral-200"
 			>
 				<f-typography variant="h5">
 					{{ title }}
@@ -105,7 +105,7 @@
 
 				<!-- Actions -->
 				<template #actions>
-					<div class="p-4 border-t border-gray-200 space-y-2">
+					<div class="p-4 border-t border-neutral-200 space-y-2">
 						<f-button type="submit" variant="primary" block>
 							{{ applyLabel }}
 						</f-button>
@@ -273,7 +273,7 @@ export default {
 		 * Content wrapper classes
 		 */
 		contentClasses() {
-			const baseClasses = 'flex flex-col h-full bg-white border-gray-200';
+			const baseClasses = 'flex flex-col h-full bg-white border-neutral-200';
 			const borderClasses = this.position === 'left' ? 'border-r' : 'border-l';
 
 			return [baseClasses, borderClasses].filter(Boolean).join(' ');

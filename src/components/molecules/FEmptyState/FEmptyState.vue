@@ -68,13 +68,13 @@ export default {
 			return 'flex flex-col items-center justify-center text-center py-12 px-4';
 		},
 		iconClasses() {
-			return 'text-gray-400 mb-4';
+			return 'text-neutral-400 mb-4';
 		},
 		titleClasses() {
-			return 'text-gray-700 mb-2';
+			return 'text-neutral-700 mb-2';
 		},
 		descriptionClasses() {
-			return 'text-gray-500 max-w-md mb-6';
+			return 'text-neutral-500 max-w-md mb-6';
 		},
 		actionClasses() {
 			return 'mt-4';

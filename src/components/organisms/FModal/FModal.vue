@@ -27,7 +27,7 @@
 							<f-typography
 								v-if="subtitle"
 								variant="caption"
-								class="text-gray-500"
+								class="text-neutral-500"
 							>
 								{{ subtitle }}
 							</f-typography>
@@ -164,7 +164,7 @@ export default {
 		modalClasses() {
 			const baseClasses =
 				'relative bg-white rounded-lg overflow-hidden shadow-xl transition-all';
-			const borderedClasses = this.bordered ? 'border border-gray-200' : '';
+			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 
 			const sizeClasses = {
 				small: 'w-full max-w-sm',

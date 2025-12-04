@@ -53,7 +53,7 @@ export default {
 		cardClasses() {
 			const baseClasses =
 				'bg-white rounded-lg overflow-hidden transition-all duration-200';
-			const borderedClasses = this.bordered ? 'border border-gray-200' : '';
+			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 			const clickableClasses = this.clickable
 				? 'cursor-pointer hover:shadow-lg hover:-translate-y-0.5'
 				: '';

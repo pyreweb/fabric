@@ -56,20 +56,20 @@ export default {
 
 			const colorClasses = {
 				blue: this.value
-					? 'bg-blue-500 focus:ring-blue-500/20'
-					: 'bg-gray-300 focus:ring-blue-500/20',
+					? 'bg-primary-500 focus:ring-primary-500/20'
+					: 'bg-neutral-300 focus:ring-primary-500/20',
 				green: this.value
-					? 'bg-green-500 focus:ring-green-500/20'
-					: 'bg-gray-300 focus:ring-green-500/20',
+					? 'bg-success-500 focus:ring-success-500/20'
+					: 'bg-neutral-300 focus:ring-success-500/20',
 				red: this.value
-					? 'bg-red-500 focus:ring-red-500/20'
-					: 'bg-gray-300 focus:ring-red-500/20',
+					? 'bg-danger-500 focus:ring-danger-500/20'
+					: 'bg-neutral-300 focus:ring-danger-500/20',
 				orange: this.value
-					? 'bg-orange-500 focus:ring-orange-500/20'
-					: 'bg-gray-300 focus:ring-orange-500/20',
+					? 'bg-warning-500 focus:ring-warning-500/20'
+					: 'bg-neutral-300 focus:ring-warning-500/20',
 				purple: this.value
-					? 'bg-purple-500 focus:ring-purple-500/20'
-					: 'bg-gray-300 focus:ring-purple-500/20'
+					? 'bg-primary-500 focus:ring-primary-500/20'
+					: 'bg-neutral-300 focus:ring-primary-500/20'
 			};
 
 			const disabledClasses = this.disabled
@@ -89,9 +89,9 @@ export default {
 			return [baseClasses, positionClasses].filter(Boolean).join(' ');
 		},
 		labelClasses() {
-			const baseClasses = 'ml-2 text-sm text-gray-800 select-none';
+			const baseClasses = 'ml-2 text-sm text-neutral-800 select-none';
 
-			const disabledClasses = this.disabled ? 'text-gray-400' : '';
+			const disabledClasses = this.disabled ? 'text-neutral-400' : '';
 
 			return [baseClasses, disabledClasses].filter(Boolean).join(' ');
 		}

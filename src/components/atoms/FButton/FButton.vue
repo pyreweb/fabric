@@ -120,18 +120,18 @@ export default {
 
 			const variants = {
 				primary:
-					'border-transparent text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
+					'border-transparent text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500',
 				secondary:
-					'border-transparent text-blue-700 bg-blue-100 hover:bg-blue-200 focus:ring-blue-500',
+					'border-transparent text-primary-700 bg-primary-100 hover:bg-primary-200 focus:ring-primary-500',
 				danger:
-					'border-transparent text-white bg-red-600 hover:bg-red-700 focus:ring-red-500',
+					'border-transparent text-white bg-danger-600 hover:bg-danger-700 focus:ring-danger-500',
 				success:
-					'border-transparent text-white bg-green-600 hover:bg-green-700 focus:ring-green-500',
+					'border-transparent text-white bg-success-600 hover:bg-success-700 focus:ring-success-500',
 				outline:
-					'border-gray-300 text-gray-700 bg-white hover:bg-gray-50 focus:ring-blue-500',
+					'border-neutral-300 text-neutral-700 bg-white hover:bg-neutral-50 focus:ring-primary-500',
 				ghost:
-					'border-transparent text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:ring-gray-500 shadow-none',
-				link: 'border-transparent text-blue-600 hover:text-blue-800 underline shadow-none px-0 bg-transparent'
+					'border-transparent text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 focus:ring-neutral-500 shadow-none',
+				link: 'border-transparent text-primary-600 hover:text-primary-800 underline shadow-none px-0 bg-transparent'
 			};
 
 			const stateClasses = this.isDisabled
