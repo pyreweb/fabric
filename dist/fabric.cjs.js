@@ -278,7 +278,7 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 const __vue_script__$t = script$t;
 
 /* template */
-var __vue_render__$w = function () {
+var __vue_render__$x = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -358,7 +358,7 @@ var __vue_render__$w = function () {
   )
 };
 var __vue_staticRenderFns__$t = [];
-__vue_render__$w._withStripped = true;
+__vue_render__$x._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$t = undefined;
@@ -377,7 +377,7 @@ __vue_render__$w._withStripped = true;
 
   
   const __vue_component__$t = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$t },
+    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
     __vue_inject_styles__$t,
     __vue_script__$t,
     __vue_scope_id__$t,
@@ -522,7 +522,7 @@ var script$s = {
 const __vue_script__$s = script$s;
 
 /* template */
-var __vue_render__$v = function () {
+var __vue_render__$w = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -546,7 +546,7 @@ var __vue_render__$v = function () {
   )
 };
 var __vue_staticRenderFns__$s = [];
-__vue_render__$v._withStripped = true;
+__vue_render__$w._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$s = undefined;
@@ -565,7 +565,7 @@ __vue_render__$v._withStripped = true;
 
   
   const __vue_component__$s = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$s },
+    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
     __vue_inject_styles__$s,
     __vue_script__$s,
     __vue_scope_id__$s,
@@ -755,7 +755,7 @@ var script$r = {
 const __vue_script__$r = script$r;
 
 /* template */
-var __vue_render__$u = function () {
+var __vue_render__$v = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -844,7 +844,7 @@ var __vue_render__$u = function () {
   )
 };
 var __vue_staticRenderFns__$r = [];
-__vue_render__$u._withStripped = true;
+__vue_render__$v._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$r = undefined;
@@ -863,7 +863,7 @@ __vue_render__$u._withStripped = true;
 
   
   const __vue_component__$r = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$r },
+    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
     __vue_inject_styles__$r,
     __vue_script__$r,
     __vue_scope_id__$r,
@@ -956,7 +956,7 @@ var script$q = {
 const __vue_script__$q = script$q;
 
 /* template */
-var __vue_render__$t = function () {
+var __vue_render__$u = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -995,7 +995,7 @@ var __vue_render__$t = function () {
   ])
 };
 var __vue_staticRenderFns__$q = [];
-__vue_render__$t._withStripped = true;
+__vue_render__$u._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$q = undefined;
@@ -1014,7 +1014,7 @@ __vue_render__$t._withStripped = true;
 
   
   const __vue_component__$q = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$q },
+    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$q },
     __vue_inject_styles__$q,
     __vue_script__$q,
     __vue_scope_id__$q,
@@ -1153,7 +1153,7 @@ var script$p = {
 const __vue_script__$p = script$p;
 
 /* template */
-var __vue_render__$s = function () {
+var __vue_render__$t = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1178,7 +1178,7 @@ var __vue_render__$s = function () {
   )
 };
 var __vue_staticRenderFns__$p = [];
-__vue_render__$s._withStripped = true;
+__vue_render__$t._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$p = undefined;
@@ -1197,7 +1197,7 @@ __vue_render__$s._withStripped = true;
 
   
   const __vue_component__$p = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$p },
+    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$p },
     __vue_inject_styles__$p,
     __vue_script__$p,
     __vue_scope_id__$p,
@@ -1390,7 +1390,7 @@ var script$o = {
 const __vue_script__$o = script$o;
 
 /* template */
-var __vue_render__$r = function () {
+var __vue_render__$s = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1462,7 +1462,7 @@ var __vue_render__$r = function () {
   )
 };
 var __vue_staticRenderFns__$o = [];
-__vue_render__$r._withStripped = true;
+__vue_render__$s._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$o = undefined;
@@ -1481,7 +1481,7 @@ __vue_render__$r._withStripped = true;
 
   
   const __vue_component__$o = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$o },
+    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$o },
     __vue_inject_styles__$o,
     __vue_script__$o,
     __vue_scope_id__$o,
@@ -1576,7 +1576,7 @@ var script$n = {
 const __vue_script__$n = script$n;
 
 /* template */
-var __vue_render__$q = function () {
+var __vue_render__$r = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1601,7 +1601,7 @@ var __vue_render__$q = function () {
   })
 };
 var __vue_staticRenderFns__$n = [];
-__vue_render__$q._withStripped = true;
+__vue_render__$r._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$n = undefined;
@@ -1620,7 +1620,7 @@ __vue_render__$q._withStripped = true;
 
   
   const __vue_component__$n = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$n },
+    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$n },
     __vue_inject_styles__$n,
     __vue_script__$n,
     __vue_scope_id__$n,
@@ -1739,7 +1739,7 @@ var script$m = {
 const __vue_script__$m = script$m;
 
 /* template */
-var __vue_render__$p = function () {
+var __vue_render__$q = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1788,7 +1788,7 @@ var __vue_render__$p = function () {
   ])
 };
 var __vue_staticRenderFns__$m = [];
-__vue_render__$p._withStripped = true;
+__vue_render__$q._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$m = undefined;
@@ -1807,7 +1807,7 @@ __vue_render__$p._withStripped = true;
 
   
   const __vue_component__$m = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$m },
+    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$m },
     __vue_inject_styles__$m,
     __vue_script__$m,
     __vue_scope_id__$m,
@@ -1954,7 +1954,7 @@ var script$l = {
 const __vue_script__$l = script$l;
 
 /* template */
-var __vue_render__$o = function () {
+var __vue_render__$p = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1978,7 +1978,7 @@ var __vue_render__$o = function () {
   ])
 };
 var __vue_staticRenderFns__$l = [];
-__vue_render__$o._withStripped = true;
+__vue_render__$p._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$l = undefined;
@@ -1997,7 +1997,7 @@ __vue_render__$o._withStripped = true;
 
   
   const __vue_component__$l = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$l },
+    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$l },
     __vue_inject_styles__$l,
     __vue_script__$l,
     __vue_scope_id__$l,
@@ -2172,7 +2172,7 @@ var script$k = {
 const __vue_script__$k = script$k;
 
 /* template */
-var __vue_render__$n = function () {
+var __vue_render__$o = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2239,7 +2239,7 @@ var __vue_render__$n = function () {
   ])
 };
 var __vue_staticRenderFns__$k = [];
-__vue_render__$n._withStripped = true;
+__vue_render__$o._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$k = undefined;
@@ -2258,7 +2258,7 @@ __vue_render__$n._withStripped = true;
 
   
   const __vue_component__$k = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
+    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$k },
     __vue_inject_styles__$k,
     __vue_script__$k,
     __vue_scope_id__$k,
@@ -2394,7 +2394,7 @@ var script$j = {
 const __vue_script__$j = script$j;
 
 /* template */
-var __vue_render__$m = function () {
+var __vue_render__$n = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2435,7 +2435,7 @@ var __vue_render__$m = function () {
   ])
 };
 var __vue_staticRenderFns__$j = [];
-__vue_render__$m._withStripped = true;
+__vue_render__$n._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$j = undefined;
@@ -2454,7 +2454,7 @@ __vue_render__$m._withStripped = true;
 
   
   const __vue_component__$j = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$j },
+    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$j },
     __vue_inject_styles__$j,
     __vue_script__$j,
     __vue_scope_id__$j,
@@ -2539,7 +2539,7 @@ var script$i = {
 const __vue_script__$i = script$i;
 
 /* template */
-var __vue_render__$l = function () {
+var __vue_render__$m = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2551,7 +2551,7 @@ var __vue_render__$l = function () {
   )
 };
 var __vue_staticRenderFns__$i = [];
-__vue_render__$l._withStripped = true;
+__vue_render__$m._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$i = undefined;
@@ -2570,7 +2570,7 @@ __vue_render__$l._withStripped = true;
 
   
   const __vue_component__$i = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$l, staticRenderFns: __vue_staticRenderFns__$i },
+    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$i },
     __vue_inject_styles__$i,
     __vue_script__$i,
     __vue_scope_id__$i,
@@ -2585,7 +2585,7 @@ __vue_render__$l._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$k = function () {
+var __vue_render__$l = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2644,7 +2644,7 @@ var __vue_render__$k = function () {
     ]
   )
 };
-__vue_render__$k._withStripped = true;
+__vue_render__$l._withStripped = true;
 
 //
 //
@@ -2770,7 +2770,7 @@ var script$h = {
 const __vue_script__$h = script$h;
 
 /* template */
-var __vue_render__$j = function () {
+var __vue_render__$k = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2830,7 +2830,7 @@ var __vue_render__$j = function () {
     : _vm._e()
 };
 var __vue_staticRenderFns__$h = [];
-__vue_render__$j._withStripped = true;
+__vue_render__$k._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$h = undefined;
@@ -2849,7 +2849,7 @@ __vue_render__$j._withStripped = true;
 
   
   const __vue_component__$h = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$h },
+    { render: __vue_render__$k, staticRenderFns: __vue_staticRenderFns__$h },
     __vue_inject_styles__$h,
     __vue_script__$h,
     __vue_scope_id__$h,
@@ -2993,7 +2993,7 @@ var script$g = {
 const __vue_script__$g = script$g;
 
 /* template */
-var __vue_render__$i = function () {
+var __vue_render__$j = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3078,7 +3078,7 @@ var __vue_render__$i = function () {
   )
 };
 var __vue_staticRenderFns__$g = [];
-__vue_render__$i._withStripped = true;
+__vue_render__$j._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$g = undefined;
@@ -3097,7 +3097,7 @@ __vue_render__$i._withStripped = true;
 
   
   const __vue_component__$g = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$i, staticRenderFns: __vue_staticRenderFns__$g },
+    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$g },
     __vue_inject_styles__$g,
     __vue_script__$g,
     __vue_scope_id__$g,
@@ -3148,7 +3148,7 @@ var script$f = {
 const __vue_script__$f = script$f;
 
 /* template */
-var __vue_render__$h = function () {
+var __vue_render__$i = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3163,7 +3163,7 @@ var __vue_render__$h = function () {
   )
 };
 var __vue_staticRenderFns__$f = [];
-__vue_render__$h._withStripped = true;
+__vue_render__$i._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$f = undefined;
@@ -3182,7 +3182,7 @@ __vue_render__$h._withStripped = true;
 
   
   const __vue_component__$f = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$f },
+    { render: __vue_render__$i, staticRenderFns: __vue_staticRenderFns__$f },
     __vue_inject_styles__$f,
     __vue_script__$f,
     __vue_scope_id__$f,
@@ -3287,7 +3287,7 @@ var script$e = {
 const __vue_script__$e = script$e;
 
 /* template */
-var __vue_render__$g = function () {
+var __vue_render__$h = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3335,7 +3335,7 @@ var __vue_render__$g = function () {
   )
 };
 var __vue_staticRenderFns__$e = [];
-__vue_render__$g._withStripped = true;
+__vue_render__$h._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$e = undefined;
@@ -3354,7 +3354,7 @@ __vue_render__$g._withStripped = true;
 
   
   const __vue_component__$e = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$g, staticRenderFns: __vue_staticRenderFns__$e },
+    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$e },
     __vue_inject_styles__$e,
     __vue_script__$e,
     __vue_scope_id__$e,
@@ -3505,7 +3505,7 @@ var script$d = {
 const __vue_script__$d = script$d;
 
 /* template */
-var __vue_render__$f = function () {
+var __vue_render__$g = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3567,7 +3567,7 @@ var __vue_render__$f = function () {
   )
 };
 var __vue_staticRenderFns__$d = [];
-__vue_render__$f._withStripped = true;
+__vue_render__$g._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$d = undefined;
@@ -3586,7 +3586,7 @@ __vue_render__$f._withStripped = true;
 
   
   const __vue_component__$d = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$d },
+    { render: __vue_render__$g, staticRenderFns: __vue_staticRenderFns__$d },
     __vue_inject_styles__$d,
     __vue_script__$d,
     __vue_scope_id__$d,
@@ -3689,7 +3689,7 @@ var script$c = {
 const __vue_script__$c = script$c;
 
 /* template */
-var __vue_render__$e = function () {
+var __vue_render__$f = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3749,7 +3749,7 @@ var __vue_render__$e = function () {
   )
 };
 var __vue_staticRenderFns__$c = [];
-__vue_render__$e._withStripped = true;
+__vue_render__$f._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$c = undefined;
@@ -3768,7 +3768,7 @@ __vue_render__$e._withStripped = true;
 
   
   const __vue_component__$c = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$e, staticRenderFns: __vue_staticRenderFns__$c },
+    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$c },
     __vue_inject_styles__$c,
     __vue_script__$c,
     __vue_scope_id__$c,
@@ -3847,7 +3847,7 @@ var script$b = {
 const __vue_script__$b = script$b;
 
 /* template */
-var __vue_render__$d = function () {
+var __vue_render__$e = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3899,7 +3899,7 @@ var __vue_render__$d = function () {
   ])
 };
 var __vue_staticRenderFns__$b = [];
-__vue_render__$d._withStripped = true;
+__vue_render__$e._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$b = undefined;
@@ -3918,7 +3918,7 @@ __vue_render__$d._withStripped = true;
 
   
   const __vue_component__$b = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$d, staticRenderFns: __vue_staticRenderFns__$b },
+    { render: __vue_render__$e, staticRenderFns: __vue_staticRenderFns__$b },
     __vue_inject_styles__$b,
     __vue_script__$b,
     __vue_scope_id__$b,
@@ -4106,7 +4106,7 @@ var script$a = {
 const __vue_script__$a = script$a;
 
 /* template */
-var __vue_render__$c = function () {
+var __vue_render__$d = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4189,7 +4189,7 @@ var __vue_render__$c = function () {
   )
 };
 var __vue_staticRenderFns__$a = [];
-__vue_render__$c._withStripped = true;
+__vue_render__$d._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$a = undefined;
@@ -4208,7 +4208,7 @@ __vue_render__$c._withStripped = true;
 
   
   const __vue_component__$a = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$c, staticRenderFns: __vue_staticRenderFns__$a },
+    { render: __vue_render__$d, staticRenderFns: __vue_staticRenderFns__$a },
     __vue_inject_styles__$a,
     __vue_script__$a,
     __vue_scope_id__$a,
@@ -4328,7 +4328,7 @@ var script$9 = {
 const __vue_script__$9 = script$9;
 
 /* template */
-var __vue_render__$b = function () {
+var __vue_render__$c = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4408,7 +4408,7 @@ var __vue_render__$b = function () {
   )
 };
 var __vue_staticRenderFns__$9 = [];
-__vue_render__$b._withStripped = true;
+__vue_render__$c._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$9 = undefined;
@@ -4427,7 +4427,7 @@ __vue_render__$b._withStripped = true;
 
   
   const __vue_component__$9 = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$9 },
+    { render: __vue_render__$c, staticRenderFns: __vue_staticRenderFns__$9 },
     __vue_inject_styles__$9,
     __vue_script__$9,
     __vue_scope_id__$9,
@@ -4655,7 +4655,7 @@ var script$8 = {
 const __vue_script__$8 = script$8;
 
 /* template */
-var __vue_render__$a = function () {
+var __vue_render__$b = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4799,7 +4799,7 @@ var __vue_render__$a = function () {
   )
 };
 var __vue_staticRenderFns__$8 = [];
-__vue_render__$a._withStripped = true;
+__vue_render__$b._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$8 = undefined;
@@ -4818,7 +4818,7 @@ __vue_render__$a._withStripped = true;
 
   
   const __vue_component__$8 = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$a, staticRenderFns: __vue_staticRenderFns__$8 },
+    { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$8 },
     __vue_inject_styles__$8,
     __vue_script__$8,
     __vue_scope_id__$8,
@@ -4833,7 +4833,7 @@ __vue_render__$a._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$9 = function () {
+var __vue_render__$a = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4869,7 +4869,7 @@ var __vue_render__$9 = function () {
     ),
   ])
 };
-__vue_render__$9._withStripped = true;
+__vue_render__$a._withStripped = true;
 
 //
 //
@@ -4894,7 +4894,7 @@ var script$7 = {
 const __vue_script__$7 = script$7;
 
 /* template */
-var __vue_render__$8 = function () {
+var __vue_render__$9 = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4920,7 +4920,7 @@ var __vue_render__$8 = function () {
   )
 };
 var __vue_staticRenderFns__$7 = [];
-__vue_render__$8._withStripped = true;
+__vue_render__$9._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$7 = undefined;
@@ -4939,7 +4939,7 @@ __vue_render__$8._withStripped = true;
 
   
   const __vue_component__$7 = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$8, staticRenderFns: __vue_staticRenderFns__$7 },
+    { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$7 },
     __vue_inject_styles__$7,
     __vue_script__$7,
     __vue_scope_id__$7,
@@ -5530,7 +5530,7 @@ var script$6 = {
 const __vue_script__$6 = script$6;
 
 /* template */
-var __vue_render__$7 = function () {
+var __vue_render__$8 = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -5788,7 +5788,7 @@ var __vue_render__$7 = function () {
   ])
 };
 var __vue_staticRenderFns__$6 = [];
-__vue_render__$7._withStripped = true;
+__vue_render__$8._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$6 = undefined;
@@ -5807,7 +5807,7 @@ __vue_render__$7._withStripped = true;
 
   
   const __vue_component__$6 = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$7, staticRenderFns: __vue_staticRenderFns__$6 },
+    { render: __vue_render__$8, staticRenderFns: __vue_staticRenderFns__$6 },
     __vue_inject_styles__$6,
     __vue_script__$6,
     __vue_scope_id__$6,
@@ -6444,7 +6444,7 @@ var script$5 = {
 const __vue_script__$5 = script$5;
 
 /* template */
-var __vue_render__$6 = function () {
+var __vue_render__$7 = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -6643,7 +6643,7 @@ var __vue_render__$6 = function () {
   )
 };
 var __vue_staticRenderFns__$5 = [];
-__vue_render__$6._withStripped = true;
+__vue_render__$7._withStripped = true;
 
   /* style */
   const __vue_inject_styles__$5 = undefined;
@@ -6662,7 +6662,7 @@ __vue_render__$6._withStripped = true;
 
   
   const __vue_component__$5 = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$6, staticRenderFns: __vue_staticRenderFns__$5 },
+    { render: __vue_render__$7, staticRenderFns: __vue_staticRenderFns__$5 },
     __vue_inject_styles__$5,
     __vue_script__$5,
     __vue_scope_id__$5,
@@ -6677,7 +6677,7 @@ __vue_render__$6._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$5 = function () {
+var __vue_render__$6 = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -6925,6 +6925,384 @@ var __vue_render__$5 = function () {
         ],
         1
       ),
+    ]
+  )
+};
+__vue_render__$6._withStripped = true;
+
+/* script */
+
+/* template */
+var __vue_render__$5 = function () {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "aside",
+    {
+      class: _vm.sidebarClasses,
+      style: _vm.sidebarStyle,
+      attrs: { role: "navigation", "aria-label": "Navigation principale" },
+    },
+    [
+      _c(
+        "div",
+        { class: _vm.brandingClasses },
+        [
+          _vm._t("branding", function () {
+            return [
+              _c(
+                "div",
+                { staticClass: "flex items-center gap-3" },
+                [
+                  _vm._t("logo"),
+                  _vm._v(" "),
+                  _vm.title && !_vm.collapsed
+                    ? _c(
+                        "f-typography",
+                        {
+                          staticClass: "transition-opacity duration-200",
+                          attrs: { variant: "h6" },
+                        },
+                        [
+                          _vm._v(
+                            "\n          " + _vm._s(_vm.title) + "\n        "
+                          ),
+                        ]
+                      )
+                    : _vm._e(),
+                ],
+                2
+              ),
+            ]
+          }),
+          _vm._v(" "),
+          _vm.collapsible
+            ? _c(
+                "f-button",
+                {
+                  attrs: {
+                    variant: "ghost",
+                    size: "small",
+                    "aria-label": _vm.collapsed
+                      ? "Développer la navigation"
+                      : "Réduire la navigation",
+                  },
+                  on: { click: _vm.toggleCollapsed },
+                },
+                [
+                  _c("f-icon", {
+                    attrs: {
+                      name: _vm.collapsed ? "chevron-right" : "chevron-left",
+                      size: "sm",
+                    },
+                  }),
+                ],
+                1
+              )
+            : _vm._e(),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "nav",
+        { staticClass: "flex-1 overflow-y-auto py-2" },
+        [
+          _vm._l(_vm.navigationItems, function (item, index) {
+            return [
+              item.type === "group"
+                ? _c(
+                    "div",
+                    { key: "nav-group-" + index, class: _vm.groupLabelClasses },
+                    [
+                      !_vm.collapsed
+                        ? _c(
+                            "f-typography",
+                            {
+                              staticClass: "text-gray-500",
+                              attrs: { variant: "overline" },
+                            },
+                            [
+                              _vm._v(
+                                "\n          " +
+                                  _vm._s(item.label) +
+                                  "\n        "
+                              ),
+                            ]
+                          )
+                        : _c("f-divider", { attrs: { margin: "sm" } }),
+                    ],
+                    1
+                  )
+                : item.type === "divider"
+                ? _c("f-divider", {
+                    key: "nav-divider-" + index,
+                    attrs: { margin: "sm" },
+                  })
+                : item.children && item.children.length > 0
+                ? _c(
+                    "div",
+                    { key: "nav-submenu-" + index, staticClass: "nav-submenu" },
+                    [
+                      _c(
+                        "button",
+                        {
+                          class: _vm.getNavItemClasses(item, true),
+                          attrs: {
+                            "aria-expanded": String(_vm.isSubmenuOpen(item)),
+                          },
+                          on: {
+                            click: function ($event) {
+                              return _vm.toggleSubmenu(item)
+                            },
+                          },
+                        },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "flex items-center gap-3 flex-1 min-w-0",
+                            },
+                            [
+                              item.icon
+                                ? _c("f-icon", {
+                                    class: _vm.getIconClasses(item),
+                                    attrs: { name: item.icon, size: "md" },
+                                  })
+                                : _vm._e(),
+                              _vm._v(" "),
+                              !_vm.collapsed
+                                ? _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "truncate transition-opacity duration-200",
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n              " +
+                                          _vm._s(item.label) +
+                                          "\n            "
+                                      ),
+                                    ]
+                                  )
+                                : _vm._e(),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          !_vm.collapsed
+                            ? _c("f-icon", {
+                                class: _vm.getChevronClasses(item),
+                                attrs: { name: "chevron-down", size: "sm" },
+                              })
+                            : _vm._e(),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.isSubmenuOpen(item) && !_vm.collapsed,
+                              expression: "isSubmenuOpen(item) && !collapsed",
+                            },
+                          ],
+                          staticClass: "submenu-content",
+                        },
+                        _vm._l(item.children, function (child, childIndex) {
+                          return _c(
+                            _vm.getItemComponent(child),
+                            {
+                              key: "child-" + index + "-" + childIndex,
+                              tag: "component",
+                              class: _vm.getChildItemClasses(child),
+                              attrs: { href: child.href, to: child.to },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.handleItemClick(child, $event)
+                                },
+                              },
+                            },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "flex items-center gap-3 flex-1 min-w-0",
+                                },
+                                [
+                                  child.icon
+                                    ? _c("f-icon", {
+                                        class: _vm.getIconClasses(child),
+                                        attrs: { name: child.icon, size: "sm" },
+                                      })
+                                    : _vm._e(),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "truncate" }, [
+                                    _vm._v(_vm._s(child.label)),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              child.badge
+                                ? _c(
+                                    "f-badge",
+                                    {
+                                      attrs: {
+                                        variant:
+                                          child.badgeVariant || "primary",
+                                        size: "small",
+                                      },
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n              " +
+                                          _vm._s(child.badge) +
+                                          "\n            "
+                                      ),
+                                    ]
+                                  )
+                                : _vm._e(),
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      ),
+                    ]
+                  )
+                : _c(
+                    _vm.getItemComponent(item),
+                    {
+                      key: "nav-item-" + index,
+                      tag: "component",
+                      class: _vm.getNavItemClasses(item),
+                      attrs: { href: item.href, to: item.to },
+                      on: {
+                        click: function ($event) {
+                          return _vm.handleItemClick(item, $event)
+                        },
+                      },
+                    },
+                    [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "flex items-center gap-3 flex-1 min-w-0",
+                        },
+                        [
+                          item.icon
+                            ? _c("f-icon", {
+                                class: _vm.getIconClasses(item),
+                                attrs: { name: item.icon, size: "md" },
+                              })
+                            : _vm._e(),
+                          _vm._v(" "),
+                          !_vm.collapsed
+                            ? _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "truncate transition-opacity duration-200",
+                                },
+                                [
+                                  _vm._v(
+                                    "\n            " +
+                                      _vm._s(item.label) +
+                                      "\n          "
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      item.badge && !_vm.collapsed
+                        ? _c(
+                            "f-badge",
+                            {
+                              attrs: {
+                                variant: item.badgeVariant || "primary",
+                                size: "small",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\n          " +
+                                  _vm._s(item.badge) +
+                                  "\n        "
+                              ),
+                            ]
+                          )
+                        : _vm._e(),
+                    ],
+                    1
+                  ),
+            ]
+          }),
+          _vm._v(" "),
+          _vm._t("navigation"),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm.$slots.footer || _vm.showThemeToggle
+        ? _c(
+            "div",
+            { class: _vm.footerClasses },
+            [
+              _vm._t("footer", function () {
+                return [
+                  _vm.showThemeToggle
+                    ? _c(
+                        "div",
+                        {
+                          staticClass: "flex items-center",
+                          class: _vm.collapsed
+                            ? "justify-center"
+                            : "justify-between",
+                        },
+                        [
+                          !_vm.collapsed
+                            ? _c(
+                                "f-typography",
+                                { attrs: { variant: "caption" } },
+                                [
+                                  _vm._v(
+                                    "\n          " +
+                                      _vm._s(_vm.themeToggleLabel) +
+                                      "\n        "
+                                  ),
+                                ]
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _c("f-toggle", {
+                            attrs: {
+                              value: _vm.isDarkMode,
+                              "aria-label": _vm.themeToggleLabel,
+                            },
+                            on: { input: _vm.handleThemeToggle },
+                          }),
+                        ],
+                        1
+                      )
+                    : _vm._e(),
+                ]
+              }),
+            ],
+            2
+          )
+        : _vm._e(),
     ]
   )
 };
