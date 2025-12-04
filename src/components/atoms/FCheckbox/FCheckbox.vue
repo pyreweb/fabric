@@ -45,9 +45,7 @@ export default {
 		wrapperClasses() {
 			return [
 				'inline-flex items-center select-none',
-				this.disabled
-					? 'cursor-not-allowed opacity-50'
-					: 'cursor-pointer'
+				this.disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'
 			];
 		},
 		inputClasses() {

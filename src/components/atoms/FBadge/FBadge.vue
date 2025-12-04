@@ -1,9 +1,5 @@
 <template>
-	<component
-		:is="tag"
-		:class="computedClasses"
-		:aria-label="computedAriaLabel"
-	>
+	<component :is="tag" :class="computedClasses" :aria-label="computedAriaLabel">
 		<template v-if="!dot">
 			<slot>{{ content }}</slot>
 		</template>
@@ -22,9 +18,7 @@ export default {
 			type: String,
 			default: 'primary',
 			validator: (value) =>
-				['primary', 'success', 'warning', 'error', 'neutral'].includes(
-					value
-				)
+				['primary', 'success', 'warning', 'error', 'neutral'].includes(value)
 		},
 		shape: {
 			type: String,
@@ -84,9 +78,7 @@ export default {
 					variants[this.variant].split(' ')[0],
 					this.outlined
 						? ''
-						: variants[this.variant]
-								.split(' ')[0]
-								.replace('bg-', 'bg-'),
+						: variants[this.variant].split(' ')[0].replace('bg-', 'bg-'),
 					'rounded-full',
 					this.size === 'sm'
 						? 'w-1.5 h-1.5'
@@ -102,13 +94,8 @@ export default {
 						? 'w-4 h-4 text-[10px]'
 						: 'px-1.5 py-0.5 text-[10px]',
 				md:
-					this.shape === 'circle'
-						? 'w-6 h-6 text-xs'
-						: 'px-2.5 py-0.5 text-xs',
-				lg:
-					this.shape === 'circle'
-						? 'w-8 h-8 text-sm'
-						: 'px-3 py-1 text-sm'
+					this.shape === 'circle' ? 'w-6 h-6 text-xs' : 'px-2.5 py-0.5 text-xs',
+				lg: this.shape === 'circle' ? 'w-8 h-8 text-sm' : 'px-3 py-1 text-sm'
 			};
 
 			const shapes = {

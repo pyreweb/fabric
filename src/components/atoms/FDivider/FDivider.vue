@@ -81,10 +81,7 @@ export default {
 			};
 			const size = thicknessMap[this.thickness];
 
-			return [
-				`bg-${this.color}`,
-				this.isVertical ? `w-${size}` : `h-${size}`
-			];
+			return [`bg-${this.color}`, this.isVertical ? `w-${size}` : `h-${size}`];
 		},
 		textClasses() {
 			return [
@@ -98,10 +95,7 @@ export default {
 	methods: {
 		lineClasses(position) {
 			if (position === 'full') {
-				return [
-					this.isVertical ? 'h-full' : 'w-full',
-					...this.baseLineClasses
-				];
+				return [this.isVertical ? 'h-full' : 'w-full', ...this.baseLineClasses];
 			}
 
 			const offset = this.isVertical ? 'h-4' : 'w-4';

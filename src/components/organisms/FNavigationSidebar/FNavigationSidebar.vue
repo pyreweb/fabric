@@ -1,541 +1,561 @@
 <template>
-  <aside
-    :class="sidebarClasses"
-    :style="sidebarStyle"
-    role="navigation"
-    aria-label="Navigation principale"
-  >
-    <!-- Branding/Logo Section -->
-    <div :class="brandingClasses">
-      <slot name="branding">
-        <div class="flex items-center gap-3">
-          <slot name="logo" />
-          <f-typography
-            v-if="title && !collapsed"
-            variant="h6"
-            class="transition-opacity duration-200"
-          >
-            {{ title }}
-          </f-typography>
-        </div>
-      </slot>
-      <f-button
-        v-if="collapsible"
-        variant="ghost"
-        size="small"
-        :aria-label="collapsed ? 'Développer la navigation' : 'Réduire la navigation'"
-        @click="toggleCollapsed"
-      >
-        <f-icon :name="collapsed ? 'chevron-right' : 'chevron-left'" size="sm" />
-      </f-button>
-    </div>
+	<aside
+		:class="sidebarClasses"
+		:style="sidebarStyle"
+		role="navigation"
+		aria-label="Navigation principale"
+	>
+		<!-- Branding/Logo Section -->
+		<div :class="brandingClasses">
+			<slot name="branding">
+				<div class="flex items-center gap-3">
+					<slot name="logo" />
+					<f-typography
+						v-if="title && !collapsed"
+						variant="h6"
+						class="transition-opacity duration-200"
+					>
+						{{ title }}
+					</f-typography>
+				</div>
+			</slot>
+			<f-button
+				v-if="collapsible"
+				variant="ghost"
+				size="small"
+				:aria-label="
+					collapsed ? 'Développer la navigation' : 'Réduire la navigation'
+				"
+				@click="toggleCollapsed"
+			>
+				<f-icon
+					:name="collapsed ? 'chevron-right' : 'chevron-left'"
+					size="sm"
+				/>
+			</f-button>
+		</div>
 
-    <!-- Navigation Content -->
-    <nav class="flex-1 overflow-y-auto py-2">
-      <!-- All Navigation Items (including submenus) rendered in order -->
-      <template v-for="(item, index) in navigationItems">
-        <!-- Group Label -->
-        <div
-          v-if="item.type === 'group'"
-          :key="`nav-group-${index}`"
-          :class="groupLabelClasses"
-        >
-          <f-typography
-            v-if="!collapsed"
-            variant="overline"
-            class="text-gray-500"
-          >
-            {{ item.label }}
-          </f-typography>
-          <f-divider v-else margin="sm" />
-        </div>
+		<!-- Navigation Content -->
+		<nav class="flex-1 overflow-y-auto py-2">
+			<!-- All Navigation Items (including submenus) rendered in order -->
+			<template v-for="(item, index) in navigationItems">
+				<!-- Group Label -->
+				<div
+					v-if="item.type === 'group'"
+					:key="`nav-group-${index}`"
+					:class="groupLabelClasses"
+				>
+					<f-typography
+						v-if="!collapsed"
+						variant="overline"
+						class="text-gray-500"
+					>
+						{{ item.label }}
+					</f-typography>
+					<f-divider v-else margin="sm" />
+				</div>
 
-        <!-- Divider -->
-        <f-divider
-          v-else-if="item.type === 'divider'"
-          :key="`nav-divider-${index}`"
-          margin="sm"
-        />
+				<!-- Divider -->
+				<f-divider
+					v-else-if="item.type === 'divider'"
+					:key="`nav-divider-${index}`"
+					margin="sm"
+				/>
 
-        <!-- Submenu Item (with children) -->
-        <div
-          v-else-if="item.children && item.children.length > 0"
-          :key="`nav-submenu-${index}`"
-          class="nav-submenu"
-        >
-          <button
-            :class="getNavItemClasses(item, true)"
-            :aria-expanded="String(isSubmenuOpen(item))"
-            @click="toggleSubmenu(item)"
-          >
-            <span class="flex items-center gap-3 flex-1 min-w-0">
-              <f-icon
-                v-if="item.icon"
-                :name="item.icon"
-                size="md"
-                :class="getIconClasses(item)"
-              />
-              <span
-                v-if="!collapsed"
-                class="truncate transition-opacity duration-200"
-              >
-                {{ item.label }}
-              </span>
-            </span>
-            <f-icon
-              v-if="!collapsed"
-              name="chevron-down"
-              size="sm"
-              :class="getChevronClasses(item)"
-            />
-          </button>
+				<!-- Submenu Item (with children) -->
+				<div
+					v-else-if="item.children && item.children.length > 0"
+					:key="`nav-submenu-${index}`"
+					class="nav-submenu"
+				>
+					<button
+						:class="getNavItemClasses(item, true)"
+						:aria-expanded="String(isSubmenuOpen(item))"
+						@click="toggleSubmenu(item)"
+					>
+						<span class="flex items-center gap-3 flex-1 min-w-0">
+							<f-icon
+								v-if="item.icon"
+								:name="item.icon"
+								size="md"
+								:class="getIconClasses(item)"
+							/>
+							<span
+								v-if="!collapsed"
+								class="truncate transition-opacity duration-200"
+							>
+								{{ item.label }}
+							</span>
+						</span>
+						<f-icon
+							v-if="!collapsed"
+							name="chevron-down"
+							size="sm"
+							:class="getChevronClasses(item)"
+						/>
+					</button>
 
-          <!-- Submenu Children -->
-          <div
-            v-show="isSubmenuOpen(item) && !collapsed"
-            class="submenu-content"
-          >
-            <component
-              v-for="(child, childIndex) in item.children"
-              :is="getItemComponent(child)"
-              :key="`child-${index}-${childIndex}`"
-              :href="child.href"
-              :to="child.to"
-              :class="getChildItemClasses(child)"
-              @click="handleItemClick(child, $event)"
-            >
-              <span class="flex items-center gap-3 flex-1 min-w-0">
-                <f-icon
-                  v-if="child.icon"
-                  :name="child.icon"
-                  size="sm"
-                  :class="getIconClasses(child)"
-                />
-                <span class="truncate">{{ child.label }}</span>
-              </span>
-              <f-badge
-                v-if="child.badge"
-                :variant="child.badgeVariant || 'primary'"
-                size="small"
-              >
-                {{ child.badge }}
-              </f-badge>
-            </component>
-          </div>
-        </div>
+					<!-- Submenu Children -->
+					<div
+						v-show="isSubmenuOpen(item) && !collapsed"
+						class="submenu-content"
+					>
+						<component
+							:is="getItemComponent(child)"
+							v-for="(child, childIndex) in item.children"
+							:key="`child-${index}-${childIndex}`"
+							:href="child.href"
+							:to="child.to"
+							:class="getChildItemClasses(child)"
+							@click="handleItemClick(child, $event)"
+						>
+							<span class="flex items-center gap-3 flex-1 min-w-0">
+								<f-icon
+									v-if="child.icon"
+									:name="child.icon"
+									size="sm"
+									:class="getIconClasses(child)"
+								/>
+								<span class="truncate">{{ child.label }}</span>
+							</span>
+							<f-badge
+								v-if="child.badge"
+								:variant="child.badgeVariant || 'primary'"
+								size="small"
+							>
+								{{ child.badge }}
+							</f-badge>
+						</component>
+					</div>
+				</div>
 
-        <!-- Regular Navigation Item -->
-        <component
-          v-else
-          :is="getItemComponent(item)"
-          :key="`nav-item-${index}`"
-          :href="item.href"
-          :to="item.to"
-          :class="getNavItemClasses(item)"
-          @click="handleItemClick(item, $event)"
-        >
-          <span class="flex items-center gap-3 flex-1 min-w-0">
-            <f-icon
-              v-if="item.icon"
-              :name="item.icon"
-              size="md"
-              :class="getIconClasses(item)"
-            />
-            <span
-              v-if="!collapsed"
-              class="truncate transition-opacity duration-200"
-            >
-              {{ item.label }}
-            </span>
-          </span>
-          <f-badge
-            v-if="item.badge && !collapsed"
-            :variant="item.badgeVariant || 'primary'"
-            size="small"
-          >
-            {{ item.badge }}
-          </f-badge>
-        </component>
-      </template>
+				<!-- Regular Navigation Item -->
+				<component
+					:is="getItemComponent(item)"
+					v-else
+					:key="`nav-item-${index}`"
+					:href="item.href"
+					:to="item.to"
+					:class="getNavItemClasses(item)"
+					@click="handleItemClick(item, $event)"
+				>
+					<span class="flex items-center gap-3 flex-1 min-w-0">
+						<f-icon
+							v-if="item.icon"
+							:name="item.icon"
+							size="md"
+							:class="getIconClasses(item)"
+						/>
+						<span
+							v-if="!collapsed"
+							class="truncate transition-opacity duration-200"
+						>
+							{{ item.label }}
+						</span>
+					</span>
+					<f-badge
+						v-if="item.badge && !collapsed"
+						:variant="item.badgeVariant || 'primary'"
+						size="small"
+					>
+						{{ item.badge }}
+					</f-badge>
+				</component>
+			</template>
 
-      <!-- Custom Navigation Slot -->
-      <slot name="navigation" />
-    </nav>
+			<!-- Custom Navigation Slot -->
+			<slot name="navigation" />
+		</nav>
 
-    <!-- Footer Section -->
-    <div
-      v-if="$slots.footer || showThemeToggle"
-      :class="footerClasses"
-    >
-      <slot name="footer">
-        <div
-          v-if="showThemeToggle"
-          class="flex items-center"
-          :class="collapsed ? 'justify-center' : 'justify-between'"
-        >
-          <f-typography
-            v-if="!collapsed"
-            variant="caption"
-          >
-            {{ themeToggleLabel }}
-          </f-typography>
-          <f-toggle
-            :value="isDarkMode"
-            :aria-label="themeToggleLabel"
-            @input="handleThemeToggle"
-          />
-        </div>
-      </slot>
-    </div>
-  </aside>
+		<!-- Footer Section -->
+		<div v-if="$slots.footer || showThemeToggle" :class="footerClasses">
+			<slot name="footer">
+				<div
+					v-if="showThemeToggle"
+					class="flex items-center"
+					:class="collapsed ? 'justify-center' : 'justify-between'"
+				>
+					<f-typography v-if="!collapsed" variant="caption">
+						{{ themeToggleLabel }}
+					</f-typography>
+					<f-toggle
+						:value="isDarkMode"
+						:aria-label="themeToggleLabel"
+						@input="handleThemeToggle"
+					/>
+				</div>
+			</slot>
+		</div>
+	</aside>
 </template>
 
 <script>
-import FTypography from '../../atoms/FTypography/FTypography.vue'
-import FButton from '../../atoms/FButton/FButton.vue'
-import FIcon from '../../atoms/FIcon/FIcon.vue'
-import FDivider from '../../atoms/FDivider/FDivider.vue'
-import FToggle from '../../atoms/FToggle/FToggle.vue'
-import FBadge from '../../atoms/FBadge/FBadge.vue'
+import FTypography from '../../atoms/FTypography/FTypography.vue';
+import FButton from '../../atoms/FButton/FButton.vue';
+import FIcon from '../../atoms/FIcon/FIcon.vue';
+import FDivider from '../../atoms/FDivider/FDivider.vue';
+import FToggle from '../../atoms/FToggle/FToggle.vue';
+import FBadge from '../../atoms/FBadge/FBadge.vue';
 
 export default {
-  name: 'FNavigationSidebar',
-  components: {
-    FTypography,
-    FButton,
-    FIcon,
-    FDivider,
-    FToggle,
-    FBadge
-  },
-  props: {
-    /**
-     * Controls the collapsed state of the sidebar.
-     * Use v-model:collapsed for two-way binding.
-     */
-    collapsed: {
-      type: Boolean,
-      default: false
-    },
-    /**
-     * Title displayed next to the logo when expanded
-     */
-    title: {
-      type: String,
-      default: ''
-    },
-    /**
-     * Width of the sidebar when expanded
-     */
-    width: {
-      type: String,
-      default: '256px'
-    },
-    /**
-     * Width of the sidebar when collapsed
-     */
-    collapsedWidth: {
-      type: String,
-      default: '64px'
-    },
-    /**
-     * Allow collapsing/expanding the sidebar
-     */
-    collapsible: {
-      type: Boolean,
-      default: true
-    },
-    /**
-     * Navigation items configuration
-     * Each item: { id, label, icon, href, to, children, badge, badgeVariant, disabled, type }
-     * type: 'link' (default) | 'group' | 'divider'
-     */
-    items: {
-      type: Array,
-      default: () => []
-    },
-    /**
-     * Current active route path for determining active state
-     */
-    activeRoute: {
-      type: String,
-      default: ''
-    },
-    /**
-     * Show theme toggle in footer
-     */
-    showThemeToggle: {
-      type: Boolean,
-      default: false
-    },
-    /**
-     * Current dark mode state
-     */
-    isDarkMode: {
-      type: Boolean,
-      default: false
-    },
-    /**
-     * Label for the theme toggle
-     */
-    themeToggleLabel: {
-      type: String,
-      default: 'Mode sombre'
-    },
-    /**
-     * Position of the sidebar
-     */
-    position: {
-      type: String,
-      default: 'left',
-      validator: (value) => ['left', 'right'].includes(value)
-    }
-  },
-  data() {
-    return {
-      openSubmenus: []
-    }
-  },
-  computed: {
-    /**
-     * Filtered navigation items (excluding invalid entries)
-     */
-    navigationItems() {
-      return this.items.filter(item => item && (item.label || item.type === 'divider'))
-    },
-    /**
-     * Main sidebar container classes
-     */
-    sidebarClasses() {
-      const baseClasses = 'flex flex-col h-full bg-white border-gray-200 transition-all duration-300'
-      const borderClasses = this.position === 'left' ? 'border-r' : 'border-l'
+	name: 'FNavigationSidebar',
+	components: {
+		FTypography,
+		FButton,
+		FIcon,
+		FDivider,
+		FToggle,
+		FBadge
+	},
+	props: {
+		/**
+		 * Controls the collapsed state of the sidebar.
+		 * Use v-model:collapsed for two-way binding.
+		 */
+		collapsed: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Title displayed next to the logo when expanded
+		 */
+		title: {
+			type: String,
+			default: ''
+		},
+		/**
+		 * Width of the sidebar when expanded
+		 */
+		width: {
+			type: String,
+			default: '256px'
+		},
+		/**
+		 * Width of the sidebar when collapsed
+		 */
+		collapsedWidth: {
+			type: String,
+			default: '64px'
+		},
+		/**
+		 * Allow collapsing/expanding the sidebar
+		 */
+		collapsible: {
+			type: Boolean,
+			default: true
+		},
+		/**
+		 * Navigation items configuration
+		 * Each item: { id, label, icon, href, to, children, badge, badgeVariant, disabled, type }
+		 * type: 'link' (default) | 'group' | 'divider'
+		 */
+		items: {
+			type: Array,
+			default: () => []
+		},
+		/**
+		 * Current active route path for determining active state
+		 */
+		activeRoute: {
+			type: String,
+			default: ''
+		},
+		/**
+		 * Show theme toggle in footer
+		 */
+		showThemeToggle: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Current dark mode state
+		 */
+		isDarkMode: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Label for the theme toggle
+		 */
+		themeToggleLabel: {
+			type: String,
+			default: 'Mode sombre'
+		},
+		/**
+		 * Position of the sidebar
+		 */
+		position: {
+			type: String,
+			default: 'left',
+			validator: (value) => ['left', 'right'].includes(value)
+		}
+	},
+	data() {
+		return {
+			openSubmenus: []
+		};
+	},
+	computed: {
+		/**
+		 * Filtered navigation items (excluding invalid entries)
+		 */
+		navigationItems() {
+			return this.items.filter(
+				(item) => item && (item.label || item.type === 'divider')
+			);
+		},
+		/**
+		 * Main sidebar container classes
+		 */
+		sidebarClasses() {
+			const baseClasses =
+				'flex flex-col h-full bg-white border-gray-200 transition-all duration-300';
+			const borderClasses = this.position === 'left' ? 'border-r' : 'border-l';
 
-      return [
-        baseClasses,
-        borderClasses
-      ].filter(Boolean).join(' ')
-    },
-    /**
-     * Sidebar inline styles
-     */
-    sidebarStyle() {
-      return {
-        width: this.collapsed ? this.collapsedWidth : this.width
-      }
-    },
-    /**
-     * Branding section classes
-     */
-    brandingClasses() {
-      const baseClasses = 'flex items-center border-b border-gray-200 transition-all duration-200'
-      const paddingClasses = this.collapsed ? 'justify-center p-3' : 'justify-between p-4'
+			return [baseClasses, borderClasses].filter(Boolean).join(' ');
+		},
+		/**
+		 * Sidebar inline styles
+		 */
+		sidebarStyle() {
+			return {
+				width: this.collapsed ? this.collapsedWidth : this.width
+			};
+		},
+		/**
+		 * Branding section classes
+		 */
+		brandingClasses() {
+			const baseClasses =
+				'flex items-center border-b border-gray-200 transition-all duration-200';
+			const paddingClasses = this.collapsed
+				? 'justify-center p-3'
+				: 'justify-between p-4';
 
-      return [
-        baseClasses,
-        paddingClasses
-      ].filter(Boolean).join(' ')
-    },
-    /**
-     * Group label classes
-     */
-    groupLabelClasses() {
-      return this.collapsed ? 'px-2 py-1' : 'px-4 py-2 mt-2'
-    },
-    /**
-     * Footer section classes
-     */
-    footerClasses() {
-      const baseClasses = 'border-t border-gray-200 transition-all duration-200'
-      const paddingClasses = this.collapsed ? 'p-2' : 'p-4'
+			return [baseClasses, paddingClasses].filter(Boolean).join(' ');
+		},
+		/**
+		 * Group label classes
+		 */
+		groupLabelClasses() {
+			return this.collapsed ? 'px-2 py-1' : 'px-4 py-2 mt-2';
+		},
+		/**
+		 * Footer section classes
+		 */
+		footerClasses() {
+			const baseClasses =
+				'border-t border-gray-200 transition-all duration-200';
+			const paddingClasses = this.collapsed ? 'p-2' : 'p-4';
 
-      return [
-        baseClasses,
-        paddingClasses
-      ].filter(Boolean).join(' ')
-    }
-  },
-  watch: {
-    /**
-     * Close submenus when sidebar is collapsed
-     */
-    collapsed(newValue) {
-      if (newValue) {
-        this.openSubmenus = []
-      }
-    }
-  },
-  created() {
-    this.initializeOpenSubmenus()
-  },
-  methods: {
-    /**
-     * Initialize open submenus based on active route
-     */
-    initializeOpenSubmenus() {
-      if (!this.activeRoute) return
+			return [baseClasses, paddingClasses].filter(Boolean).join(' ');
+		}
+	},
+	watch: {
+		/**
+		 * Close submenus when sidebar is collapsed
+		 */
+		collapsed(newValue) {
+			if (newValue) {
+				this.openSubmenus = [];
+			}
+		}
+	},
+	created() {
+		this.initializeOpenSubmenus();
+	},
+	methods: {
+		/**
+		 * Initialize open submenus based on active route
+		 */
+		initializeOpenSubmenus() {
+			if (!this.activeRoute) return;
 
-      this.items.forEach(item => {
-        if (item.children && item.children.length > 0) {
-          const hasActiveChild = item.children.some(child =>
-            this.isItemActive(child)
-          )
-          if (hasActiveChild && !this.openSubmenus.includes(item.id || item.label)) {
-            this.openSubmenus.push(item.id || item.label)
-          }
-        }
-      })
-    },
-    /**
-     * Toggle sidebar collapsed state
-     */
-    toggleCollapsed() {
-      this.$emit('update:collapsed', !this.collapsed)
-      this.$emit('toggle', !this.collapsed)
-    },
-    /**
-     * Check if a submenu is open
-     */
-    isSubmenuOpen(item) {
-      const key = item.id || item.label
-      return this.openSubmenus.includes(key)
-    },
-    /**
-     * Toggle submenu open state
-     */
-    toggleSubmenu(item) {
-      const key = item.id || item.label
-      const index = this.openSubmenus.indexOf(key)
+			this.items.forEach((item) => {
+				if (item.children && item.children.length > 0) {
+					const hasActiveChild = item.children.some((child) =>
+						this.isItemActive(child)
+					);
+					if (
+						hasActiveChild &&
+						!this.openSubmenus.includes(item.id || item.label)
+					) {
+						this.openSubmenus.push(item.id || item.label);
+					}
+				}
+			});
+		},
+		/**
+		 * Toggle sidebar collapsed state
+		 */
+		toggleCollapsed() {
+			this.$emit('update:collapsed', !this.collapsed);
+			this.$emit('toggle', !this.collapsed);
+		},
+		/**
+		 * Check if a submenu is open
+		 */
+		isSubmenuOpen(item) {
+			const key = item.id || item.label;
+			return this.openSubmenus.includes(key);
+		},
+		/**
+		 * Toggle submenu open state
+		 */
+		toggleSubmenu(item) {
+			const key = item.id || item.label;
+			const index = this.openSubmenus.indexOf(key);
 
-      if (index === -1) {
-        this.openSubmenus.push(key)
-      } else {
-        this.openSubmenus.splice(index, 1)
-      }
+			if (index === -1) {
+				this.openSubmenus.push(key);
+			} else {
+				this.openSubmenus.splice(index, 1);
+			}
 
-      this.$emit('submenu-toggle', { item, open: index === -1 })
-    },
-    /**
-     * Check if an item is currently active
-     */
-    isItemActive(item) {
-      if (!this.activeRoute) return false
+			this.$emit('submenu-toggle', { item, open: index === -1 });
+		},
+		/**
+		 * Check if an item is currently active
+		 */
+		isItemActive(item) {
+			if (!this.activeRoute) return false;
 
-      const itemPath = item.to || item.href
-      if (!itemPath) return false
+			const itemPath = item.to || item.href;
+			if (!itemPath) return false;
 
-      // Exact match
-      if (this.activeRoute === itemPath) return true
+			// Exact match
+			if (this.activeRoute === itemPath) return true;
 
-      // For nested routes: check if active route starts with item path
-      // followed by '/' or end of string to avoid partial matches
-      // e.g., '/users' should not match '/user-settings'
-      if (itemPath !== '/') {
-        return this.activeRoute.startsWith(itemPath + '/') ||
-          this.activeRoute === itemPath
-      }
+			// For nested routes: check if active route starts with item path
+			// followed by '/' or end of string to avoid partial matches
+			// e.g., '/users' should not match '/user-settings'
+			if (itemPath !== '/') {
+				return (
+					this.activeRoute.startsWith(itemPath + '/') ||
+					this.activeRoute === itemPath
+				);
+			}
 
-      return false
-    },
-    /**
-     * Check if a parent item has an active child
-     */
-    hasActiveChild(item) {
-      if (!item.children || item.children.length === 0) return false
-      return item.children.some(child => this.isItemActive(child))
-    },
-    /**
-     * Get the component to use for navigation items
-     */
-    getItemComponent(item) {
-      if (item.to) return 'router-link'
-      if (item.href) return 'a'
-      return 'button'
-    },
-    /**
-     * Get classes for navigation items
-     */
-    getNavItemClasses(item, isSubmenuTrigger = false) {
-      const isActive = this.isItemActive(item) || this.hasActiveChild(item)
-      const isDisabled = item.disabled
+			return false;
+		},
+		/**
+		 * Check if a parent item has an active child
+		 */
+		hasActiveChild(item) {
+			if (!item.children || item.children.length === 0) return false;
+			return item.children.some((child) => this.isItemActive(child));
+		},
+		/**
+		 * Get the component to use for navigation items
+		 */
+		getItemComponent(item) {
+			if (item.to) return 'router-link';
+			if (item.href) return 'a';
+			return 'button';
+		},
+		/**
+		 * Get classes for navigation items
+		 */
+		getNavItemClasses(item, isSubmenuTrigger = false) {
+			const isActive = this.isItemActive(item) || this.hasActiveChild(item);
+			const isDisabled = item.disabled;
 
-      const baseClasses = 'flex items-center w-full gap-3 transition-colors duration-200 text-sm font-medium'
-      const paddingClasses = this.collapsed ? 'justify-center px-3 py-3' : 'px-4 py-3'
-      const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : ''
-      const activeClasses = isActive ? 'bg-blue-50 text-blue-600' : 'text-gray-700'
-      const disabledClasses = isDisabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
-      const focusClasses = 'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset'
+			const baseClasses =
+				'flex items-center w-full gap-3 transition-colors duration-200 text-sm font-medium';
+			const paddingClasses = this.collapsed
+				? 'justify-center px-3 py-3'
+				: 'px-4 py-3';
+			const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : '';
+			const activeClasses = isActive
+				? 'bg-blue-50 text-blue-600'
+				: 'text-gray-700';
+			const disabledClasses = isDisabled
+				? 'opacity-50 cursor-not-allowed'
+				: 'cursor-pointer';
+			const focusClasses =
+				'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset';
 
-      return [
-        baseClasses,
-        paddingClasses,
-        hoverClasses,
-        activeClasses,
-        disabledClasses,
-        focusClasses
-      ].filter(Boolean).join(' ')
-    },
-    /**
-     * Get classes for child items in submenus
-     */
-    getChildItemClasses(item) {
-      const isActive = this.isItemActive(item)
-      const isDisabled = item.disabled
+			return [
+				baseClasses,
+				paddingClasses,
+				hoverClasses,
+				activeClasses,
+				disabledClasses,
+				focusClasses
+			]
+				.filter(Boolean)
+				.join(' ');
+		},
+		/**
+		 * Get classes for child items in submenus
+		 */
+		getChildItemClasses(item) {
+			const isActive = this.isItemActive(item);
+			const isDisabled = item.disabled;
 
-      const baseClasses = 'flex items-center w-full gap-3 pl-11 pr-4 py-2 transition-colors duration-200 text-sm'
-      const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : ''
-      const activeClasses = isActive ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-600'
-      const disabledClasses = isDisabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
-      const focusClasses = 'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset'
+			const baseClasses =
+				'flex items-center w-full gap-3 pl-11 pr-4 py-2 transition-colors duration-200 text-sm';
+			const hoverClasses = !isDisabled ? 'hover:bg-gray-50' : '';
+			const activeClasses = isActive
+				? 'bg-blue-50 text-blue-600 font-medium'
+				: 'text-gray-600';
+			const disabledClasses = isDisabled
+				? 'opacity-50 cursor-not-allowed'
+				: 'cursor-pointer';
+			const focusClasses =
+				'focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:ring-inset';
 
-      return [
-        baseClasses,
-        hoverClasses,
-        activeClasses,
-        disabledClasses,
-        focusClasses
-      ].filter(Boolean).join(' ')
-    },
-    /**
-     * Get icon classes based on active state
-     */
-    getIconClasses(item) {
-      const isActive = this.isItemActive(item) || this.hasActiveChild(item)
-      return isActive ? 'text-blue-600' : 'text-gray-400'
-    },
-    /**
-     * Get chevron classes for submenu indicators
-     */
-    getChevronClasses(item) {
-      const isOpen = this.isSubmenuOpen(item)
-      const baseClasses = 'transition-transform duration-200 text-gray-400'
-      const rotateClasses = isOpen ? 'rotate-180' : 'rotate-0'
+			return [
+				baseClasses,
+				hoverClasses,
+				activeClasses,
+				disabledClasses,
+				focusClasses
+			]
+				.filter(Boolean)
+				.join(' ');
+		},
+		/**
+		 * Get icon classes based on active state
+		 */
+		getIconClasses(item) {
+			const isActive = this.isItemActive(item) || this.hasActiveChild(item);
+			return isActive ? 'text-blue-600' : 'text-gray-400';
+		},
+		/**
+		 * Get chevron classes for submenu indicators
+		 */
+		getChevronClasses(item) {
+			const isOpen = this.isSubmenuOpen(item);
+			const baseClasses = 'transition-transform duration-200 text-gray-400';
+			const rotateClasses = isOpen ? 'rotate-180' : 'rotate-0';
 
-      return `${baseClasses} ${rotateClasses}`
-    },
-    /**
-     * Handle navigation item click
-     */
-    handleItemClick(item, event) {
-      if (item.disabled) {
-        event.preventDefault()
-        return
-      }
+			return `${baseClasses} ${rotateClasses}`;
+		},
+		/**
+		 * Handle navigation item click
+		 */
+		handleItemClick(item, event) {
+			if (item.disabled) {
+				event.preventDefault();
+				return;
+			}
 
-      this.$emit('navigate', item)
+			this.$emit('navigate', item);
 
-      // For items without href/to (custom actions)
-      if (!item.href && !item.to) {
-        event.preventDefault()
-        this.$emit('item-click', item)
-      }
-    },
-    /**
-     * Handle theme toggle
-     */
-    handleThemeToggle(value) {
-      this.$emit('update:isDarkMode', value)
-      this.$emit('theme-change', value)
-    }
-  }
-}
+			// For items without href/to (custom actions)
+			if (!item.href && !item.to) {
+				event.preventDefault();
+				this.$emit('item-click', item);
+			}
+		},
+		/**
+		 * Handle theme toggle
+		 */
+		handleThemeToggle(value) {
+			this.$emit('update:isDarkMode', value);
+			this.$emit('theme-change', value);
+		}
+	}
+};
 </script>

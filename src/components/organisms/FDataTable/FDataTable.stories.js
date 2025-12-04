@@ -25,7 +25,7 @@ export default {
 		},
 		perPage: {
 			control: { type: 'number', min: 1, max: 50 },
-			description: 'Nombre d\'éléments par page'
+			description: "Nombre d'éléments par page"
 		},
 		loading: {
 			control: 'boolean',
@@ -53,18 +53,90 @@ export default {
 
 // Données de démonstration
 const sampleData = [
-	{ id: 1, name: 'Jean Dupont', email: 'jean.dupont@email.com', role: 'Administrateur', status: 'Actif' },
-	{ id: 2, name: 'Marie Martin', email: 'marie.martin@email.com', role: 'Éditeur', status: 'Actif' },
-	{ id: 3, name: 'Pierre Bernard', email: 'pierre.bernard@email.com', role: 'Utilisateur', status: 'Inactif' },
-	{ id: 4, name: 'Sophie Petit', email: 'sophie.petit@email.com', role: 'Éditeur', status: 'Actif' },
-	{ id: 5, name: 'Lucas Moreau', email: 'lucas.moreau@email.com', role: 'Utilisateur', status: 'Actif' },
-	{ id: 6, name: 'Emma Leroy', email: 'emma.leroy@email.com', role: 'Administrateur', status: 'Actif' },
-	{ id: 7, name: 'Hugo Roux', email: 'hugo.roux@email.com', role: 'Utilisateur', status: 'Inactif' },
-	{ id: 8, name: 'Léa Fournier', email: 'lea.fournier@email.com', role: 'Éditeur', status: 'Actif' },
-	{ id: 9, name: 'Arthur Girard', email: 'arthur.girard@email.com', role: 'Utilisateur', status: 'Actif' },
-	{ id: 10, name: 'Chloé Bonnet', email: 'chloe.bonnet@email.com', role: 'Utilisateur', status: 'Inactif' },
-	{ id: 11, name: 'Louis Dumont', email: 'louis.dumont@email.com', role: 'Éditeur', status: 'Actif' },
-	{ id: 12, name: 'Camille Lambert', email: 'camille.lambert@email.com', role: 'Utilisateur', status: 'Actif' }
+	{
+		id: 1,
+		name: 'Jean Dupont',
+		email: 'jean.dupont@email.com',
+		role: 'Administrateur',
+		status: 'Actif'
+	},
+	{
+		id: 2,
+		name: 'Marie Martin',
+		email: 'marie.martin@email.com',
+		role: 'Éditeur',
+		status: 'Actif'
+	},
+	{
+		id: 3,
+		name: 'Pierre Bernard',
+		email: 'pierre.bernard@email.com',
+		role: 'Utilisateur',
+		status: 'Inactif'
+	},
+	{
+		id: 4,
+		name: 'Sophie Petit',
+		email: 'sophie.petit@email.com',
+		role: 'Éditeur',
+		status: 'Actif'
+	},
+	{
+		id: 5,
+		name: 'Lucas Moreau',
+		email: 'lucas.moreau@email.com',
+		role: 'Utilisateur',
+		status: 'Actif'
+	},
+	{
+		id: 6,
+		name: 'Emma Leroy',
+		email: 'emma.leroy@email.com',
+		role: 'Administrateur',
+		status: 'Actif'
+	},
+	{
+		id: 7,
+		name: 'Hugo Roux',
+		email: 'hugo.roux@email.com',
+		role: 'Utilisateur',
+		status: 'Inactif'
+	},
+	{
+		id: 8,
+		name: 'Léa Fournier',
+		email: 'lea.fournier@email.com',
+		role: 'Éditeur',
+		status: 'Actif'
+	},
+	{
+		id: 9,
+		name: 'Arthur Girard',
+		email: 'arthur.girard@email.com',
+		role: 'Utilisateur',
+		status: 'Actif'
+	},
+	{
+		id: 10,
+		name: 'Chloé Bonnet',
+		email: 'chloe.bonnet@email.com',
+		role: 'Utilisateur',
+		status: 'Inactif'
+	},
+	{
+		id: 11,
+		name: 'Louis Dumont',
+		email: 'louis.dumont@email.com',
+		role: 'Éditeur',
+		status: 'Actif'
+	},
+	{
+		id: 12,
+		name: 'Camille Lambert',
+		email: 'camille.lambert@email.com',
+		role: 'Utilisateur',
+		status: 'Actif'
+	}
 ];
 
 const sampleColumns = [
@@ -128,7 +200,7 @@ Empty.args = {
 	data: [],
 	columns: sampleColumns,
 	emptyTitle: 'Aucun utilisateur',
-	emptyDescription: 'Il n\'y a aucun utilisateur à afficher pour le moment.',
+	emptyDescription: "Il n'y a aucun utilisateur à afficher pour le moment.",
 	emptyActionLabel: 'Ajouter un utilisateur'
 };
 
@@ -237,7 +309,7 @@ export const WithEvents = () => ({
 		return {
 			data: sampleData.slice(0, 5),
 			columns: sampleColumns,
-			lastEvent: 'Cliquez sur une ligne pour voir l\'événement'
+			lastEvent: "Cliquez sur une ligne pour voir l'événement"
 		};
 	},
 	methods: {

@@ -131,9 +131,7 @@ export default {
 				lg: 'text-base',
 				xl: 'text-lg'
 			};
-			return [fonts[this.size], 'font-sans font-medium select-none'].join(
-				' '
-			);
+			return [fonts[this.size], 'font-sans font-medium select-none'].join(' ');
 		},
 		containerClasses() {
 			const shapes = {
