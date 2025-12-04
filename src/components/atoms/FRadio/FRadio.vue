@@ -73,16 +73,16 @@ export default {
 			let stateClasses;
 			if (this.error) {
 				stateClasses = this.isChecked
-					? 'border-red-500 bg-red-500'
-					: 'border-red-500 bg-white';
+					? 'border-danger-500 bg-danger-500'
+					: 'border-danger-500 bg-white';
 			} else if (this.disabled) {
 				stateClasses = this.isChecked
-					? 'border-gray-300 bg-gray-300'
-					: 'border-gray-300 bg-gray-100';
+					? 'border-neutral-300 bg-neutral-300'
+					: 'border-neutral-300 bg-neutral-100';
 			} else {
 				stateClasses = this.isChecked
-					? 'border-blue-500 bg-blue-500'
-					: 'border-gray-300 bg-white hover:border-blue-400';
+					? 'border-primary-500 bg-primary-500'
+					: 'border-neutral-300 bg-white hover:border-primary-400';
 			}
 
 			return [baseClasses, stateClasses].filter(Boolean).join(' ');
@@ -91,13 +91,13 @@ export default {
 			return 'w-2 h-2 rounded-full bg-white';
 		},
 		labelClasses() {
-			const baseClasses = 'ml-2 text-sm text-gray-800 select-none';
+			const baseClasses = 'ml-2 text-sm text-neutral-800 select-none';
 
 			let stateClasses = '';
 			if (this.disabled) {
-				stateClasses = 'text-gray-400';
+				stateClasses = 'text-neutral-400';
 			} else if (this.error) {
-				stateClasses = 'text-red-500';
+				stateClasses = 'text-danger-500';
 			}
 
 			return [baseClasses, stateClasses].filter(Boolean).join(' ');

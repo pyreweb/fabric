@@ -21,14 +21,14 @@
 				:size="avatarSize"
 				:status="avatarStatus"
 			/>
-			<span v-if="showUserName" class="ml-2 font-medium text-gray-700">
+			<span v-if="showUserName" class="ml-2 font-medium text-neutral-700">
 				{{ userName }}
 			</span>
 			<f-icon
 				v-if="showChevron"
 				:name="isOpen ? 'chevron-up' : 'chevron-down'"
 				size="sm"
-				class="ml-1 text-gray-500"
+				class="ml-1 text-neutral-500"
 			/>
 		</button>
 
@@ -42,13 +42,13 @@
 		>
 			<!-- User Info Header -->
 			<div v-if="showUserInfo" class="px-4 py-3">
-				<f-typography variant="body" class="font-medium text-gray-900" truncate>
+				<f-typography variant="body" class="font-medium text-neutral-900" truncate>
 					{{ userName }}
 				</f-typography>
 				<f-typography
 					v-if="userEmail"
 					variant="caption"
-					class="text-gray-500"
+					class="text-neutral-500"
 					truncate
 				>
 					{{ userEmail }}
@@ -77,7 +77,7 @@
 							@click="handleItemClick(item, $event)"
 						>
 							<template v-if="item.icon" #left>
-								<f-icon :name="item.icon" size="sm" class="text-gray-500" />
+								<f-icon :name="item.icon" size="sm" class="text-neutral-500" />
 							</template>
 						</f-list-item>
 					</template>
@@ -91,11 +91,11 @@
 					<f-list-item
 						:title="logoutLabel"
 						clickable
-						class="text-red-600 hover:bg-red-50"
+						class="text-danger-600 hover:bg-danger-50"
 						@click="handleLogout"
 					>
 						<template #left>
-							<f-icon name="arrow-right" size="sm" class="text-red-500" />
+							<f-icon name="arrow-right" size="sm" class="text-danger-500" />
 						</template>
 					</f-list-item>
 				</div>
@@ -298,8 +298,8 @@ export default {
 				'inline-flex items-center',
 				'px-2 py-1 rounded-lg',
 				'transition-colors duration-200',
-				'hover:bg-gray-100',
-				'focus:outline-none focus:ring-2 focus:ring-blue-500/20',
+				'hover:bg-neutral-100',
+				'focus:outline-none focus:ring-2 focus:ring-primary-500/20',
 				'cursor-pointer'
 			].join(' ');
 		},
@@ -315,7 +315,7 @@ export default {
 				alignmentClass,
 				this.dropdownWidth,
 				'bg-white rounded-lg shadow-lg',
-				'border border-gray-200',
+				'border border-neutral-200',
 				'overflow-hidden'
 			].join(' ');
 		}
@@ -373,7 +373,7 @@ export default {
 		getItemClasses(item) {
 			const classes = [];
 			if (item.danger) {
-				classes.push('text-red-600 hover:bg-red-50');
+				classes.push('text-danger-600 hover:bg-danger-50');
 			}
 			return classes.join(' ');
 		},

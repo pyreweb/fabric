@@ -56,20 +56,20 @@ export default {
 
 			const variants = {
 				primary: this.outlined
-					? 'border border-blue-500 text-blue-500 bg-transparent'
-					: 'bg-blue-500 text-white',
+					? 'border border-primary-500 text-primary-500 bg-transparent'
+					: 'bg-primary-500 text-white',
 				success: this.outlined
-					? 'border border-green-500 text-green-500 bg-transparent'
-					: 'bg-green-500 text-white',
+					? 'border border-success-500 text-success-500 bg-transparent'
+					: 'bg-success-500 text-white',
 				warning: this.outlined
-					? 'border border-yellow-600 text-yellow-600 bg-transparent'
-					: 'bg-yellow-600 text-white',
+					? 'border border-warning-600 text-warning-600 bg-transparent'
+					: 'bg-warning-600 text-white',
 				error: this.outlined
-					? 'border border-red-500 text-red-500 bg-transparent'
-					: 'bg-red-500 text-white',
+					? 'border border-danger-500 text-danger-500 bg-transparent'
+					: 'bg-danger-500 text-white',
 				neutral: this.outlined
-					? 'border border-gray-500 text-gray-500 bg-transparent'
-					: 'bg-gray-500 text-white'
+					? 'border border-neutral-500 text-neutral-500 bg-transparent'
+					: 'bg-neutral-500 text-white'
 			};
 
 			if (this.dot) {

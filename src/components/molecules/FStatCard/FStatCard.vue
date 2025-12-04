@@ -20,13 +20,13 @@ import FTypography from '../../atoms/FTypography/FTypography.vue';
 
 const VARIANT_COLORS = {
 	primary: {
-		iconContainer: 'bg-blue-100 text-blue-600'
+		iconContainer: 'bg-primary-100 text-primary-600'
 	},
 	success: {
-		iconContainer: 'bg-green-100 text-green-600'
+		iconContainer: 'bg-success-100 text-success-600'
 	},
 	danger: {
-		iconContainer: 'bg-red-100 text-red-600'
+		iconContainer: 'bg-danger-100 text-danger-600'
 	},
 	info: {
 		iconContainer: 'bg-cyan-100 text-cyan-600'
@@ -74,7 +74,7 @@ export default {
 		},
 		cardClasses() {
 			const baseClasses = 'bg-white rounded-lg p-4';
-			const borderedClasses = this.bordered ? 'border border-gray-200' : '';
+			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 			const layoutClasses =
 				this.layout === 'vertical'
 					? 'flex flex-col items-center text-center'
@@ -96,10 +96,10 @@ export default {
 			return [baseClasses, verticalClasses].filter(Boolean).join(' ');
 		},
 		labelClasses() {
-			return 'text-gray-500';
+			return 'text-neutral-500';
 		},
 		valueClasses() {
-			return 'text-gray-900 font-bold';
+			return 'text-neutral-900 font-bold';
 		}
 	}
 };

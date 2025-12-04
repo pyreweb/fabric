@@ -102,16 +102,16 @@ export default {
 		},
 		containerClasses() {
 			const baseClasses =
-				'flex items-center gap-3 px-4 py-3 bg-gray-50 rounded-lg border border-gray-200';
+				'flex items-center gap-3 px-4 py-3 bg-neutral-50 rounded-lg border border-neutral-200';
 			const disabledClasses = this.disabled ? 'opacity-50' : '';
 
 			return [baseClasses, disabledClasses].filter(Boolean).join(' ');
 		},
 		iconClasses() {
-			return 'text-gray-500 flex-shrink-0';
+			return 'text-neutral-500 flex-shrink-0';
 		},
 		fileNameClasses() {
-			return this.disabled ? 'text-gray-400' : '';
+			return this.disabled ? 'text-neutral-400' : '';
 		}
 	},
 	methods: {

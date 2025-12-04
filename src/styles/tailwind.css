@@ -1,1 +1,89 @@
 @import "tailwindcss";
+
+/*
+ * Fabric Design System - Semantic Color Tokens
+ * 
+ * This theming system uses CSS custom properties that can be overridden
+ * by consuming applications to customize the design system colors.
+ * 
+ * To customize, override these variables in your application's CSS:
+ * 
+ * :root {
+ *   --color-primary-50: oklch(0.97 0.01 250);
+ *   --color-primary-100: oklch(0.93 0.03 250);
+ *   ...
+ * }
+ */
+
+@theme {
+	/* Primary color palette - Blue by default */
+	--color-primary-50: oklch(0.97 0.01 250);
+	--color-primary-100: oklch(0.93 0.03 250);
+	--color-primary-200: oklch(0.87 0.06 250);
+	--color-primary-300: oklch(0.76 0.11 250);
+	--color-primary-400: oklch(0.63 0.17 250);
+	--color-primary-500: oklch(0.55 0.20 250);
+	--color-primary-600: oklch(0.49 0.20 250);
+	--color-primary-700: oklch(0.42 0.17 250);
+	--color-primary-800: oklch(0.35 0.14 250);
+	--color-primary-900: oklch(0.28 0.10 250);
+	--color-primary-950: oklch(0.21 0.07 250);
+
+	/* Success color palette - Green by default */
+	--color-success-50: oklch(0.98 0.02 145);
+	--color-success-100: oklch(0.94 0.05 145);
+	--color-success-200: oklch(0.87 0.10 145);
+	--color-success-300: oklch(0.76 0.15 145);
+	--color-success-400: oklch(0.64 0.18 145);
+	--color-success-500: oklch(0.55 0.18 145);
+	--color-success-600: oklch(0.47 0.16 145);
+	--color-success-700: oklch(0.40 0.13 145);
+	--color-success-800: oklch(0.34 0.10 145);
+	--color-success-900: oklch(0.28 0.08 145);
+	--color-success-950: oklch(0.18 0.05 145);
+
+	/* Danger color palette - Red by default */
+	--color-danger-50: oklch(0.97 0.02 25);
+	--color-danger-100: oklch(0.94 0.04 25);
+	--color-danger-200: oklch(0.88 0.08 25);
+	--color-danger-300: oklch(0.78 0.13 25);
+	--color-danger-400: oklch(0.67 0.18 25);
+	--color-danger-500: oklch(0.58 0.20 25);
+	--color-danger-600: oklch(0.51 0.19 25);
+	--color-danger-700: oklch(0.44 0.16 25);
+	--color-danger-800: oklch(0.37 0.13 25);
+	--color-danger-900: oklch(0.30 0.10 25);
+	--color-danger-950: oklch(0.20 0.06 25);
+
+	/* Warning color palette - Yellow/Orange by default */
+	--color-warning-50: oklch(0.98 0.02 85);
+	--color-warning-100: oklch(0.95 0.05 85);
+	--color-warning-200: oklch(0.90 0.10 85);
+	--color-warning-300: oklch(0.82 0.15 85);
+	--color-warning-400: oklch(0.74 0.18 85);
+	--color-warning-500: oklch(0.68 0.18 85);
+	--color-warning-600: oklch(0.60 0.16 85);
+	--color-warning-700: oklch(0.52 0.13 75);
+	--color-warning-800: oklch(0.44 0.10 75);
+	--color-warning-900: oklch(0.36 0.07 75);
+	--color-warning-950: oklch(0.25 0.05 75);
+
+	/* Neutral color palette - Gray by default */
+	--color-neutral-50: oklch(0.98 0.00 0);
+	--color-neutral-100: oklch(0.96 0.00 0);
+	--color-neutral-200: oklch(0.92 0.00 0);
+	--color-neutral-300: oklch(0.87 0.00 0);
+	--color-neutral-400: oklch(0.70 0.00 0);
+	--color-neutral-500: oklch(0.55 0.00 0);
+	--color-neutral-600: oklch(0.45 0.00 0);
+	--color-neutral-700: oklch(0.37 0.00 0);
+	--color-neutral-800: oklch(0.27 0.00 0);
+	--color-neutral-900: oklch(0.20 0.00 0);
+	--color-neutral-950: oklch(0.13 0.00 0);
+
+	/* Surface colors - for backgrounds and containers */
+	--color-surface-background: var(--color-neutral-50);
+	--color-surface-foreground: var(--color-neutral-900);
+	--color-surface-muted: var(--color-neutral-100);
+	--color-surface-border: var(--color-neutral-300);
+}

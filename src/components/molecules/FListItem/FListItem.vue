@@ -77,9 +77,9 @@ export default {
 				'flex items-center gap-3 px-4 py-3 transition-all duration-200';
 			const clickableClasses =
 				this.clickable && !this.disabled
-					? 'cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500/20'
+					? 'cursor-pointer hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500/20'
 					: '';
-			const selectedClasses = this.selected ? 'bg-blue-50' : '';
+			const selectedClasses = this.selected ? 'bg-primary-50' : '';
 			const disabledClasses = this.disabled
 				? 'opacity-50 cursor-not-allowed'
 				: '';
@@ -89,10 +89,10 @@ export default {
 				.join(' ');
 		},
 		titleClasses() {
-			return this.disabled ? 'text-gray-400' : '';
+			return this.disabled ? 'text-neutral-400' : '';
 		},
 		subtitleClasses() {
-			return this.disabled ? 'text-gray-300' : '';
+			return this.disabled ? 'text-neutral-300' : '';
 		}
 	},
 	methods: {

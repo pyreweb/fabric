@@ -30,22 +30,22 @@ import FButton from '../../atoms/FButton/FButton.vue';
 
 const VARIANT_COLORS = {
 	success: {
-		container: 'bg-green-50 border-green-200 text-green-800',
-		title: 'text-green-800',
-		message: 'text-green-700',
-		closeButton: 'text-green-600 hover:text-green-800'
+		container: 'bg-success-50 border-success-200 text-success-800',
+		title: 'text-success-800',
+		message: 'text-success-700',
+		closeButton: 'text-success-600 hover:text-success-800'
 	},
 	error: {
-		container: 'bg-red-50 border-red-200 text-red-800',
-		title: 'text-red-800',
-		message: 'text-red-700',
-		closeButton: 'text-red-600 hover:text-red-800'
+		container: 'bg-danger-50 border-danger-200 text-danger-800',
+		title: 'text-danger-800',
+		message: 'text-danger-700',
+		closeButton: 'text-danger-600 hover:text-danger-800'
 	},
 	info: {
-		container: 'bg-blue-50 border-blue-200 text-blue-800',
-		title: 'text-blue-800',
-		message: 'text-blue-700',
-		closeButton: 'text-blue-600 hover:text-blue-800'
+		container: 'bg-primary-50 border-primary-200 text-primary-800',
+		title: 'text-primary-800',
+		message: 'text-primary-700',
+		closeButton: 'text-primary-600 hover:text-primary-800'
 	}
 };
 

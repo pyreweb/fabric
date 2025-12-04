@@ -1,5 +1,5 @@
 <template>
-	<div class="border border-gray-200 rounded-lg overflow-hidden">
+	<div class="border border-neutral-200 rounded-lg overflow-hidden">
 		<button
 			:id="headerId"
 			type="button"
@@ -62,12 +62,12 @@ export default {
 	computed: {
 		headerClasses() {
 			const baseClasses =
-				'w-full flex items-center justify-between gap-3 p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset transition-colors duration-200 cursor-pointer';
+				'w-full flex items-center justify-between gap-3 p-4 bg-neutral-50 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset transition-colors duration-200 cursor-pointer';
 			return baseClasses;
 		},
 		iconClasses() {
 			const baseClasses =
-				'transform transition-transform duration-300 text-gray-500';
+				'transform transition-transform duration-300 text-neutral-500';
 			const rotateClasses = this.isOpen ? 'rotate-180' : 'rotate-0';
 			return `${baseClasses} ${rotateClasses}`;
 		},

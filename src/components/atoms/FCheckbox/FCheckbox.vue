@@ -52,15 +52,15 @@ export default {
 			return [
 				'shrink-0 w-4 h-4 rounded border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1',
 				this.error
-					? 'border-red-500 text-red-500 focus:ring-red-500/20'
-					: 'border-gray-300 text-blue-600 focus:border-blue-600 focus:ring-blue-600/20',
+					? 'border-danger-500 text-danger-500 focus:ring-danger-500/20'
+					: 'border-neutral-300 text-primary-600 focus:border-primary-600 focus:ring-primary-600/20',
 				this.disabled ? 'cursor-not-allowed' : 'cursor-pointer'
 			];
 		},
 		labelClasses() {
 			return [
 				'ml-2 font-sans text-sm',
-				this.error ? 'text-red-500' : 'text-gray-700'
+				this.error ? 'text-danger-500' : 'text-neutral-700'
 			];
 		}
 	},

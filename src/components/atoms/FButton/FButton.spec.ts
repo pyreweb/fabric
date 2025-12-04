@@ -6,35 +6,35 @@ describe('FButton', () => {
 	describe('variant prop', () => {
 		it('renders with default variant (primary)', () => {
 			const wrapper = mount(FButton);
-			expect(wrapper.classes()).toContain('bg-blue-600');
+			expect(wrapper.classes()).toContain('bg-primary-600');
 		});
 
 		it('renders with secondary variant', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'secondary' }
 			});
-			expect(wrapper.classes()).toContain('bg-blue-100');
+			expect(wrapper.classes()).toContain('bg-primary-100');
 		});
 
 		it('renders with danger variant', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'danger' }
 			});
-			expect(wrapper.classes()).toContain('bg-red-600');
+			expect(wrapper.classes()).toContain('bg-danger-600');
 		});
 
 		it('renders with success variant', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'success' }
 			});
-			expect(wrapper.classes()).toContain('bg-green-600');
+			expect(wrapper.classes()).toContain('bg-success-600');
 		});
 
 		it('renders with outline variant', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'outline' }
 			});
-			expect(wrapper.classes()).toContain('border-gray-300');
+			expect(wrapper.classes()).toContain('border-neutral-300');
 			expect(wrapper.classes()).toContain('bg-white');
 		});
 
@@ -42,14 +42,14 @@ describe('FButton', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'ghost' }
 			});
-			expect(wrapper.classes()).toContain('text-gray-600');
+			expect(wrapper.classes()).toContain('text-neutral-600');
 		});
 
 		it('renders with link variant', () => {
 			const wrapper = mount(FButton, {
 				propsData: { variant: 'link' }
 			});
-			expect(wrapper.classes()).toContain('text-blue-600');
+			expect(wrapper.classes()).toContain('text-primary-600');
 			expect(wrapper.classes()).toContain('underline');
 		});
 	});

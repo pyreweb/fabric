@@ -93,7 +93,7 @@ export default {
 		},
 		inputClasses() {
 			const baseClasses =
-				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 border-gray-300 focus:border-blue-500 focus:ring-blue-500/20';
+				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20';
 
 			const sizeClasses = {
 				small: 'py-1.5 px-2.5 text-xs',
@@ -108,7 +108,7 @@ export default {
 			};
 
 			const disabledClasses = this.disabled
-				? 'bg-gray-100 cursor-not-allowed opacity-70'
+				? 'bg-neutral-100 cursor-not-allowed opacity-70'
 				: '';
 
 			const hasInsideIcon = this.iconPosition === 'inside' && !this.buttonMode;
@@ -124,7 +124,7 @@ export default {
 		},
 		iconButtonClasses() {
 			const baseClasses =
-				'inline-flex items-center justify-center rounded transition-all duration-200 text-gray-500 hover:text-blue-500 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500/20';
+				'inline-flex items-center justify-center rounded transition-all duration-200 text-neutral-500 hover:text-primary-500 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500/20';
 
 			const sizeClasses = {
 				small: 'p-1.5',
@@ -150,7 +150,7 @@ export default {
 		},
 		insideIconClasses() {
 			const baseClasses =
-				'absolute top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none';
+				'absolute top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none';
 
 			const leftPositionClasses = {
 				small: 'left-2.5',

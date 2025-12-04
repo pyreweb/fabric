@@ -80,7 +80,7 @@ export default {
 				xl: 'w-12 h-12'
 			};
 
-			const colorClasses = this.color ? '' : 'text-blue-500';
+			const colorClasses = this.color ? '' : 'text-primary-500';
 
 			return [baseClasses, sizeClasses[this.size], colorClasses]
 				.filter(Boolean)
