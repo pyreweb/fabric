@@ -5,7 +5,8 @@
 	"type": "module",
 	"overrides": {
 		"json5": "^2.2.3",
-		"loader-utils": "^3.2.1"
+		"loader-utils": "^3.2.1",
+		"postcss": "^8.4.31"
 	},
 	"main": "dist/fabric.cjs.js",
 	"module": "dist/fabric.esm.js",
