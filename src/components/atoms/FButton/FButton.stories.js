@@ -8,7 +8,15 @@ export default {
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
-			options: ['primary', 'secondary', 'danger', 'success', 'outline', 'ghost', 'link'],
+			options: [
+				'primary',
+				'secondary',
+				'danger',
+				'success',
+				'outline',
+				'ghost',
+				'link'
+			],
 			description: 'Style de bouton'
 		},
 		size: {
@@ -39,7 +47,8 @@ export default {
 const Template = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { FButton },
-	template: '<f-button v-bind="$props">{{ $props.label || "Bouton" }}</f-button>'
+	template:
+		'<f-button v-bind="$props">{{ $props.label || "Bouton" }}</f-button>'
 });
 
 // Story par défaut
