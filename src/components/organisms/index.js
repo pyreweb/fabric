@@ -18,4 +18,4 @@ export {
   FModal,
   FUserMenu,
   FOnboardingStepper
-}
+};
