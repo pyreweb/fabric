@@ -1,3 +1,4 @@
+import type { Meta, StoryFn } from '@storybook/vue';
 import FButton from './FButton.vue';
 import FIcon from '../FIcon/FIcon.vue';
 
@@ -41,10 +42,10 @@ export default {
 			description: 'Bouton pleine largeur'
 		}
 	}
-};
+} as Meta<typeof FButton>;
 
 // Template de base
-const Template = (args, { argTypes }) => ({
+const Template: StoryFn<typeof FButton> = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { FButton },
 	template:
@@ -159,7 +160,7 @@ Block.args = {
 };
 
 // Toutes les variantes côte à côte
-export const AllVariants = () => ({
+export const AllVariants = (): object => ({
 	components: { FButton },
 	template: `
 		<div class="flex flex-wrap gap-4">
@@ -175,7 +176,7 @@ export const AllVariants = () => ({
 });
 
 // Toutes les tailles côte à côte
-export const AllSizes = () => ({
+export const AllSizes = (): object => ({
 	components: { FButton },
 	template: `
 		<div class="flex items-center gap-4">
@@ -189,7 +190,7 @@ export const AllSizes = () => ({
 });
 
 // Avec icônes (utilisation des slots)
-export const WithIconLeft = () => ({
+export const WithIconLeft = (): object => ({
 	components: { FButton, FIcon },
 	template: `
 		<f-button variant="primary">
@@ -201,7 +202,7 @@ export const WithIconLeft = () => ({
 	`
 });
 
-export const WithIconRight = () => ({
+export const WithIconRight = (): object => ({
 	components: { FButton, FIcon },
 	template: `
 		<f-button variant="primary">

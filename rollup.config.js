@@ -3,13 +3,14 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import postcss from 'rollup-plugin-postcss';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
-	input: 'src/index.js',
+	input: 'src/index.ts',
 	output: [
 		{
 			file: 'dist/fabric.cjs.js',
@@ -33,8 +34,16 @@ export default {
 	],
 	external: ['vue'],
 	plugins: [
-		resolve(),
+		resolve({
+			extensions: ['.js', '.ts', '.vue']
+		}),
 		commonjs(),
+		typescript({
+			tsconfig: './tsconfig.json',
+			declaration: true,
+			declarationDir: 'dist/types',
+			exclude: ['**/*.spec.ts', '**/*.stories.ts']
+		}),
 		vue({
 			css: true,
 			compileTemplate: true

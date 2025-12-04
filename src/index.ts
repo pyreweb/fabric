@@ -36,8 +36,15 @@ import {
 	FOnboardingStepper,
 	FProfileSection
 } from './components/organisms';
+import type { VueConstructor, Component } from 'vue';
 
-const components = {
+// Export all types
+export * from './types';
+
+// Type for components record
+type ComponentsRecord = Record<string, Component>;
+
+const components: ComponentsRecord = {
 	FActivityFeed,
 	FAlert,
 	FAvatar,
@@ -71,11 +78,19 @@ const components = {
 	FUserMenu
 };
 
-const install = (Vue) => {
+const install = (Vue: VueConstructor): void => {
 	Object.keys(components).forEach((name) => {
-		Vue.component(name, components[name]);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		Vue.component(name, components[name] as any);
 	});
 };
+
+// Auto-install when Vue is found (browser global)
+declare global {
+	interface Window {
+		Vue?: VueConstructor;
+	}
+}
 
 if (typeof window !== 'undefined' && window.Vue) {
 	install(window.Vue);

@@ -32,10 +32,10 @@ describe('FDataTable', () => {
 			});
 
 			const rows = wrapper.findAll('tbody tr');
-			await rows.at(0).trigger('click');
+			await rows.at(0)?.trigger('click');
 
 			expect(wrapper.emitted('row-click')).toBeTruthy();
-			expect(wrapper.emitted('row-click')[0][0]).toEqual({
+			expect(wrapper.emitted('row-click')?.[0]?.[0]).toEqual({
 				id: 1,
 				name: 'Item 1'
 			});
@@ -48,10 +48,10 @@ describe('FDataTable', () => {
 			});
 
 			const rows = wrapper.findAll('tbody tr');
-			await rows.at(1).trigger('click');
+			await rows.at(1)?.trigger('click');
 
 			expect(wrapper.emitted('row-click')).toBeTruthy();
-			expect(wrapper.emitted('row-click')[0][0]).toEqual({
+			expect(wrapper.emitted('row-click')?.[0]?.[0]).toEqual({
 				id: 2,
 				name: 'Item 2'
 			});
@@ -67,10 +67,10 @@ describe('FDataTable', () => {
 
 			const headers = wrapper.findAll('thead th');
 			// Click on the 'name' column header (sortable)
-			await headers.at(1).trigger('click');
+			await headers.at(1)?.trigger('click');
 
 			expect(wrapper.emitted('sort')).toBeTruthy();
-			expect(wrapper.emitted('sort')[0][0]).toEqual({
+			expect(wrapper.emitted('sort')?.[0]?.[0]).toEqual({
 				key: 'name',
 				direction: 'asc'
 			});
@@ -86,15 +86,15 @@ describe('FDataTable', () => {
 			const nameHeader = headers.at(1);
 
 			// First click - ascending
-			await nameHeader.trigger('click');
-			expect(wrapper.emitted('sort')[0][0]).toEqual({
+			await nameHeader?.trigger('click');
+			expect(wrapper.emitted('sort')?.[0]?.[0]).toEqual({
 				key: 'name',
 				direction: 'asc'
 			});
 
 			// Second click - descending
-			await nameHeader.trigger('click');
-			expect(wrapper.emitted('sort')[1][0]).toEqual({
+			await nameHeader?.trigger('click');
+			expect(wrapper.emitted('sort')?.[1]?.[0]).toEqual({
 				key: 'name',
 				direction: 'desc'
 			});
@@ -114,15 +114,15 @@ describe('FDataTable', () => {
 			const headers = wrapper.findAll('thead th');
 
 			// Click on 'id' column
-			await headers.at(0).trigger('click');
-			expect(wrapper.emitted('sort')[0][0]).toEqual({
+			await headers.at(0)?.trigger('click');
+			expect(wrapper.emitted('sort')?.[0]?.[0]).toEqual({
 				key: 'id',
 				direction: 'asc'
 			});
 
 			// Click on 'name' column - should reset to ascending
-			await headers.at(1).trigger('click');
-			expect(wrapper.emitted('sort')[1][0]).toEqual({
+			await headers.at(1)?.trigger('click');
+			expect(wrapper.emitted('sort')?.[1]?.[0]).toEqual({
 				key: 'name',
 				direction: 'asc'
 			});
