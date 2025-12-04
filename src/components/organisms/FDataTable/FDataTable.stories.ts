@@ -1,4 +1,20 @@
+import type { Meta, StoryFn } from '@storybook/vue';
 import FDataTable from './FDataTable.vue';
+
+interface SampleDataItem {
+	id: number;
+	name: string;
+	email: string;
+	role: string;
+	status: string;
+}
+
+interface ColumnDefinition {
+	key: string;
+	label: string;
+	sortable?: boolean;
+	align?: 'left' | 'center' | 'right';
+}
 
 export default {
 	title: 'Organisms/FDataTable',
@@ -49,10 +65,10 @@ export default {
 			description: 'Taille du tableau'
 		}
 	}
-};
+} as Meta<typeof FDataTable>;
 
 // Données de démonstration
-const sampleData = [
+const sampleData: SampleDataItem[] = [
 	{
 		id: 1,
 		name: 'Jean Dupont',
@@ -139,7 +155,7 @@ const sampleData = [
 	}
 ];
 
-const sampleColumns = [
+const sampleColumns: ColumnDefinition[] = [
 	{ key: 'name', label: 'Nom', sortable: true },
 	{ key: 'email', label: 'Email', sortable: true },
 	{ key: 'role', label: 'Rôle', sortable: true },
@@ -147,7 +163,7 @@ const sampleColumns = [
 ];
 
 // Template de base
-const Template = (args, { argTypes }) => ({
+const Template: StoryFn<typeof FDataTable> = (args, { argTypes }) => ({
 	props: Object.keys(argTypes),
 	components: { FDataTable },
 	template: '<f-data-table v-bind="$props" />'
@@ -237,13 +253,13 @@ LargeSize.args = {
 };
 
 // Configuration complète
-export const FullFeatured = () => ({
+export const FullFeatured = (): object => ({
 	components: { FDataTable },
 	data() {
 		return {
 			data: sampleData,
 			columns: sampleColumns,
-			selected: []
+			selected: [] as number[]
 		};
 	},
 	template: `
@@ -271,7 +287,7 @@ export const FullFeatured = () => ({
 });
 
 // Cellules personnalisées avec slots
-export const CustomCells = () => ({
+export const CustomCells = (): object => ({
 	components: { FDataTable },
 	data() {
 		return {
@@ -281,7 +297,7 @@ export const CustomCells = () => ({
 				{ key: 'email', label: 'Email', sortable: true },
 				{ key: 'role', label: 'Rôle', sortable: true },
 				{ key: 'status', label: 'Statut', sortable: true, align: 'center' }
-			]
+			] as ColumnDefinition[]
 		};
 	},
 	template: `
@@ -303,7 +319,7 @@ export const CustomCells = () => ({
 });
 
 // Événements
-export const WithEvents = () => ({
+export const WithEvents = (): object => ({
 	components: { FDataTable },
 	data() {
 		return {
@@ -313,11 +329,11 @@ export const WithEvents = () => ({
 		};
 	},
 	methods: {
-		handleRowClick(row) {
-			this.lastEvent = `Ligne cliquée: ${row.name}`;
+		handleRowClick(row: SampleDataItem) {
+			(this as { lastEvent: string }).lastEvent = `Ligne cliquée: ${row.name}`;
 		},
-		handleSort({ key, direction }) {
-			this.lastEvent = `Tri: ${key} (${direction})`;
+		handleSort({ key, direction }: { key: string; direction: string }) {
+			(this as { lastEvent: string }).lastEvent = `Tri: ${key} (${direction})`;
 		}
 	},
 	template: `

@@ -5,6 +5,7 @@
 	"type": "module",
 	"main": "dist/fabric.cjs.js",
 	"module": "dist/fabric.esm.js",
+	"types": "dist/types/index.d.ts",
 	"unpkg": "dist/fabric.min.js",
 	"files": [
 		"dist",
@@ -14,10 +15,11 @@
 		"build": "rollup -c",
 		"dev": "rollup -c -w",
 		"test": "vitest run",
-		"lint": "eslint --ext .js,.vue src .storybook",
-		"lint:fix": "eslint --ext .js,.vue src .storybook --fix",
-		"format": "prettier --write \"src/**/*.{js,vue}\" \".storybook/**/*.js\" \"*.{js,cjs}\"",
-		"format:check": "prettier --check \"src/**/*.{js,vue}\" \".storybook/**/*.js\" \"*.{js,cjs}\"",
+		"typecheck": "vue-tsc --noEmit",
+		"lint": "eslint --ext .js,.ts,.vue src .storybook",
+		"lint:fix": "eslint --ext .js,.ts,.vue src .storybook --fix",
+		"format": "prettier --write \"src/**/*.{js,ts,vue}\" \".storybook/**/*.{js,ts}\" \"*.{js,cjs,ts}\"",
+		"format:check": "prettier --check \"src/**/*.{js,ts,vue}\" \".storybook/**/*.{js,ts}\" \"*.{js,cjs,ts}\"",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
@@ -44,12 +46,15 @@
 		"@rollup/plugin-commonjs": "^28.0.2",
 		"@rollup/plugin-node-resolve": "^15.3.1",
 		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^12.3.0",
 		"@storybook/addon-essentials": "^7.6.20",
 		"@storybook/addon-links": "^7.6.20",
 		"@storybook/builder-vite": "^7.6.20",
 		"@storybook/vue": "^7.6.20",
 		"@storybook/vue-vite": "^7.6.20",
 		"@tailwindcss/postcss": "^4.1.17",
+		"@typescript-eslint/eslint-plugin": "^8.48.1",
+		"@typescript-eslint/parser": "^8.48.1",
 		"@vitejs/plugin-vue2": "^2.3.4",
 		"@vue/test-utils": "^1.3.6",
 		"autoprefixer": "^10.4.22",
@@ -66,8 +71,10 @@
 		"rollup-plugin-vue": "^5.1.9",
 		"storybook": "^7.6.20",
 		"tailwindcss": "^4.1.17",
+		"typescript": "^5.9.3",
 		"vitest": "^3.2.4",
 		"vue": "^2.7.16",
-		"vue-template-compiler": "^2.7.16"
+		"vue-template-compiler": "^2.7.16",
+		"vue-tsc": "^3.1.5"
 	}
 }
