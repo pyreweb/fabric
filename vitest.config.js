@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitest/config';
-import vue from 'rollup-plugin-vue';
+import vue from 'vite-plugin-vue2';
 
 export default defineConfig({
 	plugins: [vue()],
