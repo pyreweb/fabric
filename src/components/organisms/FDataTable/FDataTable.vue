@@ -59,7 +59,7 @@
 						@click="handleRowClick(row)"
 					>
 						<!-- Selection checkbox -->
-						<td v-if="selectable" :class="cellClasses">
+						<td v-if="selectable" :class="cellClasses" data-label="">
 							<f-checkbox
 								:checked="isRowSelected(row)"
 								@change="handleRowSelect(row, $event)"
@@ -71,6 +71,7 @@
 							v-for="column in columns"
 							:key="column.key"
 							:class="getCellClasses(column)"
+							:data-label="column.label"
 						>
 							<slot
 								:name="'cell-' + column.key"
@@ -601,3 +602,74 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+/* Mobile Card View - transforms table rows into cards on small screens */
+@media (max-width: 640px) {
+	/* Hide table header on mobile */
+	table thead {
+		display: none;
+	}
+
+	/* Make table body a flex container for cards */
+	table tbody {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	/* Transform each row into a card */
+	table tbody tr {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		border: 1px solid var(--color-neutral-200, #e5e7eb);
+		border-radius: 0.5rem;
+		padding: 0.75rem;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	/* Style each cell as a row in the card */
+	table tbody tr td {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid var(--color-neutral-100, #f3f4f6);
+		text-align: right;
+	}
+
+	/* Remove border from last cell */
+	table tbody tr td:last-child {
+		border-bottom: none;
+	}
+
+	/* Display column label before cell content */
+	table tbody tr td::before {
+		content: attr(data-label);
+		font-weight: 600;
+		color: var(--color-neutral-700, #374151);
+		text-align: left;
+		flex-shrink: 0;
+		margin-right: 1rem;
+	}
+
+	/* Hide empty labels (for checkbox column) */
+	table tbody tr td[data-label='']::before {
+		display: none;
+	}
+
+	/* Checkbox cell styling */
+	table tbody tr td[data-label=''] {
+		justify-content: flex-start;
+		border-bottom: 1px solid var(--color-neutral-200, #e5e7eb);
+		margin-bottom: 0.25rem;
+		padding-bottom: 0.75rem;
+	}
+
+	/* Ensure table is full width */
+	table {
+		width: 100%;
+	}
+}
+</style>

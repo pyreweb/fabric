@@ -108,4 +108,35 @@ describe('FDataTable', () => {
 		});
 		expect(wrapper.exists()).toBe(true);
 	});
+
+	it('renders data-label attributes on cells for mobile card view', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data }
+		});
+		const cells = wrapper.findAll('td[data-label]');
+		// Each row should have cells with data-label attributes matching column labels
+		expect(cells.length).toBeGreaterThan(0);
+		// Check that at least one cell has the correct data-label
+		const hasNameLabel = cells.wrappers.some(
+			(cell) => cell.attributes('data-label') === 'Name'
+		);
+		const hasEmailLabel = cells.wrappers.some(
+			(cell) => cell.attributes('data-label') === 'Email'
+		);
+		const hasRoleLabel = cells.wrappers.some(
+			(cell) => cell.attributes('data-label') === 'Role'
+		);
+		expect(hasNameLabel).toBe(true);
+		expect(hasEmailLabel).toBe(true);
+		expect(hasRoleLabel).toBe(true);
+	});
+
+	it('renders empty data-label for checkbox column when selectable', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data, selectable: true }
+		});
+		// The checkbox cells should have empty data-label
+		const checkboxCells = wrapper.findAll('td[data-label=""]');
+		expect(checkboxCells.length).toBe(data.length);
+	});
 });

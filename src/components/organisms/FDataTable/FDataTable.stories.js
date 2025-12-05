@@ -246,3 +246,41 @@ export const FullFeatures = () => ({
 		</FDataTable>
 	`
 });
+
+export const MobileCardView = () => ({
+	components: { FDataTable, FBadge },
+	data() {
+		return {
+			columns: [
+				{ key: 'name', label: 'Nom' },
+				{ key: 'email', label: 'Email' },
+				{ key: 'role', label: 'Rôle' },
+				{ key: 'status', label: 'Statut' }
+			],
+			data: sampleData
+		};
+	},
+	template: `
+		<div style="max-width: 400px; margin: 0 auto;">
+			<p class="text-sm text-neutral-500 mb-4">
+				Ce tableau utilise le mode "Card View" sur mobile (écrans &lt; 640px).
+				Redimensionnez la fenêtre ou utilisez les outils de développement pour voir le mode mobile.
+			</p>
+			<FDataTable :data="data" :columns="columns">
+				<template #cell-status="{ value }">
+					<FBadge
+						:content="value"
+						:variant="value === 'active' ? 'success' : value === 'pending' ? 'warning' : 'neutral'"
+					/>
+				</template>
+			</FDataTable>
+		</div>
+	`
+});
+MobileCardView.parameters = {
+	docs: {
+		description: {
+			story: 'Sur les écrans mobiles (< 640px), le tableau se transforme automatiquement en mode "Card View" où chaque ligne devient une carte avec les labels de colonnes affichés comme étiquettes.'
+		}
+	}
+};
