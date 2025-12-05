@@ -22,6 +22,29 @@
 
 <br />
 
+## Développement
+
+### Storybook
+
+Pour lancer Storybook en mode développement :
+
+```bash
+npm run storybook
+```
+
+### Prévisualiser le build statique de Storybook
+
+Pour construire et prévisualiser le Storybook statique localement :
+
+```bash
+npm run build-storybook
+npm run preview-storybook
+```
+
+Le serveur sera accessible à l'adresse `http://localhost:6006`.
+
+> ⚠️ **Note importante** : N'ouvrez pas le fichier `storybook-static/index.html` directement via le protocole `file://`. Les navigateurs modernes bloquent le chargement des modules JavaScript depuis le protocole `file://` pour des raisons de sécurité (erreurs CORS). Utilisez toujours `npm run preview-storybook` pour lancer un serveur HTTP local.
+
 ## Composants de la bibliothèque
 
 ### Atomes
