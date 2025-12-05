@@ -26,7 +26,8 @@
 		"format": "prettier --write \"src/**/*.{js,ts,vue}\" \".storybook/**/*.{js,ts}\" \"*.{js,cjs,ts}\"",
 		"format:check": "prettier --check \"src/**/*.{js,ts,vue}\" \".storybook/**/*.{js,ts}\" \"*.{js,cjs,ts}\"",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"preview-storybook": "npx serve storybook-static -l 6006"
 	},
 	"keywords": [
 		"javascript",
