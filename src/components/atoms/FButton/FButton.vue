@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import FLoader from '@/components/atoms/FLoader/FLoader.vue';
+import FLoader from '../FLoader/FLoader.vue';
 
 interface Props {
 	variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'link';

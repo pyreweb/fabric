@@ -241,154 +241,77 @@ __vue_render__$y._withStripped = true;
     undefined
   );
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var script$t = {
-	name: 'FLoader',
-	props: {
-		size: {
-			type: String,
-			default: 'md',
-			validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
-		},
-		color: {
-			type: String,
-			default: ''
-		},
-		overlay: {
-			type: Boolean,
-			default: false
-		},
-		centered: {
-			type: Boolean,
-			default: false
-		},
-		label: {
-			type: String,
-			default: 'Chargement en cours'
-		}
-	},
-	computed: {
-		ariaLabel() {
-			return this.label;
-		},
-		wrapperClasses() {
-			const overlayClasses = this.overlay
-				? 'fixed inset-0 flex items-center justify-center bg-black/50 z-50'
-				: '';
-			return [overlayClasses].filter(Boolean).join(' ');
-		},
-		containerClasses() {
-			const baseClasses = 'inline-flex items-center justify-center';
-			const centeredClasses =
-				this.centered && !this.overlay ? 'absolute inset-0' : '';
-
-			return [baseClasses, centeredClasses].filter(Boolean).join(' ');
-		},
-		spinnerClasses() {
-			const baseClasses = 'animate-spin';
-
-			const sizeClasses = {
-				xs: 'w-4 h-4',
-				sm: 'w-5 h-5',
-				md: 'w-6 h-6',
-				lg: 'w-8 h-8',
-				xl: 'w-12 h-12'
-			};
-
-			const colorClasses = this.color ? '' : 'text-primary-500';
-
-			return [baseClasses, sizeClasses[this.size], colorClasses]
-				.filter(Boolean)
-				.join(' ');
-		},
-		spinnerStyle() {
-			if (this.color) {
-				return { color: this.color };
-			}
-			return undefined;
-		}
-	}
-};
-
 /* script */
-const __vue_script__$t = script$t;
 
 /* template */
 var __vue_render__$x = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("div", { class: _vm.wrapperClasses }, [
-    _c(
-      "div",
-      {
-        class: _vm.containerClasses,
-        attrs: { role: "status", "aria-label": _vm.ariaLabel },
+  return _c(
+    "button",
+    {
+      class: _vm.classes,
+      attrs: {
+        type: _vm.type,
+        disabled: _vm.disabled || _vm.loading,
+        "aria-disabled": _vm.disabled || _vm.loading,
       },
-      [
-        _c(
-          "svg",
-          {
-            class: _vm.spinnerClasses,
-            style: _vm.spinnerStyle,
-            attrs: {
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "none",
-              viewBox: "0 0 24 24",
+      on: { click: _vm.handleClick },
+    },
+    [
+      _vm.loading
+        ? _c(
+            "div",
+            {
+              staticClass:
+                "absolute inset-0 flex items-center justify-center text-current",
             },
-          },
-          [
-            _c("circle", {
-              staticClass: "opacity-25",
-              attrs: {
-                cx: "12",
-                cy: "12",
-                r: "10",
-                stroke: "currentColor",
-                "stroke-width": "4",
-              },
-            }),
-            _vm._v(" "),
-            _c("path", {
-              staticClass: "opacity-75",
-              attrs: {
-                fill: "currentColor",
-                d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z",
-              },
-            }),
-          ]
-        ),
-      ]
-    ),
-  ])
+            [
+              _c("FLoader", {
+                staticClass: "text-current opacity-100",
+                attrs: { size: "sm" },
+              }),
+            ],
+            1
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          staticClass: "flex items-center gap-2",
+          class: { "opacity-0": _vm.loading },
+        },
+        [
+          _vm._t("prefix", function () {
+            return [
+              _vm.iconLeft
+                ? _c("span", {
+                    class: _vm.iconLeft,
+                    attrs: { "aria-hidden": "true" },
+                  })
+                : _vm._e(),
+            ]
+          }),
+          _vm._v(" "),
+          _vm._t("default"),
+          _vm._v(" "),
+          _vm._t("suffix", function () {
+            return [
+              _vm.iconRight
+                ? _c("span", {
+                    class: _vm.iconRight,
+                    attrs: { "aria-hidden": "true" },
+                  })
+                : _vm._e(),
+            ]
+          }),
+        ],
+        2
+      ),
+    ]
+  )
 };
 var __vue_staticRenderFns__$t = [];
 __vue_render__$x._withStripped = true;
@@ -412,7 +335,7 @@ __vue_render__$x._withStripped = true;
   const __vue_component__$t = /*#__PURE__*/normalizeComponent(
     { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
     __vue_inject_styles__$t,
-    __vue_script__$t,
+    {},
     __vue_scope_id__$t,
     __vue_is_functional_template__$t,
     __vue_module_identifier__$t,
@@ -440,268 +363,8 @@ __vue_render__$x._withStripped = true;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 var script$s = {
-	name: 'FButton',
-	components: {
-		FLoader: __vue_component__$t
-	},
-	props: {
-		variant: {
-			type: String,
-			default: 'primary',
-			validator: (value) =>
-				[
-					'primary',
-					'secondary',
-					'danger',
-					'success',
-					'outline',
-					'ghost',
-					'link'
-				].includes(value)
-		},
-		size: {
-			type: String,
-			default: 'medium',
-			validator: (value) =>
-				['xs', 'small', 'medium', 'large', 'xl'].includes(value)
-		},
-		type: {
-			type: String,
-			default: 'button'
-		},
-		disabled: {
-			type: Boolean,
-			default: false
-		},
-		loading: {
-			type: Boolean,
-			default: false
-		},
-		loadingText: {
-			type: String,
-			default: ''
-		},
-		block: {
-			type: Boolean,
-			default: false
-		},
-		to: {
-			type: [String, Object],
-			default: null
-		},
-		href: {
-			type: String,
-			default: null
-		},
-		target: {
-			type: String,
-			default: null
-		}
-	},
-	computed: {
-		isButton() {
-			return !this.to && !this.href;
-		},
-		componentTag() {
-			if (this.to) return 'router-link';
-			if (this.href) return 'a';
-			return 'button';
-		},
-		isDisabled() {
-			return this.disabled || this.loading;
-		},
-		computedClasses() {
-			const base =
-				'inline-flex items-center justify-center border font-medium rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-200';
-
-			const sizes = {
-				xs: 'px-2.5 py-1.5 text-xs',
-				small: 'px-3 py-2 text-sm leading-4',
-				medium: 'px-4 py-2 text-sm',
-				large: 'px-4 py-2 text-base',
-				xl: 'px-6 py-3 text-base'
-			};
-
-			const variants = {
-				primary:
-					'border-transparent text-white bg-primary-600 hover:bg-primary-700 focus:ring-primary-500',
-				secondary:
-					'border-transparent text-primary-700 bg-primary-100 hover:bg-primary-200 focus:ring-primary-500',
-				danger:
-					'border-transparent text-white bg-danger-600 hover:bg-danger-700 focus:ring-danger-500',
-				success:
-					'border-transparent text-white bg-success-600 hover:bg-success-700 focus:ring-success-500',
-				outline:
-					'border-neutral-300 text-neutral-700 bg-white hover:bg-neutral-50 focus:ring-primary-500',
-				ghost:
-					'border-transparent text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 focus:ring-neutral-500 shadow-none',
-				link: 'border-transparent text-primary-600 hover:text-primary-800 underline shadow-none px-0 bg-transparent'
-			};
-
-			const stateClasses = this.isDisabled
-				? 'opacity-60 cursor-not-allowed pointer-events-none'
-				: 'cursor-pointer';
-
-			const widthClass = this.block ? 'w-full' : '';
-
-			return [
-				base,
-				sizes[this.size],
-				variants[this.variant],
-				stateClasses,
-				widthClass
-			];
-		}
-	},
-	methods: {
-		handleClick(event) {
-			if (this.isDisabled) {
-				event.preventDefault();
-				event.stopPropagation();
-				return;
-			}
-			this.$emit('click', event);
-		}
-	}
-};
-
-/* script */
-const __vue_script__$s = script$s;
-
-/* template */
-var __vue_render__$w = function () {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c(
-    _vm.componentTag,
-    _vm._g(
-      {
-        tag: "component",
-        class: _vm.computedClasses,
-        attrs: {
-          type: _vm.isButton ? _vm.type : null,
-          disabled: _vm.isDisabled,
-          to: _vm.to,
-          href: _vm.href,
-          target: _vm.target,
-          "aria-disabled": _vm.isDisabled,
-        },
-        on: { click: _vm.handleClick },
-      },
-      _vm.$listeners
-    ),
-    [
-      _vm.loading
-        ? _c("f-loader", {
-            staticClass: "-ml-1 mr-2",
-            attrs: { size: "xs", color: "currentColor" },
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.$slots.iconLeft && !_vm.loading
-        ? _c(
-            "span",
-            { staticClass: "mr-2 flex items-center" },
-            [_vm._t("iconLeft")],
-            2
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c(
-        "span",
-        { class: { "opacity-0": _vm.loading && !_vm.loadingText } },
-        [
-          _vm._t("default", function () {
-            return [_vm._v(_vm._s(_vm.loadingText))]
-          }),
-        ],
-        2
-      ),
-      _vm._v(" "),
-      _vm.$slots.iconRight && !_vm.loading
-        ? _c(
-            "span",
-            { staticClass: "ml-2 flex items-center" },
-            [_vm._t("iconRight")],
-            2
-          )
-        : _vm._e(),
-    ],
-    1
-  )
-};
-var __vue_staticRenderFns__$s = [];
-__vue_render__$w._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$s = undefined;
-  /* scoped */
-  const __vue_scope_id__$s = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$s = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$s = false;
-  /* style inject */
-  
-  /* style inject SSR */
-  
-  /* style inject shadow dom */
-  
-
-  
-  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
-    __vue_inject_styles__$s,
-    __vue_script__$s,
-    __vue_scope_id__$s,
-    __vue_is_functional_template__$s,
-    __vue_module_identifier__$s,
-    false,
-    undefined,
-    undefined,
-    undefined
-  );
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var script$r = {
 	name: 'FCheckbox',
 	model: {
 		prop: 'checked',
@@ -758,10 +421,10 @@ var script$r = {
 };
 
 /* script */
-const __vue_script__$r = script$r;
+const __vue_script__$s = script$s;
 
 /* template */
-var __vue_render__$v = function () {
+var __vue_render__$w = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -799,17 +462,17 @@ var __vue_render__$v = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$r = [];
-__vue_render__$v._withStripped = true;
+var __vue_staticRenderFns__$s = [];
+__vue_render__$w._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$r = undefined;
+  const __vue_inject_styles__$s = undefined;
   /* scoped */
-  const __vue_scope_id__$r = undefined;
+  const __vue_scope_id__$s = undefined;
   /* module identifier */
-  const __vue_module_identifier__$r = undefined;
+  const __vue_module_identifier__$s = undefined;
   /* functional template */
-  const __vue_is_functional_template__$r = false;
+  const __vue_is_functional_template__$s = false;
   /* style inject */
   
   /* style inject SSR */
@@ -818,13 +481,13 @@ __vue_render__$v._withStripped = true;
   
 
   
-  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
-    __vue_inject_styles__$r,
-    __vue_script__$r,
-    __vue_scope_id__$r,
-    __vue_is_functional_template__$r,
-    __vue_module_identifier__$r,
+  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
+    __vue_inject_styles__$s,
+    __vue_script__$s,
+    __vue_scope_id__$s,
+    __vue_is_functional_template__$s,
+    __vue_module_identifier__$s,
     false,
     undefined,
     undefined,
@@ -849,7 +512,7 @@ __vue_render__$v._withStripped = true;
 //
 //
 
-var script$q = {
+var script$r = {
 	name: 'FDivider',
 	props: {
 		orientation: {
@@ -949,10 +612,10 @@ var script$q = {
 };
 
 /* script */
-const __vue_script__$q = script$q;
+const __vue_script__$r = script$r;
 
 /* template */
-var __vue_render__$u = function () {
+var __vue_render__$v = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -976,17 +639,17 @@ var __vue_render__$u = function () {
     2
   )
 };
-var __vue_staticRenderFns__$q = [];
-__vue_render__$u._withStripped = true;
+var __vue_staticRenderFns__$r = [];
+__vue_render__$v._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$q = undefined;
+  const __vue_inject_styles__$r = undefined;
   /* scoped */
-  const __vue_scope_id__$q = undefined;
+  const __vue_scope_id__$r = undefined;
   /* module identifier */
-  const __vue_module_identifier__$q = undefined;
+  const __vue_module_identifier__$r = undefined;
   /* functional template */
-  const __vue_is_functional_template__$q = false;
+  const __vue_is_functional_template__$r = false;
   /* style inject */
   
   /* style inject SSR */
@@ -995,13 +658,13 @@ __vue_render__$u._withStripped = true;
   
 
   
-  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$q },
-    __vue_inject_styles__$q,
-    __vue_script__$q,
-    __vue_scope_id__$q,
-    __vue_is_functional_template__$q,
-    __vue_module_identifier__$q,
+  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
+    __vue_inject_styles__$r,
+    __vue_script__$r,
+    __vue_scope_id__$r,
+    __vue_is_functional_template__$r,
+    __vue_module_identifier__$r,
     false,
     undefined,
     undefined,
@@ -1116,7 +779,7 @@ const ICON_PATHS = {
 		'M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
 };
 
-var script$p = {
+var script$q = {
 	name: 'FIcon',
 	props: {
 		name: {
@@ -1201,10 +864,10 @@ var script$p = {
 };
 
 /* script */
-const __vue_script__$p = script$p;
+const __vue_script__$q = script$q;
 
 /* template */
-var __vue_render__$t = function () {
+var __vue_render__$u = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1275,17 +938,17 @@ var __vue_render__$t = function () {
     2
   )
 };
-var __vue_staticRenderFns__$p = [];
-__vue_render__$t._withStripped = true;
+var __vue_staticRenderFns__$q = [];
+__vue_render__$u._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$p = undefined;
+  const __vue_inject_styles__$q = undefined;
   /* scoped */
-  const __vue_scope_id__$p = undefined;
+  const __vue_scope_id__$q = undefined;
   /* module identifier */
-  const __vue_module_identifier__$p = undefined;
+  const __vue_module_identifier__$q = undefined;
   /* functional template */
-  const __vue_is_functional_template__$p = false;
+  const __vue_is_functional_template__$q = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1294,13 +957,13 @@ __vue_render__$t._withStripped = true;
   
 
   
-  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$p },
-    __vue_inject_styles__$p,
-    __vue_script__$p,
-    __vue_scope_id__$p,
-    __vue_is_functional_template__$p,
-    __vue_module_identifier__$p,
+  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$q },
+    __vue_inject_styles__$q,
+    __vue_script__$q,
+    __vue_scope_id__$q,
+    __vue_is_functional_template__$q,
+    __vue_module_identifier__$q,
     false,
     undefined,
     undefined,
@@ -1322,7 +985,7 @@ __vue_render__$t._withStripped = true;
 //
 //
 
-var script$o = {
+var script$p = {
 	name: 'FInput',
 	props: {
 		value: {
@@ -1392,10 +1055,10 @@ var script$o = {
 };
 
 /* script */
-const __vue_script__$o = script$o;
+const __vue_script__$p = script$p;
 
 /* template */
-var __vue_render__$s = function () {
+var __vue_render__$t = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1418,6 +1081,187 @@ var __vue_render__$s = function () {
       },
     },
   })
+};
+var __vue_staticRenderFns__$p = [];
+__vue_render__$t._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$p = undefined;
+  /* scoped */
+  const __vue_scope_id__$p = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$p = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$p = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$p },
+    __vue_inject_styles__$p,
+    __vue_script__$p,
+    __vue_scope_id__$p,
+    __vue_is_functional_template__$p,
+    __vue_module_identifier__$p,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$o = {
+	name: 'FLoader',
+	props: {
+		size: {
+			type: String,
+			default: 'md',
+			validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
+		},
+		color: {
+			type: String,
+			default: ''
+		},
+		overlay: {
+			type: Boolean,
+			default: false
+		},
+		centered: {
+			type: Boolean,
+			default: false
+		},
+		label: {
+			type: String,
+			default: 'Chargement en cours'
+		}
+	},
+	computed: {
+		ariaLabel() {
+			return this.label;
+		},
+		wrapperClasses() {
+			const overlayClasses = this.overlay
+				? 'fixed inset-0 flex items-center justify-center bg-black/50 z-50'
+				: '';
+			return [overlayClasses].filter(Boolean).join(' ');
+		},
+		containerClasses() {
+			const baseClasses = 'inline-flex items-center justify-center';
+			const centeredClasses =
+				this.centered && !this.overlay ? 'absolute inset-0' : '';
+
+			return [baseClasses, centeredClasses].filter(Boolean).join(' ');
+		},
+		spinnerClasses() {
+			const baseClasses = 'animate-spin';
+
+			const sizeClasses = {
+				xs: 'w-4 h-4',
+				sm: 'w-5 h-5',
+				md: 'w-6 h-6',
+				lg: 'w-8 h-8',
+				xl: 'w-12 h-12'
+			};
+
+			const colorClasses = this.color ? '' : 'text-primary-500';
+
+			return [baseClasses, sizeClasses[this.size], colorClasses]
+				.filter(Boolean)
+				.join(' ');
+		},
+		spinnerStyle() {
+			if (this.color) {
+				return { color: this.color };
+			}
+			return undefined;
+		}
+	}
+};
+
+/* script */
+const __vue_script__$o = script$o;
+
+/* template */
+var __vue_render__$s = function () {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c("div", { class: _vm.wrapperClasses }, [
+    _c(
+      "div",
+      {
+        class: _vm.containerClasses,
+        attrs: { role: "status", "aria-label": _vm.ariaLabel },
+      },
+      [
+        _c(
+          "svg",
+          {
+            class: _vm.spinnerClasses,
+            style: _vm.spinnerStyle,
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              fill: "none",
+              viewBox: "0 0 24 24",
+            },
+          },
+          [
+            _c("circle", {
+              staticClass: "opacity-25",
+              attrs: {
+                cx: "12",
+                cy: "12",
+                r: "10",
+                stroke: "currentColor",
+                "stroke-width": "4",
+              },
+            }),
+            _vm._v(" "),
+            _c("path", {
+              staticClass: "opacity-75",
+              attrs: {
+                fill: "currentColor",
+                d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z",
+              },
+            }),
+          ]
+        ),
+      ]
+    ),
+  ])
 };
 var __vue_staticRenderFns__$o = [];
 __vue_render__$s._withStripped = true;
@@ -2295,9 +2139,9 @@ const VARIANT_COLORS = {
 var script$j = {
 	name: 'FAlert',
 	components: {
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k,
-		FButton: __vue_component__$s
+		FButton: __vue_component__$t
 	},
 	props: {
 		variant: {
@@ -2484,7 +2328,7 @@ __vue_render__$m._withStripped = true;
 var script$i = {
 	name: 'FBreadcrumb',
 	components: {
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k
 	},
 	props: {
@@ -2786,9 +2630,9 @@ __vue_render__$k._withStripped = true;
 var script$g = {
 	name: 'FEmptyState',
 	components: {
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k,
-		FButton: __vue_component__$s
+		FButton: __vue_component__$t
 	},
 	props: {
 		icon: {
@@ -2985,10 +2829,10 @@ const FILE_TYPE_ICONS = {
 var script$f = {
 	name: 'FFilePreview',
 	components: {
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k,
-		FLoader: __vue_component__$t,
-		FButton: __vue_component__$s
+		FLoader: __vue_component__$o,
+		FButton: __vue_component__$t
 	},
 	props: {
 		fileName: {
@@ -3188,7 +3032,7 @@ let idCounter$2 = 0;
 var script$e = {
 	name: 'FFormField',
 	components: {
-		FInput: __vue_component__$o
+		FInput: __vue_component__$p
 	},
 	props: {
 		id: {
@@ -3557,8 +3401,8 @@ __vue_render__$g._withStripped = true;
 var script$c = {
 	name: 'FSearchBar',
 	components: {
-		FIcon: __vue_component__$p,
-		FButton: __vue_component__$s
+		FIcon: __vue_component__$q,
+		FButton: __vue_component__$t
 	},
 	props: {
 		value: {
@@ -4089,8 +3933,8 @@ __vue_render__$e._withStripped = true;
 var script$a = {
 	name: 'FPagination',
 	components: {
-		FButton: __vue_component__$s,
-		FIcon: __vue_component__$p
+		FButton: __vue_component__$t,
+		FIcon: __vue_component__$q
 	},
 	props: {
 		value: {
@@ -4571,9 +4415,9 @@ var script$9 = {
 		FListItem: __vue_component__$b,
 		FEmptyState: __vue_component__$g,
 		FTypography: __vue_component__$k,
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FBadge: __vue_component__$u,
-		FLoader: __vue_component__$t
+		FLoader: __vue_component__$o
 	},
 	props: {
 		/**
@@ -5445,9 +5289,9 @@ var script$7 = {
 		FSearchBar: __vue_component__$c,
 		FPagination: __vue_component__$a,
 		FEmptyState: __vue_component__$g,
-		FCheckbox: __vue_component__$r,
-		FIcon: __vue_component__$p,
-		FLoader: __vue_component__$t
+		FCheckbox: __vue_component__$s,
+		FIcon: __vue_component__$q,
+		FLoader: __vue_component__$o
 	},
 	props: {
 		/**
@@ -6313,9 +6157,9 @@ const FILE_STATUS = {
 var script$6 = {
 	name: 'FFileUpload',
 	components: {
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k,
-		FButton: __vue_component__$s,
+		FButton: __vue_component__$t,
 		FAlert: __vue_component__$j,
 		FFilePreview: __vue_component__$f
 	},
@@ -8127,8 +7971,8 @@ var script$4 = {
 	name: 'FModal',
 	components: {
 		FTypography: __vue_component__$k,
-		FButton: __vue_component__$s,
-		FIcon: __vue_component__$p
+		FButton: __vue_component__$t,
+		FIcon: __vue_component__$q
 	},
 	props: {
 		/**
@@ -8565,9 +8409,9 @@ var script$3 = {
 	name: 'FUserMenu',
 	components: {
 		FAvatar: __vue_component__$v,
-		FIcon: __vue_component__$p,
+		FIcon: __vue_component__$q,
 		FTypography: __vue_component__$k,
-		FDivider: __vue_component__$q,
+		FDivider: __vue_component__$r,
 		FListItem: __vue_component__$b
 	},
 	props: {
@@ -9429,8 +9273,8 @@ var script$1 = {
 	name: 'FOnboardingStepper',
 	components: {
 		FCard: __vue_component__$d,
-		FButton: __vue_component__$s,
-		FIcon: __vue_component__$p,
+		FButton: __vue_component__$t,
+		FIcon: __vue_component__$q,
 		FStepperProgress: __vue_component__$2
 	},
 	props: {
@@ -9982,8 +9826,8 @@ var script = {
 	components: {
 		FCard: __vue_component__$d,
 		FTypography: __vue_component__$k,
-		FButton: __vue_component__$s,
-		FLoader: __vue_component__$t,
+		FButton: __vue_component__$t,
+		FLoader: __vue_component__$o,
 		FAlert: __vue_component__$j,
 		FForm: __vue_component__$8,
 		FFormField: __vue_component__$e,
@@ -10812,18 +10656,18 @@ const components = {
     FAvatar: __vue_component__$v,
     FBadge: __vue_component__$u,
     FBreadcrumb: __vue_component__$i,
-    FButton: __vue_component__$s,
+    FButton: __vue_component__$t,
     FButtonGroup: __vue_component__$h,
-    FCheckbox: __vue_component__$r,
+    FCheckbox: __vue_component__$s,
     FDataTable: __vue_component__$7,
-    FDivider: __vue_component__$q,
+    FDivider: __vue_component__$r,
     FEmptyState: __vue_component__$g,
     FFilePreview: __vue_component__$f,
     FFileUpload: __vue_component__$6,
-    FIcon: __vue_component__$p,
-    FInput: __vue_component__$o,
+    FIcon: __vue_component__$q,
+    FInput: __vue_component__$p,
     FListItem: __vue_component__$b,
-    FLoader: __vue_component__$t,
+    FLoader: __vue_component__$o,
     FModal: __vue_component__$4,
     FOnboardingStepper: __vue_component__$1,
     FPageHeader: __vue_component__$5,
@@ -10854,4 +10698,4 @@ var index = {
     install
 };
 
-export { __vue_component__$9 as FActivityFeed, __vue_component__$j as FAlert, __vue_component__$v as FAvatar, __vue_component__$u as FBadge, __vue_component__$i as FBreadcrumb, __vue_component__$s as FButton, __vue_component__$h as FButtonGroup, __vue_component__$d as FCard, __vue_component__$r as FCheckbox, __vue_component__$7 as FDataTable, __vue_component__$q as FDivider, __vue_component__$g as FEmptyState, __vue_component__$f as FFilePreview, __vue_component__$6 as FFileUpload, __vue_component__$8 as FForm, __vue_component__$e as FFormField, __vue_component__$p as FIcon, __vue_component__$o as FInput, __vue_component__$b as FListItem, __vue_component__$t as FLoader, __vue_component__$4 as FModal, __vue_component__$1 as FOnboardingStepper, __vue_component__$5 as FPageHeader, __vue_component__$a as FPagination, __vue_component__ as FProfileSection, __vue_component__$n as FRadio, __vue_component__$c as FSearchBar, __vue_component__$m as FTextarea, __vue_component__$l as FToggle, __vue_component__$k as FTypography, __vue_component__$3 as FUserMenu, index as default };
+export { __vue_component__$9 as FActivityFeed, __vue_component__$j as FAlert, __vue_component__$v as FAvatar, __vue_component__$u as FBadge, __vue_component__$i as FBreadcrumb, __vue_component__$t as FButton, __vue_component__$h as FButtonGroup, __vue_component__$d as FCard, __vue_component__$s as FCheckbox, __vue_component__$7 as FDataTable, __vue_component__$r as FDivider, __vue_component__$g as FEmptyState, __vue_component__$f as FFilePreview, __vue_component__$6 as FFileUpload, __vue_component__$8 as FForm, __vue_component__$e as FFormField, __vue_component__$q as FIcon, __vue_component__$p as FInput, __vue_component__$b as FListItem, __vue_component__$o as FLoader, __vue_component__$4 as FModal, __vue_component__$1 as FOnboardingStepper, __vue_component__$5 as FPageHeader, __vue_component__$a as FPagination, __vue_component__ as FProfileSection, __vue_component__$n as FRadio, __vue_component__$c as FSearchBar, __vue_component__$m as FTextarea, __vue_component__$l as FToggle, __vue_component__$k as FTypography, __vue_component__$3 as FUserMenu, index as default };
