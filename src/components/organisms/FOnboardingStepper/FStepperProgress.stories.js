@@ -102,7 +102,7 @@ export const Interactive = () => ({
 				</button>
 				<button 
 					@click="next" 
-					:disabled="currentStep >= steps.length"
+					:disabled="currentStep >= steps.length - 1"
 					class="px-4 py-2 bg-primary-600 text-white rounded disabled:opacity-50"
 				>
 					Suivant
