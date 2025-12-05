@@ -1,6 +1,6 @@
 {
 	"name": "@pyreweb/fabric",
-	"version": "25.12-beta.2",
+	"version": "v25.12-beta.2",
 	"description": "Système de design et bibliothèque de composants VueJS de la société Pyréweb",
 	"type": "module",
 	"overrides": {
