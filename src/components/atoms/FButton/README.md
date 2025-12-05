@@ -1,81 +1,42 @@
-# FButton
+FButton est un composant de bouton flexible et accessible qui prend en charge plusieurs variantes, tailles et états.
 
-Boutons d'action avec variantes et tailles multiples. Supporte les liens et le routage.
+## Import
+
+```typescript
+import { FButton } from '@pyreweb/fabric';
+```
+
+## Utilisation
+
+```vue
+<FButton variant="primary" @click="doSomething">
+  Cliquez-moi
+</FButton>
+```
 
 ## Props
 
-| Prop | Type | Défaut | Description |
-|------|------|--------|-------------|
-| `variant` | `String` | `'primary'` | Style : `primary`, `secondary`, `danger`, `success`, `outline`, `ghost`, `link` |
-| `size` | `String` | `'medium'` | Taille : `xs`, `small`, `medium`, `large`, `xl` |
-| `type` | `String` | `'button'` | Type HTML : `button`, `submit`, `reset` |
-| `disabled` | `Boolean` | `false` | Désactive le bouton |
-| `loading` | `Boolean` | `false` | Affiche un indicateur de chargement |
-| `loadingText` | `String` | `''` | Texte à afficher pendant le chargement |
-| `block` | `Boolean` | `false` | Affiche le bouton en largeur complète |
-| `to` | `String \| Object` | `null` | Route pour `router-link` (Vue Router) |
-| `href` | `String` | `null` | URL pour lien externe (rendu en `<a>`) |
-| `target` | `String` | `null` | Attribut target pour les liens (ex: `_blank`) |
-
-## Événements
-
-| Événement | Description |
-|-----------|-------------|
-| `click` | Émis lors d'un clic (si non désactivé et non en chargement) |
+| Nom      | Type                                                                     | Défaut      | Description                                          |
+| :------- | :----------------------------------------------------------------------- | :---------- | :--------------------------------------------------- |
+| variant  | `'primary' \| 'secondary' \| 'outline' \| 'ghost' \| 'danger' \| 'link'` | `'primary'` | Le style visuel du bouton.                           |
+| size     | `'sm' \| 'md' \| 'lg'`                                                   | `'md'`      | La taille du bouton.                                 |
+| type     | `'button' \| 'submit' \| 'reset'`                                        | `'button'`  | Le type HTML du bouton.                              |
+| disabled | `boolean`                                                                | `false`     | Si vrai, le bouton est désactivé et non cliquable.   |
+| loading  | `boolean`                                                                | `false`     | Si vrai, affiche un loader et désactive le clic.     |
+| block    | `boolean`                                                                | `false`     | Si vrai, le bouton prend toute la largeur disponible.|
+| rounded  | `boolean`                                                                | `false`     | Si vrai, applique des bords entièrement arrondis.    |
 
 ## Slots
 
-| Slot | Description |
-|------|-------------|
-| `default` | Contenu du bouton |
-| `iconLeft` | Icône à gauche du texte |
-| `iconRight` | Icône à droite du texte |
+| Nom     | Description                                     |
+| :------ | :---------------------------------------------- |
+| default | Le contenu principal du bouton (texte).         |
+| prefix  | Contenu placé avant le texte (ex: icône).       |
+| suffix  | Contenu placé après le texte (ex: icône).       |
 
-## Exemple d'utilisation
+## Events
 
-```vue
-<template>
-  <!-- Bouton primaire -->
-  <FButton variant="primary" size="medium" @click="handleClick">
-    Valider
-  </FButton>
-
-  <!-- Bouton outline -->
-  <FButton variant="outline" size="small">
-    Annuler
-  </FButton>
-
-  <!-- Bouton de soumission de formulaire -->
-  <FButton type="submit" variant="primary" :disabled="isLoading">
-    Envoyer
-  </FButton>
-
-  <!-- Bouton avec indicateur de chargement -->
-  <FButton variant="primary" :loading="isSubmitting" loadingText="Envoi...">
-    Envoyer
-  </FButton>
-
-  <!-- Bouton pleine largeur -->
-  <FButton variant="primary" :block="true">
-    Action principale
-  </FButton>
-
-  <!-- Bouton avec icônes -->
-  <FButton variant="primary">
-    <template #iconLeft>
-      <FIcon name="plus" size="sm" />
-    </template>
-    Ajouter
-  </FButton>
-
-  <!-- Bouton comme lien externe -->
-  <FButton variant="link" href="https://example.com" target="_blank" rel="noopener noreferrer">
-    Voir plus
-  </FButton>
-
-  <!-- Bouton avec Vue Router -->
-  <FButton variant="primary" :to="{ name: 'profile' }">
-    Mon profil
-  </FButton>
-</template>
-```
+| Nom   | Arguments    | Description                                       |
+| :---- | :----------- | :------------------------------------------------ |
+| click | `MouseEvent` | Émis lorsque le bouton est cliqué (si non désactivé). |
+"""
