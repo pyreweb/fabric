@@ -1,6 +1,7 @@
 import FActivityFeed from './FActivityFeed/FActivityFeed.vue';
 import FForm from './FForm/FForm.vue';
 import FDataTable from './FDataTable/FDataTable.vue';
+import FDrawer from './FDrawer/FDrawer.vue';
 import FFileUpload from './FFileUpload/FFileUpload.vue';
 import FFilterSidebar from './FFilterSidebar/FFilterSidebar.vue';
 import FNavigationSidebar from './FNavigationSidebar/FNavigationSidebar.vue';
@@ -14,6 +15,7 @@ export {
 	FActivityFeed,
 	FForm,
 	FDataTable,
+	FDrawer,
 	FFileUpload,
 	FFilterSidebar,
 	FNavigationSidebar,
