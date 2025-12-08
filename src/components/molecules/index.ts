@@ -12,6 +12,8 @@ import FListItem from './FListItem/FListItem.vue';
 import FPagination from './FPagination/FPagination.vue';
 import FStatCard from './FStatCard/FStatCard.vue';
 import FSelect from './FSelect/FSelect.vue';
+import FTabs from './FTabs/FTabs.vue';
+import FTab from './FTabs/FTab.vue';
 import FToast from './FToast/FToast.vue';
 
 export {
@@ -29,5 +31,7 @@ export {
 	FPagination,
 	FStatCard,
 	FSelect,
+	FTabs,
+	FTab,
 	FToast
 };
