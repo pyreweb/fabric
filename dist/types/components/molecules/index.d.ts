@@ -10,4 +10,5 @@ import FSearchBar from './FSearchBar/FSearchBar.vue';
 import FListItem from './FListItem/FListItem.vue';
 import FPagination from './FPagination/FPagination.vue';
 import FStatCard from './FStatCard/FStatCard.vue';
-export { FAccordionItem, FAlert, FBreadcrumb, FButtonGroup, FEmptyState, FFilePreview, FFormField, FCard, FSearchBar, FListItem, FPagination, FStatCard };
+import FSelect from './FSelect/FSelect.vue';
+export { FAccordionItem, FAlert, FBreadcrumb, FButtonGroup, FEmptyState, FFilePreview, FFormField, FCard, FSearchBar, FListItem, FPagination, FStatCard, FSelect };

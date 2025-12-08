@@ -483,6 +483,7 @@ export default {
 		scrollToFocusedOption() {
 			this.$nextTick(() => {
 				const optionsList = this.$refs.optionsList;
+				// Dynamic refs in v-for return an array, so we access [0]
 				const focusedOption = this.$refs[`option-${this.focusedIndex}`];
 
 				if (optionsList && focusedOption && focusedOption[0]) {
@@ -504,12 +505,14 @@ export default {
 			this.clickOutsideHandler = (event) => {
 				const dropdown = this.$refs.dropdown;
 				const trigger = this.$refs.trigger;
+				const target = event.target;
 
 				if (
+					target instanceof Node &&
 					dropdown &&
-					!dropdown.contains(event.target) &&
+					!dropdown.contains(target) &&
 					trigger &&
-					!trigger.contains(event.target)
+					!trigger.contains(target)
 				) {
 					this.closeDropdown();
 				}
