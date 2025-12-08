@@ -10,6 +10,7 @@ import FModal from './FModal/FModal.vue';
 import FUserMenu from './FUserMenu/FUserMenu.vue';
 import FOnboardingStepper from './FOnboardingStepper/FOnboardingStepper.vue';
 import FProfileSection from './FProfileSection/FProfileSection.vue';
+import FToastProvider from './FToastProvider/FToastProvider.vue';
 
 export {
 	FActivityFeed,
@@ -23,5 +24,6 @@ export {
 	FModal,
 	FUserMenu,
 	FOnboardingStepper,
-	FProfileSection
+	FProfileSection,
+	FToastProvider
 };
