@@ -136,7 +136,7 @@ describe('useDataTableState', () => {
 			state.internalPage.value = 2;
 			state.searchQuery.value = 'alice';
 			// Wait for watcher to trigger
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise((resolve) => setTimeout(resolve, 0));
 			expect(state.internalPage.value).toBe(1);
 		});
 	});
@@ -230,10 +230,7 @@ describe('useDataTableState', () => {
 
 		it('disables pagination when virtual mode is enabled', () => {
 			const emit = vi.fn();
-			const state = useDataTableState(
-				{ data, columns, virtual: true },
-				emit
-			);
+			const state = useDataTableState({ data, columns, virtual: true }, emit);
 
 			expect(state.effectivePaginated.value).toBe(false);
 			expect(state.paginatedData.value.length).toBe(4);
@@ -245,7 +242,7 @@ describe('useDataTableState', () => {
 
 			state.internalPage.value = 2;
 			// Wait for watcher to trigger
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise((resolve) => setTimeout(resolve, 0));
 			expect(emit).toHaveBeenCalledWith('update:page', 2);
 		});
 	});
@@ -265,10 +262,7 @@ describe('useDataTableState', () => {
 
 		it('deselects a row', () => {
 			const emit = vi.fn();
-			const state = useDataTableState(
-				{ data, columns, selected: [1] },
-				emit
-			);
+			const state = useDataTableState({ data, columns, selected: [1] }, emit);
 
 			state.handleRowSelect(data[0], false);
 			expect(state.selectedKeys.value).not.toContain(1);
@@ -333,7 +327,7 @@ describe('useDataTableState', () => {
 
 			state.selectedKeys.value = [1];
 			// Wait for next tick for watcher to trigger
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise((resolve) => setTimeout(resolve, 0));
 			expect(emit).toHaveBeenCalledWith('update:selected', [1]);
 		});
 

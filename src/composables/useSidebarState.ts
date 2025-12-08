@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref, computed, watch, Ref, ComputedRef } from 'vue';
 
 /**
@@ -40,13 +41,13 @@ export interface SidebarStateOptions {
 export interface SidebarState {
 	// Collapse state
 	collapsed: Ref<boolean>;
-	
+
 	// Submenu state
 	openSubmenus: Ref<string[]>;
-	
+
 	// Filtered navigation items
 	navigationItems: ComputedRef<NavigationItem[]>;
-	
+
 	// Methods
 	toggleCollapsed: () => void;
 	isSubmenuOpen: (item: NavigationItem) => boolean;
@@ -58,13 +59,13 @@ export interface SidebarState {
 
 /**
  * Composable for managing navigation sidebar state
- * 
+ *
  * Handles collapsed state, submenu navigation, and active route detection.
- * 
+ *
  * @param options - Configuration options for the sidebar state
  * @param emit - Emit function from the component setup
  * @returns Object containing reactive state and methods for sidebar operations
- * 
+ *
  * @example
  * ```ts
  * const sidebarState = useSidebarState({
@@ -77,11 +78,7 @@ export function useSidebarState(
 	options: SidebarStateOptions,
 	emit: (event: string, ...args: any[]) => void
 ): SidebarState {
-	const {
-		items,
-		initialCollapsed = false,
-		activeRoute = ''
-	} = options;
+	const { items, initialCollapsed = false, activeRoute = '' } = options;
 
 	// Reactive state
 	const collapsed = ref(initialCollapsed);
@@ -89,7 +86,9 @@ export function useSidebarState(
 
 	// Computed: Filtered navigation items (excluding invalid entries)
 	const navigationItems = computed(() => {
-		return items.filter((item) => item && (item.label || item.type === 'divider'));
+		return items.filter(
+			(item) => item && (item.label || item.type === 'divider')
+		);
 	});
 
 	/**
@@ -108,10 +107,7 @@ export function useSidebarState(
 		// followed by '/' or end of string to avoid partial matches
 		// e.g., '/users' should not match '/user-settings'
 		if (itemPath !== '/') {
-			return (
-				activeRoute.startsWith(itemPath + '/') ||
-				activeRoute === itemPath
-			);
+			return activeRoute.startsWith(itemPath + '/') || activeRoute === itemPath;
 		}
 
 		return false;
@@ -187,13 +183,13 @@ export function useSidebarState(
 	return {
 		// Collapse state
 		collapsed,
-		
+
 		// Submenu state
 		openSubmenus,
-		
+
 		// Filtered navigation items
 		navigationItems,
-		
+
 		// Methods
 		toggleCollapsed,
 		isSubmenuOpen,

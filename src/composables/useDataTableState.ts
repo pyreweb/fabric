@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref, computed, watch, Ref, ComputedRef } from 'vue';
 
 /**
@@ -11,7 +12,12 @@ export interface DataTableStateOptions {
 	/**
 	 * Column definitions
 	 */
-	columns: Array<{ key: string; label: string; sortable?: boolean; align?: string }>;
+	columns: Array<{
+		key: string;
+		label: string;
+		sortable?: boolean;
+		align?: string;
+	}>;
 	/**
 	 * Unique key property in data objects
 	 */
@@ -60,30 +66,30 @@ export interface DataTableStateOptions {
 export interface DataTableState {
 	// Search state
 	searchQuery: Ref<string>;
-	
+
 	// Sort state
 	sortKey: Ref<string | null>;
 	sortDirection: Ref<'asc' | 'desc'>;
-	
+
 	// Pagination state
 	internalPage: Ref<number>;
 	totalPages: ComputedRef<number>;
 	paginationInfo: ComputedRef<string>;
 	effectivePaginated: ComputedRef<boolean>;
-	
+
 	// Selection state
 	selectedKeys: Ref<any[]>;
 	selectedKeysSet: ComputedRef<Set<any>>;
 	selectedItems: ComputedRef<any[]>;
 	isAllSelected: ComputedRef<boolean>;
-	
+
 	// Data processing
 	filteredData: ComputedRef<any[]>;
 	sortedData: ComputedRef<any[]>;
 	processedData: ComputedRef<any[]>;
 	paginatedData: ComputedRef<any[]>;
 	computedTotalItems: ComputedRef<number>;
-	
+
 	// Methods
 	getCellValue: (row: any, key: string) => any;
 	getRowKey: (row: any, index?: number) => any;
@@ -96,13 +102,13 @@ export interface DataTableState {
 
 /**
  * Composable for managing data table state and logic
- * 
+ *
  * Handles filtering, sorting, pagination, and row selection for data tables.
- * 
+ *
  * @param options - Configuration options for the data table state
  * @param emit - Emit function from the component setup
  * @returns Object containing reactive state and methods for table operations
- * 
+ *
  * @example
  * ```ts
  * const tableState = useDataTableState({
@@ -223,7 +229,10 @@ export function useDataTableState(
 			(internalPage.value - 1) * perPage + 1,
 			computedTotalItems.value
 		);
-		const end = Math.min(internalPage.value * perPage, computedTotalItems.value);
+		const end = Math.min(
+			internalPage.value * perPage,
+			computedTotalItems.value
+		);
 		return `${start} - ${end} sur ${computedTotalItems.value}`;
 	});
 
@@ -274,7 +283,9 @@ export function useDataTableState(
 	const handleSelectAll = (checked: boolean): void => {
 		if (checked) {
 			const currentKeys = paginatedData.value.map((row) => getRowKey(row));
-			const newKeys = currentKeys.filter((k) => !selectedKeys.value.includes(k));
+			const newKeys = currentKeys.filter(
+				(k) => !selectedKeys.value.includes(k)
+			);
 			selectedKeys.value = [...selectedKeys.value, ...newKeys];
 		} else {
 			const currentKeys = paginatedData.value.map((row) => getRowKey(row));
@@ -314,30 +325,30 @@ export function useDataTableState(
 	return {
 		// Search state
 		searchQuery,
-		
+
 		// Sort state
 		sortKey,
 		sortDirection,
-		
+
 		// Pagination state
 		internalPage,
 		totalPages,
 		paginationInfo,
 		effectivePaginated,
-		
+
 		// Selection state
 		selectedKeys,
 		selectedKeysSet,
 		selectedItems,
 		isAllSelected,
-		
+
 		// Data processing
 		filteredData,
 		sortedData,
 		processedData,
 		paginatedData,
 		computedTotalItems,
-		
+
 		// Methods
 		getCellValue,
 		getRowKey,

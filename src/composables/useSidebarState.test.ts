@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, vi } from 'vitest';
 import { useSidebarState } from './useSidebarState';
 
@@ -53,10 +54,7 @@ describe('useSidebarState', () => {
 	describe('isItemActive', () => {
 		it('detects exact route match', () => {
 			const emit = vi.fn();
-			const state = useSidebarState(
-				{ items, activeRoute: '/dashboard' },
-				emit
-			);
+			const state = useSidebarState({ items, activeRoute: '/dashboard' }, emit);
 
 			expect(state.isItemActive(items[0])).toBe(true);
 			expect(state.isItemActive(items[1])).toBe(false);
@@ -168,9 +166,7 @@ describe('useSidebarState', () => {
 			{
 				id: 'section',
 				label: 'Section',
-				children: [
-					{ id: 'child1', label: 'Child 1', href: '/child1' }
-				]
+				children: [{ id: 'child1', label: 'Child 1', href: '/child1' }]
 			}
 		];
 
@@ -225,16 +221,12 @@ describe('useSidebarState', () => {
 			{
 				id: 'section1',
 				label: 'Section 1',
-				children: [
-					{ id: 'child1', label: 'Child 1', href: '/section1/child1' }
-				]
+				children: [{ id: 'child1', label: 'Child 1', href: '/section1/child1' }]
 			},
 			{
 				id: 'section2',
 				label: 'Section 2',
-				children: [
-					{ id: 'child2', label: 'Child 2', href: '/section2/child2' }
-				]
+				children: [{ id: 'child2', label: 'Child 2', href: '/section2/child2' }]
 			}
 		];
 
@@ -267,7 +259,9 @@ describe('useSidebarState', () => {
 
 			state.initializeOpenSubmenus();
 			state.initializeOpenSubmenus();
-			expect(state.openSubmenus.value.filter(k => k === 'section1').length).toBe(1);
+			expect(
+				state.openSubmenus.value.filter((k) => k === 'section1').length
+			).toBe(1);
 		});
 	});
 
@@ -306,7 +300,7 @@ describe('useSidebarState', () => {
 
 			state.toggleCollapsed();
 			// Wait for watcher to trigger
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise((resolve) => setTimeout(resolve, 0));
 			expect(state.openSubmenus.value).toEqual([]);
 		});
 	});

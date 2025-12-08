@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref, Ref } from 'vue';
 
 /**
@@ -16,14 +17,17 @@ export interface FormValidationOptions {
 export interface FormValidationState {
 	// Form data
 	formData: Ref<Record<string, any>>;
-	
+
 	// Validation state
 	errors: Ref<Record<string, string>>;
 	isValid: Ref<boolean>;
 	isSubmitting: Ref<boolean>;
-	
+
 	// Methods
-	handleSubmit: (event: Event, callback?: (data: Record<string, any>) => void | Promise<void>) => Promise<void>;
+	handleSubmit: (
+		event: Event,
+		callback?: (data: Record<string, any>) => void | Promise<void>
+	) => Promise<void>;
 	setFieldValue: (field: string, value: any) => void;
 	setFieldError: (field: string, error: string) => void;
 	clearFieldError: (field: string) => void;
@@ -34,20 +38,20 @@ export interface FormValidationState {
 
 /**
  * Composable for managing form validation and submission
- * 
+ *
  * Provides a simple interface for form handling with built-in validation state.
  * Can be extended with custom validation logic.
- * 
+ *
  * @param options - Configuration options for the form validation
  * @param emit - Emit function from the component setup
  * @returns Object containing reactive state and methods for form operations
- * 
+ *
  * @example
  * ```ts
  * const formState = useFormValidation({
  *   initialData: { name: '', email: '' }
  * }, emit);
- * 
+ *
  * // In submit handler
  * await formState.handleSubmit(event, async (data) => {
  *   await api.submitForm(data);
@@ -121,7 +125,7 @@ export function useFormValidation(
 		callback?: (data: Record<string, any>) => void | Promise<void>
 	): Promise<void> => {
 		event.preventDefault();
-		
+
 		// Emit submit event with the event object
 		emit('submit', event);
 
@@ -156,12 +160,12 @@ export function useFormValidation(
 	return {
 		// Form data
 		formData,
-		
+
 		// Validation state
 		errors,
 		isValid,
 		isSubmitting,
-		
+
 		// Methods
 		handleSubmit,
 		setFieldValue,

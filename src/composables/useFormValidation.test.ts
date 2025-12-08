@@ -144,7 +144,7 @@ describe('useFormValidation', () => {
 			const state = useFormValidation({}, emit);
 			const callback = vi.fn(async () => {
 				expect(state.isSubmitting.value).toBe(true);
-				await new Promise(resolve => setTimeout(resolve, 10));
+				await new Promise((resolve) => setTimeout(resolve, 10));
 			});
 			const event = new Event('submit');
 
@@ -167,7 +167,6 @@ describe('useFormValidation', () => {
 			expect(emit).toHaveBeenCalledWith('submit-error', error);
 			expect(state.isSubmitting.value).toBe(false);
 		});
-
 	});
 
 	describe('reset', () => {

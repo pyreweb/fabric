@@ -12,14 +12,9 @@ export default {
 			type: String,
 			default: 'primary',
 			validator: (value) =>
-				[
-					'primary',
-					'secondary',
-					'outline',
-					'ghost',
-					'danger',
-					'link'
-				].includes(value)
+				['primary', 'secondary', 'outline', 'ghost', 'danger', 'link'].includes(
+					value
+				)
 		},
 		size: {
 			type: String,

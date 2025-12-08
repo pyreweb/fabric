@@ -19,6 +19,13 @@
  */
 export default {
 	name: 'FThemeProvider',
+	provide() {
+		return {
+			theme: () => this.currentTheme,
+			toggleTheme: this.toggleTheme,
+			setTheme: this.setTheme
+		};
+	},
 	props: {
 		/**
 		 * Default theme to use when no preference is stored
@@ -54,13 +61,6 @@ export default {
 			currentTheme: this.defaultTheme === 'light' ? 'light' : 'dark',
 			storedTheme: null,
 			mediaQuery: null
-		};
-	},
-	provide() {
-		return {
-			theme: () => this.currentTheme,
-			toggleTheme: this.toggleTheme,
-			setTheme: this.setTheme
 		};
 	},
 	created() {
