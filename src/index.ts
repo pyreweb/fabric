@@ -121,6 +121,7 @@ export default {
 };
 
 export {
+	FAccordionItem,
 	FActivityFeed,
 	FAlert,
 	FAvatar,

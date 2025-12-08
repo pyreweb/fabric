@@ -17412,6 +17412,7 @@ var index = {
     install
 };
 
+exports.FAccordionItem = __vue_component__$t;
 exports.FActivityFeed = __vue_component__$c;
 exports.FAlert = __vue_component__$s;
 exports.FAvatar = __vue_component__$F;
