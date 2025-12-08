@@ -57,7 +57,8 @@ export default {
 	},
 	data() {
 		return {
-			currentTheme: this.getInitialTheme(),
+			currentTheme: this.defaultTheme === 'light' ? 'light' : 'dark',
+			storedTheme: null,
 			mediaQuery: null
 		};
 	},
@@ -67,6 +68,9 @@ export default {
 			toggleTheme: this.toggleTheme,
 			setTheme: this.setTheme
 		};
+	},
+	created() {
+		this.initializeTheme();
 	},
 	mounted() {
 		this.setupMediaQuery();
@@ -81,9 +85,9 @@ export default {
 	},
 	methods: {
 		/**
-		 * Get initial theme from localStorage or default
+		 * Initialize theme from localStorage or system preference
 		 */
-		getInitialTheme() {
+		initializeTheme() {
 			let theme = this.defaultTheme;
 
 			// Try to get theme from localStorage if persistence is enabled
@@ -92,31 +96,14 @@ export default {
 					const stored = localStorage.getItem(this.storageKey);
 					if (stored && ['light', 'dark', 'auto'].includes(stored)) {
 						theme = stored;
+						this.storedTheme = stored;
 					}
 				} catch (error) {
 					console.warn('Failed to read theme from localStorage:', error);
 				}
 			}
 
-			// Resolve theme
-			return this.resolveTheme(theme);
-		},
-
-		/**
-		 * Resolve 'auto' theme to actual theme based on system preference
-		 */
-		resolveTheme(theme) {
-			if (theme === 'auto') {
-				if (
-					typeof window !== 'undefined' &&
-					window.matchMedia &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches
-				) {
-					return 'dark';
-				}
-				return 'light';
-			}
-			return theme;
+			this.applyTheme(theme);
 		},
 
 		/**
@@ -137,9 +124,27 @@ export default {
 		 * Handle media query changes (for auto theme)
 		 */
 		handleMediaQueryChange() {
-			if (this.currentTheme === 'auto') {
+			// Only re-apply if stored theme is 'auto'
+			if (this.storedTheme === 'auto') {
 				this.applyTheme('auto');
 			}
+		},
+
+		/**
+		 * Resolve 'auto' theme to actual theme based on system preference
+		 */
+		resolveTheme(theme) {
+			if (theme === 'auto') {
+				if (
+					typeof window !== 'undefined' &&
+					window.matchMedia &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches
+				) {
+					return 'dark';
+				}
+				return 'light';
+			}
+			return theme;
 		},
 
 		/**
@@ -149,6 +154,7 @@ export default {
 		applyTheme(theme) {
 			const resolvedTheme = this.resolveTheme(theme);
 			this.currentTheme = resolvedTheme;
+			this.storedTheme = theme; // Remember the original preference
 
 			// Emit theme change event
 			this.$emit('theme-change', resolvedTheme);
@@ -174,6 +180,7 @@ export default {
 				return;
 			}
 
+			this.storedTheme = theme;
 			this.applyTheme(theme);
 
 			// Persist to localStorage if enabled

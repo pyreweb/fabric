@@ -210,7 +210,9 @@ describe('FThemeProvider', () => {
 		expect(wrapper.emitted('theme-change')).toBeTruthy();
 		const emitted = wrapper.emitted('theme-change');
 		if (emitted) {
-			expect(emitted[0][0]).toBe('dark');
+			// First emission is from initialization (light), second is from toggle (dark)
+			expect(emitted.length).toBeGreaterThanOrEqual(2);
+			expect(emitted[1][0]).toBe('dark');
 		}
 	});
 
