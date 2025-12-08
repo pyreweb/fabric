@@ -434,14 +434,9 @@ var script$C = {
 			type: String,
 			default: 'primary',
 			validator: (value) =>
-				[
-					'primary',
-					'secondary',
-					'outline',
-					'ghost',
-					'danger',
-					'link'
-				].includes(value)
+				['primary', 'secondary', 'outline', 'ghost', 'danger', 'link'].includes(
+					value
+				)
 		},
 		size: {
 			type: String,
@@ -17244,6 +17239,13 @@ __vue_render__$1._withStripped = true;
  */
 var script = {
 	name: 'FThemeProvider',
+	provide() {
+		return {
+			theme: () => this.currentTheme,
+			toggleTheme: this.toggleTheme,
+			setTheme: this.setTheme
+		};
+	},
 	props: {
 		/**
 		 * Default theme to use when no preference is stored
@@ -17279,13 +17281,6 @@ var script = {
 			currentTheme: this.defaultTheme === 'light' ? 'light' : 'dark',
 			storedTheme: null,
 			mediaQuery: null
-		};
-	},
-	provide() {
-		return {
-			theme: () => this.currentTheme,
-			toggleTheme: this.toggleTheme,
-			setTheme: this.setTheme
 		};
 	},
 	created() {
@@ -17467,6 +17462,7 @@ __vue_render__._withStripped = true;
     undefined
   );
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Composable for managing data table state and logic
  *
@@ -17675,6 +17671,7 @@ function useDataTableState(options, emit) {
     };
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Composable for managing navigation sidebar state
  *
@@ -17717,8 +17714,7 @@ function useSidebarState(options, emit) {
         // followed by '/' or end of string to avoid partial matches
         // e.g., '/users' should not match '/user-settings'
         if (itemPath !== '/') {
-            return (activeRoute.startsWith(itemPath + '/') ||
-                activeRoute === itemPath);
+            return activeRoute.startsWith(itemPath + '/') || activeRoute === itemPath;
         }
         return false;
     };
@@ -17798,6 +17794,7 @@ function useSidebarState(options, emit) {
     };
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Composable for managing form validation and submission
  *
