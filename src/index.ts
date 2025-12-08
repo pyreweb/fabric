@@ -26,6 +26,8 @@ import {
 	FListItem,
 	FPagination,
 	FSelect,
+	FTabs,
+	FTab,
 	FToast
 } from './components/molecules';
 import {
@@ -75,6 +77,8 @@ const components: ComponentsRecord = {
 	FProfileSection,
 	FRadio,
 	FSelect,
+	FTab,
+	FTabs,
 	FTextarea,
 	FToggle,
 	FTypography,
@@ -138,6 +142,8 @@ export {
 	FProfileSection,
 	FRadio,
 	FSelect,
+	FTab,
+	FTabs,
 	FTextarea,
 	FToggle,
 	FTypography,

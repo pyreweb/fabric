@@ -180,7 +180,9 @@ export default {
 		getTabButtonClasses(tab) {
 			const isActive = this.activeTabName === tab.name;
 			const baseClasses =
-				'px-4 py-2 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded-t-md';
+				'px-4 py-2 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2';
+
+			const roundingClasses = this.variant === 'pills' ? '' : 'rounded-t-md';
 
 			const variantClasses = {
 				default: isActive
@@ -198,7 +200,12 @@ export default {
 				? 'opacity-50 cursor-not-allowed'
 				: 'cursor-pointer';
 
-			return [baseClasses, variantClasses[this.variant], disabledClasses]
+			return [
+				baseClasses,
+				roundingClasses,
+				variantClasses[this.variant],
+				disabledClasses
+			]
 				.filter(Boolean)
 				.join(' ');
 		},
@@ -207,7 +214,7 @@ export default {
 		 */
 		handleTabClick(name) {
 			const tab = this.tabItems.find((t) => t.name === name);
-			if (!tab.disabled) {
+			if (tab && !tab.disabled) {
 				this.activeTabName = name;
 				this.$emit('change', name);
 			}

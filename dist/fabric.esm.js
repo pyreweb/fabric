@@ -151,17 +151,17 @@ var __vue_render__$G = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$A = [];
+var __vue_staticRenderFns__$C = [];
 __vue_render__$G._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$A = undefined;
+  const __vue_inject_styles__$C = undefined;
   /* scoped */
-  const __vue_scope_id__$A = undefined;
+  const __vue_scope_id__$C = undefined;
   /* module identifier */
-  const __vue_module_identifier__$A = undefined;
+  const __vue_module_identifier__$C = undefined;
   /* functional template */
-  const __vue_is_functional_template__$A = false;
+  const __vue_is_functional_template__$C = false;
   /* style inject */
   
   /* style inject SSR */
@@ -170,13 +170,13 @@ __vue_render__$G._withStripped = true;
   
 
   
-  const __vue_component__$A = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$G, staticRenderFns: __vue_staticRenderFns__$A },
-    __vue_inject_styles__$A,
+  const __vue_component__$C = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$G, staticRenderFns: __vue_staticRenderFns__$C },
+    __vue_inject_styles__$C,
     {},
-    __vue_scope_id__$A,
-    __vue_is_functional_template__$A,
-    __vue_module_identifier__$A,
+    __vue_scope_id__$C,
+    __vue_is_functional_template__$C,
+    __vue_module_identifier__$C,
     false,
     undefined,
     undefined,
@@ -209,17 +209,17 @@ var __vue_render__$F = function () {
     2
   )
 };
-var __vue_staticRenderFns__$z = [];
+var __vue_staticRenderFns__$B = [];
 __vue_render__$F._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$z = undefined;
+  const __vue_inject_styles__$B = undefined;
   /* scoped */
-  const __vue_scope_id__$z = undefined;
+  const __vue_scope_id__$B = undefined;
   /* module identifier */
-  const __vue_module_identifier__$z = undefined;
+  const __vue_module_identifier__$B = undefined;
   /* functional template */
-  const __vue_is_functional_template__$z = false;
+  const __vue_is_functional_template__$B = false;
   /* style inject */
   
   /* style inject SSR */
@@ -228,13 +228,13 @@ __vue_render__$F._withStripped = true;
   
 
   
-  const __vue_component__$z = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$F, staticRenderFns: __vue_staticRenderFns__$z },
-    __vue_inject_styles__$z,
+  const __vue_component__$B = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$F, staticRenderFns: __vue_staticRenderFns__$B },
+    __vue_inject_styles__$B,
     {},
-    __vue_scope_id__$z,
-    __vue_is_functional_template__$z,
-    __vue_module_identifier__$z,
+    __vue_scope_id__$B,
+    __vue_is_functional_template__$B,
+    __vue_module_identifier__$B,
     false,
     undefined,
     undefined,
@@ -313,17 +313,17 @@ var __vue_render__$E = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$y = [];
+var __vue_staticRenderFns__$A = [];
 __vue_render__$E._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$y = undefined;
+  const __vue_inject_styles__$A = undefined;
   /* scoped */
-  const __vue_scope_id__$y = undefined;
+  const __vue_scope_id__$A = undefined;
   /* module identifier */
-  const __vue_module_identifier__$y = undefined;
+  const __vue_module_identifier__$A = undefined;
   /* functional template */
-  const __vue_is_functional_template__$y = false;
+  const __vue_is_functional_template__$A = false;
   /* style inject */
   
   /* style inject SSR */
@@ -332,13 +332,13 @@ __vue_render__$E._withStripped = true;
   
 
   
-  const __vue_component__$y = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$E, staticRenderFns: __vue_staticRenderFns__$y },
-    __vue_inject_styles__$y,
+  const __vue_component__$A = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$E, staticRenderFns: __vue_staticRenderFns__$A },
+    __vue_inject_styles__$A,
     {},
-    __vue_scope_id__$y,
-    __vue_is_functional_template__$y,
-    __vue_module_identifier__$y,
+    __vue_scope_id__$A,
+    __vue_is_functional_template__$A,
+    __vue_module_identifier__$A,
     false,
     undefined,
     undefined,
@@ -364,7 +364,7 @@ __vue_render__$E._withStripped = true;
 //
 //
 
-var script$x = {
+var script$z = {
 	name: 'FCheckbox',
 	model: {
 		prop: 'checked',
@@ -421,7 +421,7 @@ var script$x = {
 };
 
 /* script */
-const __vue_script__$x = script$x;
+const __vue_script__$z = script$z;
 
 /* template */
 var __vue_render__$D = function () {
@@ -462,17 +462,17 @@ var __vue_render__$D = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$x = [];
+var __vue_staticRenderFns__$z = [];
 __vue_render__$D._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$x = undefined;
+  const __vue_inject_styles__$z = undefined;
   /* scoped */
-  const __vue_scope_id__$x = undefined;
+  const __vue_scope_id__$z = undefined;
   /* module identifier */
-  const __vue_module_identifier__$x = undefined;
+  const __vue_module_identifier__$z = undefined;
   /* functional template */
-  const __vue_is_functional_template__$x = false;
+  const __vue_is_functional_template__$z = false;
   /* style inject */
   
   /* style inject SSR */
@@ -481,13 +481,13 @@ __vue_render__$D._withStripped = true;
   
 
   
-  const __vue_component__$x = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$D, staticRenderFns: __vue_staticRenderFns__$x },
-    __vue_inject_styles__$x,
-    __vue_script__$x,
-    __vue_scope_id__$x,
-    __vue_is_functional_template__$x,
-    __vue_module_identifier__$x,
+  const __vue_component__$z = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$D, staticRenderFns: __vue_staticRenderFns__$z },
+    __vue_inject_styles__$z,
+    __vue_script__$z,
+    __vue_scope_id__$z,
+    __vue_is_functional_template__$z,
+    __vue_module_identifier__$z,
     false,
     undefined,
     undefined,
@@ -512,7 +512,7 @@ __vue_render__$D._withStripped = true;
 //
 //
 
-var script$w = {
+var script$y = {
 	name: 'FDivider',
 	props: {
 		orientation: {
@@ -612,7 +612,7 @@ var script$w = {
 };
 
 /* script */
-const __vue_script__$w = script$w;
+const __vue_script__$y = script$y;
 
 /* template */
 var __vue_render__$C = function () {
@@ -639,17 +639,17 @@ var __vue_render__$C = function () {
     2
   )
 };
-var __vue_staticRenderFns__$w = [];
+var __vue_staticRenderFns__$y = [];
 __vue_render__$C._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$w = undefined;
+  const __vue_inject_styles__$y = undefined;
   /* scoped */
-  const __vue_scope_id__$w = undefined;
+  const __vue_scope_id__$y = undefined;
   /* module identifier */
-  const __vue_module_identifier__$w = undefined;
+  const __vue_module_identifier__$y = undefined;
   /* functional template */
-  const __vue_is_functional_template__$w = false;
+  const __vue_is_functional_template__$y = false;
   /* style inject */
   
   /* style inject SSR */
@@ -658,13 +658,13 @@ __vue_render__$C._withStripped = true;
   
 
   
-  const __vue_component__$w = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$C, staticRenderFns: __vue_staticRenderFns__$w },
-    __vue_inject_styles__$w,
-    __vue_script__$w,
-    __vue_scope_id__$w,
-    __vue_is_functional_template__$w,
-    __vue_module_identifier__$w,
+  const __vue_component__$y = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$C, staticRenderFns: __vue_staticRenderFns__$y },
+    __vue_inject_styles__$y,
+    __vue_script__$y,
+    __vue_scope_id__$y,
+    __vue_is_functional_template__$y,
+    __vue_module_identifier__$y,
     false,
     undefined,
     undefined,
@@ -779,7 +779,7 @@ const ICON_PATHS = {
 		'M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
 };
 
-var script$v = {
+var script$x = {
 	name: 'FIcon',
 	props: {
 		name: {
@@ -864,7 +864,7 @@ var script$v = {
 };
 
 /* script */
-const __vue_script__$v = script$v;
+const __vue_script__$x = script$x;
 
 /* template */
 var __vue_render__$B = function () {
@@ -938,17 +938,17 @@ var __vue_render__$B = function () {
     2
   )
 };
-var __vue_staticRenderFns__$v = [];
+var __vue_staticRenderFns__$x = [];
 __vue_render__$B._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$v = undefined;
+  const __vue_inject_styles__$x = undefined;
   /* scoped */
-  const __vue_scope_id__$v = undefined;
+  const __vue_scope_id__$x = undefined;
   /* module identifier */
-  const __vue_module_identifier__$v = undefined;
+  const __vue_module_identifier__$x = undefined;
   /* functional template */
-  const __vue_is_functional_template__$v = false;
+  const __vue_is_functional_template__$x = false;
   /* style inject */
   
   /* style inject SSR */
@@ -957,13 +957,13 @@ __vue_render__$B._withStripped = true;
   
 
   
-  const __vue_component__$v = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$B, staticRenderFns: __vue_staticRenderFns__$v },
-    __vue_inject_styles__$v,
-    __vue_script__$v,
-    __vue_scope_id__$v,
-    __vue_is_functional_template__$v,
-    __vue_module_identifier__$v,
+  const __vue_component__$x = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$B, staticRenderFns: __vue_staticRenderFns__$x },
+    __vue_inject_styles__$x,
+    __vue_script__$x,
+    __vue_scope_id__$x,
+    __vue_is_functional_template__$x,
+    __vue_module_identifier__$x,
     false,
     undefined,
     undefined,
@@ -985,7 +985,7 @@ __vue_render__$B._withStripped = true;
 //
 //
 
-var script$u = {
+var script$w = {
 	name: 'FInput',
 	props: {
 		value: {
@@ -1055,7 +1055,7 @@ var script$u = {
 };
 
 /* script */
-const __vue_script__$u = script$u;
+const __vue_script__$w = script$w;
 
 /* template */
 var __vue_render__$A = function () {
@@ -1082,17 +1082,17 @@ var __vue_render__$A = function () {
     },
   })
 };
-var __vue_staticRenderFns__$u = [];
+var __vue_staticRenderFns__$w = [];
 __vue_render__$A._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$u = undefined;
+  const __vue_inject_styles__$w = undefined;
   /* scoped */
-  const __vue_scope_id__$u = undefined;
+  const __vue_scope_id__$w = undefined;
   /* module identifier */
-  const __vue_module_identifier__$u = undefined;
+  const __vue_module_identifier__$w = undefined;
   /* functional template */
-  const __vue_is_functional_template__$u = false;
+  const __vue_is_functional_template__$w = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1101,13 +1101,13 @@ __vue_render__$A._withStripped = true;
   
 
   
-  const __vue_component__$u = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$A, staticRenderFns: __vue_staticRenderFns__$u },
-    __vue_inject_styles__$u,
-    __vue_script__$u,
-    __vue_scope_id__$u,
-    __vue_is_functional_template__$u,
-    __vue_module_identifier__$u,
+  const __vue_component__$w = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$A, staticRenderFns: __vue_staticRenderFns__$w },
+    __vue_inject_styles__$w,
+    __vue_script__$w,
+    __vue_scope_id__$w,
+    __vue_is_functional_template__$w,
+    __vue_module_identifier__$w,
     false,
     undefined,
     undefined,
@@ -1143,7 +1143,7 @@ __vue_render__$A._withStripped = true;
 //
 //
 
-var script$t = {
+var script$v = {
 	name: 'FLoader',
 	props: {
 		size: {
@@ -1212,7 +1212,7 @@ var script$t = {
 };
 
 /* script */
-const __vue_script__$t = script$t;
+const __vue_script__$v = script$v;
 
 /* template */
 var __vue_render__$z = function () {
@@ -1263,17 +1263,17 @@ var __vue_render__$z = function () {
     ),
   ])
 };
-var __vue_staticRenderFns__$t = [];
+var __vue_staticRenderFns__$v = [];
 __vue_render__$z._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$t = undefined;
+  const __vue_inject_styles__$v = undefined;
   /* scoped */
-  const __vue_scope_id__$t = undefined;
+  const __vue_scope_id__$v = undefined;
   /* module identifier */
-  const __vue_module_identifier__$t = undefined;
+  const __vue_module_identifier__$v = undefined;
   /* functional template */
-  const __vue_is_functional_template__$t = false;
+  const __vue_is_functional_template__$v = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1282,13 +1282,13 @@ __vue_render__$z._withStripped = true;
   
 
   
-  const __vue_component__$t = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$t },
-    __vue_inject_styles__$t,
-    __vue_script__$t,
-    __vue_scope_id__$t,
-    __vue_is_functional_template__$t,
-    __vue_module_identifier__$t,
+  const __vue_component__$v = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$v },
+    __vue_inject_styles__$v,
+    __vue_script__$v,
+    __vue_scope_id__$v,
+    __vue_is_functional_template__$v,
+    __vue_module_identifier__$v,
     false,
     undefined,
     undefined,
@@ -1316,7 +1316,7 @@ __vue_render__$z._withStripped = true;
 //
 //
 
-var script$s = {
+var script$u = {
 	name: 'FRadio',
 	model: {
 		prop: 'modelValue',
@@ -1410,7 +1410,7 @@ var script$s = {
 };
 
 /* script */
-const __vue_script__$s = script$s;
+const __vue_script__$u = script$u;
 
 /* template */
 var __vue_render__$y = function () {
@@ -1436,17 +1436,17 @@ var __vue_render__$y = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$s = [];
+var __vue_staticRenderFns__$u = [];
 __vue_render__$y._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$s = undefined;
+  const __vue_inject_styles__$u = undefined;
   /* scoped */
-  const __vue_scope_id__$s = undefined;
+  const __vue_scope_id__$u = undefined;
   /* module identifier */
-  const __vue_module_identifier__$s = undefined;
+  const __vue_module_identifier__$u = undefined;
   /* functional template */
-  const __vue_is_functional_template__$s = false;
+  const __vue_is_functional_template__$u = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1455,13 +1455,13 @@ __vue_render__$y._withStripped = true;
   
 
   
-  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$s },
-    __vue_inject_styles__$s,
-    __vue_script__$s,
-    __vue_scope_id__$s,
-    __vue_is_functional_template__$s,
-    __vue_module_identifier__$s,
+  const __vue_component__$u = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$u },
+    __vue_inject_styles__$u,
+    __vue_script__$u,
+    __vue_scope_id__$u,
+    __vue_is_functional_template__$u,
+    __vue_module_identifier__$u,
     false,
     undefined,
     undefined,
@@ -1503,9 +1503,9 @@ __vue_render__$y._withStripped = true;
 //
 //
 
-let idCounter$5 = 0;
+let idCounter$6 = 0;
 
-var script$r = {
+var script$t = {
 	name: 'FTextarea',
 	props: {
 		value: {
@@ -1550,7 +1550,7 @@ var script$r = {
 		}
 	},
 	data() {
-		const id = ++idCounter$5;
+		const id = ++idCounter$6;
 		return {
 			inputId: `ftextarea-${id}`,
 			errorId: `ftextarea-error-${id}`
@@ -1616,7 +1616,7 @@ var script$r = {
 };
 
 /* script */
-const __vue_script__$r = script$r;
+const __vue_script__$t = script$t;
 
 /* template */
 var __vue_render__$x = function () {
@@ -1685,17 +1685,17 @@ var __vue_render__$x = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$r = [];
+var __vue_staticRenderFns__$t = [];
 __vue_render__$x._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$r = undefined;
+  const __vue_inject_styles__$t = undefined;
   /* scoped */
-  const __vue_scope_id__$r = undefined;
+  const __vue_scope_id__$t = undefined;
   /* module identifier */
-  const __vue_module_identifier__$r = undefined;
+  const __vue_module_identifier__$t = undefined;
   /* functional template */
-  const __vue_is_functional_template__$r = false;
+  const __vue_is_functional_template__$t = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1704,13 +1704,13 @@ __vue_render__$x._withStripped = true;
   
 
   
-  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$r },
-    __vue_inject_styles__$r,
-    __vue_script__$r,
-    __vue_scope_id__$r,
-    __vue_is_functional_template__$r,
-    __vue_module_identifier__$r,
+  const __vue_component__$t = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
+    __vue_inject_styles__$t,
+    __vue_script__$t,
+    __vue_scope_id__$t,
+    __vue_is_functional_template__$t,
+    __vue_module_identifier__$t,
     false,
     undefined,
     undefined,
@@ -1738,7 +1738,7 @@ __vue_render__$x._withStripped = true;
 //
 //
 
-var script$q = {
+var script$s = {
 	name: 'FToggle',
 	props: {
 		value: {
@@ -1826,7 +1826,7 @@ var script$q = {
 };
 
 /* script */
-const __vue_script__$q = script$q;
+const __vue_script__$s = script$s;
 
 /* template */
 var __vue_render__$w = function () {
@@ -1869,17 +1869,17 @@ var __vue_render__$w = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$q = [];
+var __vue_staticRenderFns__$s = [];
 __vue_render__$w._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$q = undefined;
+  const __vue_inject_styles__$s = undefined;
   /* scoped */
-  const __vue_scope_id__$q = undefined;
+  const __vue_scope_id__$s = undefined;
   /* module identifier */
-  const __vue_module_identifier__$q = undefined;
+  const __vue_module_identifier__$s = undefined;
   /* functional template */
-  const __vue_is_functional_template__$q = false;
+  const __vue_is_functional_template__$s = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1888,13 +1888,13 @@ __vue_render__$w._withStripped = true;
   
 
   
-  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$q },
-    __vue_inject_styles__$q,
-    __vue_script__$q,
-    __vue_scope_id__$q,
-    __vue_is_functional_template__$q,
-    __vue_module_identifier__$q,
+  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
+    __vue_inject_styles__$s,
+    __vue_script__$s,
+    __vue_scope_id__$s,
+    __vue_is_functional_template__$s,
+    __vue_module_identifier__$s,
     false,
     undefined,
     undefined,
@@ -1908,7 +1908,7 @@ __vue_render__$w._withStripped = true;
 //
 //
 
-var script$p = {
+var script$r = {
 	name: 'FTypography',
 	props: {
 		variant: {
@@ -1980,7 +1980,7 @@ var script$p = {
 };
 
 /* script */
-const __vue_script__$p = script$p;
+const __vue_script__$r = script$r;
 
 /* template */
 var __vue_render__$v = function () {
@@ -1994,17 +1994,17 @@ var __vue_render__$v = function () {
     2
   )
 };
-var __vue_staticRenderFns__$p = [];
+var __vue_staticRenderFns__$r = [];
 __vue_render__$v._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$p = undefined;
+  const __vue_inject_styles__$r = undefined;
   /* scoped */
-  const __vue_scope_id__$p = undefined;
+  const __vue_scope_id__$r = undefined;
   /* module identifier */
-  const __vue_module_identifier__$p = undefined;
+  const __vue_module_identifier__$r = undefined;
   /* functional template */
-  const __vue_is_functional_template__$p = false;
+  const __vue_is_functional_template__$r = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2013,13 +2013,13 @@ __vue_render__$v._withStripped = true;
   
 
   
-  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$p },
-    __vue_inject_styles__$p,
-    __vue_script__$p,
-    __vue_scope_id__$p,
-    __vue_is_functional_template__$p,
-    __vue_module_identifier__$p,
+  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
+    __vue_inject_styles__$r,
+    __vue_script__$r,
+    __vue_scope_id__$r,
+    __vue_is_functional_template__$r,
+    __vue_module_identifier__$r,
     false,
     undefined,
     undefined,
@@ -2138,12 +2138,12 @@ const VARIANT_COLORS = {
 	}
 };
 
-var script$o = {
+var script$q = {
 	name: 'FAlert',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A
 	},
 	props: {
 		variant: {
@@ -2196,7 +2196,7 @@ var script$o = {
 };
 
 /* script */
-const __vue_script__$o = script$o;
+const __vue_script__$q = script$q;
 
 /* template */
 var __vue_render__$t = function () {
@@ -2258,17 +2258,17 @@ var __vue_render__$t = function () {
       )
     : _vm._e()
 };
-var __vue_staticRenderFns__$o = [];
+var __vue_staticRenderFns__$q = [];
 __vue_render__$t._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$o = undefined;
+  const __vue_inject_styles__$q = undefined;
   /* scoped */
-  const __vue_scope_id__$o = undefined;
+  const __vue_scope_id__$q = undefined;
   /* module identifier */
-  const __vue_module_identifier__$o = undefined;
+  const __vue_module_identifier__$q = undefined;
   /* functional template */
-  const __vue_is_functional_template__$o = false;
+  const __vue_is_functional_template__$q = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2277,13 +2277,13 @@ __vue_render__$t._withStripped = true;
   
 
   
-  const __vue_component__$o = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$o },
-    __vue_inject_styles__$o,
-    __vue_script__$o,
-    __vue_scope_id__$o,
-    __vue_is_functional_template__$o,
-    __vue_module_identifier__$o,
+  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$q },
+    __vue_inject_styles__$q,
+    __vue_script__$q,
+    __vue_scope_id__$q,
+    __vue_is_functional_template__$q,
+    __vue_module_identifier__$q,
     false,
     undefined,
     undefined,
@@ -2327,11 +2327,11 @@ __vue_render__$t._withStripped = true;
 //
 
 
-var script$n = {
+var script$p = {
 	name: 'FBreadcrumb',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r
 	},
 	props: {
 		items: {
@@ -2406,7 +2406,7 @@ var script$n = {
 };
 
 /* script */
-const __vue_script__$n = script$n;
+const __vue_script__$p = script$p;
 
 /* template */
 var __vue_render__$s = function () {
@@ -2493,17 +2493,17 @@ var __vue_render__$s = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$n = [];
+var __vue_staticRenderFns__$p = [];
 __vue_render__$s._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$n = undefined;
+  const __vue_inject_styles__$p = undefined;
   /* scoped */
-  const __vue_scope_id__$n = undefined;
+  const __vue_scope_id__$p = undefined;
   /* module identifier */
-  const __vue_module_identifier__$n = undefined;
+  const __vue_module_identifier__$p = undefined;
   /* functional template */
-  const __vue_is_functional_template__$n = false;
+  const __vue_is_functional_template__$p = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2512,13 +2512,13 @@ __vue_render__$s._withStripped = true;
   
 
   
-  const __vue_component__$n = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$n },
-    __vue_inject_styles__$n,
-    __vue_script__$n,
-    __vue_scope_id__$n,
-    __vue_is_functional_template__$n,
-    __vue_module_identifier__$n,
+  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$p },
+    __vue_inject_styles__$p,
+    __vue_script__$p,
+    __vue_scope_id__$p,
+    __vue_is_functional_template__$p,
+    __vue_module_identifier__$p,
     false,
     undefined,
     undefined,
@@ -2532,7 +2532,7 @@ __vue_render__$s._withStripped = true;
 //
 //
 
-var script$m = {
+var script$o = {
 	name: 'FButtonGroup',
 	props: {
 		ariaLabel: {
@@ -2557,7 +2557,7 @@ var script$m = {
 };
 
 /* script */
-const __vue_script__$m = script$m;
+const __vue_script__$o = script$o;
 
 /* template */
 var __vue_render__$r = function () {
@@ -2574,17 +2574,17 @@ var __vue_render__$r = function () {
     2
   )
 };
-var __vue_staticRenderFns__$m = [];
+var __vue_staticRenderFns__$o = [];
 __vue_render__$r._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$m = undefined;
+  const __vue_inject_styles__$o = undefined;
   /* scoped */
-  const __vue_scope_id__$m = undefined;
+  const __vue_scope_id__$o = undefined;
   /* module identifier */
-  const __vue_module_identifier__$m = undefined;
+  const __vue_module_identifier__$o = undefined;
   /* functional template */
-  const __vue_is_functional_template__$m = false;
+  const __vue_is_functional_template__$o = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2593,13 +2593,13 @@ __vue_render__$r._withStripped = true;
   
 
   
-  const __vue_component__$m = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$m },
-    __vue_inject_styles__$m,
-    __vue_script__$m,
-    __vue_scope_id__$m,
-    __vue_is_functional_template__$m,
-    __vue_module_identifier__$m,
+  const __vue_component__$o = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$o },
+    __vue_inject_styles__$o,
+    __vue_script__$o,
+    __vue_scope_id__$o,
+    __vue_is_functional_template__$o,
+    __vue_module_identifier__$o,
     false,
     undefined,
     undefined,
@@ -2812,12 +2812,12 @@ __vue_render__$r._withStripped = true;
 //
 
 
-let idCounter$4 = 0;
+let idCounter$5 = 0;
 
-var script$l = {
+var script$n = {
 	name: 'FDatePicker',
 	components: {
-		FIcon: __vue_component__$v
+		FIcon: __vue_component__$x
 	},
 	props: {
 		value: {
@@ -2909,7 +2909,7 @@ var script$l = {
 			selectedHour: 0,
 			selectedMinute: 0,
 			calendarDays: [],
-			generatedId: `f-datepicker-${++idCounter$4}`
+			generatedId: `f-datepicker-${++idCounter$5}`
 		};
 	},
 	computed: {
@@ -3356,7 +3356,7 @@ var script$l = {
 };
 
 /* script */
-const __vue_script__$l = script$l;
+const __vue_script__$n = script$n;
 
 /* template */
 var __vue_render__$q = function () {
@@ -3826,17 +3826,17 @@ var __vue_render__$q = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$l = [];
+var __vue_staticRenderFns__$n = [];
 __vue_render__$q._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$l = undefined;
+  const __vue_inject_styles__$n = undefined;
   /* scoped */
-  const __vue_scope_id__$l = undefined;
+  const __vue_scope_id__$n = undefined;
   /* module identifier */
-  const __vue_module_identifier__$l = undefined;
+  const __vue_module_identifier__$n = undefined;
   /* functional template */
-  const __vue_is_functional_template__$l = false;
+  const __vue_is_functional_template__$n = false;
   /* style inject */
   
   /* style inject SSR */
@@ -3845,13 +3845,13 @@ __vue_render__$q._withStripped = true;
   
 
   
-  const __vue_component__$l = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$l },
-    __vue_inject_styles__$l,
-    __vue_script__$l,
-    __vue_scope_id__$l,
-    __vue_is_functional_template__$l,
-    __vue_module_identifier__$l,
+  const __vue_component__$n = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$n },
+    __vue_inject_styles__$n,
+    __vue_script__$n,
+    __vue_scope_id__$n,
+    __vue_is_functional_template__$n,
+    __vue_module_identifier__$n,
     false,
     undefined,
     undefined,
@@ -3881,12 +3881,12 @@ __vue_render__$q._withStripped = true;
 //
 
 
-var script$k = {
+var script$m = {
 	name: 'FEmptyState',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A
 	},
 	props: {
 		icon: {
@@ -3945,7 +3945,7 @@ var script$k = {
 };
 
 /* script */
-const __vue_script__$k = script$k;
+const __vue_script__$m = script$m;
 
 /* template */
 var __vue_render__$p = function () {
@@ -3995,17 +3995,17 @@ var __vue_render__$p = function () {
     2
   )
 };
-var __vue_staticRenderFns__$k = [];
+var __vue_staticRenderFns__$m = [];
 __vue_render__$p._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$k = undefined;
+  const __vue_inject_styles__$m = undefined;
   /* scoped */
-  const __vue_scope_id__$k = undefined;
+  const __vue_scope_id__$m = undefined;
   /* module identifier */
-  const __vue_module_identifier__$k = undefined;
+  const __vue_module_identifier__$m = undefined;
   /* functional template */
-  const __vue_is_functional_template__$k = false;
+  const __vue_is_functional_template__$m = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4014,13 +4014,13 @@ __vue_render__$p._withStripped = true;
   
 
   
-  const __vue_component__$k = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$k },
-    __vue_inject_styles__$k,
-    __vue_script__$k,
-    __vue_scope_id__$k,
-    __vue_is_functional_template__$k,
-    __vue_module_identifier__$k,
+  const __vue_component__$m = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$m },
+    __vue_inject_styles__$m,
+    __vue_script__$m,
+    __vue_scope_id__$m,
+    __vue_is_functional_template__$m,
+    __vue_module_identifier__$m,
     false,
     undefined,
     undefined,
@@ -4080,13 +4080,13 @@ const FILE_TYPE_ICONS = {
 	default: 'document'
 };
 
-var script$j = {
+var script$l = {
 	name: 'FFilePreview',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FLoader: __vue_component__$t,
-		FButton: __vue_component__$y
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FLoader: __vue_component__$v,
+		FButton: __vue_component__$A
 	},
 	props: {
 		fileName: {
@@ -4149,7 +4149,7 @@ var script$j = {
 };
 
 /* script */
-const __vue_script__$j = script$j;
+const __vue_script__$l = script$l;
 
 /* template */
 var __vue_render__$o = function () {
@@ -4213,17 +4213,17 @@ var __vue_render__$o = function () {
     1
   )
 };
-var __vue_staticRenderFns__$j = [];
+var __vue_staticRenderFns__$l = [];
 __vue_render__$o._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$j = undefined;
+  const __vue_inject_styles__$l = undefined;
   /* scoped */
-  const __vue_scope_id__$j = undefined;
+  const __vue_scope_id__$l = undefined;
   /* module identifier */
-  const __vue_module_identifier__$j = undefined;
+  const __vue_module_identifier__$l = undefined;
   /* functional template */
-  const __vue_is_functional_template__$j = false;
+  const __vue_is_functional_template__$l = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4232,13 +4232,13 @@ __vue_render__$o._withStripped = true;
   
 
   
-  const __vue_component__$j = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$j },
-    __vue_inject_styles__$j,
-    __vue_script__$j,
-    __vue_scope_id__$j,
-    __vue_is_functional_template__$j,
-    __vue_module_identifier__$j,
+  const __vue_component__$l = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$l },
+    __vue_inject_styles__$l,
+    __vue_script__$l,
+    __vue_scope_id__$l,
+    __vue_is_functional_template__$l,
+    __vue_module_identifier__$l,
     false,
     undefined,
     undefined,
@@ -4281,12 +4281,12 @@ __vue_render__$o._withStripped = true;
 //
 
 
-let idCounter$3 = 0;
+let idCounter$4 = 0;
 
-var script$i = {
+var script$k = {
 	name: 'FFormField',
 	components: {
-		FInput: __vue_component__$u
+		FInput: __vue_component__$w
 	},
 	props: {
 		id: {
@@ -4346,13 +4346,13 @@ var script$i = {
 	},
 	created() {
 		if (!this.id) {
-			this.generatedId = `f-form-field-${++idCounter$3}`;
+			this.generatedId = `f-form-field-${++idCounter$4}`;
 		}
 	}
 };
 
 /* script */
-const __vue_script__$i = script$i;
+const __vue_script__$k = script$k;
 
 /* template */
 var __vue_render__$n = function () {
@@ -4414,17 +4414,17 @@ var __vue_render__$n = function () {
     1
   )
 };
-var __vue_staticRenderFns__$i = [];
+var __vue_staticRenderFns__$k = [];
 __vue_render__$n._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$i = undefined;
+  const __vue_inject_styles__$k = undefined;
   /* scoped */
-  const __vue_scope_id__$i = undefined;
+  const __vue_scope_id__$k = undefined;
   /* module identifier */
-  const __vue_module_identifier__$i = undefined;
+  const __vue_module_identifier__$k = undefined;
   /* functional template */
-  const __vue_is_functional_template__$i = false;
+  const __vue_is_functional_template__$k = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4433,13 +4433,13 @@ __vue_render__$n._withStripped = true;
   
 
   
-  const __vue_component__$i = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$i },
-    __vue_inject_styles__$i,
-    __vue_script__$i,
-    __vue_scope_id__$i,
-    __vue_is_functional_template__$i,
-    __vue_module_identifier__$i,
+  const __vue_component__$k = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
+    __vue_inject_styles__$k,
+    __vue_script__$k,
+    __vue_scope_id__$k,
+    __vue_is_functional_template__$k,
+    __vue_module_identifier__$k,
     false,
     undefined,
     undefined,
@@ -4473,10 +4473,10 @@ __vue_render__$n._withStripped = true;
 //
 
 
-var script$h = {
+var script$j = {
 	name: 'FCard',
 	components: {
-		FTypography: __vue_component__$p
+		FTypography: __vue_component__$r
 	},
 	props: {
 		title: {
@@ -4520,7 +4520,7 @@ var script$h = {
 };
 
 /* script */
-const __vue_script__$h = script$h;
+const __vue_script__$j = script$j;
 
 /* template */
 var __vue_render__$m = function () {
@@ -4574,17 +4574,17 @@ var __vue_render__$m = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$h = [];
+var __vue_staticRenderFns__$j = [];
 __vue_render__$m._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$h = undefined;
+  const __vue_inject_styles__$j = undefined;
   /* scoped */
-  const __vue_scope_id__$h = undefined;
+  const __vue_scope_id__$j = undefined;
   /* module identifier */
-  const __vue_module_identifier__$h = undefined;
+  const __vue_module_identifier__$j = undefined;
   /* functional template */
-  const __vue_is_functional_template__$h = false;
+  const __vue_is_functional_template__$j = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4593,13 +4593,13 @@ __vue_render__$m._withStripped = true;
   
 
   
-  const __vue_component__$h = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$h },
-    __vue_inject_styles__$h,
-    __vue_script__$h,
-    __vue_scope_id__$h,
-    __vue_is_functional_template__$h,
-    __vue_module_identifier__$h,
+  const __vue_component__$j = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$j },
+    __vue_inject_styles__$j,
+    __vue_script__$j,
+    __vue_scope_id__$j,
+    __vue_is_functional_template__$j,
+    __vue_module_identifier__$j,
     false,
     undefined,
     undefined,
@@ -4652,11 +4652,11 @@ __vue_render__$m._withStripped = true;
 //
 
 
-var script$g = {
+var script$i = {
 	name: 'FSearchBar',
 	components: {
-		FIcon: __vue_component__$v,
-		FButton: __vue_component__$y
+		FIcon: __vue_component__$x,
+		FButton: __vue_component__$A
 	},
 	props: {
 		value: {
@@ -4785,7 +4785,7 @@ var script$g = {
 };
 
 /* script */
-const __vue_script__$g = script$g;
+const __vue_script__$i = script$i;
 
 /* template */
 var __vue_render__$l = function () {
@@ -4870,17 +4870,17 @@ var __vue_render__$l = function () {
     1
   )
 };
-var __vue_staticRenderFns__$g = [];
+var __vue_staticRenderFns__$i = [];
 __vue_render__$l._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$g = undefined;
+  const __vue_inject_styles__$i = undefined;
   /* scoped */
-  const __vue_scope_id__$g = undefined;
+  const __vue_scope_id__$i = undefined;
   /* module identifier */
-  const __vue_module_identifier__$g = undefined;
+  const __vue_module_identifier__$i = undefined;
   /* functional template */
-  const __vue_is_functional_template__$g = false;
+  const __vue_is_functional_template__$i = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4889,13 +4889,13 @@ __vue_render__$l._withStripped = true;
   
 
   
-  const __vue_component__$g = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$l, staticRenderFns: __vue_staticRenderFns__$g },
-    __vue_inject_styles__$g,
-    __vue_script__$g,
-    __vue_scope_id__$g,
-    __vue_is_functional_template__$g,
-    __vue_module_identifier__$g,
+  const __vue_component__$i = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$l, staticRenderFns: __vue_staticRenderFns__$i },
+    __vue_inject_styles__$i,
+    __vue_script__$i,
+    __vue_scope_id__$i,
+    __vue_is_functional_template__$i,
+    __vue_module_identifier__$i,
     false,
     undefined,
     undefined,
@@ -4943,10 +4943,10 @@ __vue_render__$l._withStripped = true;
 //
 
 
-var script$f = {
+var script$h = {
 	name: 'FListItem',
 	components: {
-		FTypography: __vue_component__$p
+		FTypography: __vue_component__$r
 	},
 	props: {
 		title: {
@@ -5008,7 +5008,7 @@ var script$f = {
 };
 
 /* script */
-const __vue_script__$f = script$f;
+const __vue_script__$h = script$h;
 
 /* template */
 var __vue_render__$k = function () {
@@ -5090,17 +5090,17 @@ var __vue_render__$k = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$f = [];
+var __vue_staticRenderFns__$h = [];
 __vue_render__$k._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$f = undefined;
+  const __vue_inject_styles__$h = undefined;
   /* scoped */
-  const __vue_scope_id__$f = undefined;
+  const __vue_scope_id__$h = undefined;
   /* module identifier */
-  const __vue_module_identifier__$f = undefined;
+  const __vue_module_identifier__$h = undefined;
   /* functional template */
-  const __vue_is_functional_template__$f = false;
+  const __vue_is_functional_template__$h = false;
   /* style inject */
   
   /* style inject SSR */
@@ -5109,13 +5109,13 @@ __vue_render__$k._withStripped = true;
   
 
   
-  const __vue_component__$f = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$k, staticRenderFns: __vue_staticRenderFns__$f },
-    __vue_inject_styles__$f,
-    __vue_script__$f,
-    __vue_scope_id__$f,
-    __vue_is_functional_template__$f,
-    __vue_module_identifier__$f,
+  const __vue_component__$h = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$k, staticRenderFns: __vue_staticRenderFns__$h },
+    __vue_inject_styles__$h,
+    __vue_script__$h,
+    __vue_scope_id__$h,
+    __vue_is_functional_template__$h,
+    __vue_module_identifier__$h,
     false,
     undefined,
     undefined,
@@ -5184,11 +5184,11 @@ __vue_render__$k._withStripped = true;
 //
 
 
-var script$e = {
+var script$g = {
 	name: 'FPagination',
 	components: {
-		FButton: __vue_component__$y,
-		FIcon: __vue_component__$v
+		FButton: __vue_component__$A,
+		FIcon: __vue_component__$x
 	},
 	props: {
 		value: {
@@ -5327,7 +5327,7 @@ var script$e = {
 };
 
 /* script */
-const __vue_script__$e = script$e;
+const __vue_script__$g = script$g;
 
 /* template */
 var __vue_render__$j = function () {
@@ -5473,17 +5473,17 @@ var __vue_render__$j = function () {
     1
   )
 };
-var __vue_staticRenderFns__$e = [];
+var __vue_staticRenderFns__$g = [];
 __vue_render__$j._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$e = undefined;
+  const __vue_inject_styles__$g = undefined;
   /* scoped */
-  const __vue_scope_id__$e = undefined;
+  const __vue_scope_id__$g = undefined;
   /* module identifier */
-  const __vue_module_identifier__$e = undefined;
+  const __vue_module_identifier__$g = undefined;
   /* functional template */
-  const __vue_is_functional_template__$e = false;
+  const __vue_is_functional_template__$g = false;
   /* style inject */
   
   /* style inject SSR */
@@ -5492,13 +5492,13 @@ __vue_render__$j._withStripped = true;
   
 
   
-  const __vue_component__$e = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$e },
-    __vue_inject_styles__$e,
-    __vue_script__$e,
-    __vue_scope_id__$e,
-    __vue_is_functional_template__$e,
-    __vue_module_identifier__$e,
+  const __vue_component__$g = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$g },
+    __vue_inject_styles__$g,
+    __vue_script__$g,
+    __vue_scope_id__$g,
+    __vue_is_functional_template__$g,
+    __vue_module_identifier__$g,
     false,
     undefined,
     undefined,
@@ -5653,12 +5653,12 @@ __vue_render__$i._withStripped = true;
 
 let selectCounter = 0;
 
-var script$d = {
+var script$f = {
 	name: 'FSelect',
 	components: {
-		FIcon: __vue_component__$v,
-		FLoader: __vue_component__$t,
-		FCheckbox: __vue_component__$x
+		FIcon: __vue_component__$x,
+		FLoader: __vue_component__$v,
+		FCheckbox: __vue_component__$z
 	},
 	props: {
 		/**
@@ -6088,7 +6088,7 @@ var script$d = {
 };
 
 /* script */
-const __vue_script__$d = script$d;
+const __vue_script__$f = script$f;
 
 /* template */
 var __vue_render__$h = function () {
@@ -6382,17 +6382,17 @@ var __vue_render__$h = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$d = [];
+var __vue_staticRenderFns__$f = [];
 __vue_render__$h._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$d = undefined;
+  const __vue_inject_styles__$f = undefined;
   /* scoped */
-  const __vue_scope_id__$d = undefined;
+  const __vue_scope_id__$f = undefined;
   /* module identifier */
-  const __vue_module_identifier__$d = undefined;
+  const __vue_module_identifier__$f = undefined;
   /* functional template */
-  const __vue_is_functional_template__$d = false;
+  const __vue_is_functional_template__$f = false;
   /* style inject */
   
   /* style inject SSR */
@@ -6401,20 +6401,288 @@ __vue_render__$h._withStripped = true;
   
 
   
-  const __vue_component__$d = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$d },
-    __vue_inject_styles__$d,
-    __vue_script__$d,
-    __vue_scope_id__$d,
-    __vue_is_functional_template__$d,
-    __vue_module_identifier__$d,
+  const __vue_component__$f = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$f },
+    __vue_inject_styles__$f,
+    __vue_script__$f,
+    __vue_scope_id__$f,
+    __vue_is_functional_template__$f,
+    __vue_module_identifier__$f,
     false,
     undefined,
     undefined,
     undefined
   );
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+let idCounter$3 = 0;
+
+var script$e = {
+	name: 'FTabs',
+	provide() {
+		return {
+			tabsProvider: {
+				registerTab: this.registerTab,
+				unregisterTab: this.unregisterTab,
+				isActive: this.isTabActive,
+				getTabId: this.getTabId,
+				getPanelId: this.getPanelId
+			}
+		};
+	},
+	props: {
+		/**
+		 * Currently active tab name (v-model support)
+		 */
+		value: {
+			type: String,
+			default: ''
+		},
+		/**
+		 * Visual variant of the tabs
+		 */
+		variant: {
+			type: String,
+			default: 'default',
+			validator: (value) => ['default', 'pills', 'underline'].includes(value)
+		},
+		/**
+		 * Position of the tab buttons
+		 */
+		position: {
+			type: String,
+			default: 'top',
+			validator: (value) => ['top', 'bottom'].includes(value)
+		},
+		/**
+		 * Accessible label for the tab list
+		 */
+		ariaLabel: {
+			type: String,
+			default: 'Onglets'
+		}
+	},
+	data() {
+		return {
+			tabItems: [],
+			uid: idCounter$3++,
+			initialTabSet: false,
+			internalActiveTab: ''
+		};
+	},
+	computed: {
+		activeTabName: {
+			get() {
+				// Use value prop if provided, otherwise use internal state
+				return this.value !== '' ? this.value : this.internalActiveTab;
+			},
+			set(val) {
+				this.internalActiveTab = val;
+				this.$emit('input', val);
+			}
+		},
+		tabListClasses() {
+			const baseClasses = 'flex gap-1';
+			const variantClasses = {
+				default: 'border-b border-neutral-200',
+				pills: '',
+				underline: 'border-b border-neutral-200'
+			};
+			const positionClasses = {
+				top: '',
+				bottom: 'order-2 mt-4'
+			};
+
+			return [
+				baseClasses,
+				variantClasses[this.variant],
+				positionClasses[this.position]
+			]
+				.filter(Boolean)
+				.join(' ');
+		}
+	},
+	watch: {
+		tabItems: {
+			handler() {
+				// Set first tab as active if no value provided and not yet set
+				if (!this.initialTabSet && !this.activeTabName && this.tabItems.length > 0) {
+					const firstEnabledTab = this.tabItems.find((tab) => !tab.disabled);
+					if (firstEnabledTab) {
+						this.activeTabName = firstEnabledTab.name;
+						this.initialTabSet = true;
+					}
+				}
+			},
+			immediate: true
+		}
+	},
+	methods: {
+		/**
+		 * Register a tab from FTab component
+		 */
+		registerTab(tab) {
+			const exists = this.tabItems.find((t) => t.name === tab.name);
+			if (!exists) {
+				this.tabItems.push(tab);
+			}
+			// Set first non-disabled tab as active if no value provided
+			if (!this.activeTabName) {
+				const firstEnabledTab = this.tabItems.find((t) => !t.disabled);
+				if (firstEnabledTab) {
+					this.activeTabName = firstEnabledTab.name;
+				}
+			}
+		},
+		/**
+		 * Unregister a tab from FTab component
+		 */
+		unregisterTab(name) {
+			const index = this.tabItems.findIndex((t) => t.name === name);
+			if (index > -1) {
+				this.tabItems.splice(index, 1);
+			}
+		},
+		/**
+		 * Check if a tab is active
+		 */
+		isTabActive(name) {
+			return this.activeTabName === name;
+		},
+		/**
+		 * Generate unique tab button ID
+		 */
+		getTabId(name) {
+			return `f-tab-${this.uid}-${name}`;
+		},
+		/**
+		 * Generate unique tab panel ID
+		 */
+		getPanelId(name) {
+			return `f-tabpanel-${this.uid}-${name}`;
+		},
+		/**
+		 * Get classes for tab button based on state
+		 */
+		getTabButtonClasses(tab) {
+			const isActive = this.activeTabName === tab.name;
+			const baseClasses =
+				'px-4 py-2 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2';
+
+			const roundingClasses = this.variant === 'pills' ? '' : 'rounded-t-md';
+
+			const variantClasses = {
+				default: isActive
+					? 'text-primary-600 border-b-2 border-primary-600 -mb-px'
+					: 'text-neutral-600 hover:text-neutral-800 hover:border-neutral-300 border-b-2 border-transparent -mb-px',
+				pills: isActive
+					? 'bg-primary-100 text-primary-700 rounded-lg'
+					: 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-800 rounded-lg',
+				underline: isActive
+					? 'text-primary-600 border-b-2 border-primary-600 -mb-px'
+					: 'text-neutral-600 hover:text-neutral-800 border-b-2 border-transparent -mb-px'
+			};
+
+			const disabledClasses = tab.disabled
+				? 'opacity-50 cursor-not-allowed'
+				: 'cursor-pointer';
+
+			return [
+				baseClasses,
+				roundingClasses,
+				variantClasses[this.variant],
+				disabledClasses
+			]
+				.filter(Boolean)
+				.join(' ');
+		},
+		/**
+		 * Handle tab click
+		 */
+		handleTabClick(name) {
+			const tab = this.tabItems.find((t) => t.name === name);
+			if (tab && !tab.disabled) {
+				this.activeTabName = name;
+				this.$emit('change', name);
+			}
+		},
+		/**
+		 * Handle keyboard navigation
+		 */
+		handleKeydown(event, currentName) {
+			const enabledTabs = this.tabItems.filter((tab) => !tab.disabled);
+			const currentIndex = enabledTabs.findIndex((tab) => tab.name === currentName);
+
+			let nextIndex = currentIndex;
+
+			switch (event.key) {
+				case 'ArrowRight':
+					event.preventDefault();
+					nextIndex = (currentIndex + 1) % enabledTabs.length;
+					break;
+				case 'ArrowLeft':
+					event.preventDefault();
+					nextIndex =
+						currentIndex === 0 ? enabledTabs.length - 1 : currentIndex - 1;
+					break;
+				case 'Home':
+					event.preventDefault();
+					nextIndex = 0;
+					break;
+				case 'End':
+					event.preventDefault();
+					nextIndex = enabledTabs.length - 1;
+					break;
+				default:
+					return;
+			}
+
+			const nextTab = enabledTabs[nextIndex];
+			if (nextTab) {
+				this.activeTabName = nextTab.name;
+				this.$emit('change', nextTab.name);
+				this.$nextTick(() => {
+					const tabButton = this.$refs[`tab-${nextTab.name}`];
+					if (tabButton && tabButton[0]) {
+						tabButton[0].focus();
+					}
+				});
+			}
+		}
+	}
+};
+
 /* script */
+const __vue_script__$e = script$e;
 
 /* template */
 var __vue_render__$g = function () {
@@ -6463,9 +6731,103 @@ var __vue_render__$g = function () {
     _c("div", { staticClass: "mt-4" }, [_vm._t("default")], 2),
   ])
 };
+var __vue_staticRenderFns__$e = [];
 __vue_render__$g._withStripped = true;
 
+  /* style */
+  const __vue_inject_styles__$e = undefined;
+  /* scoped */
+  const __vue_scope_id__$e = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$e = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$e = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$e = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$g, staticRenderFns: __vue_staticRenderFns__$e },
+    __vue_inject_styles__$e,
+    __vue_script__$e,
+    __vue_scope_id__$e,
+    __vue_is_functional_template__$e,
+    __vue_module_identifier__$e,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$d = {
+	name: 'FTab',
+	inject: ['tabsProvider'],
+	props: {
+		/**
+		 * Label displayed in the tab button
+		 */
+		label: {
+			type: String,
+			required: true
+		},
+		/**
+		 * Unique identifier for the tab
+		 */
+		name: {
+			type: String,
+			required: true
+		},
+		/**
+		 * Whether the tab is disabled
+		 */
+		disabled: {
+			type: Boolean,
+			default: false
+		}
+	},
+	computed: {
+		isActive() {
+			return this.tabsProvider.isActive(this.name);
+		},
+		tabId() {
+			return this.tabsProvider.getTabId(this.name);
+		},
+		panelId() {
+			return this.tabsProvider.getPanelId(this.name);
+		}
+	},
+	created() {
+		this.tabsProvider.registerTab({
+			name: this.name,
+			label: this.label,
+			disabled: this.disabled
+		});
+	},
+	beforeDestroy() {
+		this.tabsProvider.unregisterTab(this.name);
+	}
+};
+
 /* script */
+const __vue_script__$d = script$d;
 
 /* template */
 var __vue_render__$f = function () {
@@ -6495,7 +6857,37 @@ var __vue_render__$f = function () {
     2
   )
 };
+var __vue_staticRenderFns__$d = [];
 __vue_render__$f._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$d = undefined;
+  /* scoped */
+  const __vue_scope_id__$d = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$d = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$d = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$d = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$d },
+    __vue_inject_styles__$d,
+    __vue_script__$d,
+    __vue_scope_id__$d,
+    __vue_is_functional_template__$d,
+    __vue_module_identifier__$d,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
 
 //
 //
@@ -6572,9 +6964,9 @@ const VARIANT_STYLES = {
 var script$c = {
 	name: 'FToast',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A
 	},
 	props: {
 		/**
@@ -7024,12 +7416,12 @@ __vue_render__$e._withStripped = true;
 var script$b = {
 	name: 'FActivityFeed',
 	components: {
-		FListItem: __vue_component__$f,
-		FEmptyState: __vue_component__$k,
-		FTypography: __vue_component__$p,
-		FIcon: __vue_component__$v,
-		FBadge: __vue_component__$z,
-		FLoader: __vue_component__$t
+		FListItem: __vue_component__$h,
+		FEmptyState: __vue_component__$m,
+		FTypography: __vue_component__$r,
+		FIcon: __vue_component__$x,
+		FBadge: __vue_component__$B,
+		FLoader: __vue_component__$v
 	},
 	props: {
 		/**
@@ -7899,12 +8291,12 @@ __vue_render__$c._withStripped = true;
 var script$9 = {
 	name: 'FDataTable',
 	components: {
-		FSearchBar: __vue_component__$g,
-		FPagination: __vue_component__$e,
-		FEmptyState: __vue_component__$k,
-		FCheckbox: __vue_component__$x,
-		FIcon: __vue_component__$v,
-		FLoader: __vue_component__$t
+		FSearchBar: __vue_component__$i,
+		FPagination: __vue_component__$g,
+		FEmptyState: __vue_component__$m,
+		FCheckbox: __vue_component__$z,
+		FIcon: __vue_component__$x,
+		FLoader: __vue_component__$v
 	},
 	props: {
 		/**
@@ -8742,9 +9134,9 @@ let idCounter$2 = 0;
 var script$8 = {
 	name: 'FDrawer',
 	components: {
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y,
-		FIcon: __vue_component__$v
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A,
+		FIcon: __vue_component__$x
 	},
 	props: {
 		/**
@@ -9223,11 +9615,11 @@ const FILE_STATUS = {
 var script$7 = {
 	name: 'FFileUpload',
 	components: {
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y,
-		FAlert: __vue_component__$o,
-		FFilePreview: __vue_component__$j
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A,
+		FAlert: __vue_component__$q,
+		FFilePreview: __vue_component__$l
 	},
 	props: {
 		/**
@@ -10661,9 +11053,9 @@ __vue_render__$7._withStripped = true;
 var script$6 = {
 	name: 'FPageHeader',
 	components: {
-		FBreadcrumb: __vue_component__$n,
-		FTypography: __vue_component__$p,
-		FAvatar: __vue_component__$A
+		FBreadcrumb: __vue_component__$p,
+		FTypography: __vue_component__$r,
+		FAvatar: __vue_component__$C
 	},
 	props: {
 		/**
@@ -11038,9 +11430,9 @@ let idCounter = 0;
 var script$5 = {
 	name: 'FModal',
 	components: {
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y,
-		FIcon: __vue_component__$v
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A,
+		FIcon: __vue_component__$x
 	},
 	props: {
 		/**
@@ -11480,11 +11872,11 @@ __vue_render__$5._withStripped = true;
 var script$4 = {
 	name: 'FUserMenu',
 	components: {
-		FAvatar: __vue_component__$A,
-		FIcon: __vue_component__$v,
-		FTypography: __vue_component__$p,
-		FDivider: __vue_component__$w,
-		FListItem: __vue_component__$f
+		FAvatar: __vue_component__$C,
+		FIcon: __vue_component__$x,
+		FTypography: __vue_component__$r,
+		FDivider: __vue_component__$y,
+		FListItem: __vue_component__$h
 	},
 	props: {
 		/**
@@ -12344,9 +12736,9 @@ __vue_render__$3._withStripped = true;
 var script$2 = {
 	name: 'FOnboardingStepper',
 	components: {
-		FCard: __vue_component__$h,
-		FButton: __vue_component__$y,
-		FIcon: __vue_component__$v,
+		FCard: __vue_component__$j,
+		FButton: __vue_component__$A,
+		FIcon: __vue_component__$x,
 		FStepperProgress: __vue_component__$3
 	},
 	props: {
@@ -12896,15 +13288,15 @@ __vue_render__$2._withStripped = true;
 var script$1 = {
 	name: 'FProfileSection',
 	components: {
-		FCard: __vue_component__$h,
-		FTypography: __vue_component__$p,
-		FButton: __vue_component__$y,
-		FLoader: __vue_component__$t,
-		FAlert: __vue_component__$o,
+		FCard: __vue_component__$j,
+		FTypography: __vue_component__$r,
+		FButton: __vue_component__$A,
+		FLoader: __vue_component__$v,
+		FAlert: __vue_component__$q,
 		FForm: __vue_component__$a,
-		FFormField: __vue_component__$i,
-		FTextarea: __vue_component__$r,
-		FAvatar: __vue_component__$A
+		FFormField: __vue_component__$k,
+		FTextarea: __vue_component__$t,
+		FAvatar: __vue_component__$C
 	},
 	props: {
 		/**
@@ -14010,38 +14402,40 @@ __vue_render__._withStripped = true;
 
 const components = {
     FActivityFeed: __vue_component__$b,
-    FAlert: __vue_component__$o,
-    FAvatar: __vue_component__$A,
-    FBadge: __vue_component__$z,
-    FBreadcrumb: __vue_component__$n,
-    FButton: __vue_component__$y,
-    FButtonGroup: __vue_component__$m,
-    FCheckbox: __vue_component__$x,
+    FAlert: __vue_component__$q,
+    FAvatar: __vue_component__$C,
+    FBadge: __vue_component__$B,
+    FBreadcrumb: __vue_component__$p,
+    FButton: __vue_component__$A,
+    FButtonGroup: __vue_component__$o,
+    FCheckbox: __vue_component__$z,
     FDataTable: __vue_component__$9,
-    FDatePicker: __vue_component__$l,
-    FDivider: __vue_component__$w,
+    FDatePicker: __vue_component__$n,
+    FDivider: __vue_component__$y,
     FDrawer: __vue_component__$8,
-    FEmptyState: __vue_component__$k,
-    FFilePreview: __vue_component__$j,
+    FEmptyState: __vue_component__$m,
+    FFilePreview: __vue_component__$l,
     FFileUpload: __vue_component__$7,
-    FIcon: __vue_component__$v,
-    FInput: __vue_component__$u,
-    FListItem: __vue_component__$f,
-    FLoader: __vue_component__$t,
+    FIcon: __vue_component__$x,
+    FInput: __vue_component__$w,
+    FListItem: __vue_component__$h,
+    FLoader: __vue_component__$v,
     FModal: __vue_component__$5,
     FOnboardingStepper: __vue_component__$2,
     FPageHeader: __vue_component__$6,
     FProfileSection: __vue_component__$1,
-    FRadio: __vue_component__$s,
-    FSelect: __vue_component__$d,
-    FTextarea: __vue_component__$r,
-    FToggle: __vue_component__$q,
-    FTypography: __vue_component__$p,
-    FFormField: __vue_component__$i,
-    FCard: __vue_component__$h,
+    FRadio: __vue_component__$u,
+    FSelect: __vue_component__$f,
+    FTab: __vue_component__$d,
+    FTabs: __vue_component__$e,
+    FTextarea: __vue_component__$t,
+    FToggle: __vue_component__$s,
+    FTypography: __vue_component__$r,
+    FFormField: __vue_component__$k,
+    FCard: __vue_component__$j,
     FForm: __vue_component__$a,
-    FSearchBar: __vue_component__$g,
-    FPagination: __vue_component__$e,
+    FSearchBar: __vue_component__$i,
+    FPagination: __vue_component__$g,
     FUserMenu: __vue_component__$4,
     FToast: __vue_component__$c,
     FToastProvider: __vue_component__
@@ -14061,4 +14455,4 @@ var index = {
     install
 };
 
-export { __vue_component__$b as FActivityFeed, __vue_component__$o as FAlert, __vue_component__$A as FAvatar, __vue_component__$z as FBadge, __vue_component__$n as FBreadcrumb, __vue_component__$y as FButton, __vue_component__$m as FButtonGroup, __vue_component__$h as FCard, __vue_component__$x as FCheckbox, __vue_component__$9 as FDataTable, __vue_component__$l as FDatePicker, __vue_component__$w as FDivider, __vue_component__$8 as FDrawer, __vue_component__$k as FEmptyState, __vue_component__$j as FFilePreview, __vue_component__$7 as FFileUpload, __vue_component__$a as FForm, __vue_component__$i as FFormField, __vue_component__$v as FIcon, __vue_component__$u as FInput, __vue_component__$f as FListItem, __vue_component__$t as FLoader, __vue_component__$5 as FModal, __vue_component__$2 as FOnboardingStepper, __vue_component__$6 as FPageHeader, __vue_component__$e as FPagination, __vue_component__$1 as FProfileSection, __vue_component__$s as FRadio, __vue_component__$g as FSearchBar, __vue_component__$d as FSelect, __vue_component__$r as FTextarea, __vue_component__$c as FToast, __vue_component__ as FToastProvider, __vue_component__$q as FToggle, __vue_component__$p as FTypography, __vue_component__$4 as FUserMenu, index as default };
+export { __vue_component__$b as FActivityFeed, __vue_component__$q as FAlert, __vue_component__$C as FAvatar, __vue_component__$B as FBadge, __vue_component__$p as FBreadcrumb, __vue_component__$A as FButton, __vue_component__$o as FButtonGroup, __vue_component__$j as FCard, __vue_component__$z as FCheckbox, __vue_component__$9 as FDataTable, __vue_component__$n as FDatePicker, __vue_component__$y as FDivider, __vue_component__$8 as FDrawer, __vue_component__$m as FEmptyState, __vue_component__$l as FFilePreview, __vue_component__$7 as FFileUpload, __vue_component__$a as FForm, __vue_component__$k as FFormField, __vue_component__$x as FIcon, __vue_component__$w as FInput, __vue_component__$h as FListItem, __vue_component__$v as FLoader, __vue_component__$5 as FModal, __vue_component__$2 as FOnboardingStepper, __vue_component__$6 as FPageHeader, __vue_component__$g as FPagination, __vue_component__$1 as FProfileSection, __vue_component__$u as FRadio, __vue_component__$i as FSearchBar, __vue_component__$f as FSelect, __vue_component__$d as FTab, __vue_component__$e as FTabs, __vue_component__$t as FTextarea, __vue_component__$c as FToast, __vue_component__ as FToastProvider, __vue_component__$s as FToggle, __vue_component__$r as FTypography, __vue_component__$4 as FUserMenu, index as default };
