@@ -194,4 +194,55 @@ describe('FDataTable', () => {
 			false
 		);
 	});
+
+	it('adds aria-sort="none" to sortable headers when not sorted', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data }
+		});
+		const headers = wrapper.findAll('th');
+		// Skip the first header if selectable (it's the checkbox column)
+		const nameHeader = headers.wrappers.find((h) => h.text().includes('Name'));
+		expect(nameHeader?.attributes('aria-sort')).toBe('none');
+	});
+
+	it('adds aria-sort="ascending" when column is sorted ascending', async () => {
+		const wrapper = mount(FDataTable, {
+			propsData: {
+				columns,
+				data,
+				defaultSortKey: 'name',
+				defaultSortDirection: 'asc'
+			}
+		});
+		const headers = wrapper.findAll('th');
+		const nameHeader = headers.wrappers.find((h) => h.text().includes('Name'));
+		expect(nameHeader?.attributes('aria-sort')).toBe('ascending');
+	});
+
+	it('adds aria-sort="descending" when column is sorted descending', async () => {
+		const wrapper = mount(FDataTable, {
+			propsData: {
+				columns,
+				data,
+				defaultSortKey: 'name',
+				defaultSortDirection: 'desc'
+			}
+		});
+		const headers = wrapper.findAll('th');
+		const nameHeader = headers.wrappers.find((h) => h.text().includes('Name'));
+		expect(nameHeader?.attributes('aria-sort')).toBe('descending');
+	});
+
+	it('does not add aria-sort to non-sortable columns', () => {
+		const nonSortableColumns = [
+			{ key: 'name', label: 'Name', sortable: false },
+			{ key: 'email', label: 'Email' }
+		];
+		const wrapper = mount(FDataTable, {
+			propsData: { columns: nonSortableColumns, data }
+		});
+		const headers = wrapper.findAll('th');
+		const nameHeader = headers.wrappers.find((h) => h.text().includes('Name'));
+		expect(nameHeader?.attributes('aria-sort')).toBeUndefined();
+	});
 });
