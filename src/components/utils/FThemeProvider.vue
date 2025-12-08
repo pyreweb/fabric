@@ -1,6 +1,10 @@
 <template>
 	<div :data-theme="currentTheme">
-		<slot :theme="currentTheme" :toggle-theme="toggleTheme" :set-theme="setTheme" />
+		<slot
+			:theme="currentTheme"
+			:toggle-theme="toggleTheme"
+			:set-theme="setTheme"
+		/>
 	</div>
 </template>
 
@@ -69,7 +73,10 @@ export default {
 	},
 	beforeDestroy() {
 		if (this.mediaQuery) {
-			this.mediaQuery.removeEventListener('change', this.handleMediaQueryChange);
+			this.mediaQuery.removeEventListener(
+				'change',
+				this.handleMediaQueryChange
+			);
 		}
 	},
 	methods: {

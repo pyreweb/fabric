@@ -49,7 +49,11 @@ describe('FThemeProvider', () => {
 			scopedSlots: {
 				default: function (props) {
 					return this.$createElement('div', [
-						this.$createElement('span', { attrs: { id: 'theme' } }, props.theme),
+						this.$createElement(
+							'span',
+							{ attrs: { id: 'theme' } },
+							props.theme
+						),
 						this.$createElement('button', {
 							attrs: { id: 'toggle' },
 							on: { click: props.toggleTheme }

@@ -1,8 +1,4 @@
 import FThemeProvider from './FThemeProvider.vue';
-import FButton from '../../atoms/FButton/FButton.vue';
-import FCard from '../../molecules/FCard/FCard.vue';
-import FTypography from '../../atoms/FTypography/FTypography.vue';
-import FAlert from '../../molecules/FAlert/FAlert.vue';
 
 export default {
 	title: 'Utils/FThemeProvider',
@@ -25,7 +21,7 @@ export default {
 };
 
 const Template = (args, { argTypes }) => ({
-	components: { FThemeProvider, FButton, FCard, FTypography, FAlert },
+	components: { FThemeProvider },
 	props: Object.keys(argTypes),
 	template: `
 		<f-theme-provider v-bind="$props" v-slot="{ theme, toggleTheme, setTheme }">
@@ -37,18 +33,35 @@ const Template = (args, { argTypes }) => ({
 				<div class="max-w-4xl mx-auto space-y-6">
 					<!-- Theme Controls -->
 					<div class="flex gap-4 mb-8">
-						<f-button @click="toggleTheme" variant="primary">
+						<button 
+							@click="toggleTheme" 
+							class="px-4 py-2 rounded-lg font-medium transition-colors"
+							:style="{
+								backgroundColor: 'var(--theme-primary)',
+								color: 'var(--theme-primary-foreground)'
+							}">
 							Basculer le Thème
-						</f-button>
-						<f-button @click="setTheme('light')" variant="secondary">
+						</button>
+						<button 
+							@click="setTheme('light')" 
+							class="px-4 py-2 rounded-lg border transition-colors"
+							:style="{
+								borderColor: 'var(--theme-border)',
+								backgroundColor: theme === 'light' ? 'var(--theme-primary)' : 'var(--theme-card)',
+								color: theme === 'light' ? 'var(--theme-primary-foreground)' : 'var(--theme-foreground)'
+							}">
 							Mode Clair
-						</f-button>
-						<f-button @click="setTheme('dark')" variant="secondary">
+						</button>
+						<button 
+							@click="setTheme('dark')" 
+							class="px-4 py-2 rounded-lg border transition-colors"
+							:style="{
+								borderColor: 'var(--theme-border)',
+								backgroundColor: theme === 'dark' ? 'var(--theme-primary)' : 'var(--theme-card)',
+								color: theme === 'dark' ? 'var(--theme-primary-foreground)' : 'var(--theme-foreground)'
+							}">
 							Mode Sombre
-						</f-button>
-						<f-button @click="setTheme('auto')" variant="secondary">
-							Auto (Système)
-						</f-button>
+						</button>
 					</div>
 
 					<!-- Current Theme Display -->
@@ -57,21 +70,22 @@ const Template = (args, { argTypes }) => ({
 					       backgroundColor: 'var(--theme-card)',
 					       borderColor: 'var(--theme-border)'
 					     }">
-						<f-typography variant="h6" class="mb-2">
+						<h3 class="text-lg font-semibold mb-2">
 							Thème actuel : <strong>{{ theme }}</strong>
-						</f-typography>
+						</h3>
+						<p :style="{ color: 'var(--theme-muted-foreground)' }">
+							Le thème est automatiquement persisté dans localStorage et appliqué à tous les composants.
+						</p>
 					</div>
 
 					<!-- Color Palette Demo -->
 					<div class="space-y-4">
-						<f-typography variant="h4">
-							Palette de Couleurs
-						</f-typography>
+						<h2 class="text-2xl font-bold">Palette de Couleurs</h2>
 
 						<!-- Primary Colors -->
 						<div>
-							<f-typography variant="h6" class="mb-2">Primaire</f-typography>
-							<div class="flex gap-2">
+							<h3 class="text-lg font-semibold mb-2">Primaire</h3>
+							<div class="flex gap-2 flex-wrap">
 								<div v-for="shade in [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]" 
 								     :key="shade"
 								     class="w-16 h-16 rounded flex items-center justify-center text-xs font-bold"
@@ -86,8 +100,8 @@ const Template = (args, { argTypes }) => ({
 
 						<!-- Success Colors -->
 						<div>
-							<f-typography variant="h6" class="mb-2">Succès</f-typography>
-							<div class="flex gap-2">
+							<h3 class="text-lg font-semibold mb-2">Succès</h3>
+							<div class="flex gap-2 flex-wrap">
 								<div v-for="shade in [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]" 
 								     :key="shade"
 								     class="w-16 h-16 rounded flex items-center justify-center text-xs font-bold"
@@ -102,8 +116,8 @@ const Template = (args, { argTypes }) => ({
 
 						<!-- Danger Colors -->
 						<div>
-							<f-typography variant="h6" class="mb-2">Danger</f-typography>
-							<div class="flex gap-2">
+							<h3 class="text-lg font-semibold mb-2">Danger</h3>
+							<div class="flex gap-2 flex-wrap">
 								<div v-for="shade in [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]" 
 								     :key="shade"
 								     class="w-16 h-16 rounded flex items-center justify-center text-xs font-bold"
@@ -118,8 +132,8 @@ const Template = (args, { argTypes }) => ({
 
 						<!-- Warning Colors -->
 						<div>
-							<f-typography variant="h6" class="mb-2">Avertissement</f-typography>
-							<div class="flex gap-2">
+							<h3 class="text-lg font-semibold mb-2">Avertissement</h3>
+							<div class="flex gap-2 flex-wrap">
 								<div v-for="shade in [50, 100, 200, 300, 400, 500, 600, 700, 800, 900]" 
 								     :key="shade"
 								     class="w-16 h-16 rounded flex items-center justify-center text-xs font-bold"
@@ -133,105 +147,58 @@ const Template = (args, { argTypes }) => ({
 						</div>
 					</div>
 
-					<!-- Component Examples -->
+					<!-- Semantic Theme Variables -->
 					<div class="space-y-4 mt-8">
-						<f-typography variant="h4">
-							Exemples de Composants
-						</f-typography>
-
-						<!-- Buttons -->
-						<div class="space-y-2">
-							<f-typography variant="h6">Boutons</f-typography>
-							<div class="flex gap-2 flex-wrap">
-								<f-button variant="primary">Primaire</f-button>
-								<f-button variant="secondary">Secondaire</f-button>
-								<f-button variant="outline">Outline</f-button>
-								<f-button variant="ghost">Ghost</f-button>
-								<f-button variant="danger">Danger</f-button>
+						<h2 class="text-2xl font-bold">Variables Thématiques Sémantiques</h2>
+						<div class="grid grid-cols-2 gap-4">
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-background</p>
+								<div class="w-full h-12 rounded" :style="{ backgroundColor: 'var(--theme-background)', border: '1px solid var(--theme-border)' }"></div>
 							</div>
-						</div>
-
-						<!-- Alerts -->
-						<div class="space-y-2">
-							<f-typography variant="h6">Alertes</f-typography>
-							<f-alert variant="success" title="Succès" message="Ceci est un message de succès." />
-							<f-alert variant="error" title="Erreur" message="Ceci est un message d'erreur." />
-							<f-alert variant="info" title="Information" message="Ceci est un message d'information." />
-						</div>
-
-						<!-- Cards -->
-						<div class="space-y-2">
-							<f-typography variant="h6">Cartes</f-typography>
-							<div class="grid grid-cols-3 gap-4">
-								<f-card>
-									<template #title>Carte 1</template>
-									<template #content>
-										<p :style="{ color: 'var(--theme-muted-foreground)' }">
-											Contenu de la première carte avec un style thématique.
-										</p>
-									</template>
-								</f-card>
-								<f-card>
-									<template #title>Carte 2</template>
-									<template #content>
-										<p :style="{ color: 'var(--theme-muted-foreground)' }">
-											Contenu de la deuxième carte.
-										</p>
-									</template>
-								</f-card>
-								<f-card>
-									<template #title>Carte 3</template>
-									<template #content>
-										<p :style="{ color: 'var(--theme-muted-foreground)' }">
-											Contenu de la troisième carte.
-										</p>
-									</template>
-								</f-card>
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-foreground</p>
+								<div class="w-full h-12 rounded" :style="{ backgroundColor: 'var(--theme-foreground)' }"></div>
+							</div>
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-card</p>
+								<div class="w-full h-12 rounded" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }"></div>
+							</div>
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-muted</p>
+								<div class="w-full h-12 rounded" :style="{ backgroundColor: 'var(--theme-muted)' }"></div>
+							</div>
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-primary</p>
+								<div class="w-full h-12 rounded" :style="{ backgroundColor: 'var(--theme-primary)' }"></div>
+							</div>
+							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<p class="font-mono text-sm mb-2">--theme-border</p>
+								<div class="w-full h-12 rounded border-4" :style="{ borderColor: 'var(--theme-border)' }"></div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Semantic Theme Variables -->
+					<!-- Example Cards -->
 					<div class="space-y-4 mt-8">
-						<f-typography variant="h4">
-							Variables Thématiques Sémantiques
-						</f-typography>
-						<div class="grid grid-cols-2 gap-4">
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-background
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded" :style="{ backgroundColor: 'var(--theme-background)' }"></div>
+						<h2 class="text-2xl font-bold">Exemples de Cartes</h2>
+						<div class="grid grid-cols-3 gap-4">
+							<div class="p-6 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<h3 class="text-lg font-semibold mb-2">Carte 1</h3>
+								<p :style="{ color: 'var(--theme-muted-foreground)' }">
+									Contenu de la première carte avec un style thématique.
+								</p>
 							</div>
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-foreground
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded" :style="{ backgroundColor: 'var(--theme-foreground)' }"></div>
+							<div class="p-6 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<h3 class="text-lg font-semibold mb-2">Carte 2</h3>
+								<p :style="{ color: 'var(--theme-muted-foreground)' }">
+									Contenu de la deuxième carte.
+								</p>
 							</div>
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-card
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }"></div>
-							</div>
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-muted
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded" :style="{ backgroundColor: 'var(--theme-muted)' }"></div>
-							</div>
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-primary
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded" :style="{ backgroundColor: 'var(--theme-primary)' }"></div>
-							</div>
-							<div class="p-4 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
-								<f-typography variant="body" class="font-mono text-sm">
-									--theme-border
-								</f-typography>
-								<div class="w-full h-12 mt-2 rounded border-4" :style="{ borderColor: 'var(--theme-border)' }"></div>
+							<div class="p-6 rounded-lg" :style="{ backgroundColor: 'var(--theme-card)', border: '1px solid var(--theme-border)' }">
+								<h3 class="text-lg font-semibold mb-2">Carte 3</h3>
+								<p :style="{ color: 'var(--theme-muted-foreground)' }">
+									Contenu de la troisième carte.
+								</p>
 							</div>
 						</div>
 					</div>
