@@ -139,4 +139,57 @@ describe('FDataTable', () => {
 		const checkboxCells = wrapper.findAll('td[data-label=""]');
 		expect(checkboxCells.length).toBe(data.length);
 	});
+
+	it('renders RecycleScroller when virtual is enabled', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data, virtual: true }
+		});
+		expect(wrapper.findComponent({ name: 'RecycleScroller' }).exists()).toBe(
+			true
+		);
+	});
+
+	it('does not render pagination when virtual is enabled', () => {
+		const manyRows = Array.from({ length: 100 }, (_, i) => ({
+			id: i + 1,
+			name: `User ${i + 1}`,
+			email: `user${i + 1}@test.com`,
+			role: 'User'
+		}));
+		const wrapper = mount(FDataTable, {
+			propsData: {
+				columns,
+				data: manyRows,
+				virtual: true,
+				paginated: true,
+				perPage: 10
+			}
+		});
+		// Pagination should be disabled when virtual is true
+		expect(wrapper.findComponent({ name: 'FPagination' }).exists()).toBe(false);
+	});
+
+	it('uses custom virtualItemHeight when provided', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data, virtual: true, virtualItemHeight: 60 }
+		});
+		expect((wrapper.vm as any).computedVirtualItemHeight).toBe(60);
+	});
+
+	it('calculates virtualItemHeight based on size when not provided', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data, virtual: true, size: 'large' }
+		});
+		expect((wrapper.vm as any).computedVirtualItemHeight).toBe(64);
+	});
+
+	it('renders regular tbody when virtual is disabled', () => {
+		const wrapper = mount(FDataTable, {
+			propsData: { columns, data, virtual: false }
+		});
+		expect(wrapper.find('tbody').exists()).toBe(true);
+		expect(wrapper.findComponent({ name: 'RecycleScroller' }).exists()).toBe(
+			false
+		);
+	});
 });

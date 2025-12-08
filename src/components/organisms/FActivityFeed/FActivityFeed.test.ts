@@ -103,4 +103,32 @@ describe('FActivityFeed', () => {
 		});
 		expect(wrapper.text()).toContain('Custom Title');
 	});
+
+	it('renders RecycleScroller when virtual is enabled', () => {
+		const wrapper = mount(FActivityFeed, {
+			propsData: { events, virtual: true }
+		});
+		expect(wrapper.findComponent({ name: 'RecycleScroller' }).exists()).toBe(
+			true
+		);
+	});
+
+	it('renders regular list when virtual is disabled', () => {
+		const wrapper = mount(FActivityFeed, {
+			propsData: { events, virtual: false }
+		});
+		expect(wrapper.findComponent({ name: 'RecycleScroller' }).exists()).toBe(
+			false
+		);
+		// Should still render list items
+		expect(wrapper.findComponent({ name: 'FListItem' }).exists()).toBe(true);
+	});
+
+	it('uses virtualItemHeight when virtual is enabled', () => {
+		const wrapper = mount(FActivityFeed, {
+			propsData: { events, virtual: true, virtualItemHeight: 120 }
+		});
+		const scroller = wrapper.findComponent({ name: 'RecycleScroller' });
+		expect(scroller.exists()).toBe(true);
+	});
 });
