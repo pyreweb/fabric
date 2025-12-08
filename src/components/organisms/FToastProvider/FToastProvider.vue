@@ -92,6 +92,11 @@ export default {
 				warning: this.warning,
 				clear: this.clear
 			};
+		} else if (this.$root && this.$root.$toast) {
+			// Warn if another FToastProvider is already mounted
+			console.warn(
+				'FToastProvider: Multiple instances detected. Only one FToastProvider should be mounted at a time. The global API will use the first mounted instance.'
+			);
 		}
 	},
 	beforeDestroy() {
