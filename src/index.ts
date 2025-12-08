@@ -14,6 +14,7 @@ import {
 	FTypography
 } from './components/atoms';
 import {
+	FAccordionItem,
 	FAlert,
 	FBreadcrumb,
 	FButtonGroup,
@@ -53,6 +54,7 @@ export * from './types';
 type ComponentsRecord = Record<string, Component>;
 
 const components: ComponentsRecord = {
+	FAccordionItem,
 	FActivityFeed,
 	FAlert,
 	FAvatar,
