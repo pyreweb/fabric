@@ -15,13 +15,7 @@
  * This component provides theme switching functionality (light/dark mode)
  * and manages theme persistence using localStorage.
  *
- * @example
- * <f-theme-provider v-slot="{ theme, toggleTheme }">
- *   <div>
- *     <button @click="toggleTheme">Toggle Theme</button>
- *     <p>Current theme: {{ theme }}</p>
- *   </div>
- * </f-theme-provider>
+ * See the Storybook stories for usage examples.
  */
 export default {
 	name: 'FThemeProvider',
