@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
 /*
- * Fabric Design System - Semantic Color Tokens
+ * Fabric Design System - Theme System with Dark/Light Mode Support
  * 
- * This theming system uses CSS custom properties that can be overridden
- * by consuming applications to customize the design system colors.
+ * This theming system uses CSS custom properties for dynamic theme switching.
  * 
- * To customize, override these variables in your application's CSS:
+ * Theme Usage:
+ * - Add `data-theme="light"` or `data-theme="dark"` to any container (typically <html> or <body>)
+ * - Use FThemeProvider component for automatic theme management
+ * 
+ * Customization:
+ * Override these variables in your application's CSS:
  * 
  * :root {
- *   --color-primary-50: oklch(0.97 0.01 250);
- *   --color-primary-100: oklch(0.93 0.03 250);
+ *   --color-primary-500: oklch(0.55 0.20 250);
+ *   --theme-background: oklch(1 0 0);
  *   ...
  * }
  */
@@ -80,10 +84,81 @@
 	--color-neutral-800: oklch(0.27 0.00 0);
 	--color-neutral-900: oklch(0.20 0.00 0);
 	--color-neutral-950: oklch(0.13 0.00 0);
+}
 
-	/* Surface colors - for backgrounds and containers */
-	--color-surface-background: var(--color-neutral-50);
-	--color-surface-foreground: var(--color-neutral-900);
-	--color-surface-muted: var(--color-neutral-100);
-	--color-surface-border: var(--color-neutral-300);
+/*
+ * Semantic Theme Variables
+ * These variables adapt to the current theme (light/dark)
+ */
+:root,
+[data-theme="light"] {
+	/* Background colors */
+	--theme-background: var(--color-neutral-50);
+	--theme-foreground: var(--color-neutral-900);
+	
+	/* Card/Surface colors */
+	--theme-card: oklch(1 0 0); /* Pure white for cards in light mode */
+	--theme-card-foreground: var(--color-neutral-900);
+	
+	/* Muted backgrounds (for secondary surfaces) */
+	--theme-muted: var(--color-neutral-100);
+	--theme-muted-foreground: var(--color-neutral-600);
+	
+	/* Border colors */
+	--theme-border: var(--color-neutral-300);
+	
+	/* Input colors */
+	--theme-input-background: oklch(1 0 0);
+	--theme-input-border: var(--color-neutral-300);
+	--theme-input-foreground: var(--color-neutral-900);
+	--theme-input-placeholder: var(--color-neutral-500);
+	
+	/* Accent colors (maintain brand colors) */
+	--theme-primary: var(--color-primary-600);
+	--theme-primary-foreground: oklch(1 0 0);
+	
+	--theme-success: var(--color-success-600);
+	--theme-success-foreground: oklch(1 0 0);
+	
+	--theme-danger: var(--color-danger-600);
+	--theme-danger-foreground: oklch(1 0 0);
+	
+	--theme-warning: var(--color-warning-600);
+	--theme-warning-foreground: oklch(1 0 0);
+}
+
+[data-theme="dark"] {
+	/* Background colors - darker shades */
+	--theme-background: oklch(0.15 0.00 0);
+	--theme-foreground: var(--color-neutral-50);
+	
+	/* Card/Surface colors - slightly lighter than background */
+	--theme-card: oklch(0.18 0.00 0);
+	--theme-card-foreground: var(--color-neutral-50);
+	
+	/* Muted backgrounds */
+	--theme-muted: oklch(0.20 0.00 0);
+	--theme-muted-foreground: var(--color-neutral-400);
+	
+	/* Border colors - more subtle in dark mode */
+	--theme-border: oklch(0.30 0.00 0);
+	
+	/* Input colors */
+	--theme-input-background: oklch(0.18 0.00 0);
+	--theme-input-border: oklch(0.30 0.00 0);
+	--theme-input-foreground: var(--color-neutral-50);
+	--theme-input-placeholder: var(--color-neutral-500);
+	
+	/* Accent colors - slightly adjusted for dark mode visibility */
+	--theme-primary: var(--color-primary-500);
+	--theme-primary-foreground: oklch(0.15 0.00 0);
+	
+	--theme-success: var(--color-success-500);
+	--theme-success-foreground: oklch(0.15 0.00 0);
+	
+	--theme-danger: var(--color-danger-500);
+	--theme-danger-foreground: oklch(0.15 0.00 0);
+	
+	--theme-warning: var(--color-warning-500);
+	--theme-warning-foreground: oklch(0.15 0.00 0);
 }
