@@ -119,8 +119,8 @@
 							<button
 								type="button"
 								:class="timeButtonClasses"
-								aria-label="Diminuer les heures"
-								@click="decrementHour"
+								aria-label="Augmenter les heures"
+								@click="incrementHour"
 							>
 								<f-icon name="chevron-up" size="sm" />
 							</button>
@@ -135,8 +135,8 @@
 							<button
 								type="button"
 								:class="timeButtonClasses"
-								aria-label="Augmenter les heures"
-								@click="incrementHour"
+								aria-label="Diminuer les heures"
+								@click="decrementHour"
 							>
 								<f-icon name="chevron-down" size="sm" />
 							</button>
@@ -151,8 +151,8 @@
 							<button
 								type="button"
 								:class="timeButtonClasses"
-								aria-label="Diminuer les minutes"
-								@click="decrementMinute"
+								aria-label="Augmenter les minutes"
+								@click="incrementMinute"
 							>
 								<f-icon name="chevron-up" size="sm" />
 							</button>
@@ -167,8 +167,8 @@
 							<button
 								type="button"
 								:class="timeButtonClasses"
-								aria-label="Augmenter les minutes"
-								@click="incrementMinute"
+								aria-label="Diminuer les minutes"
+								@click="decrementMinute"
 							>
 								<f-icon name="chevron-down" size="sm" />
 							</button>
