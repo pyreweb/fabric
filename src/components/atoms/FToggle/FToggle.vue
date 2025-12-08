@@ -7,6 +7,8 @@
 			:aria-checked="String(value)"
 			:disabled="disabled"
 			@click="handleToggle"
+			@keydown.space.prevent="handleToggle"
+			@keydown.enter.prevent="handleToggle"
 			@focus="$emit('focus', $event)"
 			@blur="$emit('blur', $event)"
 		>

@@ -37,6 +37,7 @@
 							v-for="column in columns"
 							:key="column.key"
 							:class="getHeaderCellClasses(column)"
+							:aria-sort="getAriaSort(column.key, column.sortable)"
 							@click="column.sortable !== false && handleSort(column.key)"
 						>
 							<div class="flex items-center gap-1">
@@ -634,6 +635,18 @@ export default {
 		getSortIconClasses(key) {
 			const isActive = this.sortKey === key;
 			return isActive ? 'text-primary-500' : 'text-neutral-400';
+		},
+		getAriaSort(key, sortable) {
+			// Don't add aria-sort if column is not sortable
+			if (sortable === false) {
+				return undefined;
+			}
+			// If this column is currently sorted, indicate direction
+			if (this.sortKey === key) {
+				return this.sortDirection === 'asc' ? 'ascending' : 'descending';
+			}
+			// Column is sortable but not currently sorted
+			return 'none';
 		},
 		handleSort(key) {
 			if (this.sortKey === key) {

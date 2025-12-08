@@ -137,7 +137,10 @@ export default {
 	},
 	data() {
 		return {
-			uid: idCounter++
+			uid: idCounter++,
+			previousActiveElement: null,
+			focusableElementsSelector:
+				'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 		};
 	},
 	computed: {
@@ -188,12 +191,14 @@ export default {
 				if (newValue) {
 					this.lockBodyScroll();
 					this.$nextTick(() => {
+						this.setupFocusTrap();
 						if (this.closeOnEscape) {
 							document.addEventListener('keydown', this.handleKeydown);
 						}
 					});
 				} else {
 					this.unlockBodyScroll();
+					this.removeFocusTrap();
 					document.removeEventListener('keydown', this.handleKeydown);
 				}
 			}
@@ -201,6 +206,7 @@ export default {
 	},
 	beforeDestroy() {
 		this.unlockBodyScroll();
+		this.removeFocusTrap();
 		document.removeEventListener('keydown', this.handleKeydown);
 	},
 	methods: {
@@ -225,7 +231,69 @@ export default {
 		handleKeydown(event) {
 			if (event.key === 'Escape' && this.closeOnEscape) {
 				this.handleClose();
+			} else if (event.key === 'Tab') {
+				this.handleTabKey(event);
 			}
+		},
+		/**
+		 * Handle Tab key for focus trap
+		 */
+		handleTabKey(event) {
+			const modalElement = this.$el.querySelector('[role="dialog"]');
+			if (!modalElement) return;
+
+			const focusableElements = modalElement.querySelectorAll(
+				this.focusableElementsSelector
+			);
+			const focusableArray = Array.from(focusableElements);
+
+			if (focusableArray.length === 0) return;
+
+			const firstElement = focusableArray[0];
+			const lastElement = focusableArray[focusableArray.length - 1];
+
+			if (event.shiftKey) {
+				// Shift + Tab: going backwards
+				if (document.activeElement === firstElement) {
+					event.preventDefault();
+					lastElement.focus();
+				}
+			} else {
+				// Tab: going forwards
+				if (document.activeElement === lastElement) {
+					event.preventDefault();
+					firstElement.focus();
+				}
+			}
+		},
+		/**
+		 * Setup focus trap and set initial focus
+		 */
+		setupFocusTrap() {
+			// Store the element that had focus before opening the modal
+			this.previousActiveElement = document.activeElement;
+
+			const modalElement = this.$el.querySelector('[role="dialog"]');
+			if (!modalElement) return;
+
+			// Find the first focusable element and focus it
+			const focusableElements = modalElement.querySelectorAll(
+				this.focusableElementsSelector
+			);
+
+			if (focusableElements.length > 0) {
+				focusableElements[0].focus();
+			}
+		},
+		/**
+		 * Remove focus trap and restore focus
+		 */
+		removeFocusTrap() {
+			// Restore focus to the element that had it before the modal opened
+			if (this.previousActiveElement && this.previousActiveElement.focus) {
+				this.previousActiveElement.focus();
+			}
+			this.previousActiveElement = null;
 		},
 		/**
 		 * Lock body scroll when modal is open

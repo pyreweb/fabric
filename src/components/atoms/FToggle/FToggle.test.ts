@@ -59,4 +59,38 @@ describe('FToggle', () => {
 			expect(wrapper.find('button').exists()).toBe(true);
 		});
 	});
+
+	it('toggles when Space key is pressed', async () => {
+		const wrapper = mount(FToggle, {
+			propsData: { value: false }
+		});
+		await wrapper.find('button').trigger('keydown.space');
+		expect(wrapper.emitted('input')).toBeTruthy();
+		expect(wrapper.emitted('input')?.[0]).toEqual([true]);
+	});
+
+	it('toggles when Enter key is pressed', async () => {
+		const wrapper = mount(FToggle, {
+			propsData: { value: false }
+		});
+		await wrapper.find('button').trigger('keydown.enter');
+		expect(wrapper.emitted('input')).toBeTruthy();
+		expect(wrapper.emitted('input')?.[0]).toEqual([true]);
+	});
+
+	it('does not toggle when disabled and Space is pressed', async () => {
+		const wrapper = mount(FToggle, {
+			propsData: { value: false, disabled: true }
+		});
+		await wrapper.find('button').trigger('keydown.space');
+		expect(wrapper.emitted('input')).toBeFalsy();
+	});
+
+	it('does not toggle when disabled and Enter is pressed', async () => {
+		const wrapper = mount(FToggle, {
+			propsData: { value: false, disabled: true }
+		});
+		await wrapper.find('button').trigger('keydown.enter');
+		expect(wrapper.emitted('input')).toBeFalsy();
+	});
 });
