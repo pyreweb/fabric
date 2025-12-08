@@ -27,6 +27,7 @@
 - ✅ **Composants Vue 2.7** - Bibliothèque complète de composants réutilisables
 - ✅ **TypeScript** - Support TypeScript complet avec types stricts pour les événements et les slots
 - ✅ **Design System** - Architecture Atomic Design (Atoms, Molecules, Organisms)
+- ✅ **Thématisation** - Système de thèmes avec support Dark/Light Mode intégré
 - ✅ **Documentation** - Storybook interactif avec exemples
 - ✅ **Accessibilité** - Composants conformes aux standards WCAG
 - ✅ **Tailwind CSS** - Styling moderne et personnalisable
@@ -41,6 +42,26 @@ Fabric offre un **support TypeScript complet** avec :
 - **Vérification de types** à la compilation
 
 📚 Consultez le [Guide TypeScript](./docs/TYPESCRIPT_GUIDE.md) pour plus de détails et des exemples pratiques.
+
+## 🎨 Thématisation et Mode Sombre
+
+Fabric intègre un **système de thématisation complet** avec :
+
+- **Support natif du Dark/Light Mode** avec basculement dynamique
+- **Variables CSS personnalisables** pour adapter les couleurs à votre marque
+- **Composant FThemeProvider** pour une gestion simplifiée du thème
+- **Persistance automatique** des préférences utilisateur
+- **Mode auto** qui suit les préférences système
+
+```vue
+<f-theme-provider v-slot="{ theme, toggleTheme }">
+  <button @click="toggleTheme">
+    Mode {{ theme === 'light' ? 'sombre' : 'clair' }}
+  </button>
+</f-theme-provider>
+```
+
+📚 Consultez le [Guide de Thématisation](./docs/THEMING.md) pour plus de détails.
 
 ## Développement
 

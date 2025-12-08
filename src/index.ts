@@ -43,6 +43,7 @@ import {
 	FProfileSection,
 	FToastProvider
 } from './components/organisms';
+import { FThemeProvider } from './components/utils';
 import type { VueConstructor, Component } from 'vue';
 
 // Export all types
@@ -89,7 +90,8 @@ const components: ComponentsRecord = {
 	FPagination,
 	FUserMenu,
 	FToast,
-	FToastProvider
+	FToastProvider,
+	FThemeProvider
 };
 
 const install = (Vue: VueConstructor): void => {
@@ -154,5 +156,6 @@ export {
 	FPagination,
 	FUserMenu,
 	FToast,
-	FToastProvider
+	FToastProvider,
+	FThemeProvider
 };
