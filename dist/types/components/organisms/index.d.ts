@@ -10,4 +10,5 @@ import FModal from './FModal/FModal.vue';
 import FUserMenu from './FUserMenu/FUserMenu.vue';
 import FOnboardingStepper from './FOnboardingStepper/FOnboardingStepper.vue';
 import FProfileSection from './FProfileSection/FProfileSection.vue';
-export { FActivityFeed, FForm, FDataTable, FDrawer, FFileUpload, FFilterSidebar, FNavigationSidebar, FPageHeader, FModal, FUserMenu, FOnboardingStepper, FProfileSection };
+import FToastProvider from './FToastProvider/FToastProvider.vue';
+export { FActivityFeed, FForm, FDataTable, FDrawer, FFileUpload, FFilterSidebar, FNavigationSidebar, FPageHeader, FModal, FUserMenu, FOnboardingStepper, FProfileSection, FToastProvider };
