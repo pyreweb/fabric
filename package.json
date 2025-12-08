@@ -82,5 +82,8 @@
 		"vue": "^2.7.16",
 		"vue-template-compiler": "^2.7.16",
 		"vue-tsc": "^3.1.5"
+	},
+	"dependencies": {
+		"vue-virtual-scroller": "^1.1.2"
 	}
 }

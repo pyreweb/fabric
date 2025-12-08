@@ -51,7 +51,7 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody v-if="!virtual">
 					<tr
 						v-for="(row, rowIndex) in paginatedData"
 						:key="getRowKey(row, rowIndex)"
@@ -86,6 +86,52 @@
 				</tbody>
 			</table>
 
+			<!-- Virtual scrolling table body -->
+			<div
+				v-if="virtual && (processedData.length > 0 || loading)"
+				class="virtual-table-body"
+			>
+				<RecycleScroller
+					:items="paginatedData"
+					:item-size="computedVirtualItemHeight"
+					:key-field="rowKey"
+					:buffer="200"
+					class="scroller"
+					:style="{ height: '500px' }"
+				>
+					<template #default="{ item: row }">
+						<div
+							:class="['virtual-row', getRowClasses(row)]"
+							@click="handleRowClick(row)"
+						>
+							<!-- Selection checkbox -->
+							<div v-if="selectable" :class="['virtual-cell', cellClasses]">
+								<f-checkbox
+									:checked="isRowSelected(row)"
+									@change="handleRowSelect(row, $event)"
+									@click.stop
+								/>
+							</div>
+							<!-- Data cells -->
+							<div
+								v-for="column in columns"
+								:key="column.key"
+								:class="['virtual-cell', getCellClasses(column)]"
+							>
+								<slot
+									:name="'cell-' + column.key"
+									:value="getCellValue(row, column.key)"
+									:row="row"
+									:column="column"
+								>
+									{{ getCellValue(row, column.key) }}
+								</slot>
+							</div>
+						</div>
+					</template>
+				</RecycleScroller>
+			</div>
+
 			<!-- Empty state -->
 			<f-empty-state
 				v-if="!loading && processedData.length === 0"
@@ -109,7 +155,7 @@
 				</span>
 			</div>
 			<f-pagination
-				v-if="paginated && totalPages > 1"
+				v-if="effectivePaginated && totalPages > 1"
 				v-model="internalPage"
 				:total-pages="totalPages"
 				:size="size"
@@ -127,6 +173,8 @@ import FEmptyState from '../../molecules/FEmptyState/FEmptyState.vue';
 import FCheckbox from '../../atoms/FCheckbox/FCheckbox.vue';
 import FIcon from '../../atoms/FIcon/FIcon.vue';
 import FLoader from '../../atoms/FLoader/FLoader.vue';
+import { RecycleScroller } from 'vue-virtual-scroller';
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css';
 
 export default {
 	name: 'FDataTable',
@@ -136,7 +184,8 @@ export default {
 		FEmptyState,
 		FCheckbox,
 		FIcon,
-		FLoader
+		FLoader,
+		RecycleScroller
 	},
 	props: {
 		/**
@@ -303,6 +352,22 @@ export default {
 		bordered: {
 			type: Boolean,
 			default: false
+		},
+		/**
+		 * Enable virtualization for large datasets (improves performance with 1000+ rows)
+		 * When enabled, only visible rows are rendered. Pagination is automatically disabled.
+		 */
+		virtual: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Height of each virtualized row in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualItemHeight: {
+			type: Number,
+			default: null
 		}
 	},
 	data() {
@@ -371,7 +436,7 @@ export default {
 			return this.searchable || this.$slots.actions;
 		},
 		showFooter() {
-			return this.paginated || this.selectable;
+			return this.effectivePaginated || this.selectable;
 		},
 		// Filter data based on search query (client-side only)
 		filteredData() {
@@ -420,12 +485,12 @@ export default {
 		},
 		// Total pages
 		totalPages() {
-			if (!this.paginated) return 1;
+			if (!this.effectivePaginated) return 1;
 			return Math.max(1, Math.ceil(this.computedTotalItems / this.perPage));
 		},
 		// Data for current page (client-side pagination only)
 		paginatedData() {
-			if (this.serverMode || !this.paginated) {
+			if (this.serverMode || !this.effectivePaginated) {
 				return this.processedData;
 			}
 			const start = (this.internalPage - 1) * this.perPage;
@@ -434,7 +499,7 @@ export default {
 		},
 		// Pagination info text
 		paginationInfo() {
-			if (!this.paginated) {
+			if (!this.effectivePaginated) {
 				return `${this.computedTotalItems} élément(s)`;
 			}
 			const start = Math.min(
@@ -460,6 +525,23 @@ export default {
 		isAllSelected() {
 			if (this.paginatedData.length === 0) return false;
 			return this.paginatedData.every((row) => this.isRowSelected(row));
+		},
+		// Calculate virtual item height based on size
+		computedVirtualItemHeight() {
+			if (this.virtualItemHeight !== null) {
+				return this.virtualItemHeight;
+			}
+			// Auto-calculate based on size prop
+			const sizeHeights = {
+				small: 40,
+				medium: 52,
+				large: 64
+			};
+			return sizeHeights[this.size] || sizeHeights.medium;
+		},
+		// When virtual mode is enabled, don't paginate
+		effectivePaginated() {
+			return this.virtual ? false : this.paginated;
 		}
 	},
 	watch: {
@@ -604,6 +686,35 @@ export default {
 </script>
 
 <style scoped>
+/* Virtual table styling */
+.virtual-table-body {
+	border: 1px solid var(--color-neutral-200, #e5e7eb);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.virtual-table-body .scroller {
+	width: 100%;
+}
+
+.virtual-row {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--color-neutral-100, #f3f4f6);
+	transition: background-color 0.15s;
+}
+
+.virtual-row:last-child {
+	border-bottom: none;
+}
+
+.virtual-cell {
+	flex: 1;
+	min-width: 0;
+	display: flex;
+	align-items: center;
+}
+
 /* Mobile Card View - transforms table rows into cards on small screens */
 @media (max-width: 640px) {
 	/* Hide table header on mobile */

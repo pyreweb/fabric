@@ -316,3 +316,55 @@ MobileCardView.parameters = {
 		}
 	}
 };
+
+export const VirtualizedLargeDataset = () => ({
+	components: { FDataTable, FBadge },
+	data() {
+		return {
+			columns: [
+				{ key: 'id', label: 'ID' },
+				{ key: 'name', label: 'Nom' },
+				{ key: 'email', label: 'Email' },
+				{ key: 'role', label: 'Rôle' },
+				{ key: 'status', label: 'Statut' }
+			],
+			data: Array.from({ length: 10000 }, (_, i) => ({
+				id: i + 1,
+				name: `Utilisateur ${i + 1}`,
+				email: `user${i + 1}@example.com`,
+				role: ['Admin', 'User', 'Editor', 'Viewer'][i % 4],
+				status: ['active', 'inactive', 'pending'][i % 3]
+			}))
+		};
+	},
+	template: `
+		<div>
+			<p class="text-sm text-neutral-600 mb-4">
+				Ce tableau utilise la virtualisation pour afficher 10 000 lignes de manière fluide.
+				Seuls les éléments visibles sont rendus dans le DOM, ce qui améliore drastiquement les performances.
+			</p>
+			<FDataTable
+				:data="data"
+				:columns="columns"
+				virtual
+				searchable
+				selectable
+			>
+				<template #cell-status="{ value }">
+					<FBadge
+						:content="value"
+						:variant="value === 'active' ? 'success' : value === 'pending' ? 'warning' : 'neutral'"
+					/>
+				</template>
+			</FDataTable>
+		</div>
+	`
+});
+VirtualizedLargeDataset.parameters = {
+	docs: {
+		description: {
+			story:
+				"La virtualisation permet d'afficher des milliers d'enregistrements sans ralentissement. Le tableau ne rend que les lignes visibles à l'écran, ce qui réduit la charge du DOM et améliore les performances de défilement."
+		}
+	}
+};

@@ -175,3 +175,43 @@ export const Interactive = () => ({
 		/>
 	`
 });
+
+export const VirtualizedLargeDataset = () => ({
+	components: { FActivityFeed },
+	data() {
+		return {
+			events: Array.from({ length: 5000 }, (_, i) => ({
+				id: i + 1,
+				type: ['create', 'comment', 'update', 'status', 'delete'][i % 5],
+				title: `Événement ${i + 1}`,
+				description: `Description de l'événement numéro ${
+					i + 1
+				}. Ceci est un événement de test généré automatiquement.`,
+				actor: `Utilisateur ${(i % 10) + 1}`,
+				timestamp: new Date(Date.now() - i * 60 * 1000).toISOString()
+			}))
+		};
+	},
+	template: `
+		<div>
+			<p class="text-sm text-neutral-600 mb-4">
+				Ce fil d'activité utilise la virtualisation pour afficher 5 000 événements de manière fluide.
+				Seuls les éléments visibles sont rendus dans le DOM, ce qui améliore drastiquement les performances.
+			</p>
+			<FActivityFeed
+				:events="events"
+				virtual
+				showTimeline
+				clickable
+			/>
+		</div>
+	`
+});
+VirtualizedLargeDataset.parameters = {
+	docs: {
+		description: {
+			story:
+				"La virtualisation permet d'afficher des milliers d'événements sans ralentissement. Le fil d'activité ne rend que les événements visibles à l'écran, ce qui réduit la charge du DOM et améliore les performances de défilement."
+		}
+	}
+};
