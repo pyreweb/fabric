@@ -92,7 +92,7 @@
 				:key-field="eventKey"
 				:buffer="200"
 				class="scroller"
-				:style="{ height: '600px' }"
+				:style="{ height: virtualHeight + 'px' }"
 			>
 				<template #default="{ item: event, index }">
 					<div :class="eventContainerClasses">
@@ -404,6 +404,14 @@ export default {
 		virtualItemHeight: {
 			type: Number,
 			default: 100
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 600
 		}
 	},
 	data() {

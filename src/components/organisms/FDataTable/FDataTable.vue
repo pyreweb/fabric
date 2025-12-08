@@ -97,7 +97,7 @@
 					:key-field="rowKey"
 					:buffer="200"
 					class="scroller"
-					:style="{ height: '500px' }"
+					:style="{ height: virtualHeight + 'px' }"
 				>
 					<template #default="{ item: row }">
 						<div
@@ -368,6 +368,14 @@ export default {
 		virtualItemHeight: {
 			type: Number,
 			default: null
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 500
 		}
 	},
 	data() {

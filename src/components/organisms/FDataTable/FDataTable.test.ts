@@ -173,6 +173,7 @@ describe('FDataTable', () => {
 		const wrapper = mount(FDataTable, {
 			propsData: { columns, data, virtual: true, virtualItemHeight: 60 }
 		});
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((wrapper.vm as any).computedVirtualItemHeight).toBe(60);
 	});
 
@@ -180,6 +181,7 @@ describe('FDataTable', () => {
 		const wrapper = mount(FDataTable, {
 			propsData: { columns, data, virtual: true, size: 'large' }
 		});
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		expect((wrapper.vm as any).computedVirtualItemHeight).toBe(64);
 	});
 

@@ -62,6 +62,7 @@ export default {
 |------|------|--------|-------------|
 | `virtual` | Boolean | `false` | Active la virtualisation pour les grandes listes |
 | `virtualItemHeight` | Number | Auto | Hauteur de chaque ligne en pixels (calculée automatiquement selon `size`) |
+| `virtualHeight` | Number | `500` | Hauteur du conteneur de défilement en pixels |
 
 **Note** : Lorsque `virtual` est activé, la pagination est automatiquement désactivée car tous les éléments sont rendus virtuellement.
 
@@ -101,6 +102,7 @@ export default {
 |------|------|--------|-------------|
 | `virtual` | Boolean | `false` | Active la virtualisation pour les grandes listes d'événements |
 | `virtualItemHeight` | Number | `100` | Hauteur de chaque événement en pixels |
+| `virtualHeight` | Number | `600` | Hauteur du conteneur de défilement en pixels |
 
 ## Performances
 
