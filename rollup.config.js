@@ -26,11 +26,14 @@ function copyTypesPlugin() {
 			let indexContent = readFileSync(indexPath, 'utf-8');
 
 			// Add export for components if not already present
-			if (!indexContent.includes("export * from './components';")) {
-				// Find the line with "export * from './types';" and add after it
+			// Use regex to be more flexible with whitespace and quote styles
+			const hasComponentsExport = /export\s+\*\s+from\s+['"]\.\/components['"];?/.test(indexContent);
+			
+			if (!hasComponentsExport) {
+				// Find the line with export from types and add after it
 				indexContent = indexContent.replace(
-					"export * from './types';",
-					"export * from './types';\nexport * from './components';"
+					/(export\s+\*\s+from\s+['"]\.\/types['"];?)/,
+					"$1\nexport * from './components';"
 				);
 				writeFileSync(indexPath, indexContent);
 			}

@@ -480,13 +480,7 @@ export interface FAlertSlots {
 export type FToastVariant = 'info' | 'success' | 'warning' | 'error';
 
 /** Positions disponibles pour FToast */
-export type FToastPosition =
-	| 'top-left'
-	| 'top-center'
-	| 'top-right'
-	| 'bottom-left'
-	| 'bottom-center'
-	| 'bottom-right';
+export type FToastPosition = 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
 
 /** Props du composant FToast */
 export interface FToastProps {
