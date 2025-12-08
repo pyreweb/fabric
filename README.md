@@ -22,6 +22,26 @@
 
 <br />
 
+## 🚀 Fonctionnalités
+
+- ✅ **Composants Vue 2.7** - Bibliothèque complète de composants réutilisables
+- ✅ **TypeScript** - Support TypeScript complet avec types stricts pour les événements et les slots
+- ✅ **Design System** - Architecture Atomic Design (Atoms, Molecules, Organisms)
+- ✅ **Documentation** - Storybook interactif avec exemples
+- ✅ **Accessibilité** - Composants conformes aux standards WCAG
+- ✅ **Tailwind CSS** - Styling moderne et personnalisable
+
+## 📖 Documentation TypeScript
+
+Fabric offre un **support TypeScript complet** avec :
+
+- **Types stricts** pour tous les props et événements
+- **Slots scopés typés** avec autocomplétion du contexte
+- **Documentation inline** via JSDoc dans votre IDE
+- **Vérification de types** à la compilation
+
+📚 Consultez le [Guide TypeScript](./docs/TYPESCRIPT_GUIDE.md) pour plus de détails et des exemples pratiques.
+
 ## Développement
 
 ### Storybook
