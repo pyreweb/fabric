@@ -138,7 +138,9 @@ export default {
 	data() {
 		return {
 			uid: idCounter++,
-			previousActiveElement: null
+			previousActiveElement: null,
+			focusableElementsSelector:
+				'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
 		};
 	},
 	computed: {
@@ -241,10 +243,10 @@ export default {
 			if (!modalElement) return;
 
 			const focusableElements = modalElement.querySelectorAll(
-				'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+				this.focusableElementsSelector
 			);
 			const focusableArray = Array.from(focusableElements);
-			
+
 			if (focusableArray.length === 0) return;
 
 			const firstElement = focusableArray[0];
@@ -276,9 +278,9 @@ export default {
 
 			// Find the first focusable element and focus it
 			const focusableElements = modalElement.querySelectorAll(
-				'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+				this.focusableElementsSelector
 			);
-			
+
 			if (focusableElements.length > 0) {
 				focusableElements[0].focus();
 			}

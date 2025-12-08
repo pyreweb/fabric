@@ -27,8 +27,9 @@ function copyTypesPlugin() {
 
 			// Add export for components if not already present
 			// Use regex to be more flexible with whitespace and quote styles
-			const hasComponentsExport = /export\s+\*\s+from\s+['"]\.\/components['"];?/.test(indexContent);
-			
+			const hasComponentsExport =
+				/export\s+\*\s+from\s+['"]\.\/components['"];?/.test(indexContent);
+
 			if (!hasComponentsExport) {
 				// Find the line with export from types and add after it
 				indexContent = indexContent.replace(

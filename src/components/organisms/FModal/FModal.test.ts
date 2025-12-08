@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 import FModal from './FModal.vue';
 
@@ -125,8 +125,7 @@ describe('FModal', () => {
 		await wrapper.setProps({ value: true });
 		await wrapper.vm.$nextTick();
 
-		// Check that a button receives focus
-		const button = document.getElementById('test-button');
+		// Check that a button receives focus (activeElement should be truthy)
 		expect(document.activeElement).toBeTruthy();
 		wrapper.destroy();
 	});
@@ -141,7 +140,6 @@ describe('FModal', () => {
 		});
 
 		await wrapper.vm.$nextTick();
-		const firstButton = document.getElementById('first');
 		const lastButton = document.getElementById('last');
 
 		if (lastButton) {
