@@ -6,6 +6,7 @@ import { FThemeProvider } from './components/utils';
 import type { VueConstructor } from 'vue';
 export * from './types';
 export * from './components';
+export * from './composables';
 declare global {
     interface Window {
         Vue?: VueConstructor;
