@@ -25,7 +25,8 @@ import {
 	FSearchBar,
 	FListItem,
 	FPagination,
-	FSelect
+	FSelect,
+	FToast
 } from './components/molecules';
 import {
 	FActivityFeed,
@@ -37,7 +38,8 @@ import {
 	FModal,
 	FUserMenu,
 	FOnboardingStepper,
-	FProfileSection
+	FProfileSection,
+	FToastProvider
 } from './components/organisms';
 import type { VueConstructor, Component } from 'vue';
 
@@ -81,7 +83,9 @@ const components: ComponentsRecord = {
 	FForm,
 	FSearchBar,
 	FPagination,
-	FUserMenu
+	FUserMenu,
+	FToast,
+	FToastProvider
 };
 
 const install = (Vue: VueConstructor): void => {
@@ -142,5 +146,7 @@ export {
 	FForm,
 	FSearchBar,
 	FPagination,
-	FUserMenu
+	FUserMenu,
+	FToast,
+	FToastProvider
 };
