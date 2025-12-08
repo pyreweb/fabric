@@ -61,13 +61,19 @@ export const Default = () => ({
 			this.$refs.provider.success('Votre action a été effectuée avec succès.');
 		},
 		showError() {
-			this.$refs.provider.error('Une erreur s\'est produite. Veuillez réessayer.');
+			this.$refs.provider.error(
+				"Une erreur s'est produite. Veuillez réessayer."
+			);
 		},
 		showInfo() {
-			this.$refs.provider.info('Voici une information importante à prendre en compte.');
+			this.$refs.provider.info(
+				'Voici une information importante à prendre en compte.'
+			);
 		},
 		showWarning() {
-			this.$refs.provider.warning('Veuillez vérifier vos informations avant de continuer.');
+			this.$refs.provider.warning(
+				'Veuillez vérifier vos informations avant de continuer.'
+			);
 		},
 		showCustom() {
 			this.$refs.provider.show({
@@ -265,7 +271,8 @@ export const PersistentToasts = () => ({
 			this.$refs.provider.show({
 				variant: 'info',
 				title: 'Toast Persistant',
-				message: 'Ce toast ne se fermera pas automatiquement, mais vous pouvez le fermer manuellement.',
+				message:
+					'Ce toast ne se fermera pas automatiquement, mais vous pouvez le fermer manuellement.',
 				duration: 0
 			});
 		},
@@ -273,7 +280,8 @@ export const PersistentToasts = () => ({
 			this.$refs.provider.show({
 				variant: 'warning',
 				title: 'Toast Non Fermable',
-				message: 'Ce toast ne peut être fermé ni automatiquement ni manuellement.',
+				message:
+					'Ce toast ne peut être fermé ni automatiquement ni manuellement.',
 				duration: 0,
 				closable: false
 			});

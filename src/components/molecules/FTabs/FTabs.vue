@@ -4,8 +4,8 @@
 		<div :class="tabListClasses" role="tablist" :aria-label="ariaLabel">
 			<button
 				v-for="tab in tabItems"
-				:key="tab.name"
 				:id="getTabId(tab.name)"
+				:key="tab.name"
 				:ref="`tab-${tab.name}`"
 				role="tab"
 				:aria-selected="activeTabName === tab.name ? 'true' : 'false'"
@@ -119,7 +119,11 @@ export default {
 		tabItems: {
 			handler() {
 				// Set first tab as active if no value provided and not yet set
-				if (!this.initialTabSet && !this.activeTabName && this.tabItems.length > 0) {
+				if (
+					!this.initialTabSet &&
+					!this.activeTabName &&
+					this.tabItems.length > 0
+				) {
 					const firstEnabledTab = this.tabItems.find((tab) => !tab.disabled);
 					if (firstEnabledTab) {
 						this.activeTabName = firstEnabledTab.name;
@@ -224,7 +228,9 @@ export default {
 		 */
 		handleKeydown(event, currentName) {
 			const enabledTabs = this.tabItems.filter((tab) => !tab.disabled);
-			const currentIndex = enabledTabs.findIndex((tab) => tab.name === currentName);
+			const currentIndex = enabledTabs.findIndex(
+				(tab) => tab.name === currentName
+			);
 
 			let nextIndex = currentIndex;
 

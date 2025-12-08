@@ -2,7 +2,9 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+require('vue');
+
+function normalizeComponent$1(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
         createInjectorSSR = createInjector;
         createInjector = shadowMode;
@@ -80,7 +82,7 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 /* script */
 
 /* template */
-var __vue_render__$G = function () {
+var __vue_render__$H = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -155,17 +157,17 @@ var __vue_render__$G = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$C = [];
-__vue_render__$G._withStripped = true;
+var __vue_staticRenderFns__$D = [];
+__vue_render__$H._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$C = undefined;
+  const __vue_inject_styles__$D = undefined;
   /* scoped */
-  const __vue_scope_id__$C = undefined;
+  const __vue_scope_id__$D = undefined;
   /* module identifier */
-  const __vue_module_identifier__$C = undefined;
+  const __vue_module_identifier__$D = undefined;
   /* functional template */
-  const __vue_is_functional_template__$C = false;
+  const __vue_is_functional_template__$D = false;
   /* style inject */
   
   /* style inject SSR */
@@ -174,13 +176,13 @@ __vue_render__$G._withStripped = true;
   
 
   
-  const __vue_component__$C = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$G, staticRenderFns: __vue_staticRenderFns__$C },
-    __vue_inject_styles__$C,
+  const __vue_component__$D = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$H, staticRenderFns: __vue_staticRenderFns__$D },
+    __vue_inject_styles__$D,
     {},
-    __vue_scope_id__$C,
-    __vue_is_functional_template__$C,
-    __vue_module_identifier__$C,
+    __vue_scope_id__$D,
+    __vue_is_functional_template__$D,
+    __vue_module_identifier__$D,
     false,
     undefined,
     undefined,
@@ -190,7 +192,7 @@ __vue_render__$G._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$F = function () {
+var __vue_render__$G = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -213,17 +215,17 @@ var __vue_render__$F = function () {
     2
   )
 };
-var __vue_staticRenderFns__$B = [];
-__vue_render__$F._withStripped = true;
+var __vue_staticRenderFns__$C = [];
+__vue_render__$G._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$B = undefined;
+  const __vue_inject_styles__$C = undefined;
   /* scoped */
-  const __vue_scope_id__$B = undefined;
+  const __vue_scope_id__$C = undefined;
   /* module identifier */
-  const __vue_module_identifier__$B = undefined;
+  const __vue_module_identifier__$C = undefined;
   /* functional template */
-  const __vue_is_functional_template__$B = false;
+  const __vue_is_functional_template__$C = false;
   /* style inject */
   
   /* style inject SSR */
@@ -232,13 +234,13 @@ __vue_render__$F._withStripped = true;
   
 
   
-  const __vue_component__$B = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$F, staticRenderFns: __vue_staticRenderFns__$B },
-    __vue_inject_styles__$B,
+  const __vue_component__$C = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$G, staticRenderFns: __vue_staticRenderFns__$C },
+    __vue_inject_styles__$C,
     {},
-    __vue_scope_id__$B,
-    __vue_is_functional_template__$B,
-    __vue_module_identifier__$B,
+    __vue_scope_id__$C,
+    __vue_is_functional_template__$C,
+    __vue_module_identifier__$C,
     false,
     undefined,
     undefined,
@@ -248,7 +250,7 @@ __vue_render__$F._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$E = function () {
+var __vue_render__$F = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -317,17 +319,17 @@ var __vue_render__$E = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$A = [];
-__vue_render__$E._withStripped = true;
+var __vue_staticRenderFns__$B = [];
+__vue_render__$F._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$A = undefined;
+  const __vue_inject_styles__$B = undefined;
   /* scoped */
-  const __vue_scope_id__$A = undefined;
+  const __vue_scope_id__$B = undefined;
   /* module identifier */
-  const __vue_module_identifier__$A = undefined;
+  const __vue_module_identifier__$B = undefined;
   /* functional template */
-  const __vue_is_functional_template__$A = false;
+  const __vue_is_functional_template__$B = false;
   /* style inject */
   
   /* style inject SSR */
@@ -336,13 +338,13 @@ __vue_render__$E._withStripped = true;
   
 
   
-  const __vue_component__$A = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$E, staticRenderFns: __vue_staticRenderFns__$A },
-    __vue_inject_styles__$A,
+  const __vue_component__$B = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$F, staticRenderFns: __vue_staticRenderFns__$B },
+    __vue_inject_styles__$B,
     {},
-    __vue_scope_id__$A,
-    __vue_is_functional_template__$A,
-    __vue_module_identifier__$A,
+    __vue_scope_id__$B,
+    __vue_is_functional_template__$B,
+    __vue_module_identifier__$B,
     false,
     undefined,
     undefined,
@@ -368,7 +370,7 @@ __vue_render__$E._withStripped = true;
 //
 //
 
-var script$z = {
+var script$A = {
 	name: 'FCheckbox',
 	model: {
 		prop: 'checked',
@@ -425,10 +427,10 @@ var script$z = {
 };
 
 /* script */
-const __vue_script__$z = script$z;
+const __vue_script__$A = script$A;
 
 /* template */
-var __vue_render__$D = function () {
+var __vue_render__$E = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -466,17 +468,17 @@ var __vue_render__$D = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$z = [];
-__vue_render__$D._withStripped = true;
+var __vue_staticRenderFns__$A = [];
+__vue_render__$E._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$z = undefined;
+  const __vue_inject_styles__$A = undefined;
   /* scoped */
-  const __vue_scope_id__$z = undefined;
+  const __vue_scope_id__$A = undefined;
   /* module identifier */
-  const __vue_module_identifier__$z = undefined;
+  const __vue_module_identifier__$A = undefined;
   /* functional template */
-  const __vue_is_functional_template__$z = false;
+  const __vue_is_functional_template__$A = false;
   /* style inject */
   
   /* style inject SSR */
@@ -485,13 +487,13 @@ __vue_render__$D._withStripped = true;
   
 
   
-  const __vue_component__$z = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$D, staticRenderFns: __vue_staticRenderFns__$z },
-    __vue_inject_styles__$z,
-    __vue_script__$z,
-    __vue_scope_id__$z,
-    __vue_is_functional_template__$z,
-    __vue_module_identifier__$z,
+  const __vue_component__$A = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$E, staticRenderFns: __vue_staticRenderFns__$A },
+    __vue_inject_styles__$A,
+    __vue_script__$A,
+    __vue_scope_id__$A,
+    __vue_is_functional_template__$A,
+    __vue_module_identifier__$A,
     false,
     undefined,
     undefined,
@@ -516,7 +518,7 @@ __vue_render__$D._withStripped = true;
 //
 //
 
-var script$y = {
+var script$z = {
 	name: 'FDivider',
 	props: {
 		orientation: {
@@ -616,10 +618,10 @@ var script$y = {
 };
 
 /* script */
-const __vue_script__$y = script$y;
+const __vue_script__$z = script$z;
 
 /* template */
-var __vue_render__$C = function () {
+var __vue_render__$D = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -643,17 +645,17 @@ var __vue_render__$C = function () {
     2
   )
 };
-var __vue_staticRenderFns__$y = [];
-__vue_render__$C._withStripped = true;
+var __vue_staticRenderFns__$z = [];
+__vue_render__$D._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$y = undefined;
+  const __vue_inject_styles__$z = undefined;
   /* scoped */
-  const __vue_scope_id__$y = undefined;
+  const __vue_scope_id__$z = undefined;
   /* module identifier */
-  const __vue_module_identifier__$y = undefined;
+  const __vue_module_identifier__$z = undefined;
   /* functional template */
-  const __vue_is_functional_template__$y = false;
+  const __vue_is_functional_template__$z = false;
   /* style inject */
   
   /* style inject SSR */
@@ -662,13 +664,13 @@ __vue_render__$C._withStripped = true;
   
 
   
-  const __vue_component__$y = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$C, staticRenderFns: __vue_staticRenderFns__$y },
-    __vue_inject_styles__$y,
-    __vue_script__$y,
-    __vue_scope_id__$y,
-    __vue_is_functional_template__$y,
-    __vue_module_identifier__$y,
+  const __vue_component__$z = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$D, staticRenderFns: __vue_staticRenderFns__$z },
+    __vue_inject_styles__$z,
+    __vue_script__$z,
+    __vue_scope_id__$z,
+    __vue_is_functional_template__$z,
+    __vue_module_identifier__$z,
     false,
     undefined,
     undefined,
@@ -783,7 +785,7 @@ const ICON_PATHS = {
 		'M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
 };
 
-var script$x = {
+var script$y = {
 	name: 'FIcon',
 	props: {
 		name: {
@@ -868,10 +870,10 @@ var script$x = {
 };
 
 /* script */
-const __vue_script__$x = script$x;
+const __vue_script__$y = script$y;
 
 /* template */
-var __vue_render__$B = function () {
+var __vue_render__$C = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -942,17 +944,17 @@ var __vue_render__$B = function () {
     2
   )
 };
-var __vue_staticRenderFns__$x = [];
-__vue_render__$B._withStripped = true;
+var __vue_staticRenderFns__$y = [];
+__vue_render__$C._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$x = undefined;
+  const __vue_inject_styles__$y = undefined;
   /* scoped */
-  const __vue_scope_id__$x = undefined;
+  const __vue_scope_id__$y = undefined;
   /* module identifier */
-  const __vue_module_identifier__$x = undefined;
+  const __vue_module_identifier__$y = undefined;
   /* functional template */
-  const __vue_is_functional_template__$x = false;
+  const __vue_is_functional_template__$y = false;
   /* style inject */
   
   /* style inject SSR */
@@ -961,13 +963,13 @@ __vue_render__$B._withStripped = true;
   
 
   
-  const __vue_component__$x = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$B, staticRenderFns: __vue_staticRenderFns__$x },
-    __vue_inject_styles__$x,
-    __vue_script__$x,
-    __vue_scope_id__$x,
-    __vue_is_functional_template__$x,
-    __vue_module_identifier__$x,
+  const __vue_component__$y = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$C, staticRenderFns: __vue_staticRenderFns__$y },
+    __vue_inject_styles__$y,
+    __vue_script__$y,
+    __vue_scope_id__$y,
+    __vue_is_functional_template__$y,
+    __vue_module_identifier__$y,
     false,
     undefined,
     undefined,
@@ -989,7 +991,7 @@ __vue_render__$B._withStripped = true;
 //
 //
 
-var script$w = {
+var script$x = {
 	name: 'FInput',
 	props: {
 		value: {
@@ -1059,10 +1061,10 @@ var script$w = {
 };
 
 /* script */
-const __vue_script__$w = script$w;
+const __vue_script__$x = script$x;
 
 /* template */
-var __vue_render__$A = function () {
+var __vue_render__$B = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1086,17 +1088,17 @@ var __vue_render__$A = function () {
     },
   })
 };
-var __vue_staticRenderFns__$w = [];
-__vue_render__$A._withStripped = true;
+var __vue_staticRenderFns__$x = [];
+__vue_render__$B._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$w = undefined;
+  const __vue_inject_styles__$x = undefined;
   /* scoped */
-  const __vue_scope_id__$w = undefined;
+  const __vue_scope_id__$x = undefined;
   /* module identifier */
-  const __vue_module_identifier__$w = undefined;
+  const __vue_module_identifier__$x = undefined;
   /* functional template */
-  const __vue_is_functional_template__$w = false;
+  const __vue_is_functional_template__$x = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1105,13 +1107,13 @@ __vue_render__$A._withStripped = true;
   
 
   
-  const __vue_component__$w = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$A, staticRenderFns: __vue_staticRenderFns__$w },
-    __vue_inject_styles__$w,
-    __vue_script__$w,
-    __vue_scope_id__$w,
-    __vue_is_functional_template__$w,
-    __vue_module_identifier__$w,
+  const __vue_component__$x = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$B, staticRenderFns: __vue_staticRenderFns__$x },
+    __vue_inject_styles__$x,
+    __vue_script__$x,
+    __vue_scope_id__$x,
+    __vue_is_functional_template__$x,
+    __vue_module_identifier__$x,
     false,
     undefined,
     undefined,
@@ -1147,7 +1149,7 @@ __vue_render__$A._withStripped = true;
 //
 //
 
-var script$v = {
+var script$w = {
 	name: 'FLoader',
 	props: {
 		size: {
@@ -1216,10 +1218,10 @@ var script$v = {
 };
 
 /* script */
-const __vue_script__$v = script$v;
+const __vue_script__$w = script$w;
 
 /* template */
-var __vue_render__$z = function () {
+var __vue_render__$A = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1267,17 +1269,17 @@ var __vue_render__$z = function () {
     ),
   ])
 };
-var __vue_staticRenderFns__$v = [];
-__vue_render__$z._withStripped = true;
+var __vue_staticRenderFns__$w = [];
+__vue_render__$A._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$v = undefined;
+  const __vue_inject_styles__$w = undefined;
   /* scoped */
-  const __vue_scope_id__$v = undefined;
+  const __vue_scope_id__$w = undefined;
   /* module identifier */
-  const __vue_module_identifier__$v = undefined;
+  const __vue_module_identifier__$w = undefined;
   /* functional template */
-  const __vue_is_functional_template__$v = false;
+  const __vue_is_functional_template__$w = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1286,13 +1288,13 @@ __vue_render__$z._withStripped = true;
   
 
   
-  const __vue_component__$v = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$v },
-    __vue_inject_styles__$v,
-    __vue_script__$v,
-    __vue_scope_id__$v,
-    __vue_is_functional_template__$v,
-    __vue_module_identifier__$v,
+  const __vue_component__$w = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$A, staticRenderFns: __vue_staticRenderFns__$w },
+    __vue_inject_styles__$w,
+    __vue_script__$w,
+    __vue_scope_id__$w,
+    __vue_is_functional_template__$w,
+    __vue_module_identifier__$w,
     false,
     undefined,
     undefined,
@@ -1320,7 +1322,7 @@ __vue_render__$z._withStripped = true;
 //
 //
 
-var script$u = {
+var script$v = {
 	name: 'FRadio',
 	model: {
 		prop: 'modelValue',
@@ -1414,10 +1416,10 @@ var script$u = {
 };
 
 /* script */
-const __vue_script__$u = script$u;
+const __vue_script__$v = script$v;
 
 /* template */
-var __vue_render__$y = function () {
+var __vue_render__$z = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1440,17 +1442,17 @@ var __vue_render__$y = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$u = [];
-__vue_render__$y._withStripped = true;
+var __vue_staticRenderFns__$v = [];
+__vue_render__$z._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$u = undefined;
+  const __vue_inject_styles__$v = undefined;
   /* scoped */
-  const __vue_scope_id__$u = undefined;
+  const __vue_scope_id__$v = undefined;
   /* module identifier */
-  const __vue_module_identifier__$u = undefined;
+  const __vue_module_identifier__$v = undefined;
   /* functional template */
-  const __vue_is_functional_template__$u = false;
+  const __vue_is_functional_template__$v = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1459,13 +1461,13 @@ __vue_render__$y._withStripped = true;
   
 
   
-  const __vue_component__$u = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$u },
-    __vue_inject_styles__$u,
-    __vue_script__$u,
-    __vue_scope_id__$u,
-    __vue_is_functional_template__$u,
-    __vue_module_identifier__$u,
+  const __vue_component__$v = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$v },
+    __vue_inject_styles__$v,
+    __vue_script__$v,
+    __vue_scope_id__$v,
+    __vue_is_functional_template__$v,
+    __vue_module_identifier__$v,
     false,
     undefined,
     undefined,
@@ -1509,7 +1511,7 @@ __vue_render__$y._withStripped = true;
 
 let idCounter$6 = 0;
 
-var script$t = {
+var script$u = {
 	name: 'FTextarea',
 	props: {
 		value: {
@@ -1620,10 +1622,10 @@ var script$t = {
 };
 
 /* script */
-const __vue_script__$t = script$t;
+const __vue_script__$u = script$u;
 
 /* template */
-var __vue_render__$x = function () {
+var __vue_render__$y = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1689,17 +1691,17 @@ var __vue_render__$x = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$t = [];
-__vue_render__$x._withStripped = true;
+var __vue_staticRenderFns__$u = [];
+__vue_render__$y._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$t = undefined;
+  const __vue_inject_styles__$u = undefined;
   /* scoped */
-  const __vue_scope_id__$t = undefined;
+  const __vue_scope_id__$u = undefined;
   /* module identifier */
-  const __vue_module_identifier__$t = undefined;
+  const __vue_module_identifier__$u = undefined;
   /* functional template */
-  const __vue_is_functional_template__$t = false;
+  const __vue_is_functional_template__$u = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1708,13 +1710,13 @@ __vue_render__$x._withStripped = true;
   
 
   
-  const __vue_component__$t = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
-    __vue_inject_styles__$t,
-    __vue_script__$t,
-    __vue_scope_id__$t,
-    __vue_is_functional_template__$t,
-    __vue_module_identifier__$t,
+  const __vue_component__$u = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$u },
+    __vue_inject_styles__$u,
+    __vue_script__$u,
+    __vue_scope_id__$u,
+    __vue_is_functional_template__$u,
+    __vue_module_identifier__$u,
     false,
     undefined,
     undefined,
@@ -1742,7 +1744,7 @@ __vue_render__$x._withStripped = true;
 //
 //
 
-var script$s = {
+var script$t = {
 	name: 'FToggle',
 	props: {
 		value: {
@@ -1830,10 +1832,10 @@ var script$s = {
 };
 
 /* script */
-const __vue_script__$s = script$s;
+const __vue_script__$t = script$t;
 
 /* template */
-var __vue_render__$w = function () {
+var __vue_render__$x = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1873,17 +1875,17 @@ var __vue_render__$w = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$s = [];
-__vue_render__$w._withStripped = true;
+var __vue_staticRenderFns__$t = [];
+__vue_render__$x._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$s = undefined;
+  const __vue_inject_styles__$t = undefined;
   /* scoped */
-  const __vue_scope_id__$s = undefined;
+  const __vue_scope_id__$t = undefined;
   /* module identifier */
-  const __vue_module_identifier__$s = undefined;
+  const __vue_module_identifier__$t = undefined;
   /* functional template */
-  const __vue_is_functional_template__$s = false;
+  const __vue_is_functional_template__$t = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1892,13 +1894,13 @@ __vue_render__$w._withStripped = true;
   
 
   
-  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
-    __vue_inject_styles__$s,
-    __vue_script__$s,
-    __vue_scope_id__$s,
-    __vue_is_functional_template__$s,
-    __vue_module_identifier__$s,
+  const __vue_component__$t = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
+    __vue_inject_styles__$t,
+    __vue_script__$t,
+    __vue_scope_id__$t,
+    __vue_is_functional_template__$t,
+    __vue_module_identifier__$t,
     false,
     undefined,
     undefined,
@@ -1912,7 +1914,7 @@ __vue_render__$w._withStripped = true;
 //
 //
 
-var script$r = {
+var script$s = {
 	name: 'FTypography',
 	props: {
 		variant: {
@@ -1984,10 +1986,10 @@ var script$r = {
 };
 
 /* script */
-const __vue_script__$r = script$r;
+const __vue_script__$s = script$s;
 
 /* template */
-var __vue_render__$v = function () {
+var __vue_render__$w = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1998,17 +2000,17 @@ var __vue_render__$v = function () {
     2
   )
 };
-var __vue_staticRenderFns__$r = [];
-__vue_render__$v._withStripped = true;
+var __vue_staticRenderFns__$s = [];
+__vue_render__$w._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$r = undefined;
+  const __vue_inject_styles__$s = undefined;
   /* scoped */
-  const __vue_scope_id__$r = undefined;
+  const __vue_scope_id__$s = undefined;
   /* module identifier */
-  const __vue_module_identifier__$r = undefined;
+  const __vue_module_identifier__$s = undefined;
   /* functional template */
-  const __vue_is_functional_template__$r = false;
+  const __vue_is_functional_template__$s = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2017,13 +2019,13 @@ __vue_render__$v._withStripped = true;
   
 
   
-  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
-    __vue_inject_styles__$r,
-    __vue_script__$r,
-    __vue_scope_id__$r,
-    __vue_is_functional_template__$r,
-    __vue_module_identifier__$r,
+  const __vue_component__$s = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
+    __vue_inject_styles__$s,
+    __vue_script__$s,
+    __vue_scope_id__$s,
+    __vue_is_functional_template__$s,
+    __vue_module_identifier__$s,
     false,
     undefined,
     undefined,
@@ -2033,7 +2035,7 @@ __vue_render__$v._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$u = function () {
+var __vue_render__$v = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2092,7 +2094,7 @@ var __vue_render__$u = function () {
     ]
   )
 };
-__vue_render__$u._withStripped = true;
+__vue_render__$v._withStripped = true;
 
 //
 //
@@ -2142,12 +2144,12 @@ const VARIANT_COLORS = {
 	}
 };
 
-var script$q = {
+var script$r = {
 	name: 'FAlert',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B
 	},
 	props: {
 		variant: {
@@ -2200,10 +2202,10 @@ var script$q = {
 };
 
 /* script */
-const __vue_script__$q = script$q;
+const __vue_script__$r = script$r;
 
 /* template */
-var __vue_render__$t = function () {
+var __vue_render__$u = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2262,17 +2264,17 @@ var __vue_render__$t = function () {
       )
     : _vm._e()
 };
-var __vue_staticRenderFns__$q = [];
-__vue_render__$t._withStripped = true;
+var __vue_staticRenderFns__$r = [];
+__vue_render__$u._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$q = undefined;
+  const __vue_inject_styles__$r = undefined;
   /* scoped */
-  const __vue_scope_id__$q = undefined;
+  const __vue_scope_id__$r = undefined;
   /* module identifier */
-  const __vue_module_identifier__$q = undefined;
+  const __vue_module_identifier__$r = undefined;
   /* functional template */
-  const __vue_is_functional_template__$q = false;
+  const __vue_is_functional_template__$r = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2281,13 +2283,13 @@ __vue_render__$t._withStripped = true;
   
 
   
-  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$q },
-    __vue_inject_styles__$q,
-    __vue_script__$q,
-    __vue_scope_id__$q,
-    __vue_is_functional_template__$q,
-    __vue_module_identifier__$q,
+  const __vue_component__$r = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$r },
+    __vue_inject_styles__$r,
+    __vue_script__$r,
+    __vue_scope_id__$r,
+    __vue_is_functional_template__$r,
+    __vue_module_identifier__$r,
     false,
     undefined,
     undefined,
@@ -2331,11 +2333,11 @@ __vue_render__$t._withStripped = true;
 //
 
 
-var script$p = {
+var script$q = {
 	name: 'FBreadcrumb',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s
 	},
 	props: {
 		items: {
@@ -2410,10 +2412,10 @@ var script$p = {
 };
 
 /* script */
-const __vue_script__$p = script$p;
+const __vue_script__$q = script$q;
 
 /* template */
-var __vue_render__$s = function () {
+var __vue_render__$t = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2497,17 +2499,17 @@ var __vue_render__$s = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$p = [];
-__vue_render__$s._withStripped = true;
+var __vue_staticRenderFns__$q = [];
+__vue_render__$t._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$p = undefined;
+  const __vue_inject_styles__$q = undefined;
   /* scoped */
-  const __vue_scope_id__$p = undefined;
+  const __vue_scope_id__$q = undefined;
   /* module identifier */
-  const __vue_module_identifier__$p = undefined;
+  const __vue_module_identifier__$q = undefined;
   /* functional template */
-  const __vue_is_functional_template__$p = false;
+  const __vue_is_functional_template__$q = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2516,13 +2518,13 @@ __vue_render__$s._withStripped = true;
   
 
   
-  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$p },
-    __vue_inject_styles__$p,
-    __vue_script__$p,
-    __vue_scope_id__$p,
-    __vue_is_functional_template__$p,
-    __vue_module_identifier__$p,
+  const __vue_component__$q = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$q },
+    __vue_inject_styles__$q,
+    __vue_script__$q,
+    __vue_scope_id__$q,
+    __vue_is_functional_template__$q,
+    __vue_module_identifier__$q,
     false,
     undefined,
     undefined,
@@ -2536,7 +2538,7 @@ __vue_render__$s._withStripped = true;
 //
 //
 
-var script$o = {
+var script$p = {
 	name: 'FButtonGroup',
 	props: {
 		ariaLabel: {
@@ -2561,10 +2563,10 @@ var script$o = {
 };
 
 /* script */
-const __vue_script__$o = script$o;
+const __vue_script__$p = script$p;
 
 /* template */
-var __vue_render__$r = function () {
+var __vue_render__$s = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2578,17 +2580,17 @@ var __vue_render__$r = function () {
     2
   )
 };
-var __vue_staticRenderFns__$o = [];
-__vue_render__$r._withStripped = true;
+var __vue_staticRenderFns__$p = [];
+__vue_render__$s._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$o = undefined;
+  const __vue_inject_styles__$p = undefined;
   /* scoped */
-  const __vue_scope_id__$o = undefined;
+  const __vue_scope_id__$p = undefined;
   /* module identifier */
-  const __vue_module_identifier__$o = undefined;
+  const __vue_module_identifier__$p = undefined;
   /* functional template */
-  const __vue_is_functional_template__$o = false;
+  const __vue_is_functional_template__$p = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2597,13 +2599,13 @@ __vue_render__$r._withStripped = true;
   
 
   
-  const __vue_component__$o = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$o },
-    __vue_inject_styles__$o,
-    __vue_script__$o,
-    __vue_scope_id__$o,
-    __vue_is_functional_template__$o,
-    __vue_module_identifier__$o,
+  const __vue_component__$p = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$p },
+    __vue_inject_styles__$p,
+    __vue_script__$p,
+    __vue_scope_id__$p,
+    __vue_is_functional_template__$p,
+    __vue_module_identifier__$p,
     false,
     undefined,
     undefined,
@@ -2818,10 +2820,10 @@ __vue_render__$r._withStripped = true;
 
 let idCounter$5 = 0;
 
-var script$n = {
+var script$o = {
 	name: 'FDatePicker',
 	components: {
-		FIcon: __vue_component__$x
+		FIcon: __vue_component__$y
 	},
 	props: {
 		value: {
@@ -3360,10 +3362,10 @@ var script$n = {
 };
 
 /* script */
-const __vue_script__$n = script$n;
+const __vue_script__$o = script$o;
 
 /* template */
-var __vue_render__$q = function () {
+var __vue_render__$r = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3830,17 +3832,17 @@ var __vue_render__$q = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$n = [];
-__vue_render__$q._withStripped = true;
+var __vue_staticRenderFns__$o = [];
+__vue_render__$r._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$n = undefined;
+  const __vue_inject_styles__$o = undefined;
   /* scoped */
-  const __vue_scope_id__$n = undefined;
+  const __vue_scope_id__$o = undefined;
   /* module identifier */
-  const __vue_module_identifier__$n = undefined;
+  const __vue_module_identifier__$o = undefined;
   /* functional template */
-  const __vue_is_functional_template__$n = false;
+  const __vue_is_functional_template__$o = false;
   /* style inject */
   
   /* style inject SSR */
@@ -3849,13 +3851,13 @@ __vue_render__$q._withStripped = true;
   
 
   
-  const __vue_component__$n = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$n },
-    __vue_inject_styles__$n,
-    __vue_script__$n,
-    __vue_scope_id__$n,
-    __vue_is_functional_template__$n,
-    __vue_module_identifier__$n,
+  const __vue_component__$o = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$o },
+    __vue_inject_styles__$o,
+    __vue_script__$o,
+    __vue_scope_id__$o,
+    __vue_is_functional_template__$o,
+    __vue_module_identifier__$o,
     false,
     undefined,
     undefined,
@@ -3885,12 +3887,12 @@ __vue_render__$q._withStripped = true;
 //
 
 
-var script$m = {
+var script$n = {
 	name: 'FEmptyState',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B
 	},
 	props: {
 		icon: {
@@ -3949,10 +3951,10 @@ var script$m = {
 };
 
 /* script */
-const __vue_script__$m = script$m;
+const __vue_script__$n = script$n;
 
 /* template */
-var __vue_render__$p = function () {
+var __vue_render__$q = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -3999,17 +4001,17 @@ var __vue_render__$p = function () {
     2
   )
 };
-var __vue_staticRenderFns__$m = [];
-__vue_render__$p._withStripped = true;
+var __vue_staticRenderFns__$n = [];
+__vue_render__$q._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$m = undefined;
+  const __vue_inject_styles__$n = undefined;
   /* scoped */
-  const __vue_scope_id__$m = undefined;
+  const __vue_scope_id__$n = undefined;
   /* module identifier */
-  const __vue_module_identifier__$m = undefined;
+  const __vue_module_identifier__$n = undefined;
   /* functional template */
-  const __vue_is_functional_template__$m = false;
+  const __vue_is_functional_template__$n = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4018,13 +4020,13 @@ __vue_render__$p._withStripped = true;
   
 
   
-  const __vue_component__$m = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$m },
-    __vue_inject_styles__$m,
-    __vue_script__$m,
-    __vue_scope_id__$m,
-    __vue_is_functional_template__$m,
-    __vue_module_identifier__$m,
+  const __vue_component__$n = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$n },
+    __vue_inject_styles__$n,
+    __vue_script__$n,
+    __vue_scope_id__$n,
+    __vue_is_functional_template__$n,
+    __vue_module_identifier__$n,
     false,
     undefined,
     undefined,
@@ -4084,13 +4086,13 @@ const FILE_TYPE_ICONS = {
 	default: 'document'
 };
 
-var script$l = {
+var script$m = {
 	name: 'FFilePreview',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FLoader: __vue_component__$v,
-		FButton: __vue_component__$A
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FLoader: __vue_component__$w,
+		FButton: __vue_component__$B
 	},
 	props: {
 		fileName: {
@@ -4153,10 +4155,10 @@ var script$l = {
 };
 
 /* script */
-const __vue_script__$l = script$l;
+const __vue_script__$m = script$m;
 
 /* template */
-var __vue_render__$o = function () {
+var __vue_render__$p = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4217,17 +4219,17 @@ var __vue_render__$o = function () {
     1
   )
 };
-var __vue_staticRenderFns__$l = [];
-__vue_render__$o._withStripped = true;
+var __vue_staticRenderFns__$m = [];
+__vue_render__$p._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$l = undefined;
+  const __vue_inject_styles__$m = undefined;
   /* scoped */
-  const __vue_scope_id__$l = undefined;
+  const __vue_scope_id__$m = undefined;
   /* module identifier */
-  const __vue_module_identifier__$l = undefined;
+  const __vue_module_identifier__$m = undefined;
   /* functional template */
-  const __vue_is_functional_template__$l = false;
+  const __vue_is_functional_template__$m = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4236,13 +4238,13 @@ __vue_render__$o._withStripped = true;
   
 
   
-  const __vue_component__$l = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$l },
-    __vue_inject_styles__$l,
-    __vue_script__$l,
-    __vue_scope_id__$l,
-    __vue_is_functional_template__$l,
-    __vue_module_identifier__$l,
+  const __vue_component__$m = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$m },
+    __vue_inject_styles__$m,
+    __vue_script__$m,
+    __vue_scope_id__$m,
+    __vue_is_functional_template__$m,
+    __vue_module_identifier__$m,
     false,
     undefined,
     undefined,
@@ -4287,10 +4289,10 @@ __vue_render__$o._withStripped = true;
 
 let idCounter$4 = 0;
 
-var script$k = {
+var script$l = {
 	name: 'FFormField',
 	components: {
-		FInput: __vue_component__$w
+		FInput: __vue_component__$x
 	},
 	props: {
 		id: {
@@ -4356,10 +4358,10 @@ var script$k = {
 };
 
 /* script */
-const __vue_script__$k = script$k;
+const __vue_script__$l = script$l;
 
 /* template */
-var __vue_render__$n = function () {
+var __vue_render__$o = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4418,17 +4420,17 @@ var __vue_render__$n = function () {
     1
   )
 };
-var __vue_staticRenderFns__$k = [];
-__vue_render__$n._withStripped = true;
+var __vue_staticRenderFns__$l = [];
+__vue_render__$o._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$k = undefined;
+  const __vue_inject_styles__$l = undefined;
   /* scoped */
-  const __vue_scope_id__$k = undefined;
+  const __vue_scope_id__$l = undefined;
   /* module identifier */
-  const __vue_module_identifier__$k = undefined;
+  const __vue_module_identifier__$l = undefined;
   /* functional template */
-  const __vue_is_functional_template__$k = false;
+  const __vue_is_functional_template__$l = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4437,13 +4439,13 @@ __vue_render__$n._withStripped = true;
   
 
   
-  const __vue_component__$k = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
-    __vue_inject_styles__$k,
-    __vue_script__$k,
-    __vue_scope_id__$k,
-    __vue_is_functional_template__$k,
-    __vue_module_identifier__$k,
+  const __vue_component__$l = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$l },
+    __vue_inject_styles__$l,
+    __vue_script__$l,
+    __vue_scope_id__$l,
+    __vue_is_functional_template__$l,
+    __vue_module_identifier__$l,
     false,
     undefined,
     undefined,
@@ -4477,10 +4479,10 @@ __vue_render__$n._withStripped = true;
 //
 
 
-var script$j = {
+var script$k = {
 	name: 'FCard',
 	components: {
-		FTypography: __vue_component__$r
+		FTypography: __vue_component__$s
 	},
 	props: {
 		title: {
@@ -4524,10 +4526,10 @@ var script$j = {
 };
 
 /* script */
-const __vue_script__$j = script$j;
+const __vue_script__$k = script$k;
 
 /* template */
-var __vue_render__$m = function () {
+var __vue_render__$n = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4578,17 +4580,17 @@ var __vue_render__$m = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$j = [];
-__vue_render__$m._withStripped = true;
+var __vue_staticRenderFns__$k = [];
+__vue_render__$n._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$j = undefined;
+  const __vue_inject_styles__$k = undefined;
   /* scoped */
-  const __vue_scope_id__$j = undefined;
+  const __vue_scope_id__$k = undefined;
   /* module identifier */
-  const __vue_module_identifier__$j = undefined;
+  const __vue_module_identifier__$k = undefined;
   /* functional template */
-  const __vue_is_functional_template__$j = false;
+  const __vue_is_functional_template__$k = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4597,13 +4599,13 @@ __vue_render__$m._withStripped = true;
   
 
   
-  const __vue_component__$j = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$j },
-    __vue_inject_styles__$j,
-    __vue_script__$j,
-    __vue_scope_id__$j,
-    __vue_is_functional_template__$j,
-    __vue_module_identifier__$j,
+  const __vue_component__$k = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
+    __vue_inject_styles__$k,
+    __vue_script__$k,
+    __vue_scope_id__$k,
+    __vue_is_functional_template__$k,
+    __vue_module_identifier__$k,
     false,
     undefined,
     undefined,
@@ -4656,11 +4658,11 @@ __vue_render__$m._withStripped = true;
 //
 
 
-var script$i = {
+var script$j = {
 	name: 'FSearchBar',
 	components: {
-		FIcon: __vue_component__$x,
-		FButton: __vue_component__$A
+		FIcon: __vue_component__$y,
+		FButton: __vue_component__$B
 	},
 	props: {
 		value: {
@@ -4789,10 +4791,10 @@ var script$i = {
 };
 
 /* script */
-const __vue_script__$i = script$i;
+const __vue_script__$j = script$j;
 
 /* template */
-var __vue_render__$l = function () {
+var __vue_render__$m = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -4874,17 +4876,17 @@ var __vue_render__$l = function () {
     1
   )
 };
-var __vue_staticRenderFns__$i = [];
-__vue_render__$l._withStripped = true;
+var __vue_staticRenderFns__$j = [];
+__vue_render__$m._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$i = undefined;
+  const __vue_inject_styles__$j = undefined;
   /* scoped */
-  const __vue_scope_id__$i = undefined;
+  const __vue_scope_id__$j = undefined;
   /* module identifier */
-  const __vue_module_identifier__$i = undefined;
+  const __vue_module_identifier__$j = undefined;
   /* functional template */
-  const __vue_is_functional_template__$i = false;
+  const __vue_is_functional_template__$j = false;
   /* style inject */
   
   /* style inject SSR */
@@ -4893,13 +4895,13 @@ __vue_render__$l._withStripped = true;
   
 
   
-  const __vue_component__$i = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$l, staticRenderFns: __vue_staticRenderFns__$i },
-    __vue_inject_styles__$i,
-    __vue_script__$i,
-    __vue_scope_id__$i,
-    __vue_is_functional_template__$i,
-    __vue_module_identifier__$i,
+  const __vue_component__$j = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$m, staticRenderFns: __vue_staticRenderFns__$j },
+    __vue_inject_styles__$j,
+    __vue_script__$j,
+    __vue_scope_id__$j,
+    __vue_is_functional_template__$j,
+    __vue_module_identifier__$j,
     false,
     undefined,
     undefined,
@@ -4947,10 +4949,10 @@ __vue_render__$l._withStripped = true;
 //
 
 
-var script$h = {
+var script$i = {
 	name: 'FListItem',
 	components: {
-		FTypography: __vue_component__$r
+		FTypography: __vue_component__$s
 	},
 	props: {
 		title: {
@@ -5012,10 +5014,10 @@ var script$h = {
 };
 
 /* script */
-const __vue_script__$h = script$h;
+const __vue_script__$i = script$i;
 
 /* template */
-var __vue_render__$k = function () {
+var __vue_render__$l = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -5094,17 +5096,17 @@ var __vue_render__$k = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$h = [];
-__vue_render__$k._withStripped = true;
+var __vue_staticRenderFns__$i = [];
+__vue_render__$l._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$h = undefined;
+  const __vue_inject_styles__$i = undefined;
   /* scoped */
-  const __vue_scope_id__$h = undefined;
+  const __vue_scope_id__$i = undefined;
   /* module identifier */
-  const __vue_module_identifier__$h = undefined;
+  const __vue_module_identifier__$i = undefined;
   /* functional template */
-  const __vue_is_functional_template__$h = false;
+  const __vue_is_functional_template__$i = false;
   /* style inject */
   
   /* style inject SSR */
@@ -5113,13 +5115,13 @@ __vue_render__$k._withStripped = true;
   
 
   
-  const __vue_component__$h = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$k, staticRenderFns: __vue_staticRenderFns__$h },
-    __vue_inject_styles__$h,
-    __vue_script__$h,
-    __vue_scope_id__$h,
-    __vue_is_functional_template__$h,
-    __vue_module_identifier__$h,
+  const __vue_component__$i = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$l, staticRenderFns: __vue_staticRenderFns__$i },
+    __vue_inject_styles__$i,
+    __vue_script__$i,
+    __vue_scope_id__$i,
+    __vue_is_functional_template__$i,
+    __vue_module_identifier__$i,
     false,
     undefined,
     undefined,
@@ -5188,11 +5190,11 @@ __vue_render__$k._withStripped = true;
 //
 
 
-var script$g = {
+var script$h = {
 	name: 'FPagination',
 	components: {
-		FButton: __vue_component__$A,
-		FIcon: __vue_component__$x
+		FButton: __vue_component__$B,
+		FIcon: __vue_component__$y
 	},
 	props: {
 		value: {
@@ -5331,10 +5333,10 @@ var script$g = {
 };
 
 /* script */
-const __vue_script__$g = script$g;
+const __vue_script__$h = script$h;
 
 /* template */
-var __vue_render__$j = function () {
+var __vue_render__$k = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -5477,17 +5479,17 @@ var __vue_render__$j = function () {
     1
   )
 };
-var __vue_staticRenderFns__$g = [];
-__vue_render__$j._withStripped = true;
+var __vue_staticRenderFns__$h = [];
+__vue_render__$k._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$g = undefined;
+  const __vue_inject_styles__$h = undefined;
   /* scoped */
-  const __vue_scope_id__$g = undefined;
+  const __vue_scope_id__$h = undefined;
   /* module identifier */
-  const __vue_module_identifier__$g = undefined;
+  const __vue_module_identifier__$h = undefined;
   /* functional template */
-  const __vue_is_functional_template__$g = false;
+  const __vue_is_functional_template__$h = false;
   /* style inject */
   
   /* style inject SSR */
@@ -5496,13 +5498,13 @@ __vue_render__$j._withStripped = true;
   
 
   
-  const __vue_component__$g = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$j, staticRenderFns: __vue_staticRenderFns__$g },
-    __vue_inject_styles__$g,
-    __vue_script__$g,
-    __vue_scope_id__$g,
-    __vue_is_functional_template__$g,
-    __vue_module_identifier__$g,
+  const __vue_component__$h = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$k, staticRenderFns: __vue_staticRenderFns__$h },
+    __vue_inject_styles__$h,
+    __vue_script__$h,
+    __vue_scope_id__$h,
+    __vue_is_functional_template__$h,
+    __vue_module_identifier__$h,
     false,
     undefined,
     undefined,
@@ -5512,7 +5514,7 @@ __vue_render__$j._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$i = function () {
+var __vue_render__$j = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -5548,7 +5550,7 @@ var __vue_render__$i = function () {
     ),
   ])
 };
-__vue_render__$i._withStripped = true;
+__vue_render__$j._withStripped = true;
 
 //
 //
@@ -5657,12 +5659,12 @@ __vue_render__$i._withStripped = true;
 
 let selectCounter = 0;
 
-var script$f = {
+var script$g = {
 	name: 'FSelect',
 	components: {
-		FIcon: __vue_component__$x,
-		FLoader: __vue_component__$v,
-		FCheckbox: __vue_component__$z
+		FIcon: __vue_component__$y,
+		FLoader: __vue_component__$w,
+		FCheckbox: __vue_component__$A
 	},
 	props: {
 		/**
@@ -6092,10 +6094,10 @@ var script$f = {
 };
 
 /* script */
-const __vue_script__$f = script$f;
+const __vue_script__$g = script$g;
 
 /* template */
-var __vue_render__$h = function () {
+var __vue_render__$i = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -6386,17 +6388,17 @@ var __vue_render__$h = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$f = [];
-__vue_render__$h._withStripped = true;
+var __vue_staticRenderFns__$g = [];
+__vue_render__$i._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$f = undefined;
+  const __vue_inject_styles__$g = undefined;
   /* scoped */
-  const __vue_scope_id__$f = undefined;
+  const __vue_scope_id__$g = undefined;
   /* module identifier */
-  const __vue_module_identifier__$f = undefined;
+  const __vue_module_identifier__$g = undefined;
   /* functional template */
-  const __vue_is_functional_template__$f = false;
+  const __vue_is_functional_template__$g = false;
   /* style inject */
   
   /* style inject SSR */
@@ -6405,13 +6407,13 @@ __vue_render__$h._withStripped = true;
   
 
   
-  const __vue_component__$f = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$f },
-    __vue_inject_styles__$f,
-    __vue_script__$f,
-    __vue_scope_id__$f,
-    __vue_is_functional_template__$f,
-    __vue_module_identifier__$f,
+  const __vue_component__$g = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$i, staticRenderFns: __vue_staticRenderFns__$g },
+    __vue_inject_styles__$g,
+    __vue_script__$g,
+    __vue_scope_id__$g,
+    __vue_is_functional_template__$g,
+    __vue_module_identifier__$g,
     false,
     undefined,
     undefined,
@@ -6450,7 +6452,7 @@ __vue_render__$h._withStripped = true;
 
 let idCounter$3 = 0;
 
-var script$e = {
+var script$f = {
 	name: 'FTabs',
 	provide() {
 		return {
@@ -6539,7 +6541,11 @@ var script$e = {
 		tabItems: {
 			handler() {
 				// Set first tab as active if no value provided and not yet set
-				if (!this.initialTabSet && !this.activeTabName && this.tabItems.length > 0) {
+				if (
+					!this.initialTabSet &&
+					!this.activeTabName &&
+					this.tabItems.length > 0
+				) {
 					const firstEnabledTab = this.tabItems.find((tab) => !tab.disabled);
 					if (firstEnabledTab) {
 						this.activeTabName = firstEnabledTab.name;
@@ -6644,7 +6650,9 @@ var script$e = {
 		 */
 		handleKeydown(event, currentName) {
 			const enabledTabs = this.tabItems.filter((tab) => !tab.disabled);
-			const currentIndex = enabledTabs.findIndex((tab) => tab.name === currentName);
+			const currentIndex = enabledTabs.findIndex(
+				(tab) => tab.name === currentName
+			);
 
 			let nextIndex = currentIndex;
 
@@ -6686,10 +6694,10 @@ var script$e = {
 };
 
 /* script */
-const __vue_script__$e = script$e;
+const __vue_script__$f = script$f;
 
 /* template */
-var __vue_render__$g = function () {
+var __vue_render__$h = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -6735,17 +6743,17 @@ var __vue_render__$g = function () {
     _c("div", { staticClass: "mt-4" }, [_vm._t("default")], 2),
   ])
 };
-var __vue_staticRenderFns__$e = [];
-__vue_render__$g._withStripped = true;
+var __vue_staticRenderFns__$f = [];
+__vue_render__$h._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$e = undefined;
+  const __vue_inject_styles__$f = undefined;
   /* scoped */
-  const __vue_scope_id__$e = undefined;
+  const __vue_scope_id__$f = undefined;
   /* module identifier */
-  const __vue_module_identifier__$e = undefined;
+  const __vue_module_identifier__$f = undefined;
   /* functional template */
-  const __vue_is_functional_template__$e = false;
+  const __vue_is_functional_template__$f = false;
   /* style inject */
   
   /* style inject SSR */
@@ -6754,13 +6762,13 @@ __vue_render__$g._withStripped = true;
   
 
   
-  const __vue_component__$e = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$g, staticRenderFns: __vue_staticRenderFns__$e },
-    __vue_inject_styles__$e,
-    __vue_script__$e,
-    __vue_scope_id__$e,
-    __vue_is_functional_template__$e,
-    __vue_module_identifier__$e,
+  const __vue_component__$f = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$h, staticRenderFns: __vue_staticRenderFns__$f },
+    __vue_inject_styles__$f,
+    __vue_script__$f,
+    __vue_scope_id__$f,
+    __vue_is_functional_template__$f,
+    __vue_module_identifier__$f,
     false,
     undefined,
     undefined,
@@ -6781,7 +6789,7 @@ __vue_render__$g._withStripped = true;
 //
 //
 
-var script$d = {
+var script$e = {
 	name: 'FTab',
 	inject: ['tabsProvider'],
 	props: {
@@ -6831,10 +6839,10 @@ var script$d = {
 };
 
 /* script */
-const __vue_script__$d = script$d;
+const __vue_script__$e = script$e;
 
 /* template */
-var __vue_render__$f = function () {
+var __vue_render__$g = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -6861,17 +6869,17 @@ var __vue_render__$f = function () {
     2
   )
 };
-var __vue_staticRenderFns__$d = [];
-__vue_render__$f._withStripped = true;
+var __vue_staticRenderFns__$e = [];
+__vue_render__$g._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$d = undefined;
+  const __vue_inject_styles__$e = undefined;
   /* scoped */
-  const __vue_scope_id__$d = undefined;
+  const __vue_scope_id__$e = undefined;
   /* module identifier */
-  const __vue_module_identifier__$d = undefined;
+  const __vue_module_identifier__$e = undefined;
   /* functional template */
-  const __vue_is_functional_template__$d = false;
+  const __vue_is_functional_template__$e = false;
   /* style inject */
   
   /* style inject SSR */
@@ -6880,13 +6888,13 @@ __vue_render__$f._withStripped = true;
   
 
   
-  const __vue_component__$d = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$d },
-    __vue_inject_styles__$d,
-    __vue_script__$d,
-    __vue_scope_id__$d,
-    __vue_is_functional_template__$d,
-    __vue_module_identifier__$d,
+  const __vue_component__$e = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$g, staticRenderFns: __vue_staticRenderFns__$e },
+    __vue_inject_styles__$e,
+    __vue_script__$e,
+    __vue_scope_id__$e,
+    __vue_is_functional_template__$e,
+    __vue_module_identifier__$e,
     false,
     undefined,
     undefined,
@@ -6965,12 +6973,12 @@ const VARIANT_STYLES = {
 	}
 };
 
-var script$c = {
+var script$d = {
 	name: 'FToast',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B
 	},
 	props: {
 		/**
@@ -7180,10 +7188,10 @@ function addStyle(id, css) {
 }
 
 /* script */
-const __vue_script__$c = script$c;
+const __vue_script__$d = script$d;
 
 /* template */
-var __vue_render__$e = function () {
+var __vue_render__$f = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -7266,21 +7274,1858 @@ var __vue_render__$e = function () {
     ]
   )
 };
+var __vue_staticRenderFns__$d = [];
+__vue_render__$f._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$d = function (inject) {
+    if (!inject) return
+    inject("data-v-df2f9ab0_0", { source: "\n.toast-slide-left-enter-active[data-v-df2f9ab0],\n.toast-slide-left-leave-active[data-v-df2f9ab0] {\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-left-enter[data-v-df2f9ab0] {\n\ttransform: translateX(-100%);\n\topacity: 0;\n}\n.toast-slide-left-leave-to[data-v-df2f9ab0] {\n\ttransform: translateX(-100%);\n\topacity: 0;\n}\n.toast-slide-right-enter-active[data-v-df2f9ab0],\n.toast-slide-right-leave-active[data-v-df2f9ab0] {\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-right-enter[data-v-df2f9ab0] {\n\ttransform: translateX(100%);\n\topacity: 0;\n}\n.toast-slide-right-leave-to[data-v-df2f9ab0] {\n\ttransform: translateX(100%);\n\topacity: 0;\n}\n.toast-slide-down-enter-active[data-v-df2f9ab0],\n.toast-slide-down-leave-active[data-v-df2f9ab0] {\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-down-enter[data-v-df2f9ab0] {\n\ttransform: translateY(-100%);\n\topacity: 0;\n}\n.toast-slide-down-leave-to[data-v-df2f9ab0] {\n\ttransform: translateY(-100%);\n\topacity: 0;\n}\n", map: {"version":3,"sources":["/home/runner/work/fabric/fabric/src/components/molecules/FToast/FToast.vue"],"names":[],"mappings":";AA8OA;;CAEA,6BAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;;CAEA,6BAAA;AACA;AAEA;CACA,2BAAA;CACA,UAAA;AACA;AAEA;CACA,2BAAA;CACA,UAAA;AACA;AAEA;;CAEA,6BAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA","file":"FToast.vue","sourcesContent":["<template>\n\t<transition\n\t\t:name=\"transitionName\"\n\t\t@before-enter=\"onBeforeEnter\"\n\t\t@enter=\"onEnter\"\n\t\t@leave=\"onLeave\"\n\t>\n\t\t<div\n\t\t\tv-if=\"isVisible\"\n\t\t\t:class=\"toastClasses\"\n\t\t\trole=\"alert\"\n\t\t\taria-live=\"polite\"\n\t\t\t@mouseenter=\"pauseTimer\"\n\t\t\t@mouseleave=\"resumeTimer\"\n\t\t>\n\t\t\t<f-icon :name=\"iconName\" size=\"md\" />\n\t\t\t<div class=\"flex-1 min-w-0\">\n\t\t\t\t<f-typography v-if=\"title\" variant=\"h6\" :class=\"titleClasses\">\n\t\t\t\t\t{{ title }}\n\t\t\t\t</f-typography>\n\t\t\t\t<f-typography v-if=\"message\" variant=\"body\" :class=\"messageClasses\">\n\t\t\t\t\t{{ message }}\n\t\t\t\t</f-typography>\n\t\t\t\t<slot />\n\t\t\t</div>\n\t\t\t<f-button\n\t\t\t\tv-if=\"closable\"\n\t\t\t\tvariant=\"text\"\n\t\t\t\tsize=\"small\"\n\t\t\t\t:class=\"closeButtonClasses\"\n\t\t\t\t@click=\"handleClose\"\n\t\t\t>\n\t\t\t\t<f-icon name=\"close\" size=\"sm\" />\n\t\t\t\t<span class=\"sr-only\">Fermer la notification</span>\n\t\t\t</f-button>\n\t\t</div>\n\t</transition>\n</template>\n\n<script>\nimport FIcon from '../../atoms/FIcon/FIcon.vue';\nimport FTypography from '../../atoms/FTypography/FTypography.vue';\nimport FButton from '../../atoms/FButton/FButton.vue';\n\nconst VARIANT_STYLES = {\n\tsuccess: {\n\t\tcontainer: 'bg-success-50 border-success-200 text-success-800',\n\t\ttitle: 'text-success-800',\n\t\tmessage: 'text-success-700',\n\t\tcloseButton: 'text-success-600 hover:text-success-800',\n\t\ticon: 'success'\n\t},\n\terror: {\n\t\tcontainer: 'bg-danger-50 border-danger-200 text-danger-800',\n\t\ttitle: 'text-danger-800',\n\t\tmessage: 'text-danger-700',\n\t\tcloseButton: 'text-danger-600 hover:text-danger-800',\n\t\ticon: 'error'\n\t},\n\tinfo: {\n\t\tcontainer: 'bg-primary-50 border-primary-200 text-primary-800',\n\t\ttitle: 'text-primary-800',\n\t\tmessage: 'text-primary-700',\n\t\tcloseButton: 'text-primary-600 hover:text-primary-800',\n\t\ticon: 'info'\n\t},\n\twarning: {\n\t\tcontainer: 'bg-warning-50 border-warning-200 text-warning-800',\n\t\ttitle: 'text-warning-800',\n\t\tmessage: 'text-warning-700',\n\t\tcloseButton: 'text-warning-600 hover:text-warning-800',\n\t\ticon: 'warning'\n\t}\n};\n\nexport default {\n\tname: 'FToast',\n\tcomponents: {\n\t\tFIcon,\n\t\tFTypography,\n\t\tFButton\n\t},\n\tprops: {\n\t\t/**\n\t\t * Type de toast (success, error, info, warning)\n\t\t */\n\t\tvariant: {\n\t\t\ttype: String,\n\t\t\tdefault: 'info',\n\t\t\tvalidator: (value) =>\n\t\t\t\t['success', 'error', 'info', 'warning'].includes(value)\n\t\t},\n\t\t/**\n\t\t * Titre du toast\n\t\t */\n\t\ttitle: {\n\t\t\ttype: String,\n\t\t\tdefault: ''\n\t\t},\n\t\t/**\n\t\t * Message du toast\n\t\t */\n\t\tmessage: {\n\t\t\ttype: String,\n\t\t\tdefault: ''\n\t\t},\n\t\t/**\n\t\t * Afficher le bouton de fermeture\n\t\t */\n\t\tclosable: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\t/**\n\t\t * Durée d'affichage en millisecondes (0 = pas de fermeture automatique)\n\t\t */\n\t\tduration: {\n\t\t\ttype: Number,\n\t\t\tdefault: 5000\n\t\t},\n\t\t/**\n\t\t * Position du toast (utilisé pour l'animation)\n\t\t */\n\t\tposition: {\n\t\t\ttype: String,\n\t\t\tdefault: 'top-right',\n\t\t\tvalidator: (value) =>\n\t\t\t\t[\n\t\t\t\t\t'top-left',\n\t\t\t\t\t'top-center',\n\t\t\t\t\t'top-right',\n\t\t\t\t\t'bottom-left',\n\t\t\t\t\t'bottom-center',\n\t\t\t\t\t'bottom-right'\n\t\t\t\t].includes(value)\n\t\t}\n\t},\n\tdata() {\n\t\treturn {\n\t\t\tisVisible: true,\n\t\t\ttimer: null,\n\t\t\tremainingTime: this.duration,\n\t\t\tstartTime: null,\n\t\t\tpausedAt: null\n\t\t};\n\t},\n\tcomputed: {\n\t\tvariantStyles() {\n\t\t\treturn VARIANT_STYLES[this.variant];\n\t\t},\n\t\ttoastClasses() {\n\t\t\tconst baseClasses =\n\t\t\t\t'flex items-start gap-3 p-4 rounded-lg border shadow-lg min-w-[320px] max-w-md';\n\t\t\treturn `${baseClasses} ${this.variantStyles.container}`;\n\t\t},\n\t\ttitleClasses() {\n\t\t\treturn this.variantStyles.title;\n\t\t},\n\t\tmessageClasses() {\n\t\t\treturn this.variantStyles.message;\n\t\t},\n\t\tcloseButtonClasses() {\n\t\t\treturn `flex-shrink-0 ${this.variantStyles.closeButton}`;\n\t\t},\n\t\ticonName() {\n\t\t\treturn this.variantStyles.icon;\n\t\t},\n\t\ttransitionName() {\n\t\t\tif (this.position.includes('left')) {\n\t\t\t\treturn 'toast-slide-left';\n\t\t\t} else if (this.position.includes('right')) {\n\t\t\t\treturn 'toast-slide-right';\n\t\t\t}\n\t\t\treturn 'toast-slide-down';\n\t\t}\n\t},\n\tmounted() {\n\t\tif (this.duration > 0) {\n\t\t\tthis.startTimer();\n\t\t}\n\t},\n\tbeforeDestroy() {\n\t\tthis.clearTimer();\n\t},\n\tmethods: {\n\t\tstartTimer() {\n\t\t\tthis.clearTimer();\n\t\t\tthis.startTime = Date.now();\n\t\t\tthis.timer = setTimeout(() => {\n\t\t\t\tthis.handleClose();\n\t\t\t}, this.remainingTime);\n\t\t},\n\t\tclearTimer() {\n\t\t\tif (this.timer) {\n\t\t\t\tclearTimeout(this.timer);\n\t\t\t\tthis.timer = null;\n\t\t\t}\n\t\t},\n\t\tpauseTimer() {\n\t\t\tif (this.timer && this.duration > 0 && this.startTime) {\n\t\t\t\tconst elapsed = Date.now() - this.startTime;\n\t\t\t\tthis.remainingTime = Math.max(0, this.remainingTime - elapsed);\n\t\t\t\tthis.clearTimer();\n\t\t\t\tthis.pausedAt = Date.now();\n\t\t\t}\n\t\t},\n\t\tresumeTimer() {\n\t\t\tif (this.pausedAt && this.duration > 0 && this.remainingTime > 0) {\n\t\t\t\tthis.pausedAt = null;\n\t\t\t\tthis.startTimer();\n\t\t\t} else if (this.pausedAt && this.remainingTime <= 0) {\n\t\t\t\tthis.handleClose();\n\t\t\t}\n\t\t},\n\t\thandleClose() {\n\t\t\tthis.isVisible = false;\n\t\t\tthis.$emit('close');\n\t\t},\n\t\tonBeforeEnter(el) {\n\t\t\tel.style.opacity = '0';\n\t\t},\n\t\tonEnter(el, done) {\n\t\t\t// Force reflow\n\t\t\tvoid el.offsetHeight;\n\t\t\tel.style.transition = 'all 0.3s ease-out';\n\t\t\tel.style.opacity = '1';\n\t\t\tdone();\n\t\t},\n\t\tonLeave(el, done) {\n\t\t\tel.style.transition = 'all 0.3s ease-in';\n\t\t\tel.style.opacity = '0';\n\t\t\tsetTimeout(done, 300);\n\t\t}\n\t}\n};\n</script>\n\n<style scoped>\n.toast-slide-left-enter-active,\n.toast-slide-left-leave-active {\n\ttransition: all 0.3s ease-out;\n}\n\n.toast-slide-left-enter {\n\ttransform: translateX(-100%);\n\topacity: 0;\n}\n\n.toast-slide-left-leave-to {\n\ttransform: translateX(-100%);\n\topacity: 0;\n}\n\n.toast-slide-right-enter-active,\n.toast-slide-right-leave-active {\n\ttransition: all 0.3s ease-out;\n}\n\n.toast-slide-right-enter {\n\ttransform: translateX(100%);\n\topacity: 0;\n}\n\n.toast-slide-right-leave-to {\n\ttransform: translateX(100%);\n\topacity: 0;\n}\n\n.toast-slide-down-enter-active,\n.toast-slide-down-leave-active {\n\ttransition: all 0.3s ease-out;\n}\n\n.toast-slide-down-enter {\n\ttransform: translateY(-100%);\n\topacity: 0;\n}\n\n.toast-slide-down-leave-to {\n\ttransform: translateY(-100%);\n\topacity: 0;\n}\n</style>\n"]}, media: undefined });
+
+  };
+  /* scoped */
+  const __vue_scope_id__$d = "data-v-df2f9ab0";
+  /* module identifier */
+  const __vue_module_identifier__$d = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$d = false;
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$d = /*#__PURE__*/normalizeComponent$1(
+    { render: __vue_render__$f, staticRenderFns: __vue_staticRenderFns__$d },
+    __vue_inject_styles__$d,
+    __vue_script__$d,
+    __vue_scope_id__$d,
+    __vue_is_functional_template__$d,
+    __vue_module_identifier__$d,
+    false,
+    createInjector,
+    undefined,
+    undefined
+  );
+
+function getInternetExplorerVersion() {
+	var ua = window.navigator.userAgent;
+
+	var msie = ua.indexOf('MSIE ');
+	if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	}
+
+	var trident = ua.indexOf('Trident/');
+	if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	}
+
+	var edge = ua.indexOf('Edge/');
+	if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	}
+
+	// other browser
+	return -1;
+}
+
+var isIE = void 0;
+
+function initCompat() {
+	if (!initCompat.init) {
+		initCompat.init = true;
+		isIE = getInternetExplorerVersion() !== -1;
+	}
+}
+
+var ResizeObserver$1 = { render: function render() {
+		var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "resize-observer", attrs: { "tabindex": "-1" } });
+	}, staticRenderFns: [], _scopeId: 'data-v-b329ee4c',
+	name: 'resize-observer',
+
+	methods: {
+		compareAndNotify: function compareAndNotify() {
+			if (this._w !== this.$el.offsetWidth || this._h !== this.$el.offsetHeight) {
+				this._w = this.$el.offsetWidth;
+				this._h = this.$el.offsetHeight;
+				this.$emit('notify');
+			}
+		},
+		addResizeHandlers: function addResizeHandlers() {
+			this._resizeObject.contentDocument.defaultView.addEventListener('resize', this.compareAndNotify);
+			this.compareAndNotify();
+		},
+		removeResizeHandlers: function removeResizeHandlers() {
+			if (this._resizeObject && this._resizeObject.onload) {
+				if (!isIE && this._resizeObject.contentDocument) {
+					this._resizeObject.contentDocument.defaultView.removeEventListener('resize', this.compareAndNotify);
+				}
+				delete this._resizeObject.onload;
+			}
+		}
+	},
+
+	mounted: function mounted() {
+		var _this = this;
+
+		initCompat();
+		this.$nextTick(function () {
+			_this._w = _this.$el.offsetWidth;
+			_this._h = _this.$el.offsetHeight;
+		});
+		var object = document.createElement('object');
+		this._resizeObject = object;
+		object.setAttribute('aria-hidden', 'true');
+		object.setAttribute('tabindex', -1);
+		object.onload = this.addResizeHandlers;
+		object.type = 'text/html';
+		if (isIE) {
+			this.$el.appendChild(object);
+		}
+		object.data = 'about:blank';
+		if (!isIE) {
+			this.$el.appendChild(object);
+		}
+	},
+	beforeDestroy: function beforeDestroy() {
+		this.removeResizeHandlers();
+	}
+};
+
+// Install the components
+function install$2(Vue) {
+	Vue.component('resize-observer', ResizeObserver$1);
+	Vue.component('ResizeObserver', ResizeObserver$1);
+}
+
+// Plugin
+var plugin$2 = {
+	// eslint-disable-next-line no-undef
+	version: "0.4.5",
+	install: install$2
+};
+
+// Auto-install
+var GlobalVue$2 = null;
+if (typeof window !== 'undefined') {
+	GlobalVue$2 = window.Vue;
+} else if (typeof global !== 'undefined') {
+	GlobalVue$2 = global.Vue;
+}
+if (GlobalVue$2) {
+	GlobalVue$2.use(plugin$2);
+}
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+}
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  }
+}
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+function processOptions(value) {
+  var options;
+
+  if (typeof value === 'function') {
+    // Simple options (callback-only)
+    options = {
+      callback: value
+    };
+  } else {
+    // Options object
+    options = value;
+  }
+
+  return options;
+}
+function throttle(callback, delay) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var timeout;
+  var lastState;
+  var currentArgs;
+
+  var throttled = function throttled(state) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    currentArgs = args;
+    if (timeout && state === lastState) return;
+    var leading = options.leading;
+
+    if (typeof leading === 'function') {
+      leading = leading(state, lastState);
+    }
+
+    if ((!timeout || state !== lastState) && leading) {
+      callback.apply(void 0, [state].concat(_toConsumableArray(currentArgs)));
+    }
+
+    lastState = state;
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      callback.apply(void 0, [state].concat(_toConsumableArray(currentArgs)));
+      timeout = 0;
+    }, delay);
+  };
+
+  throttled._clear = function () {
+    clearTimeout(timeout);
+    timeout = null;
+  };
+
+  return throttled;
+}
+function deepEqual(val1, val2) {
+  if (val1 === val2) return true;
+
+  if (_typeof(val1) === 'object') {
+    for (var key in val1) {
+      if (!deepEqual(val1[key], val2[key])) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  return false;
+}
+
+var VisibilityState =
+/*#__PURE__*/
+function () {
+  function VisibilityState(el, options, vnode) {
+    _classCallCheck(this, VisibilityState);
+
+    this.el = el;
+    this.observer = null;
+    this.frozen = false;
+    this.createObserver(options, vnode);
+  }
+
+  _createClass(VisibilityState, [{
+    key: "createObserver",
+    value: function createObserver(options, vnode) {
+      var _this = this;
+
+      if (this.observer) {
+        this.destroyObserver();
+      }
+
+      if (this.frozen) return;
+      this.options = processOptions(options);
+
+      this.callback = function (result, entry) {
+        _this.options.callback(result, entry);
+
+        if (result && _this.options.once) {
+          _this.frozen = true;
+
+          _this.destroyObserver();
+        }
+      }; // Throttle
+
+
+      if (this.callback && this.options.throttle) {
+        var _ref = this.options.throttleOptions || {},
+            _leading = _ref.leading;
+
+        this.callback = throttle(this.callback, this.options.throttle, {
+          leading: function leading(state) {
+            return _leading === 'both' || _leading === 'visible' && state || _leading === 'hidden' && !state;
+          }
+        });
+      }
+
+      this.oldResult = undefined;
+      this.observer = new IntersectionObserver(function (entries) {
+        var entry = entries[0];
+
+        if (entries.length > 1) {
+          var intersectingEntry = entries.find(function (e) {
+            return e.isIntersecting;
+          });
+
+          if (intersectingEntry) {
+            entry = intersectingEntry;
+          }
+        }
+
+        if (_this.callback) {
+          // Use isIntersecting if possible because browsers can report isIntersecting as true, but intersectionRatio as 0, when something very slowly enters the viewport.
+          var result = entry.isIntersecting && entry.intersectionRatio >= _this.threshold;
+          if (result === _this.oldResult) return;
+          _this.oldResult = result;
+
+          _this.callback(result, entry);
+        }
+      }, this.options.intersection); // Wait for the element to be in document
+
+      vnode.context.$nextTick(function () {
+        if (_this.observer) {
+          _this.observer.observe(_this.el);
+        }
+      });
+    }
+  }, {
+    key: "destroyObserver",
+    value: function destroyObserver() {
+      if (this.observer) {
+        this.observer.disconnect();
+        this.observer = null;
+      } // Cancel throttled call
+
+
+      if (this.callback && this.callback._clear) {
+        this.callback._clear();
+
+        this.callback = null;
+      }
+    }
+  }, {
+    key: "threshold",
+    get: function get() {
+      return this.options.intersection && this.options.intersection.threshold || 0;
+    }
+  }]);
+
+  return VisibilityState;
+}();
+
+function bind(el, _ref2, vnode) {
+  var value = _ref2.value;
+  if (!value) return;
+
+  if (typeof IntersectionObserver === 'undefined') {
+    console.warn('[vue-observe-visibility] IntersectionObserver API is not available in your browser. Please install this polyfill: https://github.com/w3c/IntersectionObserver/tree/master/polyfill');
+  } else {
+    var state = new VisibilityState(el, value, vnode);
+    el._vue_visibilityState = state;
+  }
+}
+
+function update(el, _ref3, vnode) {
+  var value = _ref3.value,
+      oldValue = _ref3.oldValue;
+  if (deepEqual(value, oldValue)) return;
+  var state = el._vue_visibilityState;
+
+  if (!value) {
+    unbind(el);
+    return;
+  }
+
+  if (state) {
+    state.createObserver(value, vnode);
+  } else {
+    bind(el, {
+      value: value
+    }, vnode);
+  }
+}
+
+function unbind(el) {
+  var state = el._vue_visibilityState;
+
+  if (state) {
+    state.destroyObserver();
+    delete el._vue_visibilityState;
+  }
+}
+
+var ObserveVisibility = {
+  bind: bind,
+  update: update,
+  unbind: unbind
+};
+
+function install$1(Vue) {
+  Vue.directive('observe-visibility', ObserveVisibility);
+  /* -- Add more components here -- */
+}
+/* -- Plugin definition & Auto-install -- */
+
+/* You shouldn't have to modify the code below */
+// Plugin
+
+var plugin$1 = {
+  // eslint-disable-next-line no-undef
+  version: "0.4.6",
+  install: install$1
+};
+
+var GlobalVue$1 = null;
+
+if (typeof window !== 'undefined') {
+  GlobalVue$1 = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue$1 = global.Vue;
+}
+
+if (GlobalVue$1) {
+  GlobalVue$1.use(plugin$1);
+}
+
+function getDefaultExportFromCjs (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
+
+var scrollparent$1 = {exports: {}};
+
+var scrollparent = scrollparent$1.exports;
+
+var hasRequiredScrollparent;
+
+function requireScrollparent () {
+	if (hasRequiredScrollparent) return scrollparent$1.exports;
+	hasRequiredScrollparent = 1;
+	(function (module) {
+		(function (root, factory) {
+		  if (module.exports) {
+		    module.exports = factory();
+		  } else {
+		    root.Scrollparent = factory();
+		  }
+		}(scrollparent, function () {
+		  function isScrolling(node) {
+		    var overflow = getComputedStyle(node, null).getPropertyValue("overflow");
+
+		    return overflow.indexOf("scroll") > -1 || overflow.indexOf("auto") > - 1;
+		  }
+
+		  function scrollParent(node) {
+		    if (!(node instanceof HTMLElement || node instanceof SVGElement)) {
+		      return undefined;
+		    }
+
+		    var current = node.parentNode;
+		    while (current.parentNode) {
+		      if (isScrolling(current)) {
+		        return current;
+		      }
+
+		      current = current.parentNode;
+		    }
+
+		    return document.scrollingElement || document.documentElement;
+		  }
+
+		  return scrollParent;
+		})); 
+	} (scrollparent$1));
+	return scrollparent$1.exports;
+}
+
+var scrollparentExports = requireScrollparent();
+var ScrollParent = /*@__PURE__*/getDefaultExportFromCjs(scrollparentExports);
+
+var config = {
+  itemsLimit: 1000
+};
+
+const props = {
+  items: {
+    type: Array,
+    required: true
+  },
+  keyField: {
+    type: String,
+    default: 'id'
+  },
+  direction: {
+    type: String,
+    default: 'vertical',
+    validator: value => ['vertical', 'horizontal'].includes(value)
+  },
+  listTag: {
+    type: String,
+    default: 'div'
+  },
+  itemTag: {
+    type: String,
+    default: 'div'
+  }
+};
+function simpleArray() {
+  return this.items.length && typeof this.items[0] !== 'object';
+}
+
+let supportsPassive = false;
+if (typeof window !== 'undefined') {
+  supportsPassive = false;
+  try {
+    var opts = Object.defineProperty({}, 'passive', {
+      get() {
+        supportsPassive = true;
+      }
+    });
+    window.addEventListener('test', null, opts);
+  } catch (e) {}
+}
+
+//
+let uid = 0;
+var script$2$1 = {
+  name: 'RecycleScroller',
+  components: {
+    ResizeObserver: ResizeObserver$1
+  },
+  directives: {
+    ObserveVisibility
+  },
+  props: {
+    ...props,
+    itemSize: {
+      type: Number,
+      default: null
+    },
+    gridItems: {
+      type: Number,
+      default: undefined
+    },
+    itemSecondarySize: {
+      type: Number,
+      default: undefined
+    },
+    minItemSize: {
+      type: [Number, String],
+      default: null
+    },
+    sizeField: {
+      type: String,
+      default: 'size'
+    },
+    typeField: {
+      type: String,
+      default: 'type'
+    },
+    buffer: {
+      type: Number,
+      default: 200
+    },
+    pageMode: {
+      type: Boolean,
+      default: false
+    },
+    prerender: {
+      type: Number,
+      default: 0
+    },
+    emitUpdate: {
+      type: Boolean,
+      default: false
+    },
+    skipHover: {
+      type: Boolean,
+      default: false
+    },
+    listTag: {
+      type: String,
+      default: 'div'
+    },
+    itemTag: {
+      type: String,
+      default: 'div'
+    },
+    listClass: {
+      type: [String, Object, Array],
+      default: ''
+    },
+    itemClass: {
+      type: [String, Object, Array],
+      default: ''
+    }
+  },
+  data() {
+    return {
+      pool: [],
+      totalSize: 0,
+      ready: false,
+      hoverKey: null
+    };
+  },
+  computed: {
+    sizes() {
+      if (this.itemSize === null) {
+        const sizes = {
+          '-1': {
+            accumulator: 0
+          }
+        };
+        const items = this.items;
+        const field = this.sizeField;
+        const minItemSize = this.minItemSize;
+        let computedMinSize = 10000;
+        let accumulator = 0;
+        let current;
+        for (let i = 0, l = items.length; i < l; i++) {
+          current = items[i][field] || minItemSize;
+          if (current < computedMinSize) {
+            computedMinSize = current;
+          }
+          accumulator += current;
+          sizes[i] = {
+            accumulator,
+            size: current
+          };
+        }
+        // eslint-disable-next-line
+        this.$_computedMinItemSize = computedMinSize;
+        return sizes;
+      }
+      return [];
+    },
+    simpleArray
+  },
+  watch: {
+    items() {
+      this.updateVisibleItems(true);
+    },
+    pageMode() {
+      this.applyPageMode();
+      this.updateVisibleItems(false);
+    },
+    sizes: {
+      handler() {
+        this.updateVisibleItems(false);
+      },
+      deep: true
+    },
+    gridItems() {
+      this.updateVisibleItems(true);
+    },
+    itemSecondarySize() {
+      this.updateVisibleItems(true);
+    }
+  },
+  created() {
+    this.$_startIndex = 0;
+    this.$_endIndex = 0;
+    this.$_views = new Map();
+    this.$_unusedViews = new Map();
+    this.$_scrollDirty = false;
+    this.$_lastUpdateScrollPosition = 0;
+
+    // In SSR mode, we also prerender the same number of item for the first render
+    // to avoir mismatch between server and client templates
+    if (this.prerender) {
+      this.$_prerender = true;
+      this.updateVisibleItems(false);
+    }
+    if (this.gridItems && !this.itemSize) {
+      console.error('[vue-recycle-scroller] You must provide an itemSize when using gridItems');
+    }
+  },
+  mounted() {
+    this.applyPageMode();
+    this.$nextTick(() => {
+      // In SSR mode, render the real number of visible items
+      this.$_prerender = false;
+      this.updateVisibleItems(true);
+      this.ready = true;
+    });
+  },
+  activated() {
+    const lastPosition = this.$_lastUpdateScrollPosition;
+    if (typeof lastPosition === 'number') {
+      this.$nextTick(() => {
+        this.scrollToPosition(lastPosition);
+      });
+    }
+  },
+  beforeDestroy() {
+    this.removeListeners();
+  },
+  methods: {
+    addView(pool, index, item, key, type) {
+      const view = {
+        item,
+        position: 0
+      };
+      const nonReactive = {
+        id: uid++,
+        index,
+        used: true,
+        key,
+        type
+      };
+      Object.defineProperty(view, 'nr', {
+        configurable: false,
+        value: nonReactive
+      });
+      pool.push(view);
+      return view;
+    },
+    unuseView(view, fake = false) {
+      const unusedViews = this.$_unusedViews;
+      const type = view.nr.type;
+      let unusedPool = unusedViews.get(type);
+      if (!unusedPool) {
+        unusedPool = [];
+        unusedViews.set(type, unusedPool);
+      }
+      unusedPool.push(view);
+      if (!fake) {
+        view.nr.used = false;
+        view.position = -9999;
+        this.$_views.delete(view.nr.key);
+      }
+    },
+    handleResize() {
+      this.$emit('resize');
+      if (this.ready) this.updateVisibleItems(false);
+    },
+    handleScroll(event) {
+      if (!this.$_scrollDirty) {
+        this.$_scrollDirty = true;
+        requestAnimationFrame(() => {
+          this.$_scrollDirty = false;
+          const {
+            continuous
+          } = this.updateVisibleItems(false, true);
+
+          // It seems sometimes chrome doesn't fire scroll event :/
+          // When non continous scrolling is ending, we force a refresh
+          if (!continuous) {
+            clearTimeout(this.$_refreshTimout);
+            this.$_refreshTimout = setTimeout(this.handleScroll, 100);
+          }
+        });
+      }
+    },
+    handleVisibilityChange(isVisible, entry) {
+      if (this.ready) {
+        if (isVisible || entry.boundingClientRect.width !== 0 || entry.boundingClientRect.height !== 0) {
+          this.$emit('visible');
+          requestAnimationFrame(() => {
+            this.updateVisibleItems(false);
+          });
+        } else {
+          this.$emit('hidden');
+        }
+      }
+    },
+    updateVisibleItems(checkItem, checkPositionDiff = false) {
+      const itemSize = this.itemSize;
+      const gridItems = this.gridItems || 1;
+      const itemSecondarySize = this.itemSecondarySize || itemSize;
+      const minItemSize = this.$_computedMinItemSize;
+      const typeField = this.typeField;
+      const keyField = this.simpleArray ? null : this.keyField;
+      const items = this.items;
+      const count = items.length;
+      const sizes = this.sizes;
+      const views = this.$_views;
+      const unusedViews = this.$_unusedViews;
+      const pool = this.pool;
+      let startIndex, endIndex;
+      let totalSize;
+      let visibleStartIndex, visibleEndIndex;
+      if (!count) {
+        startIndex = endIndex = visibleStartIndex = visibleEndIndex = totalSize = 0;
+      } else if (this.$_prerender) {
+        startIndex = visibleStartIndex = 0;
+        endIndex = visibleEndIndex = Math.min(this.prerender, items.length);
+        totalSize = null;
+      } else {
+        const scroll = this.getScroll();
+
+        // Skip update if use hasn't scrolled enough
+        if (checkPositionDiff) {
+          let positionDiff = scroll.start - this.$_lastUpdateScrollPosition;
+          if (positionDiff < 0) positionDiff = -positionDiff;
+          if (itemSize === null && positionDiff < minItemSize || positionDiff < itemSize) {
+            return {
+              continuous: true
+            };
+          }
+        }
+        this.$_lastUpdateScrollPosition = scroll.start;
+        const buffer = this.buffer;
+        scroll.start -= buffer;
+        scroll.end += buffer;
+
+        // account for leading slot
+        let beforeSize = 0;
+        if (this.$refs.before) {
+          beforeSize = this.$refs.before.scrollHeight;
+          scroll.start -= beforeSize;
+        }
+
+        // account for trailing slot
+        if (this.$refs.after) {
+          const afterSize = this.$refs.after.scrollHeight;
+          scroll.end += afterSize;
+        }
+
+        // Variable size mode
+        if (itemSize === null) {
+          let h;
+          let a = 0;
+          let b = count - 1;
+          let i = ~~(count / 2);
+          let oldI;
+
+          // Searching for startIndex
+          do {
+            oldI = i;
+            h = sizes[i].accumulator;
+            if (h < scroll.start) {
+              a = i;
+            } else if (i < count - 1 && sizes[i + 1].accumulator > scroll.start) {
+              b = i;
+            }
+            i = ~~((a + b) / 2);
+          } while (i !== oldI);
+          i < 0 && (i = 0);
+          startIndex = i;
+
+          // For container style
+          totalSize = sizes[count - 1].accumulator;
+
+          // Searching for endIndex
+          for (endIndex = i; endIndex < count && sizes[endIndex].accumulator < scroll.end; endIndex++);
+          if (endIndex === -1) {
+            endIndex = items.length - 1;
+          } else {
+            endIndex++;
+            // Bounds
+            endIndex > count && (endIndex = count);
+          }
+
+          // search visible startIndex
+          for (visibleStartIndex = startIndex; visibleStartIndex < count && beforeSize + sizes[visibleStartIndex].accumulator < scroll.start; visibleStartIndex++);
+
+          // search visible endIndex
+          for (visibleEndIndex = visibleStartIndex; visibleEndIndex < count && beforeSize + sizes[visibleEndIndex].accumulator < scroll.end; visibleEndIndex++);
+        } else {
+          // Fixed size mode
+          startIndex = ~~(scroll.start / itemSize * gridItems);
+          const remainer = startIndex % gridItems;
+          startIndex -= remainer;
+          endIndex = Math.ceil(scroll.end / itemSize * gridItems);
+          visibleStartIndex = Math.max(0, Math.floor((scroll.start - beforeSize) / itemSize * gridItems));
+          visibleEndIndex = Math.floor((scroll.end - beforeSize) / itemSize * gridItems);
+
+          // Bounds
+          startIndex < 0 && (startIndex = 0);
+          endIndex > count && (endIndex = count);
+          visibleStartIndex < 0 && (visibleStartIndex = 0);
+          visibleEndIndex > count && (visibleEndIndex = count);
+          totalSize = Math.ceil(count / gridItems) * itemSize;
+        }
+      }
+      if (endIndex - startIndex > config.itemsLimit) {
+        this.itemsLimitError();
+      }
+      this.totalSize = totalSize;
+      let view;
+      const continuous = startIndex <= this.$_endIndex && endIndex >= this.$_startIndex;
+      if (this.$_continuous !== continuous) {
+        if (continuous) {
+          views.clear();
+          unusedViews.clear();
+          for (let i = 0, l = pool.length; i < l; i++) {
+            view = pool[i];
+            this.unuseView(view);
+          }
+        }
+        this.$_continuous = continuous;
+      } else if (continuous) {
+        for (let i = 0, l = pool.length; i < l; i++) {
+          view = pool[i];
+          if (view.nr.used) {
+            // Update view item index
+            if (checkItem) {
+              view.nr.index = items.indexOf(view.item);
+            }
+
+            // Check if index is still in visible range
+            if (view.nr.index === -1 || view.nr.index < startIndex || view.nr.index >= endIndex) {
+              this.unuseView(view);
+            }
+          }
+        }
+      }
+      const unusedIndex = continuous ? null : new Map();
+      let item, type, unusedPool;
+      let v;
+      for (let i = startIndex; i < endIndex; i++) {
+        item = items[i];
+        const key = keyField ? item[keyField] : item;
+        if (key == null) {
+          throw new Error(`Key is ${key} on item (keyField is '${keyField}')`);
+        }
+        view = views.get(key);
+        if (!itemSize && !sizes[i].size) {
+          if (view) this.unuseView(view);
+          continue;
+        }
+
+        // No view assigned to item
+        if (!view) {
+          if (i === items.length - 1) this.$emit('scroll-end');
+          if (i === 0) this.$emit('scroll-start');
+          type = item[typeField];
+          unusedPool = unusedViews.get(type);
+          if (continuous) {
+            // Reuse existing view
+            if (unusedPool && unusedPool.length) {
+              view = unusedPool.pop();
+              view.item = item;
+              view.nr.used = true;
+              view.nr.index = i;
+              view.nr.key = key;
+              view.nr.type = type;
+            } else {
+              view = this.addView(pool, i, item, key, type);
+            }
+          } else {
+            // Use existing view
+            // We don't care if they are already used
+            // because we are not in continous scrolling
+            v = unusedIndex.get(type) || 0;
+            if (!unusedPool || v >= unusedPool.length) {
+              view = this.addView(pool, i, item, key, type);
+              this.unuseView(view, true);
+              unusedPool = unusedViews.get(type);
+            }
+            view = unusedPool[v];
+            view.item = item;
+            view.nr.used = true;
+            view.nr.index = i;
+            view.nr.key = key;
+            view.nr.type = type;
+            unusedIndex.set(type, v + 1);
+            v++;
+          }
+          views.set(key, view);
+        } else {
+          view.nr.used = true;
+          view.item = item;
+        }
+
+        // Update position
+        if (itemSize === null) {
+          view.position = sizes[i - 1].accumulator;
+          view.offset = 0;
+        } else {
+          view.position = Math.floor(i / gridItems) * itemSize;
+          view.offset = i % gridItems * itemSecondarySize;
+        }
+      }
+      this.$_startIndex = startIndex;
+      this.$_endIndex = endIndex;
+      if (this.emitUpdate) this.$emit('update', startIndex, endIndex, visibleStartIndex, visibleEndIndex);
+
+      // After the user has finished scrolling
+      // Sort views so text selection is correct
+      clearTimeout(this.$_sortTimer);
+      this.$_sortTimer = setTimeout(this.sortViews, 300);
+      return {
+        continuous
+      };
+    },
+    getListenerTarget() {
+      let target = ScrollParent(this.$el);
+      // Fix global scroll target for Chrome and Safari
+      if (window.document && (target === window.document.documentElement || target === window.document.body)) {
+        target = window;
+      }
+      return target;
+    },
+    getScroll() {
+      const {
+        $el: el,
+        direction
+      } = this;
+      const isVertical = direction === 'vertical';
+      let scrollState;
+      if (this.pageMode) {
+        const bounds = el.getBoundingClientRect();
+        const boundsSize = isVertical ? bounds.height : bounds.width;
+        let start = -(isVertical ? bounds.top : bounds.left);
+        let size = isVertical ? window.innerHeight : window.innerWidth;
+        if (start < 0) {
+          size += start;
+          start = 0;
+        }
+        if (start + size > boundsSize) {
+          size = boundsSize - start;
+        }
+        scrollState = {
+          start,
+          end: start + size
+        };
+      } else if (isVertical) {
+        scrollState = {
+          start: el.scrollTop,
+          end: el.scrollTop + el.clientHeight
+        };
+      } else {
+        scrollState = {
+          start: el.scrollLeft,
+          end: el.scrollLeft + el.clientWidth
+        };
+      }
+      return scrollState;
+    },
+    applyPageMode() {
+      if (this.pageMode) {
+        this.addListeners();
+      } else {
+        this.removeListeners();
+      }
+    },
+    addListeners() {
+      this.listenerTarget = this.getListenerTarget();
+      this.listenerTarget.addEventListener('scroll', this.handleScroll, supportsPassive ? {
+        passive: true
+      } : false);
+      this.listenerTarget.addEventListener('resize', this.handleResize);
+    },
+    removeListeners() {
+      if (!this.listenerTarget) {
+        return;
+      }
+      this.listenerTarget.removeEventListener('scroll', this.handleScroll);
+      this.listenerTarget.removeEventListener('resize', this.handleResize);
+      this.listenerTarget = null;
+    },
+    scrollToItem(index) {
+      let scroll;
+      if (this.itemSize === null) {
+        scroll = index > 0 ? this.sizes[index - 1].accumulator : 0;
+      } else {
+        scroll = Math.floor(index / this.gridItems) * this.itemSize;
+      }
+      this.scrollToPosition(scroll);
+    },
+    scrollToPosition(position) {
+      const direction = this.direction === 'vertical' ? {
+        scroll: 'scrollTop',
+        start: 'top'
+      } : {
+        scroll: 'scrollLeft',
+        start: 'left'
+      };
+      let viewport;
+      let scrollDirection;
+      let scrollDistance;
+      if (this.pageMode) {
+        const viewportEl = ScrollParent(this.$el);
+        // HTML doesn't overflow like other elements
+        const scrollTop = viewportEl.tagName === 'HTML' ? 0 : viewportEl[direction.scroll];
+        const bounds = viewportEl.getBoundingClientRect();
+        const scroller = this.$el.getBoundingClientRect();
+        const scrollerPosition = scroller[direction.start] - bounds[direction.start];
+        viewport = viewportEl;
+        scrollDirection = direction.scroll;
+        scrollDistance = position + scrollTop + scrollerPosition;
+      } else {
+        viewport = this.$el;
+        scrollDirection = direction.scroll;
+        scrollDistance = position;
+      }
+      viewport[scrollDirection] = scrollDistance;
+    },
+    itemsLimitError() {
+      setTimeout(() => {
+        console.log('It seems the scroller element isn\'t scrolling, so it tries to render all the items at once.', 'Scroller:', this.$el);
+        console.log('Make sure the scroller has a fixed height (or width) and \'overflow-y\' (or \'overflow-x\') set to \'auto\' so it can scroll correctly and only render the items visible in the scroll viewport.');
+      });
+      throw new Error('Rendered items limit reached');
+    },
+    sortViews() {
+      this.pool.sort((viewA, viewB) => viewA.nr.index - viewB.nr.index);
+    }
+  }
+};
+
+function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
+  if (typeof shadowMode !== 'boolean') {
+    createInjectorSSR = createInjector;
+    createInjector = shadowMode;
+    shadowMode = false;
+  }
+  // Vue.extend constructor export interop.
+  const options = typeof script === 'function' ? script.options : script;
+  // render functions
+  if (template && template.render) {
+    options.render = template.render;
+    options.staticRenderFns = template.staticRenderFns;
+    options._compiled = true;
+    // functional template
+    if (isFunctionalTemplate) {
+      options.functional = true;
+    }
+  }
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId;
+  }
+  let hook;
+  if (moduleIdentifier) {
+    // server build
+    hook = function (context) {
+      // 2.3 injection
+      context = context ||
+      // cached call
+      this.$vnode && this.$vnode.ssrContext ||
+      // stateful
+      this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext; // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__;
+      }
+      // inject component styles
+      if (style) {
+        style.call(this, createInjectorSSR(context));
+      }
+      // register component module identifier for async chunk inference
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier);
+      }
+    };
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook;
+  } else if (style) {
+    hook = shadowMode ? function (context) {
+      style.call(this, createInjectorShadow(context, this.$root.$options.shadowRoot));
+    } : function (context) {
+      style.call(this, createInjector(context));
+    };
+  }
+  if (hook) {
+    if (options.functional) {
+      // register for functional component in vue file
+      const originalRender = options.render;
+      options.render = function renderWithStyleInjection(h, context) {
+        hook.call(context);
+        return originalRender(h, context);
+      };
+    } else {
+      // inject component registration as beforeCreate hook
+      const existing = options.beforeCreate;
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+    }
+  }
+  return script;
+}
+
+/* script */
+const __vue_script__$2$1 = script$2$1;
+/* template */
+var __vue_render__$1$1 = function () {
+  var _obj, _obj$1;
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "observe-visibility",
+          rawName: "v-observe-visibility",
+          value: _vm.handleVisibilityChange,
+          expression: "handleVisibilityChange",
+        },
+      ],
+      staticClass: "vue-recycle-scroller",
+      class:
+        ((_obj = {
+          ready: _vm.ready,
+          "page-mode": _vm.pageMode,
+        }),
+        (_obj["direction-" + _vm.direction] = true),
+        _obj),
+      on: {
+        "&scroll": function ($event) {
+          return _vm.handleScroll.apply(null, arguments)
+        },
+      },
+    },
+    [
+      _vm.$slots.before
+        ? _c(
+            "div",
+            { ref: "before", staticClass: "vue-recycle-scroller__slot" },
+            [_vm._t("before")],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        _vm.listTag,
+        {
+          ref: "wrapper",
+          tag: "component",
+          staticClass: "vue-recycle-scroller__item-wrapper",
+          class: _vm.listClass,
+          style:
+            ((_obj$1 = {}),
+            (_obj$1[_vm.direction === "vertical" ? "minHeight" : "minWidth"] =
+              _vm.totalSize + "px"),
+            _obj$1),
+        },
+        [
+          _vm._l(_vm.pool, function (view) {
+            return _c(
+              _vm.itemTag,
+              _vm._g(
+                {
+                  key: view.nr.id,
+                  tag: "component",
+                  staticClass: "vue-recycle-scroller__item-view",
+                  class: [
+                    _vm.itemClass,
+                    {
+                      hover: !_vm.skipHover && _vm.hoverKey === view.nr.key,
+                    },
+                  ],
+                  style: _vm.ready
+                    ? {
+                        transform:
+                          "translate" +
+                          (_vm.direction === "vertical" ? "Y" : "X") +
+                          "(" +
+                          view.position +
+                          "px) translate" +
+                          (_vm.direction === "vertical" ? "X" : "Y") +
+                          "(" +
+                          view.offset +
+                          "px)",
+                        width: _vm.gridItems
+                          ? (_vm.direction === "vertical"
+                              ? _vm.itemSecondarySize || _vm.itemSize
+                              : _vm.itemSize) + "px"
+                          : undefined,
+                        height: _vm.gridItems
+                          ? (_vm.direction === "horizontal"
+                              ? _vm.itemSecondarySize || _vm.itemSize
+                              : _vm.itemSize) + "px"
+                          : undefined,
+                      }
+                    : null,
+                },
+                _vm.skipHover
+                  ? {}
+                  : {
+                      mouseenter: function () {
+                        _vm.hoverKey = view.nr.key;
+                      },
+                      mouseleave: function () {
+                        _vm.hoverKey = null;
+                      },
+                    }
+              ),
+              [
+                _vm._t("default", null, {
+                  item: view.item,
+                  index: view.nr.index,
+                  active: view.nr.used,
+                }),
+              ],
+              2
+            )
+          }),
+          _vm._v(" "),
+          _vm._t("empty"),
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _vm.$slots.after
+        ? _c(
+            "div",
+            { ref: "after", staticClass: "vue-recycle-scroller__slot" },
+            [_vm._t("after")],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("ResizeObserver", { on: { notify: _vm.handleResize } }),
+    ],
+    1
+  )
+};
+var __vue_staticRenderFns__$1$1 = [];
+__vue_render__$1$1._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$2$1 = undefined;
+  /* scoped */
+  const __vue_scope_id__$2$1 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$2$1 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$2$1 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$2$1 = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$1$1, staticRenderFns: __vue_staticRenderFns__$1$1 },
+    __vue_inject_styles__$2$1,
+    __vue_script__$2$1,
+    __vue_scope_id__$2$1,
+    __vue_is_functional_template__$2$1,
+    __vue_module_identifier__$2$1,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+var script$1$1 = {
+  name: 'DynamicScroller',
+  components: {
+    RecycleScroller: __vue_component__$2$1
+  },
+  provide() {
+    if (typeof ResizeObserver !== 'undefined') {
+      this.$_resizeObserver = new ResizeObserver(entries => {
+        requestAnimationFrame(() => {
+          if (!Array.isArray(entries)) {
+            return;
+          }
+          for (const entry of entries) {
+            if (entry.target) {
+              const event = new CustomEvent('resize', {
+                detail: {
+                  contentRect: entry.contentRect
+                }
+              });
+              entry.target.dispatchEvent(event);
+            }
+          }
+        });
+      });
+    }
+    return {
+      vscrollData: this.vscrollData,
+      vscrollParent: this,
+      vscrollResizeObserver: this.$_resizeObserver
+    };
+  },
+  inheritAttrs: false,
+  props: {
+    ...props,
+    minItemSize: {
+      type: [Number, String],
+      required: true
+    }
+  },
+  data() {
+    return {
+      vscrollData: {
+        active: true,
+        sizes: {},
+        validSizes: {},
+        keyField: this.keyField,
+        simpleArray: false
+      }
+    };
+  },
+  computed: {
+    simpleArray,
+    itemsWithSize() {
+      const result = [];
+      const {
+        items,
+        keyField,
+        simpleArray
+      } = this;
+      const sizes = this.vscrollData.sizes;
+      const l = items.length;
+      for (let i = 0; i < l; i++) {
+        const item = items[i];
+        const id = simpleArray ? i : item[keyField];
+        let size = sizes[id];
+        if (typeof size === 'undefined' && !this.$_undefinedMap[id]) {
+          size = 0;
+        }
+        result.push({
+          item,
+          id,
+          size
+        });
+      }
+      return result;
+    },
+    listeners() {
+      const listeners = {};
+      for (const key in this.$listeners) {
+        if (key !== 'resize' && key !== 'visible') {
+          listeners[key] = this.$listeners[key];
+        }
+      }
+      return listeners;
+    }
+  },
+  watch: {
+    items() {
+      this.forceUpdate(false);
+    },
+    simpleArray: {
+      handler(value) {
+        this.vscrollData.simpleArray = value;
+      },
+      immediate: true
+    },
+    direction(value) {
+      this.forceUpdate(true);
+    },
+    itemsWithSize(next, prev) {
+      const scrollTop = this.$el.scrollTop;
+
+      // Calculate total diff between prev and next sizes
+      // over current scroll top. Then add it to scrollTop to
+      // avoid jumping the contents that the user is seeing.
+      let prevActiveTop = 0;
+      let activeTop = 0;
+      const length = Math.min(next.length, prev.length);
+      for (let i = 0; i < length; i++) {
+        if (prevActiveTop >= scrollTop) {
+          break;
+        }
+        prevActiveTop += prev[i].size || this.minItemSize;
+        activeTop += next[i].size || this.minItemSize;
+      }
+      const offset = activeTop - prevActiveTop;
+      if (offset === 0) {
+        return;
+      }
+      this.$el.scrollTop += offset;
+    }
+  },
+  beforeCreate() {
+    this.$_updates = [];
+    this.$_undefinedSizes = 0;
+    this.$_undefinedMap = {};
+  },
+  activated() {
+    this.vscrollData.active = true;
+  },
+  deactivated() {
+    this.vscrollData.active = false;
+  },
+  methods: {
+    onScrollerResize() {
+      const scroller = this.$refs.scroller;
+      if (scroller) {
+        this.forceUpdate();
+      }
+      this.$emit('resize');
+    },
+    onScrollerVisible() {
+      this.$emit('vscroll:update', {
+        force: false
+      });
+      this.$emit('visible');
+    },
+    forceUpdate(clear = true) {
+      if (clear || this.simpleArray) {
+        this.vscrollData.validSizes = {};
+      }
+      this.$emit('vscroll:update', {
+        force: true
+      });
+    },
+    scrollToItem(index) {
+      const scroller = this.$refs.scroller;
+      if (scroller) scroller.scrollToItem(index);
+    },
+    getItemSize(item, index = undefined) {
+      const id = this.simpleArray ? index != null ? index : this.items.indexOf(item) : item[this.keyField];
+      return this.vscrollData.sizes[id] || 0;
+    },
+    scrollToBottom() {
+      if (this.$_scrollingToBottom) return;
+      this.$_scrollingToBottom = true;
+      const el = this.$el;
+      // Item is inserted to the DOM
+      this.$nextTick(() => {
+        el.scrollTop = el.scrollHeight + 5000;
+        // Item sizes are computed
+        const cb = () => {
+          el.scrollTop = el.scrollHeight + 5000;
+          requestAnimationFrame(() => {
+            el.scrollTop = el.scrollHeight + 5000;
+            if (this.$_undefinedSizes === 0) {
+              this.$_scrollingToBottom = false;
+            } else {
+              requestAnimationFrame(cb);
+            }
+          });
+        };
+        requestAnimationFrame(cb);
+      });
+    }
+  }
+};
+
+/* script */
+const __vue_script__$1$1 = script$1$1;
+
+/* template */
+var __vue_render__$e = function () {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "RecycleScroller",
+    _vm._g(
+      _vm._b(
+        {
+          ref: "scroller",
+          attrs: {
+            items: _vm.itemsWithSize,
+            "min-item-size": _vm.minItemSize,
+            direction: _vm.direction,
+            "key-field": "id",
+            "list-tag": _vm.listTag,
+            "item-tag": _vm.itemTag,
+          },
+          on: { resize: _vm.onScrollerResize, visible: _vm.onScrollerVisible },
+          scopedSlots: _vm._u(
+            [
+              {
+                key: "default",
+                fn: function (ref) {
+                  var itemWithSize = ref.item;
+                  var index = ref.index;
+                  var active = ref.active;
+                  return [
+                    _vm._t("default", null, null, {
+                      item: itemWithSize.item,
+                      index: index,
+                      active: active,
+                      itemWithSize: itemWithSize,
+                    }),
+                  ]
+                },
+              },
+            ],
+            null,
+            true
+          ),
+        },
+        "RecycleScroller",
+        _vm.$attrs,
+        false
+      ),
+      _vm.listeners
+    ),
+    [
+      _vm._v(" "),
+      _c("template", { slot: "before" }, [_vm._t("before")], 2),
+      _vm._v(" "),
+      _c("template", { slot: "after" }, [_vm._t("after")], 2),
+      _vm._v(" "),
+      _c("template", { slot: "empty" }, [_vm._t("empty")], 2),
+    ],
+    2
+  )
+};
 var __vue_staticRenderFns__$c = [];
 __vue_render__$e._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$c = function (inject) {
-    if (!inject) return
-    inject("data-v-6b99b446_0", { source: "\n.toast-slide-left-enter-active[data-v-6b99b446],\r\n.toast-slide-left-leave-active[data-v-6b99b446] {\r\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-left-enter[data-v-6b99b446] {\r\n\ttransform: translateX(-100%);\r\n\topacity: 0;\n}\n.toast-slide-left-leave-to[data-v-6b99b446] {\r\n\ttransform: translateX(-100%);\r\n\topacity: 0;\n}\n.toast-slide-right-enter-active[data-v-6b99b446],\r\n.toast-slide-right-leave-active[data-v-6b99b446] {\r\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-right-enter[data-v-6b99b446] {\r\n\ttransform: translateX(100%);\r\n\topacity: 0;\n}\n.toast-slide-right-leave-to[data-v-6b99b446] {\r\n\ttransform: translateX(100%);\r\n\topacity: 0;\n}\n.toast-slide-down-enter-active[data-v-6b99b446],\r\n.toast-slide-down-leave-active[data-v-6b99b446] {\r\n\ttransition: all 0.3s ease-out;\n}\n.toast-slide-down-enter[data-v-6b99b446] {\r\n\ttransform: translateY(-100%);\r\n\topacity: 0;\n}\n.toast-slide-down-leave-to[data-v-6b99b446] {\r\n\ttransform: translateY(-100%);\r\n\topacity: 0;\n}\r\n", map: {"version":3,"sources":["/home/web/github/hugo/pyreweb/fabric/src/components/molecules/FToast/FToast.vue"],"names":[],"mappings":";AA8OA;;CAEA,6BAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;;CAEA,6BAAA;AACA;AAEA;CACA,2BAAA;CACA,UAAA;AACA;AAEA;CACA,2BAAA;CACA,UAAA;AACA;AAEA;;CAEA,6BAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA;AAEA;CACA,4BAAA;CACA,UAAA;AACA","file":"FToast.vue","sourcesContent":["<template>\r\n\t<transition\r\n\t\t:name=\"transitionName\"\r\n\t\t@before-enter=\"onBeforeEnter\"\r\n\t\t@enter=\"onEnter\"\r\n\t\t@leave=\"onLeave\"\r\n\t>\r\n\t\t<div\r\n\t\t\tv-if=\"isVisible\"\r\n\t\t\t:class=\"toastClasses\"\r\n\t\t\trole=\"alert\"\r\n\t\t\taria-live=\"polite\"\r\n\t\t\t@mouseenter=\"pauseTimer\"\r\n\t\t\t@mouseleave=\"resumeTimer\"\r\n\t\t>\r\n\t\t\t<f-icon :name=\"iconName\" size=\"md\" />\r\n\t\t\t<div class=\"flex-1 min-w-0\">\r\n\t\t\t\t<f-typography v-if=\"title\" variant=\"h6\" :class=\"titleClasses\">\r\n\t\t\t\t\t{{ title }}\r\n\t\t\t\t</f-typography>\r\n\t\t\t\t<f-typography v-if=\"message\" variant=\"body\" :class=\"messageClasses\">\r\n\t\t\t\t\t{{ message }}\r\n\t\t\t\t</f-typography>\r\n\t\t\t\t<slot />\r\n\t\t\t</div>\r\n\t\t\t<f-button\r\n\t\t\t\tv-if=\"closable\"\r\n\t\t\t\tvariant=\"text\"\r\n\t\t\t\tsize=\"small\"\r\n\t\t\t\t:class=\"closeButtonClasses\"\r\n\t\t\t\t@click=\"handleClose\"\r\n\t\t\t>\r\n\t\t\t\t<f-icon name=\"close\" size=\"sm\" />\r\n\t\t\t\t<span class=\"sr-only\">Fermer la notification</span>\r\n\t\t\t</f-button>\r\n\t\t</div>\r\n\t</transition>\r\n</template>\r\n\r\n<script>\r\nimport FIcon from '../../atoms/FIcon/FIcon.vue';\r\nimport FTypography from '../../atoms/FTypography/FTypography.vue';\r\nimport FButton from '../../atoms/FButton/FButton.vue';\r\n\r\nconst VARIANT_STYLES = {\r\n\tsuccess: {\r\n\t\tcontainer: 'bg-success-50 border-success-200 text-success-800',\r\n\t\ttitle: 'text-success-800',\r\n\t\tmessage: 'text-success-700',\r\n\t\tcloseButton: 'text-success-600 hover:text-success-800',\r\n\t\ticon: 'success'\r\n\t},\r\n\terror: {\r\n\t\tcontainer: 'bg-danger-50 border-danger-200 text-danger-800',\r\n\t\ttitle: 'text-danger-800',\r\n\t\tmessage: 'text-danger-700',\r\n\t\tcloseButton: 'text-danger-600 hover:text-danger-800',\r\n\t\ticon: 'error'\r\n\t},\r\n\tinfo: {\r\n\t\tcontainer: 'bg-primary-50 border-primary-200 text-primary-800',\r\n\t\ttitle: 'text-primary-800',\r\n\t\tmessage: 'text-primary-700',\r\n\t\tcloseButton: 'text-primary-600 hover:text-primary-800',\r\n\t\ticon: 'info'\r\n\t},\r\n\twarning: {\r\n\t\tcontainer: 'bg-warning-50 border-warning-200 text-warning-800',\r\n\t\ttitle: 'text-warning-800',\r\n\t\tmessage: 'text-warning-700',\r\n\t\tcloseButton: 'text-warning-600 hover:text-warning-800',\r\n\t\ticon: 'warning'\r\n\t}\r\n};\r\n\r\nexport default {\r\n\tname: 'FToast',\r\n\tcomponents: {\r\n\t\tFIcon,\r\n\t\tFTypography,\r\n\t\tFButton\r\n\t},\r\n\tprops: {\r\n\t\t/**\r\n\t\t * Type de toast (success, error, info, warning)\r\n\t\t */\r\n\t\tvariant: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'info',\r\n\t\t\tvalidator: (value) =>\r\n\t\t\t\t['success', 'error', 'info', 'warning'].includes(value)\r\n\t\t},\r\n\t\t/**\r\n\t\t * Titre du toast\r\n\t\t */\r\n\t\ttitle: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: ''\r\n\t\t},\r\n\t\t/**\r\n\t\t * Message du toast\r\n\t\t */\r\n\t\tmessage: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: ''\r\n\t\t},\r\n\t\t/**\r\n\t\t * Afficher le bouton de fermeture\r\n\t\t */\r\n\t\tclosable: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: true\r\n\t\t},\r\n\t\t/**\r\n\t\t * Durée d'affichage en millisecondes (0 = pas de fermeture automatique)\r\n\t\t */\r\n\t\tduration: {\r\n\t\t\ttype: Number,\r\n\t\t\tdefault: 5000\r\n\t\t},\r\n\t\t/**\r\n\t\t * Position du toast (utilisé pour l'animation)\r\n\t\t */\r\n\t\tposition: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'top-right',\r\n\t\t\tvalidator: (value) =>\r\n\t\t\t\t[\r\n\t\t\t\t\t'top-left',\r\n\t\t\t\t\t'top-center',\r\n\t\t\t\t\t'top-right',\r\n\t\t\t\t\t'bottom-left',\r\n\t\t\t\t\t'bottom-center',\r\n\t\t\t\t\t'bottom-right'\r\n\t\t\t\t].includes(value)\r\n\t\t}\r\n\t},\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tisVisible: true,\r\n\t\t\ttimer: null,\r\n\t\t\tremainingTime: this.duration,\r\n\t\t\tstartTime: null,\r\n\t\t\tpausedAt: null\r\n\t\t};\r\n\t},\r\n\tcomputed: {\r\n\t\tvariantStyles() {\r\n\t\t\treturn VARIANT_STYLES[this.variant];\r\n\t\t},\r\n\t\ttoastClasses() {\r\n\t\t\tconst baseClasses =\r\n\t\t\t\t'flex items-start gap-3 p-4 rounded-lg border shadow-lg min-w-[320px] max-w-md';\r\n\t\t\treturn `${baseClasses} ${this.variantStyles.container}`;\r\n\t\t},\r\n\t\ttitleClasses() {\r\n\t\t\treturn this.variantStyles.title;\r\n\t\t},\r\n\t\tmessageClasses() {\r\n\t\t\treturn this.variantStyles.message;\r\n\t\t},\r\n\t\tcloseButtonClasses() {\r\n\t\t\treturn `flex-shrink-0 ${this.variantStyles.closeButton}`;\r\n\t\t},\r\n\t\ticonName() {\r\n\t\t\treturn this.variantStyles.icon;\r\n\t\t},\r\n\t\ttransitionName() {\r\n\t\t\tif (this.position.includes('left')) {\r\n\t\t\t\treturn 'toast-slide-left';\r\n\t\t\t} else if (this.position.includes('right')) {\r\n\t\t\t\treturn 'toast-slide-right';\r\n\t\t\t}\r\n\t\t\treturn 'toast-slide-down';\r\n\t\t}\r\n\t},\r\n\tmounted() {\r\n\t\tif (this.duration > 0) {\r\n\t\t\tthis.startTimer();\r\n\t\t}\r\n\t},\r\n\tbeforeDestroy() {\r\n\t\tthis.clearTimer();\r\n\t},\r\n\tmethods: {\r\n\t\tstartTimer() {\r\n\t\t\tthis.clearTimer();\r\n\t\t\tthis.startTime = Date.now();\r\n\t\t\tthis.timer = setTimeout(() => {\r\n\t\t\t\tthis.handleClose();\r\n\t\t\t}, this.remainingTime);\r\n\t\t},\r\n\t\tclearTimer() {\r\n\t\t\tif (this.timer) {\r\n\t\t\t\tclearTimeout(this.timer);\r\n\t\t\t\tthis.timer = null;\r\n\t\t\t}\r\n\t\t},\r\n\t\tpauseTimer() {\r\n\t\t\tif (this.timer && this.duration > 0 && this.startTime) {\r\n\t\t\t\tconst elapsed = Date.now() - this.startTime;\r\n\t\t\t\tthis.remainingTime = Math.max(0, this.remainingTime - elapsed);\r\n\t\t\t\tthis.clearTimer();\r\n\t\t\t\tthis.pausedAt = Date.now();\r\n\t\t\t}\r\n\t\t},\r\n\t\tresumeTimer() {\r\n\t\t\tif (this.pausedAt && this.duration > 0 && this.remainingTime > 0) {\r\n\t\t\t\tthis.pausedAt = null;\r\n\t\t\t\tthis.startTimer();\r\n\t\t\t} else if (this.pausedAt && this.remainingTime <= 0) {\r\n\t\t\t\tthis.handleClose();\r\n\t\t\t}\r\n\t\t},\r\n\t\thandleClose() {\r\n\t\t\tthis.isVisible = false;\r\n\t\t\tthis.$emit('close');\r\n\t\t},\r\n\t\tonBeforeEnter(el) {\r\n\t\t\tel.style.opacity = '0';\r\n\t\t},\r\n\t\tonEnter(el, done) {\r\n\t\t\t// Force reflow\r\n\t\t\tvoid el.offsetHeight;\r\n\t\t\tel.style.transition = 'all 0.3s ease-out';\r\n\t\t\tel.style.opacity = '1';\r\n\t\t\tdone();\r\n\t\t},\r\n\t\tonLeave(el, done) {\r\n\t\t\tel.style.transition = 'all 0.3s ease-in';\r\n\t\t\tel.style.opacity = '0';\r\n\t\t\tsetTimeout(done, 300);\r\n\t\t}\r\n\t}\r\n};\r\n</script>\r\n\r\n<style scoped>\r\n.toast-slide-left-enter-active,\r\n.toast-slide-left-leave-active {\r\n\ttransition: all 0.3s ease-out;\r\n}\r\n\r\n.toast-slide-left-enter {\r\n\ttransform: translateX(-100%);\r\n\topacity: 0;\r\n}\r\n\r\n.toast-slide-left-leave-to {\r\n\ttransform: translateX(-100%);\r\n\topacity: 0;\r\n}\r\n\r\n.toast-slide-right-enter-active,\r\n.toast-slide-right-leave-active {\r\n\ttransition: all 0.3s ease-out;\r\n}\r\n\r\n.toast-slide-right-enter {\r\n\ttransform: translateX(100%);\r\n\topacity: 0;\r\n}\r\n\r\n.toast-slide-right-leave-to {\r\n\ttransform: translateX(100%);\r\n\topacity: 0;\r\n}\r\n\r\n.toast-slide-down-enter-active,\r\n.toast-slide-down-leave-active {\r\n\ttransition: all 0.3s ease-out;\r\n}\r\n\r\n.toast-slide-down-enter {\r\n\ttransform: translateY(-100%);\r\n\topacity: 0;\r\n}\r\n\r\n.toast-slide-down-leave-to {\r\n\ttransform: translateY(-100%);\r\n\topacity: 0;\r\n}\r\n</style>\r\n"]}, media: undefined });
-
-  };
+  const __vue_inject_styles__$1$1 = undefined;
   /* scoped */
-  const __vue_scope_id__$c = "data-v-6b99b446";
+  const __vue_scope_id__$1$1 = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$1$1 = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$1$1 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$1$1 = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$e, staticRenderFns: __vue_staticRenderFns__$c },
+    __vue_inject_styles__$1$1,
+    __vue_script__$1$1,
+    __vue_scope_id__$1$1,
+    __vue_is_functional_template__$1$1,
+    __vue_module_identifier__$1$1,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+var script$c = {
+  name: 'DynamicScrollerItem',
+  inject: ['vscrollData', 'vscrollParent', 'vscrollResizeObserver'],
+  props: {
+    // eslint-disable-next-line vue/require-prop-types
+    item: {
+      required: true
+    },
+    watchData: {
+      type: Boolean,
+      default: false
+    },
+    /**
+     * Indicates if the view is actively used to display an item.
+     */
+    active: {
+      type: Boolean,
+      required: true
+    },
+    index: {
+      type: Number,
+      default: undefined
+    },
+    sizeDependencies: {
+      type: [Array, Object],
+      default: null
+    },
+    emitResize: {
+      type: Boolean,
+      default: false
+    },
+    tag: {
+      type: String,
+      default: 'div'
+    }
+  },
+  computed: {
+    id() {
+      if (this.vscrollData.simpleArray) return this.index;
+      // eslint-disable-next-line no-prototype-builtins
+      if (this.item.hasOwnProperty(this.vscrollData.keyField)) return this.item[this.vscrollData.keyField];
+      throw new Error(`keyField '${this.vscrollData.keyField}' not found in your item. You should set a valid keyField prop on your Scroller`);
+    },
+    size() {
+      return this.vscrollData.validSizes[this.id] && this.vscrollData.sizes[this.id] || 0;
+    },
+    finalActive() {
+      return this.active && this.vscrollData.active;
+    }
+  },
+  watch: {
+    watchData: 'updateWatchData',
+    id() {
+      if (!this.size) {
+        this.onDataUpdate();
+      }
+    },
+    finalActive(value) {
+      if (!this.size) {
+        if (value) {
+          if (!this.vscrollParent.$_undefinedMap[this.id]) {
+            this.vscrollParent.$_undefinedSizes++;
+            this.vscrollParent.$_undefinedMap[this.id] = true;
+          }
+        } else {
+          if (this.vscrollParent.$_undefinedMap[this.id]) {
+            this.vscrollParent.$_undefinedSizes--;
+            this.vscrollParent.$_undefinedMap[this.id] = false;
+          }
+        }
+      }
+      if (this.vscrollResizeObserver) {
+        if (value) {
+          this.observeSize();
+        } else {
+          this.unobserveSize();
+        }
+      } else if (value && this.$_pendingVScrollUpdate === this.id) {
+        this.updateSize();
+      }
+    }
+  },
+  created() {
+    if (this.$isServer) return;
+    this.$_forceNextVScrollUpdate = null;
+    this.updateWatchData();
+    if (!this.vscrollResizeObserver) {
+      for (const k in this.sizeDependencies) {
+        this.$watch(() => this.sizeDependencies[k], this.onDataUpdate);
+      }
+      this.vscrollParent.$on('vscroll:update', this.onVscrollUpdate);
+      this.vscrollParent.$on('vscroll:update-size', this.onVscrollUpdateSize);
+    }
+  },
+  mounted() {
+    if (this.vscrollData.active) {
+      this.updateSize();
+      this.observeSize();
+    }
+  },
+  beforeDestroy() {
+    this.vscrollParent.$off('vscroll:update', this.onVscrollUpdate);
+    this.vscrollParent.$off('vscroll:update-size', this.onVscrollUpdateSize);
+    this.unobserveSize();
+  },
+  methods: {
+    updateSize() {
+      if (this.finalActive) {
+        if (this.$_pendingSizeUpdate !== this.id) {
+          this.$_pendingSizeUpdate = this.id;
+          this.$_forceNextVScrollUpdate = null;
+          this.$_pendingVScrollUpdate = null;
+          this.computeSize(this.id);
+        }
+      } else {
+        this.$_forceNextVScrollUpdate = this.id;
+      }
+    },
+    updateWatchData() {
+      if (this.watchData && !this.vscrollResizeObserver) {
+        this.$_watchData = this.$watch('item', () => {
+          this.onDataUpdate();
+        }, {
+          deep: true
+        });
+      } else if (this.$_watchData) {
+        this.$_watchData();
+        this.$_watchData = null;
+      }
+    },
+    onVscrollUpdate({
+      force
+    }) {
+      // If not active, sechedule a size update when it becomes active
+      if (!this.finalActive && force) {
+        this.$_pendingVScrollUpdate = this.id;
+      }
+      if (this.$_forceNextVScrollUpdate === this.id || force || !this.size) {
+        this.updateSize();
+      }
+    },
+    onDataUpdate() {
+      this.updateSize();
+    },
+    computeSize(id) {
+      this.$nextTick(() => {
+        if (this.id === id) {
+          const width = this.$el.offsetWidth;
+          const height = this.$el.offsetHeight;
+          this.applySize(width, height);
+        }
+        this.$_pendingSizeUpdate = null;
+      });
+    },
+    applySize(width, height) {
+      const size = ~~(this.vscrollParent.direction === 'vertical' ? height : width);
+      if (size && this.size !== size) {
+        if (this.vscrollParent.$_undefinedMap[this.id]) {
+          this.vscrollParent.$_undefinedSizes--;
+          this.vscrollParent.$_undefinedMap[this.id] = undefined;
+        }
+        this.$set(this.vscrollData.sizes, this.id, size);
+        this.$set(this.vscrollData.validSizes, this.id, true);
+        if (this.emitResize) this.$emit('resize', this.id);
+      }
+    },
+    observeSize() {
+      if (!this.vscrollResizeObserver || !this.$el.parentNode) return;
+      this.vscrollResizeObserver.observe(this.$el.parentNode);
+      this.$el.parentNode.addEventListener('resize', this.onResize);
+    },
+    unobserveSize() {
+      if (!this.vscrollResizeObserver) return;
+      this.vscrollResizeObserver.unobserve(this.$el.parentNode);
+      this.$el.parentNode.removeEventListener('resize', this.onResize);
+    },
+    onResize(event) {
+      const {
+        width,
+        height
+      } = event.detail.contentRect;
+      this.applySize(width, height);
+    }
+  },
+  render(h) {
+    return h(this.tag, this.$slots.default);
+  }
+};
+
+/* script */
+const __vue_script__$c = script$c;
+
+/* template */
+
+  /* style */
+  const __vue_inject_styles__$c = undefined;
+  /* scoped */
+  const __vue_scope_id__$c = undefined;
   /* module identifier */
   const __vue_module_identifier__$c = undefined;
   /* functional template */
-  const __vue_is_functional_template__$c = false;
+  const __vue_is_functional_template__$c = undefined;
+  /* style inject */
+  
   /* style inject SSR */
   
   /* style inject shadow dom */
@@ -7288,18 +9133,145 @@ __vue_render__$e._withStripped = true;
 
   
   const __vue_component__$c = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$e, staticRenderFns: __vue_staticRenderFns__$c },
+    {},
     __vue_inject_styles__$c,
     __vue_script__$c,
     __vue_scope_id__$c,
     __vue_is_functional_template__$c,
     __vue_module_identifier__$c,
     false,
-    createInjector,
+    undefined,
     undefined,
     undefined
   );
 
+function registerComponents(Vue, prefix) {
+  Vue.component(`${prefix}recycle-scroller`, __vue_component__$2$1);
+  Vue.component(`${prefix}RecycleScroller`, __vue_component__$2$1);
+  Vue.component(`${prefix}dynamic-scroller`, __vue_component__$1$1);
+  Vue.component(`${prefix}DynamicScroller`, __vue_component__$1$1);
+  Vue.component(`${prefix}dynamic-scroller-item`, __vue_component__$c);
+  Vue.component(`${prefix}DynamicScrollerItem`, __vue_component__$c);
+}
+const plugin = {
+  // eslint-disable-next-line no-undef
+  version: "1.1.2",
+  install(Vue, options) {
+    const finalOptions = Object.assign({}, {
+      installComponents: true,
+      componentsPrefix: ''
+    }, options);
+    for (const key in finalOptions) {
+      if (typeof finalOptions[key] !== 'undefined') {
+        config[key] = finalOptions[key];
+      }
+    }
+    if (finalOptions.installComponents) {
+      registerComponents(Vue, finalOptions.componentsPrefix);
+    }
+  }
+};
+
+// Auto-install
+let GlobalVue = null;
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+  GlobalVue.use(plugin);
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -7420,12 +9392,13 @@ __vue_render__$e._withStripped = true;
 var script$b = {
 	name: 'FActivityFeed',
 	components: {
-		FListItem: __vue_component__$h,
-		FEmptyState: __vue_component__$m,
-		FTypography: __vue_component__$r,
-		FIcon: __vue_component__$x,
-		FBadge: __vue_component__$B,
-		FLoader: __vue_component__$v
+		FListItem: __vue_component__$i,
+		FEmptyState: __vue_component__$n,
+		FTypography: __vue_component__$s,
+		FIcon: __vue_component__$y,
+		FBadge: __vue_component__$C,
+		FLoader: __vue_component__$w,
+		RecycleScroller: __vue_component__$2$1
 	},
 	props: {
 		/**
@@ -7592,6 +9565,30 @@ var script$b = {
 		loadingLabel: {
 			type: String,
 			default: 'Chargement en cours'
+		},
+		/**
+		 * Enable virtualization for large event lists (improves performance with 1000+ events)
+		 * When enabled, only visible events are rendered.
+		 */
+		virtual: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Height of each virtualized event in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualItemHeight: {
+			type: Number,
+			default: 100
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 600
 		}
 	},
 	data() {
@@ -7798,7 +9795,7 @@ var __vue_render__$d = function () {
           )
         : _vm._e(),
       _vm._v(" "),
-      _vm.sortedEvents.length > 0
+      _vm.sortedEvents.length > 0 && !_vm.virtual
         ? _c(
             "div",
             { class: _vm.listClasses },
@@ -8012,6 +10009,262 @@ var __vue_render__$d = function () {
             }),
             0
           )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.sortedEvents.length > 0 && _vm.virtual
+        ? _c(
+            "div",
+            { class: _vm.listClasses },
+            [
+              _c("RecycleScroller", {
+                staticClass: "scroller",
+                style: { height: _vm.virtualHeight + "px" },
+                attrs: {
+                  items: _vm.sortedEvents,
+                  "item-size": _vm.virtualItemHeight,
+                  "key-field": _vm.eventKey,
+                  buffer: 200,
+                },
+                scopedSlots: _vm._u(
+                  [
+                    {
+                      key: "default",
+                      fn: function (ref) {
+                        var event = ref.item;
+                        var index = ref.index;
+                        return [
+                          _c("div", { class: _vm.eventContainerClasses }, [
+                            _vm.showTimeline
+                              ? _c("div", { class: _vm.timelineClasses }, [
+                                  _c(
+                                    "div",
+                                    { class: _vm.timelineDotClasses(event) },
+                                    [
+                                      _vm.getEventIcon(event)
+                                        ? _c("f-icon", {
+                                            class: _vm.timelineIconClasses,
+                                            attrs: {
+                                              name: _vm.getEventIcon(event),
+                                              size: "xs",
+                                            },
+                                          })
+                                        : _vm._e(),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  index < _vm.sortedEvents.length - 1
+                                    ? _c("div", {
+                                        class: _vm.timelineLineClasses,
+                                      })
+                                    : _vm._e(),
+                                ])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { class: _vm.eventContentClasses },
+                              [
+                                _vm._t(
+                                  "event-" + event.type,
+                                  function () {
+                                    return [
+                                      _c("f-list-item", {
+                                        attrs: {
+                                          title: _vm.getEventTitle(event),
+                                          subtitle: _vm.getEventSubtitle(event),
+                                          clickable: _vm.clickable,
+                                          truncate: _vm.truncateContent,
+                                        },
+                                        on: {
+                                          click: function ($event) {
+                                            return _vm.handleEventClick(event)
+                                          },
+                                        },
+                                        scopedSlots: _vm._u(
+                                          [
+                                            {
+                                              key: "left",
+                                              fn: function () {
+                                                return [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      class:
+                                                        _vm.eventIconContainerClasses(
+                                                          event
+                                                        ),
+                                                    },
+                                                    [
+                                                      _c("f-icon", {
+                                                        attrs: {
+                                                          name: _vm.getEventIcon(
+                                                            event
+                                                          ),
+                                                          size: _vm.iconSize,
+                                                        },
+                                                      }),
+                                                    ],
+                                                    1
+                                                  ),
+                                                ]
+                                              },
+                                              proxy: true,
+                                            },
+                                            {
+                                              key: "content",
+                                              fn: function () {
+                                                return [
+                                                  _vm._t(
+                                                    "event-content",
+                                                    function () {
+                                                      return [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            class:
+                                                              _vm.eventBodyClasses,
+                                                          },
+                                                          [
+                                                            event.description
+                                                              ? _c(
+                                                                  "f-typography",
+                                                                  {
+                                                                    class:
+                                                                      _vm.descriptionClasses,
+                                                                    attrs: {
+                                                                      variant:
+                                                                        "body",
+                                                                    },
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                                        _vm._s(
+                                                                          event.description
+                                                                        ) +
+                                                                        "\n\t\t\t\t\t\t\t\t\t\t\t"
+                                                                    ),
+                                                                  ]
+                                                                )
+                                                              : _vm._e(),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                class:
+                                                                  _vm.metadataClasses,
+                                                              },
+                                                              [
+                                                                _vm.getEventBadge(
+                                                                  event
+                                                                )
+                                                                  ? _c(
+                                                                      "f-badge",
+                                                                      {
+                                                                        attrs: {
+                                                                          variant:
+                                                                            _vm.getEventBadge(
+                                                                              event
+                                                                            )
+                                                                              .variant ||
+                                                                            "neutral",
+                                                                          content:
+                                                                            _vm.getEventBadge(
+                                                                              event
+                                                                            )
+                                                                              .label,
+                                                                          size: "sm",
+                                                                        },
+                                                                      }
+                                                                    )
+                                                                  : _vm._e(),
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "f-typography",
+                                                                  {
+                                                                    class:
+                                                                      _vm.timestampClasses,
+                                                                    attrs: {
+                                                                      variant:
+                                                                        "caption",
+                                                                    },
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "f-icon",
+                                                                      {
+                                                                        staticClass:
+                                                                          "mr-1",
+                                                                        attrs: {
+                                                                          name: "clock",
+                                                                          size: "xs",
+                                                                        },
+                                                                      }
+                                                                    ),
+                                                                    _vm._v(
+                                                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                                        _vm._s(
+                                                                          _vm.formatTimestamp(
+                                                                            event.timestamp
+                                                                          )
+                                                                        ) +
+                                                                        "\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                                                    ),
+                                                                  ],
+                                                                  1
+                                                                ),
+                                                              ],
+                                                              1
+                                                            ),
+                                                          ],
+                                                          1
+                                                        ),
+                                                      ]
+                                                    },
+                                                    { event: event }
+                                                  ),
+                                                ]
+                                              },
+                                              proxy: true,
+                                            },
+                                            {
+                                              key: "right",
+                                              fn: function () {
+                                                return [
+                                                  _vm._t(
+                                                    "event-actions",
+                                                    null,
+                                                    { event: event }
+                                                  ),
+                                                ]
+                                              },
+                                              proxy: true,
+                                            },
+                                          ],
+                                          null,
+                                          true
+                                        ),
+                                      }),
+                                    ]
+                                  },
+                                  { event: event, index: index }
+                                ),
+                              ],
+                              2
+                            ),
+                          ]),
+                        ]
+                      },
+                    },
+                  ],
+                  null,
+                  true
+                ),
+              }),
+            ],
+            1
+          )
         : !_vm.loading
         ? _c("f-empty-state", {
             attrs: {
@@ -8075,7 +10328,7 @@ __vue_render__$d._withStripped = true;
   
 
   
-  const __vue_component__$b = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$b = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$d, staticRenderFns: __vue_staticRenderFns__$b },
     __vue_inject_styles__$b,
     __vue_script__$b,
@@ -8155,7 +10408,7 @@ __vue_render__$c._withStripped = true;
   
 
   
-  const __vue_component__$a = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$a = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$c, staticRenderFns: __vue_staticRenderFns__$a },
     __vue_inject_styles__$a,
     __vue_script__$a,
@@ -8290,17 +10543,64 @@ __vue_render__$c._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var script$9 = {
 	name: 'FDataTable',
 	components: {
-		FSearchBar: __vue_component__$i,
-		FPagination: __vue_component__$g,
-		FEmptyState: __vue_component__$m,
-		FCheckbox: __vue_component__$z,
-		FIcon: __vue_component__$x,
-		FLoader: __vue_component__$v
+		FSearchBar: __vue_component__$j,
+		FPagination: __vue_component__$h,
+		FEmptyState: __vue_component__$n,
+		FCheckbox: __vue_component__$A,
+		FIcon: __vue_component__$y,
+		FLoader: __vue_component__$w,
+		RecycleScroller: __vue_component__$2$1
 	},
 	props: {
 		/**
@@ -8467,6 +10767,30 @@ var script$9 = {
 		bordered: {
 			type: Boolean,
 			default: false
+		},
+		/**
+		 * Enable virtualization for large datasets (improves performance with 1000+ rows)
+		 * When enabled, only visible rows are rendered. Pagination is automatically disabled.
+		 */
+		virtual: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Height of each virtualized row in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualItemHeight: {
+			type: Number,
+			default: null
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 500
 		}
 	},
 	data() {
@@ -8535,7 +10859,7 @@ var script$9 = {
 			return this.searchable || this.$slots.actions;
 		},
 		showFooter() {
-			return this.paginated || this.selectable;
+			return this.effectivePaginated || this.selectable;
 		},
 		// Filter data based on search query (client-side only)
 		filteredData() {
@@ -8584,12 +10908,12 @@ var script$9 = {
 		},
 		// Total pages
 		totalPages() {
-			if (!this.paginated) return 1;
+			if (!this.effectivePaginated) return 1;
 			return Math.max(1, Math.ceil(this.computedTotalItems / this.perPage));
 		},
 		// Data for current page (client-side pagination only)
 		paginatedData() {
-			if (this.serverMode || !this.paginated) {
+			if (this.serverMode || !this.effectivePaginated) {
 				return this.processedData;
 			}
 			const start = (this.internalPage - 1) * this.perPage;
@@ -8598,7 +10922,7 @@ var script$9 = {
 		},
 		// Pagination info text
 		paginationInfo() {
-			if (!this.paginated) {
+			if (!this.effectivePaginated) {
 				return `${this.computedTotalItems} élément(s)`;
 			}
 			const start = Math.min(
@@ -8624,6 +10948,23 @@ var script$9 = {
 		isAllSelected() {
 			if (this.paginatedData.length === 0) return false;
 			return this.paginatedData.every((row) => this.isRowSelected(row));
+		},
+		// Calculate virtual item height based on size
+		computedVirtualItemHeight() {
+			if (this.virtualItemHeight !== null) {
+				return this.virtualItemHeight;
+			}
+			// Auto-calculate based on size prop
+			const sizeHeights = {
+				small: 40,
+				medium: 52,
+				large: 64
+			};
+			return sizeHeights[this.size] || sizeHeights.medium;
+		},
+		// When virtual mode is enabled, don't paginate
+		effectivePaginated() {
+			return this.virtual ? false : this.paginated;
 		}
 	},
 	watch: {
@@ -8886,84 +11227,205 @@ var __vue_render__$b = function () {
                 ),
               ]),
               _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.paginatedData, function (row, rowIndex) {
-                  return _c(
-                    "tr",
-                    {
-                      key: _vm.getRowKey(row, rowIndex),
-                      class: _vm.getRowClasses(row),
-                      on: {
-                        click: function ($event) {
-                          return _vm.handleRowClick(row)
-                        },
-                      },
-                    },
-                    [
-                      _vm.selectable
-                        ? _c(
-                            "td",
-                            {
-                              class: _vm.cellClasses,
-                              attrs: { "data-label": "" },
+              !_vm.virtual
+                ? _c(
+                    "tbody",
+                    _vm._l(_vm.paginatedData, function (row, rowIndex) {
+                      return _c(
+                        "tr",
+                        {
+                          key: _vm.getRowKey(row, rowIndex),
+                          class: _vm.getRowClasses(row),
+                          on: {
+                            click: function ($event) {
+                              return _vm.handleRowClick(row)
                             },
-                            [
-                              _c("f-checkbox", {
-                                attrs: { checked: _vm.isRowSelected(row) },
-                                on: {
-                                  change: function ($event) {
-                                    return _vm.handleRowSelect(row, $event)
+                          },
+                        },
+                        [
+                          _vm.selectable
+                            ? _c(
+                                "td",
+                                {
+                                  class: _vm.cellClasses,
+                                  attrs: { "data-label": "" },
+                                },
+                                [
+                                  _c("f-checkbox", {
+                                    attrs: { checked: _vm.isRowSelected(row) },
+                                    on: {
+                                      change: function ($event) {
+                                        return _vm.handleRowSelect(row, $event)
+                                      },
+                                      click: function ($event) {
+                                        $event.stopPropagation();
+                                      },
+                                    },
+                                  }),
+                                ],
+                                1
+                              )
+                            : _vm._e(),
+                          _vm._v(" "),
+                          _vm._l(_vm.columns, function (column) {
+                            return _c(
+                              "td",
+                              {
+                                key: column.key,
+                                class: _vm.getCellClasses(column),
+                                attrs: { "data-label": column.label },
+                              },
+                              [
+                                _vm._t(
+                                  "cell-" + column.key,
+                                  function () {
+                                    return [
+                                      _vm._v(
+                                        "\n\t\t\t\t\t\t\t" +
+                                          _vm._s(
+                                            _vm.getCellValue(row, column.key)
+                                          ) +
+                                          "\n\t\t\t\t\t\t"
+                                      ),
+                                    ]
                                   },
+                                  {
+                                    value: _vm.getCellValue(row, column.key),
+                                    row: row,
+                                    column: column,
+                                  }
+                                ),
+                              ],
+                              2
+                            )
+                          }),
+                        ],
+                        2
+                      )
+                    }),
+                    0
+                  )
+                : _vm._e(),
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.virtual && (_vm.processedData.length > 0 || _vm.loading)
+          ? _c(
+              "div",
+              { staticClass: "virtual-table-body" },
+              [
+                _c("RecycleScroller", {
+                  staticClass: "scroller",
+                  style: { height: _vm.virtualHeight + "px" },
+                  attrs: {
+                    items: _vm.paginatedData,
+                    "item-size": _vm.computedVirtualItemHeight,
+                    "key-field": _vm.rowKey,
+                    buffer: 200,
+                  },
+                  scopedSlots: _vm._u(
+                    [
+                      {
+                        key: "default",
+                        fn: function (ref) {
+                          var row = ref.item;
+                          return [
+                            _c(
+                              "div",
+                              {
+                                class: ["virtual-row", _vm.getRowClasses(row)],
+                                on: {
                                   click: function ($event) {
-                                    $event.stopPropagation();
+                                    return _vm.handleRowClick(row)
                                   },
                                 },
-                              }),
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm._l(_vm.columns, function (column) {
-                        return _c(
-                          "td",
-                          {
-                            key: column.key,
-                            class: _vm.getCellClasses(column),
-                            attrs: { "data-label": column.label },
-                          },
-                          [
-                            _vm._t(
-                              "cell-" + column.key,
-                              function () {
-                                return [
-                                  _vm._v(
-                                    "\n\t\t\t\t\t\t\t" +
-                                      _vm._s(
-                                        _vm.getCellValue(row, column.key)
-                                      ) +
-                                      "\n\t\t\t\t\t\t"
-                                  ),
-                                ]
                               },
-                              {
-                                value: _vm.getCellValue(row, column.key),
-                                row: row,
-                                column: column,
-                              }
+                              [
+                                _vm.selectable
+                                  ? _c(
+                                      "div",
+                                      {
+                                        class: [
+                                          "virtual-cell",
+                                          _vm.cellClasses,
+                                        ],
+                                      },
+                                      [
+                                        _c("f-checkbox", {
+                                          attrs: {
+                                            checked: _vm.isRowSelected(row),
+                                          },
+                                          on: {
+                                            change: function ($event) {
+                                              return _vm.handleRowSelect(
+                                                row,
+                                                $event
+                                              )
+                                            },
+                                            click: function ($event) {
+                                              $event.stopPropagation();
+                                            },
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    )
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _vm._l(_vm.columns, function (column) {
+                                  return _c(
+                                    "div",
+                                    {
+                                      key: column.key,
+                                      class: [
+                                        "virtual-cell",
+                                        _vm.getCellClasses(column),
+                                      ],
+                                    },
+                                    [
+                                      _vm._t(
+                                        "cell-" + column.key,
+                                        function () {
+                                          return [
+                                            _vm._v(
+                                              "\n\t\t\t\t\t\t\t\t" +
+                                                _vm._s(
+                                                  _vm.getCellValue(
+                                                    row,
+                                                    column.key
+                                                  )
+                                                ) +
+                                                "\n\t\t\t\t\t\t\t"
+                                            ),
+                                          ]
+                                        },
+                                        {
+                                          value: _vm.getCellValue(
+                                            row,
+                                            column.key
+                                          ),
+                                          row: row,
+                                          column: column,
+                                        }
+                                      ),
+                                    ],
+                                    2
+                                  )
+                                }),
+                              ],
+                              2
                             ),
-                          ],
-                          2
-                        )
-                      }),
+                          ]
+                        },
+                      },
                     ],
-                    2
-                  )
+                    null,
+                    true
+                  ),
                 }),
-                0
-              ),
-            ])
+              ],
+              1
+            )
           : _vm._e(),
         _vm._v(" "),
         !_vm.loading && _vm.processedData.length === 0
@@ -9008,7 +11470,7 @@ var __vue_render__$b = function () {
                   ]),
             ]),
             _vm._v(" "),
-            _vm.paginated && _vm.totalPages > 1
+            _vm.effectivePaginated && _vm.totalPages > 1
               ? _c("f-pagination", {
                   attrs: {
                     "total-pages": _vm.totalPages,
@@ -9037,11 +11499,11 @@ __vue_render__$b._withStripped = true;
   /* style */
   const __vue_inject_styles__$9 = function (inject) {
     if (!inject) return
-    inject("data-v-15bfab2f_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* Mobile Card View - transforms table rows into cards on small screens */\n@media (max-width: 640px) {\r\n\t/* Hide table header on mobile */\ntable thead[data-v-15bfab2f] {\r\n\t\tdisplay: none;\n}\r\n\r\n\t/* Make table body a flex container for cards */\ntable tbody[data-v-15bfab2f] {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tgap: 0.75rem;\n}\r\n\r\n\t/* Transform each row into a card */\ntable tbody tr[data-v-15bfab2f] {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: white;\r\n\t\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\r\n\t\tborder-radius: 0.5rem;\r\n\t\tpadding: 0.75rem;\r\n\t\tbox-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);\n}\r\n\r\n\t/* Style each cell as a row in the card */\ntable tbody tr td[data-v-15bfab2f] {\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: space-between;\r\n\t\talign-items: flex-start;\r\n\t\tpadding: 0.5rem 0;\r\n\t\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\r\n\t\ttext-align: right;\n}\r\n\r\n\t/* Remove border from last cell */\ntable tbody tr td[data-v-15bfab2f]:last-child {\r\n\t\tborder-bottom: none;\n}\r\n\r\n\t/* Display column label before cell content */\ntable tbody tr td[data-v-15bfab2f]::before {\r\n\t\tcontent: attr(data-label);\r\n\t\tfont-weight: 600;\r\n\t\tcolor: var(--color-neutral-700, #374151);\r\n\t\ttext-align: left;\r\n\t\tflex-shrink: 0;\r\n\t\tmargin-right: 1rem;\n}\r\n\r\n\t/* Hide empty labels (for checkbox column) */\ntable tbody tr td[data-label=''][data-v-15bfab2f]::before {\r\n\t\tdisplay: none;\n}\r\n\r\n\t/* Checkbox cell styling */\ntable tbody tr td[data-label=''][data-v-15bfab2f] {\r\n\t\tjustify-content: flex-start;\r\n\t\tborder-bottom: 1px solid var(--color-neutral-200, #e5e7eb);\r\n\t\tmargin-bottom: 0.25rem;\r\n\t\tpadding-bottom: 0.75rem;\n}\r\n\r\n\t/* Ensure table is full width */\ntable[data-v-15bfab2f] {\r\n\t\twidth: 100%;\n}\n}\r\n", map: {"version":3,"sources":["/home/web/github/hugo/pyreweb/fabric/src/components/organisms/FDataTable/FDataTable.vue"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AA8lBA,yEAAA;AACA;CACA,gCAAA;AACA;EACA,aAAA;AACA;;CAEA,+CAAA;AACA;EACA,aAAA;EACA,sBAAA;EACA,YAAA;AACA;;CAEA,mCAAA;AACA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mDAAA;EACA,qBAAA;EACA,gBAAA;EACA,0CAAA;AACA;;CAEA,yCAAA;AACA;EACA,aAAA;EACA,8BAAA;EACA,uBAAA;EACA,iBAAA;EACA,0DAAA;EACA,iBAAA;AACA;;CAEA,iCAAA;AACA;EACA,mBAAA;AACA;;CAEA,6CAAA;AACA;EACA,yBAAA;EACA,gBAAA;EACA,wCAAA;EACA,gBAAA;EACA,cAAA;EACA,kBAAA;AACA;;CAEA,4CAAA;AACA;EACA,aAAA;AACA;;CAEA,0BAAA;AACA;EACA,2BAAA;EACA,0DAAA;EACA,sBAAA;EACA,uBAAA;AACA;;CAEA,+BAAA;AACA;EACA,WAAA;AACA;AACA","file":"FDataTable.vue","sourcesContent":["<template>\r\n\t<div :class=\"containerClasses\">\r\n\t\t<!-- Toolbar section: Search and Actions -->\r\n\t\t<div v-if=\"showToolbar\" :class=\"toolbarClasses\">\r\n\t\t\t<div class=\"flex-1\">\r\n\t\t\t\t<f-search-bar\r\n\t\t\t\t\tv-if=\"searchable\"\r\n\t\t\t\t\tv-model=\"searchQuery\"\r\n\t\t\t\t\t:placeholder=\"searchPlaceholder\"\r\n\t\t\t\t\t:size=\"size\"\r\n\t\t\t\t\t:disabled=\"loading\"\r\n\t\t\t\t\t@search=\"handleSearch\"\r\n\t\t\t\t/>\r\n\t\t\t</div>\r\n\t\t\t<div v-if=\"$slots.actions\" class=\"flex-shrink-0\">\r\n\t\t\t\t<slot name=\"actions\" :selected-items=\"selectedItems\" />\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t\t<!-- Table wrapper -->\r\n\t\t<div :class=\"tableWrapperClasses\">\r\n\t\t\t<!-- Loading overlay -->\r\n\t\t\t<div v-if=\"loading\" :class=\"loadingOverlayClasses\">\r\n\t\t\t\t<f-loader size=\"large\" />\r\n\t\t\t</div>\r\n\r\n\t\t\t<!-- Table -->\r\n\t\t\t<table v-if=\"processedData.length > 0 || loading\" :class=\"tableClasses\">\r\n\t\t\t\t<thead>\r\n\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t<!-- Selection checkbox column -->\r\n\t\t\t\t\t\t<th v-if=\"selectable\" :class=\"headerCellClasses\">\r\n\t\t\t\t\t\t\t<f-checkbox :checked=\"isAllSelected\" @change=\"handleSelectAll\" />\r\n\t\t\t\t\t\t</th>\r\n\t\t\t\t\t\t<!-- Data columns -->\r\n\t\t\t\t\t\t<th\r\n\t\t\t\t\t\t\tv-for=\"column in columns\"\r\n\t\t\t\t\t\t\t:key=\"column.key\"\r\n\t\t\t\t\t\t\t:class=\"getHeaderCellClasses(column)\"\r\n\t\t\t\t\t\t\t@click=\"column.sortable !== false && handleSort(column.key)\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t<div class=\"flex items-center gap-1\">\r\n\t\t\t\t\t\t\t\t<span>{{ column.label }}</span>\r\n\t\t\t\t\t\t\t\t<f-icon\r\n\t\t\t\t\t\t\t\t\tv-if=\"column.sortable !== false\"\r\n\t\t\t\t\t\t\t\t\t:name=\"getSortIcon(column.key)\"\r\n\t\t\t\t\t\t\t\t\tsize=\"sm\"\r\n\t\t\t\t\t\t\t\t\t:class=\"getSortIconClasses(column.key)\"\r\n\t\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</th>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</thead>\r\n\t\t\t\t<tbody>\r\n\t\t\t\t\t<tr\r\n\t\t\t\t\t\tv-for=\"(row, rowIndex) in paginatedData\"\r\n\t\t\t\t\t\t:key=\"getRowKey(row, rowIndex)\"\r\n\t\t\t\t\t\t:class=\"getRowClasses(row)\"\r\n\t\t\t\t\t\t@click=\"handleRowClick(row)\"\r\n\t\t\t\t\t>\r\n\t\t\t\t\t\t<!-- Selection checkbox -->\r\n\t\t\t\t\t\t<td v-if=\"selectable\" :class=\"cellClasses\" data-label=\"\">\r\n\t\t\t\t\t\t\t<f-checkbox\r\n\t\t\t\t\t\t\t\t:checked=\"isRowSelected(row)\"\r\n\t\t\t\t\t\t\t\t@change=\"handleRowSelect(row, $event)\"\r\n\t\t\t\t\t\t\t\t@click.stop\r\n\t\t\t\t\t\t\t/>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t<!-- Data cells -->\r\n\t\t\t\t\t\t<td\r\n\t\t\t\t\t\t\tv-for=\"column in columns\"\r\n\t\t\t\t\t\t\t:key=\"column.key\"\r\n\t\t\t\t\t\t\t:class=\"getCellClasses(column)\"\r\n\t\t\t\t\t\t\t:data-label=\"column.label\"\r\n\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t<slot\r\n\t\t\t\t\t\t\t\t:name=\"'cell-' + column.key\"\r\n\t\t\t\t\t\t\t\t:value=\"getCellValue(row, column.key)\"\r\n\t\t\t\t\t\t\t\t:row=\"row\"\r\n\t\t\t\t\t\t\t\t:column=\"column\"\r\n\t\t\t\t\t\t\t>\r\n\t\t\t\t\t\t\t\t{{ getCellValue(row, column.key) }}\r\n\t\t\t\t\t\t\t</slot>\r\n\t\t\t\t\t\t</td>\r\n\t\t\t\t\t</tr>\r\n\t\t\t\t</tbody>\r\n\t\t\t</table>\r\n\r\n\t\t\t<!-- Empty state -->\r\n\t\t\t<f-empty-state\r\n\t\t\t\tv-if=\"!loading && processedData.length === 0\"\r\n\t\t\t\t:icon=\"emptyIcon\"\r\n\t\t\t\t:title=\"emptyTitle\"\r\n\t\t\t\t:description=\"emptyDescription\"\r\n\t\t\t\t:action-label=\"emptyActionLabel\"\r\n\t\t\t\t@action=\"$emit('empty-action')\"\r\n\t\t\t/>\r\n\t\t</div>\r\n\r\n\t\t<!-- Footer section: Info and Pagination -->\r\n\t\t<div v-if=\"showFooter\" :class=\"footerClasses\">\r\n\t\t\t<div :class=\"infoClasses\">\r\n\t\t\t\t<span v-if=\"selectable && selectedItems.length > 0\">\r\n\t\t\t\t\t{{ selectedItems.length }} élément(s) sélectionné(s) sur\r\n\t\t\t\t\t{{ totalItems }}\r\n\t\t\t\t</span>\r\n\t\t\t\t<span v-else>\r\n\t\t\t\t\t{{ paginationInfo }}\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t\t<f-pagination\r\n\t\t\t\tv-if=\"paginated && totalPages > 1\"\r\n\t\t\t\tv-model=\"internalPage\"\r\n\t\t\t\t:total-pages=\"totalPages\"\r\n\t\t\t\t:size=\"size\"\r\n\t\t\t\t:show-labels=\"false\"\r\n\t\t\t\t@change=\"handlePageChange\"\r\n\t\t\t/>\r\n\t\t</div>\r\n\t</div>\r\n</template>\r\n\r\n<script>\r\nimport FSearchBar from '../../molecules/FSearchBar/FSearchBar.vue';\r\nimport FPagination from '../../molecules/FPagination/FPagination.vue';\r\nimport FEmptyState from '../../molecules/FEmptyState/FEmptyState.vue';\r\nimport FCheckbox from '../../atoms/FCheckbox/FCheckbox.vue';\r\nimport FIcon from '../../atoms/FIcon/FIcon.vue';\r\nimport FLoader from '../../atoms/FLoader/FLoader.vue';\r\n\r\nexport default {\r\n\tname: 'FDataTable',\r\n\tcomponents: {\r\n\t\tFSearchBar,\r\n\t\tFPagination,\r\n\t\tFEmptyState,\r\n\t\tFCheckbox,\r\n\t\tFIcon,\r\n\t\tFLoader\r\n\t},\r\n\tprops: {\r\n\t\t/**\r\n\t\t * Array of data objects to display\r\n\t\t */\r\n\t\tdata: {\r\n\t\t\ttype: Array,\r\n\t\t\tdefault: () => []\r\n\t\t},\r\n\t\t/**\r\n\t\t * Column definitions\r\n\t\t * Each column: { key: string, label: string, sortable?: boolean, align?: 'left'|'center'|'right' }\r\n\t\t */\r\n\t\tcolumns: {\r\n\t\t\ttype: Array,\r\n\t\t\trequired: true,\r\n\t\t\tvalidator: (columns) => columns.every((col) => col.key && col.label)\r\n\t\t},\r\n\t\t/**\r\n\t\t * Unique key property in data objects\r\n\t\t */\r\n\t\trowKey: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'id'\r\n\t\t},\r\n\t\t/**\r\n\t\t * Enable row selection with checkboxes\r\n\t\t */\r\n\t\tselectable: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t},\r\n\t\t/**\r\n\t\t * Selected row keys (v-model:selected)\r\n\t\t */\r\n\t\tselected: {\r\n\t\t\ttype: Array,\r\n\t\t\tdefault: () => []\r\n\t\t},\r\n\t\t/**\r\n\t\t * Enable search functionality\r\n\t\t */\r\n\t\tsearchable: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t},\r\n\t\t/**\r\n\t\t * Search input placeholder\r\n\t\t */\r\n\t\tsearchPlaceholder: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'Rechercher...'\r\n\t\t},\r\n\t\t/**\r\n\t\t * Enable pagination\r\n\t\t */\r\n\t\tpaginated: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: true\r\n\t\t},\r\n\t\t/**\r\n\t\t * Number of items per page\r\n\t\t */\r\n\t\tperPage: {\r\n\t\t\ttype: Number,\r\n\t\t\tdefault: 10\r\n\t\t},\r\n\t\t/**\r\n\t\t * Current page (v-model:page)\r\n\t\t */\r\n\t\tpage: {\r\n\t\t\ttype: Number,\r\n\t\t\tdefault: 1\r\n\t\t},\r\n\t\t/**\r\n\t\t * Total items count for server-side pagination\r\n\t\t */\r\n\t\ttotalItems: {\r\n\t\t\ttype: Number,\r\n\t\t\tdefault: null\r\n\t\t},\r\n\t\t/**\r\n\t\t * Server mode - data fetching is handled externally\r\n\t\t */\r\n\t\tserverMode: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t},\r\n\t\t/**\r\n\t\t * Loading state\r\n\t\t */\r\n\t\tloading: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t},\r\n\t\t/**\r\n\t\t * Default sort column key\r\n\t\t */\r\n\t\tdefaultSortKey: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: null\r\n\t\t},\r\n\t\t/**\r\n\t\t * Default sort direction\r\n\t\t */\r\n\t\tdefaultSortDirection: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'asc',\r\n\t\t\tvalidator: (value) => ['asc', 'desc'].includes(value)\r\n\t\t},\r\n\t\t/**\r\n\t\t * Component size\r\n\t\t */\r\n\t\tsize: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'medium',\r\n\t\t\tvalidator: (value) => ['small', 'medium', 'large'].includes(value)\r\n\t\t},\r\n\t\t/**\r\n\t\t * Empty state icon\r\n\t\t */\r\n\t\temptyIcon: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'folder'\r\n\t\t},\r\n\t\t/**\r\n\t\t * Empty state title\r\n\t\t */\r\n\t\temptyTitle: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'Aucune donnée'\r\n\t\t},\r\n\t\t/**\r\n\t\t * Empty state description\r\n\t\t */\r\n\t\temptyDescription: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: \"Il n'y a aucun élément à afficher.\"\r\n\t\t},\r\n\t\t/**\r\n\t\t * Empty state action button label\r\n\t\t */\r\n\t\temptyActionLabel: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: ''\r\n\t\t},\r\n\t\t/**\r\n\t\t * Striped row style\r\n\t\t */\r\n\t\tstriped: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t},\r\n\t\t/**\r\n\t\t * Hoverable rows\r\n\t\t */\r\n\t\thoverable: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: true\r\n\t\t},\r\n\t\t/**\r\n\t\t * Bordered table\r\n\t\t */\r\n\t\tbordered: {\r\n\t\t\ttype: Boolean,\r\n\t\t\tdefault: false\r\n\t\t}\r\n\t},\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\tsearchQuery: '',\r\n\t\t\tsortKey: this.defaultSortKey,\r\n\t\t\tsortDirection: this.defaultSortDirection,\r\n\t\t\tinternalPage: this.page,\r\n\t\t\tselectedKeys: [...this.selected]\r\n\t\t};\r\n\t},\r\n\tcomputed: {\r\n\t\tcontainerClasses() {\r\n\t\t\treturn 'flex flex-col gap-4 bg-white rounded-lg';\r\n\t\t},\r\n\t\ttoolbarClasses() {\r\n\t\t\treturn 'flex items-center gap-4 flex-wrap';\r\n\t\t},\r\n\t\ttableWrapperClasses() {\r\n\t\t\tconst baseClasses = 'relative overflow-x-auto';\r\n\t\t\tconst borderClasses = this.bordered\r\n\t\t\t\t? 'border border-neutral-200 rounded-lg'\r\n\t\t\t\t: '';\r\n\t\t\treturn [baseClasses, borderClasses].filter(Boolean).join(' ');\r\n\t\t},\r\n\t\tloadingOverlayClasses() {\r\n\t\t\treturn 'absolute inset-0 bg-white/80 flex items-center justify-center z-10';\r\n\t\t},\r\n\t\ttableClasses() {\r\n\t\t\treturn 'w-full text-left';\r\n\t\t},\r\n\t\theaderCellClasses() {\r\n\t\t\tconst sizeClasses = {\r\n\t\t\t\tsmall: 'px-3 py-2 text-xs',\r\n\t\t\t\tmedium: 'px-4 py-3 text-sm',\r\n\t\t\t\tlarge: 'px-6 py-4 text-base'\r\n\t\t\t};\r\n\t\t\treturn [\r\n\t\t\t\t'font-semibold text-neutral-700 bg-neutral-50 border-b border-neutral-200',\r\n\t\t\t\tsizeClasses[this.size]\r\n\t\t\t].join(' ');\r\n\t\t},\r\n\t\tcellClasses() {\r\n\t\t\tconst sizeClasses = {\r\n\t\t\t\tsmall: 'px-3 py-2 text-xs',\r\n\t\t\t\tmedium: 'px-4 py-3 text-sm',\r\n\t\t\t\tlarge: 'px-6 py-4 text-base'\r\n\t\t\t};\r\n\t\t\treturn [\r\n\t\t\t\t'text-neutral-600 border-b border-neutral-100',\r\n\t\t\t\tsizeClasses[this.size]\r\n\t\t\t].join(' ');\r\n\t\t},\r\n\t\tfooterClasses() {\r\n\t\t\treturn 'flex items-center justify-between gap-4 flex-wrap';\r\n\t\t},\r\n\t\tinfoClasses() {\r\n\t\t\tconst sizeClasses = {\r\n\t\t\t\tsmall: 'text-xs',\r\n\t\t\t\tmedium: 'text-sm',\r\n\t\t\t\tlarge: 'text-base'\r\n\t\t\t};\r\n\t\t\treturn ['text-neutral-500', sizeClasses[this.size]].join(' ');\r\n\t\t},\r\n\t\tshowToolbar() {\r\n\t\t\treturn this.searchable || this.$slots.actions;\r\n\t\t},\r\n\t\tshowFooter() {\r\n\t\t\treturn this.paginated || this.selectable;\r\n\t\t},\r\n\t\t// Filter data based on search query (client-side only)\r\n\t\tfilteredData() {\r\n\t\t\tif (this.serverMode || !this.searchQuery) {\r\n\t\t\t\treturn this.data;\r\n\t\t\t}\r\n\t\t\tconst query = this.searchQuery.toLowerCase();\r\n\t\t\treturn this.data.filter((row) => {\r\n\t\t\t\treturn this.columns.some((column) => {\r\n\t\t\t\t\tconst value = this.getCellValue(row, column.key);\r\n\t\t\t\t\treturn String(value).toLowerCase().includes(query);\r\n\t\t\t\t});\r\n\t\t\t});\r\n\t\t},\r\n\t\t// Sort filtered data (client-side only)\r\n\t\tsortedData() {\r\n\t\t\tif (this.serverMode || !this.sortKey) {\r\n\t\t\t\treturn this.filteredData;\r\n\t\t\t}\r\n\t\t\treturn [...this.filteredData].sort((a, b) => {\r\n\t\t\t\tconst aValue = this.getCellValue(a, this.sortKey);\r\n\t\t\t\tconst bValue = this.getCellValue(b, this.sortKey);\r\n\r\n\t\t\t\tlet comparison = 0;\r\n\t\t\t\tif (aValue === null || aValue === undefined) comparison = 1;\r\n\t\t\t\telse if (bValue === null || bValue === undefined) comparison = -1;\r\n\t\t\t\telse if (typeof aValue === 'string') {\r\n\t\t\t\t\tcomparison = aValue.localeCompare(bValue);\r\n\t\t\t\t} else {\r\n\t\t\t\t\tcomparison = aValue < bValue ? -1 : aValue > bValue ? 1 : 0;\r\n\t\t\t\t}\r\n\r\n\t\t\t\treturn this.sortDirection === 'desc' ? -comparison : comparison;\r\n\t\t\t});\r\n\t\t},\r\n\t\t// Processed data after filtering and sorting\r\n\t\tprocessedData() {\r\n\t\t\treturn this.sortedData;\r\n\t\t},\r\n\t\t// Calculate total items for pagination\r\n\t\tcomputedTotalItems() {\r\n\t\t\tif (this.serverMode && this.totalItems !== null) {\r\n\t\t\t\treturn this.totalItems;\r\n\t\t\t}\r\n\t\t\treturn this.processedData.length;\r\n\t\t},\r\n\t\t// Total pages\r\n\t\ttotalPages() {\r\n\t\t\tif (!this.paginated) return 1;\r\n\t\t\treturn Math.max(1, Math.ceil(this.computedTotalItems / this.perPage));\r\n\t\t},\r\n\t\t// Data for current page (client-side pagination only)\r\n\t\tpaginatedData() {\r\n\t\t\tif (this.serverMode || !this.paginated) {\r\n\t\t\t\treturn this.processedData;\r\n\t\t\t}\r\n\t\t\tconst start = (this.internalPage - 1) * this.perPage;\r\n\t\t\tconst end = start + this.perPage;\r\n\t\t\treturn this.processedData.slice(start, end);\r\n\t\t},\r\n\t\t// Pagination info text\r\n\t\tpaginationInfo() {\r\n\t\t\tif (!this.paginated) {\r\n\t\t\t\treturn `${this.computedTotalItems} élément(s)`;\r\n\t\t\t}\r\n\t\t\tconst start = Math.min(\r\n\t\t\t\t(this.internalPage - 1) * this.perPage + 1,\r\n\t\t\t\tthis.computedTotalItems\r\n\t\t\t);\r\n\t\t\tconst end = Math.min(\r\n\t\t\t\tthis.internalPage * this.perPage,\r\n\t\t\t\tthis.computedTotalItems\r\n\t\t\t);\r\n\t\t\treturn `${start} - ${end} sur ${this.computedTotalItems}`;\r\n\t\t},\r\n\t\t// Set for efficient key lookups\r\n\t\tselectedKeysSet() {\r\n\t\t\treturn new Set(this.selectedKeys);\r\n\t\t},\r\n\t\t// Selection state\r\n\t\tselectedItems() {\r\n\t\t\treturn this.data.filter((row) =>\r\n\t\t\t\tthis.selectedKeysSet.has(this.getRowKey(row))\r\n\t\t\t);\r\n\t\t},\r\n\t\tisAllSelected() {\r\n\t\t\tif (this.paginatedData.length === 0) return false;\r\n\t\t\treturn this.paginatedData.every((row) => this.isRowSelected(row));\r\n\t\t}\r\n\t},\r\n\twatch: {\r\n\t\tpage: {\r\n\t\t\thandler(newVal) {\r\n\t\t\t\tthis.internalPage = newVal;\r\n\t\t\t},\r\n\t\t\timmediate: true\r\n\t\t},\r\n\t\tinternalPage(newVal) {\r\n\t\t\tthis.$emit('update:page', newVal);\r\n\t\t},\r\n\t\tselected: {\r\n\t\t\thandler(newVal) {\r\n\t\t\t\tthis.selectedKeys = [...newVal];\r\n\t\t\t},\r\n\t\t\tdeep: true,\r\n\t\t\timmediate: true\r\n\t\t},\r\n\t\tselectedKeys: {\r\n\t\t\thandler(newVal) {\r\n\t\t\t\tthis.$emit('update:selected', newVal);\r\n\t\t\t},\r\n\t\t\tdeep: true\r\n\t\t},\r\n\t\tsearchQuery() {\r\n\t\t\t// Reset to first page when search changes\r\n\t\t\tif (!this.serverMode) {\r\n\t\t\t\tthis.internalPage = 1;\r\n\t\t\t}\r\n\t\t}\r\n\t},\r\n\tmethods: {\r\n\t\tgetCellValue(row, key) {\r\n\t\t\t// Support nested keys like 'user.name'\r\n\t\t\treturn key.split('.').reduce((obj, k) => obj?.[k], row);\r\n\t\t},\r\n\t\tgetRowKey(row, index) {\r\n\t\t\treturn row[this.rowKey] ?? index;\r\n\t\t},\r\n\t\tgetHeaderCellClasses(column) {\r\n\t\t\tconst alignClasses = {\r\n\t\t\t\tleft: 'text-left',\r\n\t\t\t\tcenter: 'text-center',\r\n\t\t\t\tright: 'text-right'\r\n\t\t\t};\r\n\t\t\tconst sortableClasses =\r\n\t\t\t\tcolumn.sortable !== false\r\n\t\t\t\t\t? 'cursor-pointer select-none hover:bg-neutral-100'\r\n\t\t\t\t\t: '';\r\n\t\t\treturn [\r\n\t\t\t\tthis.headerCellClasses,\r\n\t\t\t\talignClasses[column.align] || 'text-left',\r\n\t\t\t\tsortableClasses\r\n\t\t\t]\r\n\t\t\t\t.filter(Boolean)\r\n\t\t\t\t.join(' ');\r\n\t\t},\r\n\t\tgetCellClasses(column) {\r\n\t\t\tconst alignClasses = {\r\n\t\t\t\tleft: 'text-left',\r\n\t\t\t\tcenter: 'text-center',\r\n\t\t\t\tright: 'text-right'\r\n\t\t\t};\r\n\t\t\treturn [this.cellClasses, alignClasses[column.align] || 'text-left'].join(\r\n\t\t\t\t' '\r\n\t\t\t);\r\n\t\t},\r\n\t\tgetRowClasses(row) {\r\n\t\t\tconst baseClasses = 'transition-colors duration-150';\r\n\t\t\tconst hoverClasses = this.hoverable ? 'hover:bg-neutral-50' : '';\r\n\t\t\tconst selectedClasses = this.isRowSelected(row) ? 'bg-primary-50' : '';\r\n\t\t\tconst stripedClasses = this.striped ? 'even:bg-neutral-50/50' : '';\r\n\t\t\treturn [baseClasses, hoverClasses, selectedClasses, stripedClasses]\r\n\t\t\t\t.filter(Boolean)\r\n\t\t\t\t.join(' ');\r\n\t\t},\r\n\t\tgetSortIcon(key) {\r\n\t\t\tif (this.sortKey !== key) return 'chevron-down';\r\n\t\t\treturn this.sortDirection === 'asc' ? 'chevron-up' : 'chevron-down';\r\n\t\t},\r\n\t\tgetSortIconClasses(key) {\r\n\t\t\tconst isActive = this.sortKey === key;\r\n\t\t\treturn isActive ? 'text-primary-500' : 'text-neutral-400';\r\n\t\t},\r\n\t\thandleSort(key) {\r\n\t\t\tif (this.sortKey === key) {\r\n\t\t\t\tthis.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';\r\n\t\t\t} else {\r\n\t\t\t\tthis.sortKey = key;\r\n\t\t\t\tthis.sortDirection = 'asc';\r\n\t\t\t}\r\n\t\t\tthis.$emit('sort', { key: this.sortKey, direction: this.sortDirection });\r\n\t\t},\r\n\t\thandleSearch(query) {\r\n\t\t\tthis.$emit('search', query);\r\n\t\t},\r\n\t\thandlePageChange(page) {\r\n\t\t\tthis.$emit('page-change', page);\r\n\t\t},\r\n\t\thandleRowClick(row) {\r\n\t\t\tthis.$emit('row-click', row);\r\n\t\t},\r\n\t\tisRowSelected(row) {\r\n\t\t\treturn this.selectedKeysSet.has(this.getRowKey(row));\r\n\t\t},\r\n\t\thandleRowSelect(row, checked) {\r\n\t\t\tconst key = this.getRowKey(row);\r\n\t\t\tif (checked) {\r\n\t\t\t\tif (!this.selectedKeysSet.has(key)) {\r\n\t\t\t\t\tthis.selectedKeys = [...this.selectedKeys, key];\r\n\t\t\t\t}\r\n\t\t\t} else {\r\n\t\t\t\tthis.selectedKeys = this.selectedKeys.filter((k) => k !== key);\r\n\t\t\t}\r\n\t\t\tthis.$emit('select', { row, selected: checked });\r\n\t\t},\r\n\t\thandleSelectAll(checked) {\r\n\t\t\tif (checked) {\r\n\t\t\t\tconst currentKeys = this.paginatedData.map((row) =>\r\n\t\t\t\t\tthis.getRowKey(row)\r\n\t\t\t\t);\r\n\t\t\t\tconst newKeys = currentKeys.filter(\r\n\t\t\t\t\t(k) => !this.selectedKeys.includes(k)\r\n\t\t\t\t);\r\n\t\t\t\tthis.selectedKeys = [...this.selectedKeys, ...newKeys];\r\n\t\t\t} else {\r\n\t\t\t\tconst currentKeys = this.paginatedData.map((row) =>\r\n\t\t\t\t\tthis.getRowKey(row)\r\n\t\t\t\t);\r\n\t\t\t\tthis.selectedKeys = this.selectedKeys.filter(\r\n\t\t\t\t\t(k) => !currentKeys.includes(k)\r\n\t\t\t\t);\r\n\t\t\t}\r\n\t\t\tthis.$emit('select-all', checked);\r\n\t\t},\r\n\t\tclearSelection() {\r\n\t\t\tthis.selectedKeys = [];\r\n\t\t}\r\n\t}\r\n};\r\n</script>\r\n\r\n<style scoped>\r\n/* Mobile Card View - transforms table rows into cards on small screens */\r\n@media (max-width: 640px) {\r\n\t/* Hide table header on mobile */\r\n\ttable thead {\r\n\t\tdisplay: none;\r\n\t}\r\n\r\n\t/* Make table body a flex container for cards */\r\n\ttable tbody {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tgap: 0.75rem;\r\n\t}\r\n\r\n\t/* Transform each row into a card */\r\n\ttable tbody tr {\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tbackground-color: white;\r\n\t\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\r\n\t\tborder-radius: 0.5rem;\r\n\t\tpadding: 0.75rem;\r\n\t\tbox-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);\r\n\t}\r\n\r\n\t/* Style each cell as a row in the card */\r\n\ttable tbody tr td {\r\n\t\tdisplay: flex;\r\n\t\tjustify-content: space-between;\r\n\t\talign-items: flex-start;\r\n\t\tpadding: 0.5rem 0;\r\n\t\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\r\n\t\ttext-align: right;\r\n\t}\r\n\r\n\t/* Remove border from last cell */\r\n\ttable tbody tr td:last-child {\r\n\t\tborder-bottom: none;\r\n\t}\r\n\r\n\t/* Display column label before cell content */\r\n\ttable tbody tr td::before {\r\n\t\tcontent: attr(data-label);\r\n\t\tfont-weight: 600;\r\n\t\tcolor: var(--color-neutral-700, #374151);\r\n\t\ttext-align: left;\r\n\t\tflex-shrink: 0;\r\n\t\tmargin-right: 1rem;\r\n\t}\r\n\r\n\t/* Hide empty labels (for checkbox column) */\r\n\ttable tbody tr td[data-label='']::before {\r\n\t\tdisplay: none;\r\n\t}\r\n\r\n\t/* Checkbox cell styling */\r\n\ttable tbody tr td[data-label=''] {\r\n\t\tjustify-content: flex-start;\r\n\t\tborder-bottom: 1px solid var(--color-neutral-200, #e5e7eb);\r\n\t\tmargin-bottom: 0.25rem;\r\n\t\tpadding-bottom: 0.75rem;\r\n\t}\r\n\r\n\t/* Ensure table is full width */\r\n\ttable {\r\n\t\twidth: 100%;\r\n\t}\r\n}\r\n</style>\r\n"]}, media: undefined });
+    inject("data-v-2612879c_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Virtual table styling */\n.virtual-table-body[data-v-2612879c] {\n\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\n\tborder-radius: 0.5rem;\n\toverflow: hidden;\n}\n.virtual-table-body .scroller[data-v-2612879c] {\n\twidth: 100%;\n}\n.virtual-row[data-v-2612879c] {\n\tdisplay: flex;\n\talign-items: center;\n\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\n\ttransition: background-color 0.15s;\n}\n.virtual-row[data-v-2612879c]:last-child {\n\tborder-bottom: none;\n}\n.virtual-cell[data-v-2612879c] {\n\tflex: 1;\n\tmin-width: 0;\n\tdisplay: flex;\n\talign-items: center;\n}\n\n/* Mobile Card View - transforms table rows into cards on small screens */\n@media (max-width: 640px) {\n\t/* Hide table header on mobile */\ntable thead[data-v-2612879c] {\n\t\tdisplay: none;\n}\n\n\t/* Make table body a flex container for cards */\ntable tbody[data-v-2612879c] {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tgap: 0.75rem;\n}\n\n\t/* Transform each row into a card */\ntable tbody tr[data-v-2612879c] {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tbackground-color: white;\n\t\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\n\t\tborder-radius: 0.5rem;\n\t\tpadding: 0.75rem;\n\t\tbox-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);\n}\n\n\t/* Style each cell as a row in the card */\ntable tbody tr td[data-v-2612879c] {\n\t\tdisplay: flex;\n\t\tjustify-content: space-between;\n\t\talign-items: flex-start;\n\t\tpadding: 0.5rem 0;\n\t\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\n\t\ttext-align: right;\n}\n\n\t/* Remove border from last cell */\ntable tbody tr td[data-v-2612879c]:last-child {\n\t\tborder-bottom: none;\n}\n\n\t/* Display column label before cell content */\ntable tbody tr td[data-v-2612879c]::before {\n\t\tcontent: attr(data-label);\n\t\tfont-weight: 600;\n\t\tcolor: var(--color-neutral-700, #374151);\n\t\ttext-align: left;\n\t\tflex-shrink: 0;\n\t\tmargin-right: 1rem;\n}\n\n\t/* Hide empty labels (for checkbox column) */\ntable tbody tr td[data-label=''][data-v-2612879c]::before {\n\t\tdisplay: none;\n}\n\n\t/* Checkbox cell styling */\ntable tbody tr td[data-label=''][data-v-2612879c] {\n\t\tjustify-content: flex-start;\n\t\tborder-bottom: 1px solid var(--color-neutral-200, #e5e7eb);\n\t\tmargin-bottom: 0.25rem;\n\t\tpadding-bottom: 0.75rem;\n}\n\n\t/* Ensure table is full width */\ntable[data-v-2612879c] {\n\t\twidth: 100%;\n}\n}\n", map: {"version":3,"sources":["/home/runner/work/fabric/fabric/src/components/organisms/FDataTable/FDataTable.vue"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAwrBA,0BAAA;AACA;CACA,mDAAA;CACA,qBAAA;CACA,gBAAA;AACA;AAEA;CACA,WAAA;AACA;AAEA;CACA,aAAA;CACA,mBAAA;CACA,0DAAA;CACA,kCAAA;AACA;AAEA;CACA,mBAAA;AACA;AAEA;CACA,OAAA;CACA,YAAA;CACA,aAAA;CACA,mBAAA;AACA;;AAEA,yEAAA;AACA;CACA,gCAAA;AACA;EACA,aAAA;AACA;;CAEA,+CAAA;AACA;EACA,aAAA;EACA,sBAAA;EACA,YAAA;AACA;;CAEA,mCAAA;AACA;EACA,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mDAAA;EACA,qBAAA;EACA,gBAAA;EACA,0CAAA;AACA;;CAEA,yCAAA;AACA;EACA,aAAA;EACA,8BAAA;EACA,uBAAA;EACA,iBAAA;EACA,0DAAA;EACA,iBAAA;AACA;;CAEA,iCAAA;AACA;EACA,mBAAA;AACA;;CAEA,6CAAA;AACA;EACA,yBAAA;EACA,gBAAA;EACA,wCAAA;EACA,gBAAA;EACA,cAAA;EACA,kBAAA;AACA;;CAEA,4CAAA;AACA;EACA,aAAA;AACA;;CAEA,0BAAA;AACA;EACA,2BAAA;EACA,0DAAA;EACA,sBAAA;EACA,uBAAA;AACA;;CAEA,+BAAA;AACA;EACA,WAAA;AACA;AACA","file":"FDataTable.vue","sourcesContent":["<template>\n\t<div :class=\"containerClasses\">\n\t\t<!-- Toolbar section: Search and Actions -->\n\t\t<div v-if=\"showToolbar\" :class=\"toolbarClasses\">\n\t\t\t<div class=\"flex-1\">\n\t\t\t\t<f-search-bar\n\t\t\t\t\tv-if=\"searchable\"\n\t\t\t\t\tv-model=\"searchQuery\"\n\t\t\t\t\t:placeholder=\"searchPlaceholder\"\n\t\t\t\t\t:size=\"size\"\n\t\t\t\t\t:disabled=\"loading\"\n\t\t\t\t\t@search=\"handleSearch\"\n\t\t\t\t/>\n\t\t\t</div>\n\t\t\t<div v-if=\"$slots.actions\" class=\"flex-shrink-0\">\n\t\t\t\t<slot name=\"actions\" :selected-items=\"selectedItems\" />\n\t\t\t</div>\n\t\t</div>\n\n\t\t<!-- Table wrapper -->\n\t\t<div :class=\"tableWrapperClasses\">\n\t\t\t<!-- Loading overlay -->\n\t\t\t<div v-if=\"loading\" :class=\"loadingOverlayClasses\">\n\t\t\t\t<f-loader size=\"large\" />\n\t\t\t</div>\n\n\t\t\t<!-- Table -->\n\t\t\t<table v-if=\"processedData.length > 0 || loading\" :class=\"tableClasses\">\n\t\t\t\t<thead>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<!-- Selection checkbox column -->\n\t\t\t\t\t\t<th v-if=\"selectable\" :class=\"headerCellClasses\">\n\t\t\t\t\t\t\t<f-checkbox :checked=\"isAllSelected\" @change=\"handleSelectAll\" />\n\t\t\t\t\t\t</th>\n\t\t\t\t\t\t<!-- Data columns -->\n\t\t\t\t\t\t<th\n\t\t\t\t\t\t\tv-for=\"column in columns\"\n\t\t\t\t\t\t\t:key=\"column.key\"\n\t\t\t\t\t\t\t:class=\"getHeaderCellClasses(column)\"\n\t\t\t\t\t\t\t@click=\"column.sortable !== false && handleSort(column.key)\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<div class=\"flex items-center gap-1\">\n\t\t\t\t\t\t\t\t<span>{{ column.label }}</span>\n\t\t\t\t\t\t\t\t<f-icon\n\t\t\t\t\t\t\t\t\tv-if=\"column.sortable !== false\"\n\t\t\t\t\t\t\t\t\t:name=\"getSortIcon(column.key)\"\n\t\t\t\t\t\t\t\t\tsize=\"sm\"\n\t\t\t\t\t\t\t\t\t:class=\"getSortIconClasses(column.key)\"\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</th>\n\t\t\t\t\t</tr>\n\t\t\t\t</thead>\n\t\t\t\t<tbody v-if=\"!virtual\">\n\t\t\t\t\t<tr\n\t\t\t\t\t\tv-for=\"(row, rowIndex) in paginatedData\"\n\t\t\t\t\t\t:key=\"getRowKey(row, rowIndex)\"\n\t\t\t\t\t\t:class=\"getRowClasses(row)\"\n\t\t\t\t\t\t@click=\"handleRowClick(row)\"\n\t\t\t\t\t>\n\t\t\t\t\t\t<!-- Selection checkbox -->\n\t\t\t\t\t\t<td v-if=\"selectable\" :class=\"cellClasses\" data-label=\"\">\n\t\t\t\t\t\t\t<f-checkbox\n\t\t\t\t\t\t\t\t:checked=\"isRowSelected(row)\"\n\t\t\t\t\t\t\t\t@change=\"handleRowSelect(row, $event)\"\n\t\t\t\t\t\t\t\t@click.stop\n\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t\t<!-- Data cells -->\n\t\t\t\t\t\t<td\n\t\t\t\t\t\t\tv-for=\"column in columns\"\n\t\t\t\t\t\t\t:key=\"column.key\"\n\t\t\t\t\t\t\t:class=\"getCellClasses(column)\"\n\t\t\t\t\t\t\t:data-label=\"column.label\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<slot\n\t\t\t\t\t\t\t\t:name=\"'cell-' + column.key\"\n\t\t\t\t\t\t\t\t:value=\"getCellValue(row, column.key)\"\n\t\t\t\t\t\t\t\t:row=\"row\"\n\t\t\t\t\t\t\t\t:column=\"column\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t{{ getCellValue(row, column.key) }}\n\t\t\t\t\t\t\t</slot>\n\t\t\t\t\t\t</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\n\t\t\t<!-- Virtual scrolling table body -->\n\t\t\t<div\n\t\t\t\tv-if=\"virtual && (processedData.length > 0 || loading)\"\n\t\t\t\tclass=\"virtual-table-body\"\n\t\t\t>\n\t\t\t\t<RecycleScroller\n\t\t\t\t\t:items=\"paginatedData\"\n\t\t\t\t\t:item-size=\"computedVirtualItemHeight\"\n\t\t\t\t\t:key-field=\"rowKey\"\n\t\t\t\t\t:buffer=\"200\"\n\t\t\t\t\tclass=\"scroller\"\n\t\t\t\t\t:style=\"{ height: virtualHeight + 'px' }\"\n\t\t\t\t>\n\t\t\t\t\t<template #default=\"{ item: row }\">\n\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t:class=\"['virtual-row', getRowClasses(row)]\"\n\t\t\t\t\t\t\t@click=\"handleRowClick(row)\"\n\t\t\t\t\t\t>\n\t\t\t\t\t\t\t<!-- Selection checkbox -->\n\t\t\t\t\t\t\t<div v-if=\"selectable\" :class=\"['virtual-cell', cellClasses]\">\n\t\t\t\t\t\t\t\t<f-checkbox\n\t\t\t\t\t\t\t\t\t:checked=\"isRowSelected(row)\"\n\t\t\t\t\t\t\t\t\t@change=\"handleRowSelect(row, $event)\"\n\t\t\t\t\t\t\t\t\t@click.stop\n\t\t\t\t\t\t\t\t/>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- Data cells -->\n\t\t\t\t\t\t\t<div\n\t\t\t\t\t\t\t\tv-for=\"column in columns\"\n\t\t\t\t\t\t\t\t:key=\"column.key\"\n\t\t\t\t\t\t\t\t:class=\"['virtual-cell', getCellClasses(column)]\"\n\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t<slot\n\t\t\t\t\t\t\t\t\t:name=\"'cell-' + column.key\"\n\t\t\t\t\t\t\t\t\t:value=\"getCellValue(row, column.key)\"\n\t\t\t\t\t\t\t\t\t:row=\"row\"\n\t\t\t\t\t\t\t\t\t:column=\"column\"\n\t\t\t\t\t\t\t\t>\n\t\t\t\t\t\t\t\t\t{{ getCellValue(row, column.key) }}\n\t\t\t\t\t\t\t\t</slot>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</template>\n\t\t\t\t</RecycleScroller>\n\t\t\t</div>\n\n\t\t\t<!-- Empty state -->\n\t\t\t<f-empty-state\n\t\t\t\tv-if=\"!loading && processedData.length === 0\"\n\t\t\t\t:icon=\"emptyIcon\"\n\t\t\t\t:title=\"emptyTitle\"\n\t\t\t\t:description=\"emptyDescription\"\n\t\t\t\t:action-label=\"emptyActionLabel\"\n\t\t\t\t@action=\"$emit('empty-action')\"\n\t\t\t/>\n\t\t</div>\n\n\t\t<!-- Footer section: Info and Pagination -->\n\t\t<div v-if=\"showFooter\" :class=\"footerClasses\">\n\t\t\t<div :class=\"infoClasses\">\n\t\t\t\t<span v-if=\"selectable && selectedItems.length > 0\">\n\t\t\t\t\t{{ selectedItems.length }} élément(s) sélectionné(s) sur\n\t\t\t\t\t{{ totalItems }}\n\t\t\t\t</span>\n\t\t\t\t<span v-else>\n\t\t\t\t\t{{ paginationInfo }}\n\t\t\t\t</span>\n\t\t\t</div>\n\t\t\t<f-pagination\n\t\t\t\tv-if=\"effectivePaginated && totalPages > 1\"\n\t\t\t\tv-model=\"internalPage\"\n\t\t\t\t:total-pages=\"totalPages\"\n\t\t\t\t:size=\"size\"\n\t\t\t\t:show-labels=\"false\"\n\t\t\t\t@change=\"handlePageChange\"\n\t\t\t/>\n\t\t</div>\n\t</div>\n</template>\n\n<script>\nimport FSearchBar from '../../molecules/FSearchBar/FSearchBar.vue';\nimport FPagination from '../../molecules/FPagination/FPagination.vue';\nimport FEmptyState from '../../molecules/FEmptyState/FEmptyState.vue';\nimport FCheckbox from '../../atoms/FCheckbox/FCheckbox.vue';\nimport FIcon from '../../atoms/FIcon/FIcon.vue';\nimport FLoader from '../../atoms/FLoader/FLoader.vue';\nimport { RecycleScroller } from 'vue-virtual-scroller';\nimport 'vue-virtual-scroller/dist/vue-virtual-scroller.css';\n\nexport default {\n\tname: 'FDataTable',\n\tcomponents: {\n\t\tFSearchBar,\n\t\tFPagination,\n\t\tFEmptyState,\n\t\tFCheckbox,\n\t\tFIcon,\n\t\tFLoader,\n\t\tRecycleScroller\n\t},\n\tprops: {\n\t\t/**\n\t\t * Array of data objects to display\n\t\t */\n\t\tdata: {\n\t\t\ttype: Array,\n\t\t\tdefault: () => []\n\t\t},\n\t\t/**\n\t\t * Column definitions\n\t\t * Each column: { key: string, label: string, sortable?: boolean, align?: 'left'|'center'|'right' }\n\t\t */\n\t\tcolumns: {\n\t\t\ttype: Array,\n\t\t\trequired: true,\n\t\t\tvalidator: (columns) => columns.every((col) => col.key && col.label)\n\t\t},\n\t\t/**\n\t\t * Unique key property in data objects\n\t\t */\n\t\trowKey: {\n\t\t\ttype: String,\n\t\t\tdefault: 'id'\n\t\t},\n\t\t/**\n\t\t * Enable row selection with checkboxes\n\t\t */\n\t\tselectable: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Selected row keys (v-model:selected)\n\t\t */\n\t\tselected: {\n\t\t\ttype: Array,\n\t\t\tdefault: () => []\n\t\t},\n\t\t/**\n\t\t * Enable search functionality\n\t\t */\n\t\tsearchable: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Search input placeholder\n\t\t */\n\t\tsearchPlaceholder: {\n\t\t\ttype: String,\n\t\t\tdefault: 'Rechercher...'\n\t\t},\n\t\t/**\n\t\t * Enable pagination\n\t\t */\n\t\tpaginated: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\t/**\n\t\t * Number of items per page\n\t\t */\n\t\tperPage: {\n\t\t\ttype: Number,\n\t\t\tdefault: 10\n\t\t},\n\t\t/**\n\t\t * Current page (v-model:page)\n\t\t */\n\t\tpage: {\n\t\t\ttype: Number,\n\t\t\tdefault: 1\n\t\t},\n\t\t/**\n\t\t * Total items count for server-side pagination\n\t\t */\n\t\ttotalItems: {\n\t\t\ttype: Number,\n\t\t\tdefault: null\n\t\t},\n\t\t/**\n\t\t * Server mode - data fetching is handled externally\n\t\t */\n\t\tserverMode: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Loading state\n\t\t */\n\t\tloading: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Default sort column key\n\t\t */\n\t\tdefaultSortKey: {\n\t\t\ttype: String,\n\t\t\tdefault: null\n\t\t},\n\t\t/**\n\t\t * Default sort direction\n\t\t */\n\t\tdefaultSortDirection: {\n\t\t\ttype: String,\n\t\t\tdefault: 'asc',\n\t\t\tvalidator: (value) => ['asc', 'desc'].includes(value)\n\t\t},\n\t\t/**\n\t\t * Component size\n\t\t */\n\t\tsize: {\n\t\t\ttype: String,\n\t\t\tdefault: 'medium',\n\t\t\tvalidator: (value) => ['small', 'medium', 'large'].includes(value)\n\t\t},\n\t\t/**\n\t\t * Empty state icon\n\t\t */\n\t\temptyIcon: {\n\t\t\ttype: String,\n\t\t\tdefault: 'folder'\n\t\t},\n\t\t/**\n\t\t * Empty state title\n\t\t */\n\t\temptyTitle: {\n\t\t\ttype: String,\n\t\t\tdefault: 'Aucune donnée'\n\t\t},\n\t\t/**\n\t\t * Empty state description\n\t\t */\n\t\temptyDescription: {\n\t\t\ttype: String,\n\t\t\tdefault: \"Il n'y a aucun élément à afficher.\"\n\t\t},\n\t\t/**\n\t\t * Empty state action button label\n\t\t */\n\t\temptyActionLabel: {\n\t\t\ttype: String,\n\t\t\tdefault: ''\n\t\t},\n\t\t/**\n\t\t * Striped row style\n\t\t */\n\t\tstriped: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Hoverable rows\n\t\t */\n\t\thoverable: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: true\n\t\t},\n\t\t/**\n\t\t * Bordered table\n\t\t */\n\t\tbordered: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Enable virtualization for large datasets (improves performance with 1000+ rows)\n\t\t * When enabled, only visible rows are rendered. Pagination is automatically disabled.\n\t\t */\n\t\tvirtual: {\n\t\t\ttype: Boolean,\n\t\t\tdefault: false\n\t\t},\n\t\t/**\n\t\t * Height of each virtualized row in pixels\n\t\t * Used only when virtual is enabled\n\t\t */\n\t\tvirtualItemHeight: {\n\t\t\ttype: Number,\n\t\t\tdefault: null\n\t\t},\n\t\t/**\n\t\t * Height of the virtual scroller container in pixels\n\t\t * Used only when virtual is enabled\n\t\t */\n\t\tvirtualHeight: {\n\t\t\ttype: Number,\n\t\t\tdefault: 500\n\t\t}\n\t},\n\tdata() {\n\t\treturn {\n\t\t\tsearchQuery: '',\n\t\t\tsortKey: this.defaultSortKey,\n\t\t\tsortDirection: this.defaultSortDirection,\n\t\t\tinternalPage: this.page,\n\t\t\tselectedKeys: [...this.selected]\n\t\t};\n\t},\n\tcomputed: {\n\t\tcontainerClasses() {\n\t\t\treturn 'flex flex-col gap-4 bg-white rounded-lg';\n\t\t},\n\t\ttoolbarClasses() {\n\t\t\treturn 'flex items-center gap-4 flex-wrap';\n\t\t},\n\t\ttableWrapperClasses() {\n\t\t\tconst baseClasses = 'relative overflow-x-auto';\n\t\t\tconst borderClasses = this.bordered\n\t\t\t\t? 'border border-neutral-200 rounded-lg'\n\t\t\t\t: '';\n\t\t\treturn [baseClasses, borderClasses].filter(Boolean).join(' ');\n\t\t},\n\t\tloadingOverlayClasses() {\n\t\t\treturn 'absolute inset-0 bg-white/80 flex items-center justify-center z-10';\n\t\t},\n\t\ttableClasses() {\n\t\t\treturn 'w-full text-left';\n\t\t},\n\t\theaderCellClasses() {\n\t\t\tconst sizeClasses = {\n\t\t\t\tsmall: 'px-3 py-2 text-xs',\n\t\t\t\tmedium: 'px-4 py-3 text-sm',\n\t\t\t\tlarge: 'px-6 py-4 text-base'\n\t\t\t};\n\t\t\treturn [\n\t\t\t\t'font-semibold text-neutral-700 bg-neutral-50 border-b border-neutral-200',\n\t\t\t\tsizeClasses[this.size]\n\t\t\t].join(' ');\n\t\t},\n\t\tcellClasses() {\n\t\t\tconst sizeClasses = {\n\t\t\t\tsmall: 'px-3 py-2 text-xs',\n\t\t\t\tmedium: 'px-4 py-3 text-sm',\n\t\t\t\tlarge: 'px-6 py-4 text-base'\n\t\t\t};\n\t\t\treturn [\n\t\t\t\t'text-neutral-600 border-b border-neutral-100',\n\t\t\t\tsizeClasses[this.size]\n\t\t\t].join(' ');\n\t\t},\n\t\tfooterClasses() {\n\t\t\treturn 'flex items-center justify-between gap-4 flex-wrap';\n\t\t},\n\t\tinfoClasses() {\n\t\t\tconst sizeClasses = {\n\t\t\t\tsmall: 'text-xs',\n\t\t\t\tmedium: 'text-sm',\n\t\t\t\tlarge: 'text-base'\n\t\t\t};\n\t\t\treturn ['text-neutral-500', sizeClasses[this.size]].join(' ');\n\t\t},\n\t\tshowToolbar() {\n\t\t\treturn this.searchable || this.$slots.actions;\n\t\t},\n\t\tshowFooter() {\n\t\t\treturn this.effectivePaginated || this.selectable;\n\t\t},\n\t\t// Filter data based on search query (client-side only)\n\t\tfilteredData() {\n\t\t\tif (this.serverMode || !this.searchQuery) {\n\t\t\t\treturn this.data;\n\t\t\t}\n\t\t\tconst query = this.searchQuery.toLowerCase();\n\t\t\treturn this.data.filter((row) => {\n\t\t\t\treturn this.columns.some((column) => {\n\t\t\t\t\tconst value = this.getCellValue(row, column.key);\n\t\t\t\t\treturn String(value).toLowerCase().includes(query);\n\t\t\t\t});\n\t\t\t});\n\t\t},\n\t\t// Sort filtered data (client-side only)\n\t\tsortedData() {\n\t\t\tif (this.serverMode || !this.sortKey) {\n\t\t\t\treturn this.filteredData;\n\t\t\t}\n\t\t\treturn [...this.filteredData].sort((a, b) => {\n\t\t\t\tconst aValue = this.getCellValue(a, this.sortKey);\n\t\t\t\tconst bValue = this.getCellValue(b, this.sortKey);\n\n\t\t\t\tlet comparison = 0;\n\t\t\t\tif (aValue === null || aValue === undefined) comparison = 1;\n\t\t\t\telse if (bValue === null || bValue === undefined) comparison = -1;\n\t\t\t\telse if (typeof aValue === 'string') {\n\t\t\t\t\tcomparison = aValue.localeCompare(bValue);\n\t\t\t\t} else {\n\t\t\t\t\tcomparison = aValue < bValue ? -1 : aValue > bValue ? 1 : 0;\n\t\t\t\t}\n\n\t\t\t\treturn this.sortDirection === 'desc' ? -comparison : comparison;\n\t\t\t});\n\t\t},\n\t\t// Processed data after filtering and sorting\n\t\tprocessedData() {\n\t\t\treturn this.sortedData;\n\t\t},\n\t\t// Calculate total items for pagination\n\t\tcomputedTotalItems() {\n\t\t\tif (this.serverMode && this.totalItems !== null) {\n\t\t\t\treturn this.totalItems;\n\t\t\t}\n\t\t\treturn this.processedData.length;\n\t\t},\n\t\t// Total pages\n\t\ttotalPages() {\n\t\t\tif (!this.effectivePaginated) return 1;\n\t\t\treturn Math.max(1, Math.ceil(this.computedTotalItems / this.perPage));\n\t\t},\n\t\t// Data for current page (client-side pagination only)\n\t\tpaginatedData() {\n\t\t\tif (this.serverMode || !this.effectivePaginated) {\n\t\t\t\treturn this.processedData;\n\t\t\t}\n\t\t\tconst start = (this.internalPage - 1) * this.perPage;\n\t\t\tconst end = start + this.perPage;\n\t\t\treturn this.processedData.slice(start, end);\n\t\t},\n\t\t// Pagination info text\n\t\tpaginationInfo() {\n\t\t\tif (!this.effectivePaginated) {\n\t\t\t\treturn `${this.computedTotalItems} élément(s)`;\n\t\t\t}\n\t\t\tconst start = Math.min(\n\t\t\t\t(this.internalPage - 1) * this.perPage + 1,\n\t\t\t\tthis.computedTotalItems\n\t\t\t);\n\t\t\tconst end = Math.min(\n\t\t\t\tthis.internalPage * this.perPage,\n\t\t\t\tthis.computedTotalItems\n\t\t\t);\n\t\t\treturn `${start} - ${end} sur ${this.computedTotalItems}`;\n\t\t},\n\t\t// Set for efficient key lookups\n\t\tselectedKeysSet() {\n\t\t\treturn new Set(this.selectedKeys);\n\t\t},\n\t\t// Selection state\n\t\tselectedItems() {\n\t\t\treturn this.data.filter((row) =>\n\t\t\t\tthis.selectedKeysSet.has(this.getRowKey(row))\n\t\t\t);\n\t\t},\n\t\tisAllSelected() {\n\t\t\tif (this.paginatedData.length === 0) return false;\n\t\t\treturn this.paginatedData.every((row) => this.isRowSelected(row));\n\t\t},\n\t\t// Calculate virtual item height based on size\n\t\tcomputedVirtualItemHeight() {\n\t\t\tif (this.virtualItemHeight !== null) {\n\t\t\t\treturn this.virtualItemHeight;\n\t\t\t}\n\t\t\t// Auto-calculate based on size prop\n\t\t\tconst sizeHeights = {\n\t\t\t\tsmall: 40,\n\t\t\t\tmedium: 52,\n\t\t\t\tlarge: 64\n\t\t\t};\n\t\t\treturn sizeHeights[this.size] || sizeHeights.medium;\n\t\t},\n\t\t// When virtual mode is enabled, don't paginate\n\t\teffectivePaginated() {\n\t\t\treturn this.virtual ? false : this.paginated;\n\t\t}\n\t},\n\twatch: {\n\t\tpage: {\n\t\t\thandler(newVal) {\n\t\t\t\tthis.internalPage = newVal;\n\t\t\t},\n\t\t\timmediate: true\n\t\t},\n\t\tinternalPage(newVal) {\n\t\t\tthis.$emit('update:page', newVal);\n\t\t},\n\t\tselected: {\n\t\t\thandler(newVal) {\n\t\t\t\tthis.selectedKeys = [...newVal];\n\t\t\t},\n\t\t\tdeep: true,\n\t\t\timmediate: true\n\t\t},\n\t\tselectedKeys: {\n\t\t\thandler(newVal) {\n\t\t\t\tthis.$emit('update:selected', newVal);\n\t\t\t},\n\t\t\tdeep: true\n\t\t},\n\t\tsearchQuery() {\n\t\t\t// Reset to first page when search changes\n\t\t\tif (!this.serverMode) {\n\t\t\t\tthis.internalPage = 1;\n\t\t\t}\n\t\t}\n\t},\n\tmethods: {\n\t\tgetCellValue(row, key) {\n\t\t\t// Support nested keys like 'user.name'\n\t\t\treturn key.split('.').reduce((obj, k) => obj?.[k], row);\n\t\t},\n\t\tgetRowKey(row, index) {\n\t\t\treturn row[this.rowKey] ?? index;\n\t\t},\n\t\tgetHeaderCellClasses(column) {\n\t\t\tconst alignClasses = {\n\t\t\t\tleft: 'text-left',\n\t\t\t\tcenter: 'text-center',\n\t\t\t\tright: 'text-right'\n\t\t\t};\n\t\t\tconst sortableClasses =\n\t\t\t\tcolumn.sortable !== false\n\t\t\t\t\t? 'cursor-pointer select-none hover:bg-neutral-100'\n\t\t\t\t\t: '';\n\t\t\treturn [\n\t\t\t\tthis.headerCellClasses,\n\t\t\t\talignClasses[column.align] || 'text-left',\n\t\t\t\tsortableClasses\n\t\t\t]\n\t\t\t\t.filter(Boolean)\n\t\t\t\t.join(' ');\n\t\t},\n\t\tgetCellClasses(column) {\n\t\t\tconst alignClasses = {\n\t\t\t\tleft: 'text-left',\n\t\t\t\tcenter: 'text-center',\n\t\t\t\tright: 'text-right'\n\t\t\t};\n\t\t\treturn [this.cellClasses, alignClasses[column.align] || 'text-left'].join(\n\t\t\t\t' '\n\t\t\t);\n\t\t},\n\t\tgetRowClasses(row) {\n\t\t\tconst baseClasses = 'transition-colors duration-150';\n\t\t\tconst hoverClasses = this.hoverable ? 'hover:bg-neutral-50' : '';\n\t\t\tconst selectedClasses = this.isRowSelected(row) ? 'bg-primary-50' : '';\n\t\t\tconst stripedClasses = this.striped ? 'even:bg-neutral-50/50' : '';\n\t\t\treturn [baseClasses, hoverClasses, selectedClasses, stripedClasses]\n\t\t\t\t.filter(Boolean)\n\t\t\t\t.join(' ');\n\t\t},\n\t\tgetSortIcon(key) {\n\t\t\tif (this.sortKey !== key) return 'chevron-down';\n\t\t\treturn this.sortDirection === 'asc' ? 'chevron-up' : 'chevron-down';\n\t\t},\n\t\tgetSortIconClasses(key) {\n\t\t\tconst isActive = this.sortKey === key;\n\t\t\treturn isActive ? 'text-primary-500' : 'text-neutral-400';\n\t\t},\n\t\thandleSort(key) {\n\t\t\tif (this.sortKey === key) {\n\t\t\t\tthis.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';\n\t\t\t} else {\n\t\t\t\tthis.sortKey = key;\n\t\t\t\tthis.sortDirection = 'asc';\n\t\t\t}\n\t\t\tthis.$emit('sort', { key: this.sortKey, direction: this.sortDirection });\n\t\t},\n\t\thandleSearch(query) {\n\t\t\tthis.$emit('search', query);\n\t\t},\n\t\thandlePageChange(page) {\n\t\t\tthis.$emit('page-change', page);\n\t\t},\n\t\thandleRowClick(row) {\n\t\t\tthis.$emit('row-click', row);\n\t\t},\n\t\tisRowSelected(row) {\n\t\t\treturn this.selectedKeysSet.has(this.getRowKey(row));\n\t\t},\n\t\thandleRowSelect(row, checked) {\n\t\t\tconst key = this.getRowKey(row);\n\t\t\tif (checked) {\n\t\t\t\tif (!this.selectedKeysSet.has(key)) {\n\t\t\t\t\tthis.selectedKeys = [...this.selectedKeys, key];\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\tthis.selectedKeys = this.selectedKeys.filter((k) => k !== key);\n\t\t\t}\n\t\t\tthis.$emit('select', { row, selected: checked });\n\t\t},\n\t\thandleSelectAll(checked) {\n\t\t\tif (checked) {\n\t\t\t\tconst currentKeys = this.paginatedData.map((row) =>\n\t\t\t\t\tthis.getRowKey(row)\n\t\t\t\t);\n\t\t\t\tconst newKeys = currentKeys.filter(\n\t\t\t\t\t(k) => !this.selectedKeys.includes(k)\n\t\t\t\t);\n\t\t\t\tthis.selectedKeys = [...this.selectedKeys, ...newKeys];\n\t\t\t} else {\n\t\t\t\tconst currentKeys = this.paginatedData.map((row) =>\n\t\t\t\t\tthis.getRowKey(row)\n\t\t\t\t);\n\t\t\t\tthis.selectedKeys = this.selectedKeys.filter(\n\t\t\t\t\t(k) => !currentKeys.includes(k)\n\t\t\t\t);\n\t\t\t}\n\t\t\tthis.$emit('select-all', checked);\n\t\t},\n\t\tclearSelection() {\n\t\t\tthis.selectedKeys = [];\n\t\t}\n\t}\n};\n</script>\n\n<style scoped>\n/* Virtual table styling */\n.virtual-table-body {\n\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\n\tborder-radius: 0.5rem;\n\toverflow: hidden;\n}\n\n.virtual-table-body .scroller {\n\twidth: 100%;\n}\n\n.virtual-row {\n\tdisplay: flex;\n\talign-items: center;\n\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\n\ttransition: background-color 0.15s;\n}\n\n.virtual-row:last-child {\n\tborder-bottom: none;\n}\n\n.virtual-cell {\n\tflex: 1;\n\tmin-width: 0;\n\tdisplay: flex;\n\talign-items: center;\n}\n\n/* Mobile Card View - transforms table rows into cards on small screens */\n@media (max-width: 640px) {\n\t/* Hide table header on mobile */\n\ttable thead {\n\t\tdisplay: none;\n\t}\n\n\t/* Make table body a flex container for cards */\n\ttable tbody {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tgap: 0.75rem;\n\t}\n\n\t/* Transform each row into a card */\n\ttable tbody tr {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t\tbackground-color: white;\n\t\tborder: 1px solid var(--color-neutral-200, #e5e7eb);\n\t\tborder-radius: 0.5rem;\n\t\tpadding: 0.75rem;\n\t\tbox-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);\n\t}\n\n\t/* Style each cell as a row in the card */\n\ttable tbody tr td {\n\t\tdisplay: flex;\n\t\tjustify-content: space-between;\n\t\talign-items: flex-start;\n\t\tpadding: 0.5rem 0;\n\t\tborder-bottom: 1px solid var(--color-neutral-100, #f3f4f6);\n\t\ttext-align: right;\n\t}\n\n\t/* Remove border from last cell */\n\ttable tbody tr td:last-child {\n\t\tborder-bottom: none;\n\t}\n\n\t/* Display column label before cell content */\n\ttable tbody tr td::before {\n\t\tcontent: attr(data-label);\n\t\tfont-weight: 600;\n\t\tcolor: var(--color-neutral-700, #374151);\n\t\ttext-align: left;\n\t\tflex-shrink: 0;\n\t\tmargin-right: 1rem;\n\t}\n\n\t/* Hide empty labels (for checkbox column) */\n\ttable tbody tr td[data-label='']::before {\n\t\tdisplay: none;\n\t}\n\n\t/* Checkbox cell styling */\n\ttable tbody tr td[data-label=''] {\n\t\tjustify-content: flex-start;\n\t\tborder-bottom: 1px solid var(--color-neutral-200, #e5e7eb);\n\t\tmargin-bottom: 0.25rem;\n\t\tpadding-bottom: 0.75rem;\n\t}\n\n\t/* Ensure table is full width */\n\ttable {\n\t\twidth: 100%;\n\t}\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__$9 = "data-v-15bfab2f";
+  const __vue_scope_id__$9 = "data-v-2612879c";
   /* module identifier */
   const __vue_module_identifier__$9 = undefined;
   /* functional template */
@@ -9052,7 +11514,7 @@ __vue_render__$b._withStripped = true;
   
 
   
-  const __vue_component__$9 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$9 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$b, staticRenderFns: __vue_staticRenderFns__$9 },
     __vue_inject_styles__$9,
     __vue_script__$9,
@@ -9138,9 +11600,9 @@ let idCounter$2 = 0;
 var script$8 = {
 	name: 'FDrawer',
 	components: {
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A,
-		FIcon: __vue_component__$x
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B,
+		FIcon: __vue_component__$y
 	},
 	props: {
 		/**
@@ -9499,7 +11961,7 @@ __vue_render__$a._withStripped = true;
   
 
   
-  const __vue_component__$8 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$8 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$a, staticRenderFns: __vue_staticRenderFns__$8 },
     __vue_inject_styles__$8,
     __vue_script__$8,
@@ -9619,11 +12081,11 @@ const FILE_STATUS = {
 var script$7 = {
 	name: 'FFileUpload',
 	components: {
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A,
-		FAlert: __vue_component__$q,
-		FFilePreview: __vue_component__$l
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B,
+		FAlert: __vue_component__$r,
+		FFilePreview: __vue_component__$m
 	},
 	props: {
 		/**
@@ -10351,7 +12813,7 @@ __vue_render__$9._withStripped = true;
   
 
   
-  const __vue_component__$7 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$7 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$9, staticRenderFns: __vue_staticRenderFns__$7 },
     __vue_inject_styles__$7,
     __vue_script__$7,
@@ -11057,9 +13519,9 @@ __vue_render__$7._withStripped = true;
 var script$6 = {
 	name: 'FPageHeader',
 	components: {
-		FBreadcrumb: __vue_component__$p,
-		FTypography: __vue_component__$r,
-		FAvatar: __vue_component__$C
+		FBreadcrumb: __vue_component__$q,
+		FTypography: __vue_component__$s,
+		FAvatar: __vue_component__$D
 	},
 	props: {
 		/**
@@ -11351,7 +13813,7 @@ __vue_render__$6._withStripped = true;
   
 
   
-  const __vue_component__$6 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$6 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$6, staticRenderFns: __vue_staticRenderFns__$6 },
     __vue_inject_styles__$6,
     __vue_script__$6,
@@ -11434,9 +13896,9 @@ let idCounter = 0;
 var script$5 = {
 	name: 'FModal',
 	components: {
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A,
-		FIcon: __vue_component__$x
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B,
+		FIcon: __vue_component__$y
 	},
 	props: {
 		/**
@@ -11748,7 +14210,7 @@ __vue_render__$5._withStripped = true;
   
 
   
-  const __vue_component__$5 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$5 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$5, staticRenderFns: __vue_staticRenderFns__$5 },
     __vue_inject_styles__$5,
     __vue_script__$5,
@@ -11876,11 +14338,11 @@ __vue_render__$5._withStripped = true;
 var script$4 = {
 	name: 'FUserMenu',
 	components: {
-		FAvatar: __vue_component__$C,
-		FIcon: __vue_component__$x,
-		FTypography: __vue_component__$r,
-		FDivider: __vue_component__$y,
-		FListItem: __vue_component__$h
+		FAvatar: __vue_component__$D,
+		FIcon: __vue_component__$y,
+		FTypography: __vue_component__$s,
+		FDivider: __vue_component__$z,
+		FListItem: __vue_component__$i
 	},
 	props: {
 		/**
@@ -12423,7 +14885,7 @@ __vue_render__$4._withStripped = true;
   
 
   
-  const __vue_component__$4 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$4 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$4, staticRenderFns: __vue_staticRenderFns__$4 },
     __vue_inject_styles__$4,
     __vue_script__$4,
@@ -12659,7 +15121,7 @@ __vue_render__$3._withStripped = true;
   
 
   
-  const __vue_component__$3 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$3 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$3, staticRenderFns: __vue_staticRenderFns__$3 },
     __vue_inject_styles__$3,
     __vue_script__$3,
@@ -12740,9 +15202,9 @@ __vue_render__$3._withStripped = true;
 var script$2 = {
 	name: 'FOnboardingStepper',
 	components: {
-		FCard: __vue_component__$j,
-		FButton: __vue_component__$A,
-		FIcon: __vue_component__$x,
+		FCard: __vue_component__$k,
+		FButton: __vue_component__$B,
+		FIcon: __vue_component__$y,
 		FStepperProgress: __vue_component__$3
 	},
 	props: {
@@ -13078,7 +15540,7 @@ __vue_render__$2._withStripped = true;
   
 
   
-  const __vue_component__$2 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$2 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$2, staticRenderFns: __vue_staticRenderFns__$2 },
     __vue_inject_styles__$2,
     __vue_script__$2,
@@ -13292,15 +15754,15 @@ __vue_render__$2._withStripped = true;
 var script$1 = {
 	name: 'FProfileSection',
 	components: {
-		FCard: __vue_component__$j,
-		FTypography: __vue_component__$r,
-		FButton: __vue_component__$A,
-		FLoader: __vue_component__$v,
-		FAlert: __vue_component__$q,
+		FCard: __vue_component__$k,
+		FTypography: __vue_component__$s,
+		FButton: __vue_component__$B,
+		FLoader: __vue_component__$w,
+		FAlert: __vue_component__$r,
 		FForm: __vue_component__$a,
-		FFormField: __vue_component__$k,
-		FTextarea: __vue_component__$t,
-		FAvatar: __vue_component__$C
+		FFormField: __vue_component__$l,
+		FTextarea: __vue_component__$u,
+		FAvatar: __vue_component__$D
 	},
 	props: {
 		/**
@@ -14105,7 +16567,7 @@ __vue_render__$1._withStripped = true;
   
 
   
-  const __vue_component__$1 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$1 = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
     __vue_inject_styles__$1,
     __vue_script__$1,
@@ -14137,10 +16599,6 @@ __vue_render__$1._withStripped = true;
 //
 //
 //
-//
-//
-//
-//
 
 
 let toastId = 0;
@@ -14148,7 +16606,7 @@ let toastId = 0;
 var script = {
 	name: 'FToastProvider',
 	components: {
-		FToast: __vue_component__$c
+		FToast: __vue_component__$d
 	},
 	props: {
 		/**
@@ -14376,11 +16834,11 @@ __vue_render__._withStripped = true;
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-d4352c6e_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/* Ensure toasts are clickable */\n.fixed > *[data-v-d4352c6e] {\r\n\tpointer-events: auto;\n}\r\n", map: {"version":3,"sources":["/home/web/github/hugo/pyreweb/fabric/src/components/organisms/FToastProvider/FToastProvider.vue"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAqNA,gCAAA;AACA;CACA,oBAAA;AACA","file":"FToastProvider.vue","sourcesContent":["<template>\r\n\t<div>\r\n\t\t<slot />\r\n\t\t<div\r\n\t\t\tv-for=\"pos in positions\"\r\n\t\t\t:key=\"pos\"\r\n\t\t\t:class=\"containerClasses(pos)\"\r\n\t\t>\r\n\t\t\t<f-toast\r\n\t\t\t\tv-for=\"toast in toastsByPosition[pos]\"\r\n\t\t\t\t:key=\"toast.id\"\r\n\t\t\t\t:variant=\"toast.variant\"\r\n\t\t\t\t:title=\"toast.title\"\r\n\t\t\t\t:message=\"toast.message\"\r\n\t\t\t\t:closable=\"toast.closable\"\r\n\t\t\t\t:duration=\"toast.duration\"\r\n\t\t\t\t:position=\"pos\"\r\n\t\t\t\t@close=\"removeToast(toast.id)\"\r\n\t\t\t/>\r\n\t\t</div>\r\n\t</div>\r\n</template>\r\n\r\n<script>\r\nimport FToast from '../../molecules/FToast/FToast.vue';\r\n\r\nlet toastId = 0;\r\n\r\nexport default {\r\n\tname: 'FToastProvider',\r\n\tcomponents: {\r\n\t\tFToast\r\n\t},\r\n\tprops: {\r\n\t\t/**\r\n\t\t * Position par défaut des toasts\r\n\t\t */\r\n\t\tposition: {\r\n\t\t\ttype: String,\r\n\t\t\tdefault: 'top-right',\r\n\t\t\tvalidator: (value) =>\r\n\t\t\t\t[\r\n\t\t\t\t\t'top-left',\r\n\t\t\t\t\t'top-center',\r\n\t\t\t\t\t'top-right',\r\n\t\t\t\t\t'bottom-left',\r\n\t\t\t\t\t'bottom-center',\r\n\t\t\t\t\t'bottom-right'\r\n\t\t\t\t].includes(value)\r\n\t\t},\r\n\t\t/**\r\n\t\t * Nombre maximum de toasts affichés simultanément\r\n\t\t */\r\n\t\tmaxToasts: {\r\n\t\t\ttype: Number,\r\n\t\t\tdefault: 5\r\n\t\t}\r\n\t},\r\n\tdata() {\r\n\t\treturn {\r\n\t\t\ttoasts: [],\r\n\t\t\tpositions: [\r\n\t\t\t\t'top-left',\r\n\t\t\t\t'top-center',\r\n\t\t\t\t'top-right',\r\n\t\t\t\t'bottom-left',\r\n\t\t\t\t'bottom-center',\r\n\t\t\t\t'bottom-right'\r\n\t\t\t]\r\n\t\t};\r\n\t},\r\n\tcomputed: {\r\n\t\ttoastsByPosition() {\r\n\t\t\treturn this.positions.reduce((acc, position) => {\r\n\t\t\t\tacc[position] = this.toasts.filter(\r\n\t\t\t\t\t(toast) => toast.position === position\r\n\t\t\t\t);\r\n\t\t\t\treturn acc;\r\n\t\t\t}, {});\r\n\t\t}\r\n\t},\r\n\tcreated() {\r\n\t\t// Expose API globally via $root for Vue 2 compatibility\r\n\t\t// Note: In Vue 3, this should be replaced with provide/inject or a plugin\r\n\t\t// This approach is acceptable for Vue 2 applications for convenience\r\n\t\tif (this.$root && !this.$root.$toast) {\r\n\t\t\tthis.$root.$toast = {\r\n\t\t\t\tshow: this.show,\r\n\t\t\t\tsuccess: this.success,\r\n\t\t\t\terror: this.error,\r\n\t\t\t\tinfo: this.info,\r\n\t\t\t\twarning: this.warning,\r\n\t\t\t\tclear: this.clear\r\n\t\t\t};\r\n\t\t} else if (this.$root && this.$root.$toast) {\r\n\t\t\t// Warn if another FToastProvider is already mounted\r\n\t\t\tconsole.warn(\r\n\t\t\t\t'FToastProvider: Multiple instances detected. Only one FToastProvider should be mounted at a time. The global API will use the first mounted instance.'\r\n\t\t\t);\r\n\t\t}\r\n\t},\r\n\tbeforeDestroy() {\r\n\t\t// Clean up global API\r\n\t\tif (this.$root && this.$root.$toast) {\r\n\t\t\tdelete this.$root.$toast;\r\n\t\t}\r\n\t},\r\n\tmethods: {\r\n\t\tcontainerClasses(position) {\r\n\t\t\tconst baseClasses =\r\n\t\t\t\t'fixed z-50 flex flex-col gap-3 p-4 pointer-events-none';\r\n\t\t\tconst positionClasses = {\r\n\t\t\t\t'top-left': 'top-0 left-0',\r\n\t\t\t\t'top-center': 'top-0 left-1/2 -translate-x-1/2',\r\n\t\t\t\t'top-right': 'top-0 right-0',\r\n\t\t\t\t'bottom-left': 'bottom-0 left-0',\r\n\t\t\t\t'bottom-center': 'bottom-0 left-1/2 -translate-x-1/2',\r\n\t\t\t\t'bottom-right': 'bottom-0 right-0'\r\n\t\t\t};\r\n\r\n\t\t\treturn `${baseClasses} ${positionClasses[position]}`;\r\n\t\t},\r\n\t\t/**\r\n\t\t * Affiche un toast avec des options personnalisées\r\n\t\t */\r\n\t\tshow(options) {\r\n\t\t\tconst toast = {\r\n\t\t\t\tid: ++toastId,\r\n\t\t\t\tvariant: options.variant || 'info',\r\n\t\t\t\ttitle: options.title || '',\r\n\t\t\t\tmessage: options.message || '',\r\n\t\t\t\tclosable: options.closable !== undefined ? options.closable : true,\r\n\t\t\t\tduration: options.duration !== undefined ? options.duration : 5000,\r\n\t\t\t\tposition: options.position || this.position\r\n\t\t\t};\r\n\r\n\t\t\t// Limit the number of toasts\r\n\t\t\tif (this.toasts.length >= this.maxToasts) {\r\n\t\t\t\tthis.toasts.shift();\r\n\t\t\t}\r\n\r\n\t\t\tthis.toasts.push(toast);\r\n\t\t\tthis.$emit('show', toast);\r\n\r\n\t\t\treturn toast.id;\r\n\t\t},\r\n\t\t/**\r\n\t\t * Affiche un toast de succès\r\n\t\t */\r\n\t\tsuccess(message, title = 'Succès', options = {}) {\r\n\t\t\treturn this.show({\r\n\t\t\t\tvariant: 'success',\r\n\t\t\t\ttitle,\r\n\t\t\t\tmessage,\r\n\t\t\t\t...options\r\n\t\t\t});\r\n\t\t},\r\n\t\t/**\r\n\t\t * Affiche un toast d'erreur\r\n\t\t */\r\n\t\terror(message, title = 'Erreur', options = {}) {\r\n\t\t\treturn this.show({\r\n\t\t\t\tvariant: 'error',\r\n\t\t\t\ttitle,\r\n\t\t\t\tmessage,\r\n\t\t\t\t...options\r\n\t\t\t});\r\n\t\t},\r\n\t\t/**\r\n\t\t * Affiche un toast d'information\r\n\t\t */\r\n\t\tinfo(message, title = 'Information', options = {}) {\r\n\t\t\treturn this.show({\r\n\t\t\t\tvariant: 'info',\r\n\t\t\t\ttitle,\r\n\t\t\t\tmessage,\r\n\t\t\t\t...options\r\n\t\t\t});\r\n\t\t},\r\n\t\t/**\r\n\t\t * Affiche un toast d'avertissement\r\n\t\t */\r\n\t\twarning(message, title = 'Avertissement', options = {}) {\r\n\t\t\treturn this.show({\r\n\t\t\t\tvariant: 'warning',\r\n\t\t\t\ttitle,\r\n\t\t\t\tmessage,\r\n\t\t\t\t...options\r\n\t\t\t});\r\n\t\t},\r\n\t\t/**\r\n\t\t * Supprime un toast spécifique\r\n\t\t */\r\n\t\tremoveToast(id) {\r\n\t\t\tconst index = this.toasts.findIndex((t) => t.id === id);\r\n\t\t\tif (index !== -1) {\r\n\t\t\t\tconst toast = this.toasts[index];\r\n\t\t\t\tthis.toasts.splice(index, 1);\r\n\t\t\t\tthis.$emit('remove', toast);\r\n\t\t\t}\r\n\t\t},\r\n\t\t/**\r\n\t\t * Supprime tous les toasts\r\n\t\t */\r\n\t\tclear() {\r\n\t\t\tthis.toasts = [];\r\n\t\t\tthis.$emit('clear');\r\n\t\t}\r\n\t}\r\n};\r\n</script>\r\n\r\n<style scoped>\r\n/* Ensure toasts are clickable */\r\n.fixed > * {\r\n\tpointer-events: auto;\r\n}\r\n</style>\r\n"]}, media: undefined });
+    inject("data-v-142a9fb2_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Ensure toasts are clickable */\n.fixed > *[data-v-142a9fb2] {\n\tpointer-events: auto;\n}\n", map: {"version":3,"sources":["/home/runner/work/fabric/fabric/src/components/organisms/FToastProvider/FToastProvider.vue"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAiNA,gCAAA;AACA;CACA,oBAAA;AACA","file":"FToastProvider.vue","sourcesContent":["<template>\n\t<div>\n\t\t<slot />\n\t\t<div v-for=\"pos in positions\" :key=\"pos\" :class=\"containerClasses(pos)\">\n\t\t\t<f-toast\n\t\t\t\tv-for=\"toast in toastsByPosition[pos]\"\n\t\t\t\t:key=\"toast.id\"\n\t\t\t\t:variant=\"toast.variant\"\n\t\t\t\t:title=\"toast.title\"\n\t\t\t\t:message=\"toast.message\"\n\t\t\t\t:closable=\"toast.closable\"\n\t\t\t\t:duration=\"toast.duration\"\n\t\t\t\t:position=\"pos\"\n\t\t\t\t@close=\"removeToast(toast.id)\"\n\t\t\t/>\n\t\t</div>\n\t</div>\n</template>\n\n<script>\nimport FToast from '../../molecules/FToast/FToast.vue';\n\nlet toastId = 0;\n\nexport default {\n\tname: 'FToastProvider',\n\tcomponents: {\n\t\tFToast\n\t},\n\tprops: {\n\t\t/**\n\t\t * Position par défaut des toasts\n\t\t */\n\t\tposition: {\n\t\t\ttype: String,\n\t\t\tdefault: 'top-right',\n\t\t\tvalidator: (value) =>\n\t\t\t\t[\n\t\t\t\t\t'top-left',\n\t\t\t\t\t'top-center',\n\t\t\t\t\t'top-right',\n\t\t\t\t\t'bottom-left',\n\t\t\t\t\t'bottom-center',\n\t\t\t\t\t'bottom-right'\n\t\t\t\t].includes(value)\n\t\t},\n\t\t/**\n\t\t * Nombre maximum de toasts affichés simultanément\n\t\t */\n\t\tmaxToasts: {\n\t\t\ttype: Number,\n\t\t\tdefault: 5\n\t\t}\n\t},\n\tdata() {\n\t\treturn {\n\t\t\ttoasts: [],\n\t\t\tpositions: [\n\t\t\t\t'top-left',\n\t\t\t\t'top-center',\n\t\t\t\t'top-right',\n\t\t\t\t'bottom-left',\n\t\t\t\t'bottom-center',\n\t\t\t\t'bottom-right'\n\t\t\t]\n\t\t};\n\t},\n\tcomputed: {\n\t\ttoastsByPosition() {\n\t\t\treturn this.positions.reduce((acc, position) => {\n\t\t\t\tacc[position] = this.toasts.filter(\n\t\t\t\t\t(toast) => toast.position === position\n\t\t\t\t);\n\t\t\t\treturn acc;\n\t\t\t}, {});\n\t\t}\n\t},\n\tcreated() {\n\t\t// Expose API globally via $root for Vue 2 compatibility\n\t\t// Note: In Vue 3, this should be replaced with provide/inject or a plugin\n\t\t// This approach is acceptable for Vue 2 applications for convenience\n\t\tif (this.$root && !this.$root.$toast) {\n\t\t\tthis.$root.$toast = {\n\t\t\t\tshow: this.show,\n\t\t\t\tsuccess: this.success,\n\t\t\t\terror: this.error,\n\t\t\t\tinfo: this.info,\n\t\t\t\twarning: this.warning,\n\t\t\t\tclear: this.clear\n\t\t\t};\n\t\t} else if (this.$root && this.$root.$toast) {\n\t\t\t// Warn if another FToastProvider is already mounted\n\t\t\tconsole.warn(\n\t\t\t\t'FToastProvider: Multiple instances detected. Only one FToastProvider should be mounted at a time. The global API will use the first mounted instance.'\n\t\t\t);\n\t\t}\n\t},\n\tbeforeDestroy() {\n\t\t// Clean up global API\n\t\tif (this.$root && this.$root.$toast) {\n\t\t\tdelete this.$root.$toast;\n\t\t}\n\t},\n\tmethods: {\n\t\tcontainerClasses(position) {\n\t\t\tconst baseClasses =\n\t\t\t\t'fixed z-50 flex flex-col gap-3 p-4 pointer-events-none';\n\t\t\tconst positionClasses = {\n\t\t\t\t'top-left': 'top-0 left-0',\n\t\t\t\t'top-center': 'top-0 left-1/2 -translate-x-1/2',\n\t\t\t\t'top-right': 'top-0 right-0',\n\t\t\t\t'bottom-left': 'bottom-0 left-0',\n\t\t\t\t'bottom-center': 'bottom-0 left-1/2 -translate-x-1/2',\n\t\t\t\t'bottom-right': 'bottom-0 right-0'\n\t\t\t};\n\n\t\t\treturn `${baseClasses} ${positionClasses[position]}`;\n\t\t},\n\t\t/**\n\t\t * Affiche un toast avec des options personnalisées\n\t\t */\n\t\tshow(options) {\n\t\t\tconst toast = {\n\t\t\t\tid: ++toastId,\n\t\t\t\tvariant: options.variant || 'info',\n\t\t\t\ttitle: options.title || '',\n\t\t\t\tmessage: options.message || '',\n\t\t\t\tclosable: options.closable !== undefined ? options.closable : true,\n\t\t\t\tduration: options.duration !== undefined ? options.duration : 5000,\n\t\t\t\tposition: options.position || this.position\n\t\t\t};\n\n\t\t\t// Limit the number of toasts\n\t\t\tif (this.toasts.length >= this.maxToasts) {\n\t\t\t\tthis.toasts.shift();\n\t\t\t}\n\n\t\t\tthis.toasts.push(toast);\n\t\t\tthis.$emit('show', toast);\n\n\t\t\treturn toast.id;\n\t\t},\n\t\t/**\n\t\t * Affiche un toast de succès\n\t\t */\n\t\tsuccess(message, title = 'Succès', options = {}) {\n\t\t\treturn this.show({\n\t\t\t\tvariant: 'success',\n\t\t\t\ttitle,\n\t\t\t\tmessage,\n\t\t\t\t...options\n\t\t\t});\n\t\t},\n\t\t/**\n\t\t * Affiche un toast d'erreur\n\t\t */\n\t\terror(message, title = 'Erreur', options = {}) {\n\t\t\treturn this.show({\n\t\t\t\tvariant: 'error',\n\t\t\t\ttitle,\n\t\t\t\tmessage,\n\t\t\t\t...options\n\t\t\t});\n\t\t},\n\t\t/**\n\t\t * Affiche un toast d'information\n\t\t */\n\t\tinfo(message, title = 'Information', options = {}) {\n\t\t\treturn this.show({\n\t\t\t\tvariant: 'info',\n\t\t\t\ttitle,\n\t\t\t\tmessage,\n\t\t\t\t...options\n\t\t\t});\n\t\t},\n\t\t/**\n\t\t * Affiche un toast d'avertissement\n\t\t */\n\t\twarning(message, title = 'Avertissement', options = {}) {\n\t\t\treturn this.show({\n\t\t\t\tvariant: 'warning',\n\t\t\t\ttitle,\n\t\t\t\tmessage,\n\t\t\t\t...options\n\t\t\t});\n\t\t},\n\t\t/**\n\t\t * Supprime un toast spécifique\n\t\t */\n\t\tremoveToast(id) {\n\t\t\tconst index = this.toasts.findIndex((t) => t.id === id);\n\t\t\tif (index !== -1) {\n\t\t\t\tconst toast = this.toasts[index];\n\t\t\t\tthis.toasts.splice(index, 1);\n\t\t\t\tthis.$emit('remove', toast);\n\t\t\t}\n\t\t},\n\t\t/**\n\t\t * Supprime tous les toasts\n\t\t */\n\t\tclear() {\n\t\t\tthis.toasts = [];\n\t\t\tthis.$emit('clear');\n\t\t}\n\t}\n};\n</script>\n\n<style scoped>\n/* Ensure toasts are clickable */\n.fixed > * {\n\tpointer-events: auto;\n}\n</style>\n"]}, media: undefined });
 
   };
   /* scoped */
-  const __vue_scope_id__ = "data-v-d4352c6e";
+  const __vue_scope_id__ = "data-v-142a9fb2";
   /* module identifier */
   const __vue_module_identifier__ = undefined;
   /* functional template */
@@ -14391,7 +16849,7 @@ __vue_render__._withStripped = true;
   
 
   
-  const __vue_component__ = /*#__PURE__*/normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/normalizeComponent$1(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -14406,42 +16864,42 @@ __vue_render__._withStripped = true;
 
 const components = {
     FActivityFeed: __vue_component__$b,
-    FAlert: __vue_component__$q,
-    FAvatar: __vue_component__$C,
-    FBadge: __vue_component__$B,
-    FBreadcrumb: __vue_component__$p,
-    FButton: __vue_component__$A,
-    FButtonGroup: __vue_component__$o,
-    FCheckbox: __vue_component__$z,
+    FAlert: __vue_component__$r,
+    FAvatar: __vue_component__$D,
+    FBadge: __vue_component__$C,
+    FBreadcrumb: __vue_component__$q,
+    FButton: __vue_component__$B,
+    FButtonGroup: __vue_component__$p,
+    FCheckbox: __vue_component__$A,
     FDataTable: __vue_component__$9,
-    FDatePicker: __vue_component__$n,
-    FDivider: __vue_component__$y,
+    FDatePicker: __vue_component__$o,
+    FDivider: __vue_component__$z,
     FDrawer: __vue_component__$8,
-    FEmptyState: __vue_component__$m,
-    FFilePreview: __vue_component__$l,
+    FEmptyState: __vue_component__$n,
+    FFilePreview: __vue_component__$m,
     FFileUpload: __vue_component__$7,
-    FIcon: __vue_component__$x,
-    FInput: __vue_component__$w,
-    FListItem: __vue_component__$h,
-    FLoader: __vue_component__$v,
+    FIcon: __vue_component__$y,
+    FInput: __vue_component__$x,
+    FListItem: __vue_component__$i,
+    FLoader: __vue_component__$w,
     FModal: __vue_component__$5,
     FOnboardingStepper: __vue_component__$2,
     FPageHeader: __vue_component__$6,
     FProfileSection: __vue_component__$1,
-    FRadio: __vue_component__$u,
-    FSelect: __vue_component__$f,
-    FTab: __vue_component__$d,
-    FTabs: __vue_component__$e,
-    FTextarea: __vue_component__$t,
-    FToggle: __vue_component__$s,
-    FTypography: __vue_component__$r,
-    FFormField: __vue_component__$k,
-    FCard: __vue_component__$j,
+    FRadio: __vue_component__$v,
+    FSelect: __vue_component__$g,
+    FTab: __vue_component__$e,
+    FTabs: __vue_component__$f,
+    FTextarea: __vue_component__$u,
+    FToggle: __vue_component__$t,
+    FTypography: __vue_component__$s,
+    FFormField: __vue_component__$l,
+    FCard: __vue_component__$k,
     FForm: __vue_component__$a,
-    FSearchBar: __vue_component__$i,
-    FPagination: __vue_component__$g,
+    FSearchBar: __vue_component__$j,
+    FPagination: __vue_component__$h,
     FUserMenu: __vue_component__$4,
-    FToast: __vue_component__$c,
+    FToast: __vue_component__$d,
     FToastProvider: __vue_component__
 };
 const install = (Vue) => {
@@ -14460,41 +16918,41 @@ var index = {
 };
 
 exports.FActivityFeed = __vue_component__$b;
-exports.FAlert = __vue_component__$q;
-exports.FAvatar = __vue_component__$C;
-exports.FBadge = __vue_component__$B;
-exports.FBreadcrumb = __vue_component__$p;
-exports.FButton = __vue_component__$A;
-exports.FButtonGroup = __vue_component__$o;
-exports.FCard = __vue_component__$j;
-exports.FCheckbox = __vue_component__$z;
+exports.FAlert = __vue_component__$r;
+exports.FAvatar = __vue_component__$D;
+exports.FBadge = __vue_component__$C;
+exports.FBreadcrumb = __vue_component__$q;
+exports.FButton = __vue_component__$B;
+exports.FButtonGroup = __vue_component__$p;
+exports.FCard = __vue_component__$k;
+exports.FCheckbox = __vue_component__$A;
 exports.FDataTable = __vue_component__$9;
-exports.FDatePicker = __vue_component__$n;
-exports.FDivider = __vue_component__$y;
+exports.FDatePicker = __vue_component__$o;
+exports.FDivider = __vue_component__$z;
 exports.FDrawer = __vue_component__$8;
-exports.FEmptyState = __vue_component__$m;
-exports.FFilePreview = __vue_component__$l;
+exports.FEmptyState = __vue_component__$n;
+exports.FFilePreview = __vue_component__$m;
 exports.FFileUpload = __vue_component__$7;
 exports.FForm = __vue_component__$a;
-exports.FFormField = __vue_component__$k;
-exports.FIcon = __vue_component__$x;
-exports.FInput = __vue_component__$w;
-exports.FListItem = __vue_component__$h;
-exports.FLoader = __vue_component__$v;
+exports.FFormField = __vue_component__$l;
+exports.FIcon = __vue_component__$y;
+exports.FInput = __vue_component__$x;
+exports.FListItem = __vue_component__$i;
+exports.FLoader = __vue_component__$w;
 exports.FModal = __vue_component__$5;
 exports.FOnboardingStepper = __vue_component__$2;
 exports.FPageHeader = __vue_component__$6;
-exports.FPagination = __vue_component__$g;
+exports.FPagination = __vue_component__$h;
 exports.FProfileSection = __vue_component__$1;
-exports.FRadio = __vue_component__$u;
-exports.FSearchBar = __vue_component__$i;
-exports.FSelect = __vue_component__$f;
-exports.FTab = __vue_component__$d;
-exports.FTabs = __vue_component__$e;
-exports.FTextarea = __vue_component__$t;
-exports.FToast = __vue_component__$c;
+exports.FRadio = __vue_component__$v;
+exports.FSearchBar = __vue_component__$j;
+exports.FSelect = __vue_component__$g;
+exports.FTab = __vue_component__$e;
+exports.FTabs = __vue_component__$f;
+exports.FTextarea = __vue_component__$u;
+exports.FToast = __vue_component__$d;
 exports.FToastProvider = __vue_component__;
-exports.FToggle = __vue_component__$s;
-exports.FTypography = __vue_component__$r;
+exports.FToggle = __vue_component__$t;
+exports.FTypography = __vue_component__$s;
 exports.FUserMenu = __vue_component__$4;
 exports.default = index;

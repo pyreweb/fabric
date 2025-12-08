@@ -6,7 +6,7 @@
 		</div>
 
 		<!-- Events list -->
-		<div v-if="sortedEvents.length > 0" :class="listClasses">
+		<div v-if="sortedEvents.length > 0 && !virtual" :class="listClasses">
 			<div
 				v-for="(event, index) in sortedEvents"
 				:key="getEventKey(event, index)"
@@ -84,6 +84,95 @@
 			</div>
 		</div>
 
+		<!-- Virtual events list -->
+		<div v-if="sortedEvents.length > 0 && virtual" :class="listClasses">
+			<RecycleScroller
+				:items="sortedEvents"
+				:item-size="virtualItemHeight"
+				:key-field="eventKey"
+				:buffer="200"
+				class="scroller"
+				:style="{ height: virtualHeight + 'px' }"
+			>
+				<template #default="{ item: event, index }">
+					<div :class="eventContainerClasses">
+						<!-- Timeline indicator -->
+						<div v-if="showTimeline" :class="timelineClasses">
+							<div :class="timelineDotClasses(event)">
+								<f-icon
+									v-if="getEventIcon(event)"
+									:name="getEventIcon(event)"
+									size="xs"
+									:class="timelineIconClasses"
+								/>
+							</div>
+							<div
+								v-if="index < sortedEvents.length - 1"
+								:class="timelineLineClasses"
+							/>
+						</div>
+
+						<!-- Event content -->
+						<div :class="eventContentClasses">
+							<!-- Custom render slot for the event type -->
+							<slot :name="'event-' + event.type" :event="event" :index="index">
+								<!-- Default event rendering using FListItem -->
+								<f-list-item
+									:title="getEventTitle(event)"
+									:subtitle="getEventSubtitle(event)"
+									:clickable="clickable"
+									:truncate="truncateContent"
+									@click="handleEventClick(event)"
+								>
+									<template #left>
+										<div :class="eventIconContainerClasses(event)">
+											<f-icon :name="getEventIcon(event)" :size="iconSize" />
+										</div>
+									</template>
+
+									<template #content>
+										<slot name="event-content" :event="event">
+											<div :class="eventBodyClasses">
+												<!-- Event description -->
+												<f-typography
+													v-if="event.description"
+													variant="body"
+													:class="descriptionClasses"
+												>
+													{{ event.description }}
+												</f-typography>
+
+												<!-- Event metadata: badge and timestamp -->
+												<div :class="metadataClasses">
+													<f-badge
+														v-if="getEventBadge(event)"
+														:variant="getEventBadge(event).variant || 'neutral'"
+														:content="getEventBadge(event).label"
+														size="sm"
+													/>
+													<f-typography
+														variant="caption"
+														:class="timestampClasses"
+													>
+														<f-icon name="clock" size="xs" class="mr-1" />
+														{{ formatTimestamp(event.timestamp) }}
+													</f-typography>
+												</div>
+											</div>
+										</slot>
+									</template>
+
+									<template #right>
+										<slot name="event-actions" :event="event" />
+									</template>
+								</f-list-item>
+							</slot>
+						</div>
+					</div>
+				</template>
+			</RecycleScroller>
+		</div>
+
 		<!-- Empty state -->
 		<f-empty-state
 			v-else-if="!loading"
@@ -120,6 +209,8 @@ import FTypography from '../../atoms/FTypography/FTypography.vue';
 import FIcon from '../../atoms/FIcon/FIcon.vue';
 import FBadge from '../../atoms/FBadge/FBadge.vue';
 import FLoader from '../../atoms/FLoader/FLoader.vue';
+import { RecycleScroller } from 'vue-virtual-scroller';
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css';
 
 export default {
 	name: 'FActivityFeed',
@@ -129,7 +220,8 @@ export default {
 		FTypography,
 		FIcon,
 		FBadge,
-		FLoader
+		FLoader,
+		RecycleScroller
 	},
 	props: {
 		/**
@@ -296,6 +388,30 @@ export default {
 		loadingLabel: {
 			type: String,
 			default: 'Chargement en cours'
+		},
+		/**
+		 * Enable virtualization for large event lists (improves performance with 1000+ events)
+		 * When enabled, only visible events are rendered.
+		 */
+		virtual: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Height of each virtualized event in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualItemHeight: {
+			type: Number,
+			default: 100
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 600
 		}
 	},
 	data() {

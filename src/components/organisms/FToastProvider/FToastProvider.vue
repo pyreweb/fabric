@@ -1,11 +1,7 @@
 <template>
 	<div>
 		<slot />
-		<div
-			v-for="pos in positions"
-			:key="pos"
-			:class="containerClasses(pos)"
-		>
+		<div v-for="pos in positions" :key="pos" :class="containerClasses(pos)">
 			<f-toast
 				v-for="toast in toastsByPosition[pos]"
 				:key="toast.id"
