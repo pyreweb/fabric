@@ -22,7 +22,9 @@ export const Default = () => ({
 	},
 	methods: {
 		handleSubmit() {
-			alert(`Formulaire soumis:\nNom: ${this.form.name}\nEmail: ${this.form.email}`);
+			alert(
+				`Formulaire soumis:\nNom: ${this.form.name}\nEmail: ${this.form.email}`
+			);
 		}
 	},
 	template: `
@@ -169,7 +171,7 @@ export const ContactForm = () => ({
 	methods: {
 		async handleSubmit() {
 			this.isLoading = true;
-			await new Promise(resolve => setTimeout(resolve, 1500));
+			await new Promise((resolve) => setTimeout(resolve, 1500));
 			this.isLoading = false;
 			alert('Message envoyé !');
 			this.form = { name: '', email: '', subject: '', message: '' };
@@ -225,14 +227,15 @@ export const WithValidation = () => ({
 		validate() {
 			this.errors = {};
 			if (!this.form.email) {
-				this.errors.email = 'L\'email est requis';
+				this.errors.email = "L'email est requis";
 			} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
 				this.errors.email = 'Email invalide';
 			}
 			if (!this.form.password) {
 				this.errors.password = 'Le mot de passe est requis';
 			} else if (this.form.password.length < 8) {
-				this.errors.password = 'Le mot de passe doit faire au moins 8 caractères';
+				this.errors.password =
+					'Le mot de passe doit faire au moins 8 caractères';
 			}
 			return Object.keys(this.errors).length === 0;
 		},

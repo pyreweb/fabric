@@ -122,7 +122,9 @@ export default {
 		},
 		counterClasses() {
 			const baseClasses = 'font-sans text-xs';
-			const stateClasses = this.isOverLimit ? 'text-danger-500' : 'text-neutral-500';
+			const stateClasses = this.isOverLimit
+				? 'text-danger-500'
+				: 'text-neutral-500';
 
 			return [baseClasses, stateClasses].filter(Boolean).join(' ');
 		},

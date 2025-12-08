@@ -80,7 +80,7 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
 /* script */
 
 /* template */
-var __vue_render__$A = function () {
+var __vue_render__$B = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -155,6 +155,64 @@ var __vue_render__$A = function () {
     ]
   )
 };
+var __vue_staticRenderFns__$x = [];
+__vue_render__$B._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$x = undefined;
+  /* scoped */
+  const __vue_scope_id__$x = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$x = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$x = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$x = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$B, staticRenderFns: __vue_staticRenderFns__$x },
+    __vue_inject_styles__$x,
+    {},
+    __vue_scope_id__$x,
+    __vue_is_functional_template__$x,
+    __vue_module_identifier__$x,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+/* script */
+
+/* template */
+var __vue_render__$A = function () {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    _vm.tag,
+    {
+      tag: "component",
+      class: _vm.computedClasses,
+      attrs: { "aria-label": _vm.computedAriaLabel },
+    },
+    [
+      !_vm.dot
+        ? [
+            _vm._t("default", function () {
+              return [_vm._v(_vm._s(_vm.content))]
+            }),
+          ]
+        : _vm._e(),
+    ],
+    2
+  )
+};
 var __vue_staticRenderFns__$w = [];
 __vue_render__$A._withStripped = true;
 
@@ -191,64 +249,6 @@ __vue_render__$A._withStripped = true;
 
 /* template */
 var __vue_render__$z = function () {
-  var _vm = this;
-  var _h = _vm.$createElement;
-  var _c = _vm._self._c || _h;
-  return _c(
-    _vm.tag,
-    {
-      tag: "component",
-      class: _vm.computedClasses,
-      attrs: { "aria-label": _vm.computedAriaLabel },
-    },
-    [
-      !_vm.dot
-        ? [
-            _vm._t("default", function () {
-              return [_vm._v(_vm._s(_vm.content))]
-            }),
-          ]
-        : _vm._e(),
-    ],
-    2
-  )
-};
-var __vue_staticRenderFns__$v = [];
-__vue_render__$z._withStripped = true;
-
-  /* style */
-  const __vue_inject_styles__$v = undefined;
-  /* scoped */
-  const __vue_scope_id__$v = undefined;
-  /* module identifier */
-  const __vue_module_identifier__$v = undefined;
-  /* functional template */
-  const __vue_is_functional_template__$v = false;
-  /* style inject */
-  
-  /* style inject SSR */
-  
-  /* style inject shadow dom */
-  
-
-  
-  const __vue_component__$v = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$v },
-    __vue_inject_styles__$v,
-    {},
-    __vue_scope_id__$v,
-    __vue_is_functional_template__$v,
-    __vue_module_identifier__$v,
-    false,
-    undefined,
-    undefined,
-    undefined
-  );
-
-/* script */
-
-/* template */
-var __vue_render__$y = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -317,17 +317,17 @@ var __vue_render__$y = function () {
     ]
   )
 };
-var __vue_staticRenderFns__$u = [];
-__vue_render__$y._withStripped = true;
+var __vue_staticRenderFns__$v = [];
+__vue_render__$z._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$u = undefined;
+  const __vue_inject_styles__$v = undefined;
   /* scoped */
-  const __vue_scope_id__$u = undefined;
+  const __vue_scope_id__$v = undefined;
   /* module identifier */
-  const __vue_module_identifier__$u = undefined;
+  const __vue_module_identifier__$v = undefined;
   /* functional template */
-  const __vue_is_functional_template__$u = false;
+  const __vue_is_functional_template__$v = false;
   /* style inject */
   
   /* style inject SSR */
@@ -336,13 +336,13 @@ __vue_render__$y._withStripped = true;
   
 
   
-  const __vue_component__$u = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$u },
-    __vue_inject_styles__$u,
+  const __vue_component__$v = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$z, staticRenderFns: __vue_staticRenderFns__$v },
+    __vue_inject_styles__$v,
     {},
-    __vue_scope_id__$u,
-    __vue_is_functional_template__$u,
-    __vue_module_identifier__$u,
+    __vue_scope_id__$v,
+    __vue_is_functional_template__$v,
+    __vue_module_identifier__$v,
     false,
     undefined,
     undefined,
@@ -368,7 +368,7 @@ __vue_render__$y._withStripped = true;
 //
 //
 
-var script$t = {
+var script$u = {
 	name: 'FCheckbox',
 	model: {
 		prop: 'checked',
@@ -425,10 +425,10 @@ var script$t = {
 };
 
 /* script */
-const __vue_script__$t = script$t;
+const __vue_script__$u = script$u;
 
 /* template */
-var __vue_render__$x = function () {
+var __vue_render__$y = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -466,17 +466,17 @@ var __vue_render__$x = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$t = [];
-__vue_render__$x._withStripped = true;
+var __vue_staticRenderFns__$u = [];
+__vue_render__$y._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$t = undefined;
+  const __vue_inject_styles__$u = undefined;
   /* scoped */
-  const __vue_scope_id__$t = undefined;
+  const __vue_scope_id__$u = undefined;
   /* module identifier */
-  const __vue_module_identifier__$t = undefined;
+  const __vue_module_identifier__$u = undefined;
   /* functional template */
-  const __vue_is_functional_template__$t = false;
+  const __vue_is_functional_template__$u = false;
   /* style inject */
   
   /* style inject SSR */
@@ -485,13 +485,13 @@ __vue_render__$x._withStripped = true;
   
 
   
-  const __vue_component__$t = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
-    __vue_inject_styles__$t,
-    __vue_script__$t,
-    __vue_scope_id__$t,
-    __vue_is_functional_template__$t,
-    __vue_module_identifier__$t,
+  const __vue_component__$u = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$y, staticRenderFns: __vue_staticRenderFns__$u },
+    __vue_inject_styles__$u,
+    __vue_script__$u,
+    __vue_scope_id__$u,
+    __vue_is_functional_template__$u,
+    __vue_module_identifier__$u,
     false,
     undefined,
     undefined,
@@ -516,7 +516,7 @@ __vue_render__$x._withStripped = true;
 //
 //
 
-var script$s = {
+var script$t = {
 	name: 'FDivider',
 	props: {
 		orientation: {
@@ -616,10 +616,10 @@ var script$s = {
 };
 
 /* script */
-const __vue_script__$s = script$s;
+const __vue_script__$t = script$t;
 
 /* template */
-var __vue_render__$w = function () {
+var __vue_render__$x = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -643,17 +643,17 @@ var __vue_render__$w = function () {
     2
   )
 };
-var __vue_staticRenderFns__$s = [];
-__vue_render__$w._withStripped = true;
+var __vue_staticRenderFns__$t = [];
+__vue_render__$x._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$s = undefined;
+  const __vue_inject_styles__$t = undefined;
   /* scoped */
-  const __vue_scope_id__$s = undefined;
+  const __vue_scope_id__$t = undefined;
   /* module identifier */
-  const __vue_module_identifier__$s = undefined;
+  const __vue_module_identifier__$t = undefined;
   /* functional template */
-  const __vue_is_functional_template__$s = false;
+  const __vue_is_functional_template__$t = false;
   /* style inject */
   
   /* style inject SSR */
@@ -662,13 +662,13 @@ __vue_render__$w._withStripped = true;
   
 
   
-  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
-    __vue_inject_styles__$s,
-    __vue_script__$s,
-    __vue_scope_id__$s,
-    __vue_is_functional_template__$s,
-    __vue_module_identifier__$s,
+  const __vue_component__$t = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$x, staticRenderFns: __vue_staticRenderFns__$t },
+    __vue_inject_styles__$t,
+    __vue_script__$t,
+    __vue_scope_id__$t,
+    __vue_is_functional_template__$t,
+    __vue_module_identifier__$t,
     false,
     undefined,
     undefined,
@@ -783,7 +783,7 @@ const ICON_PATHS = {
 		'M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
 };
 
-var script$r = {
+var script$s = {
 	name: 'FIcon',
 	props: {
 		name: {
@@ -868,10 +868,10 @@ var script$r = {
 };
 
 /* script */
-const __vue_script__$r = script$r;
+const __vue_script__$s = script$s;
 
 /* template */
-var __vue_render__$v = function () {
+var __vue_render__$w = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -942,17 +942,17 @@ var __vue_render__$v = function () {
     2
   )
 };
-var __vue_staticRenderFns__$r = [];
-__vue_render__$v._withStripped = true;
+var __vue_staticRenderFns__$s = [];
+__vue_render__$w._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$r = undefined;
+  const __vue_inject_styles__$s = undefined;
   /* scoped */
-  const __vue_scope_id__$r = undefined;
+  const __vue_scope_id__$s = undefined;
   /* module identifier */
-  const __vue_module_identifier__$r = undefined;
+  const __vue_module_identifier__$s = undefined;
   /* functional template */
-  const __vue_is_functional_template__$r = false;
+  const __vue_is_functional_template__$s = false;
   /* style inject */
   
   /* style inject SSR */
@@ -961,13 +961,13 @@ __vue_render__$v._withStripped = true;
   
 
   
-  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
-    __vue_inject_styles__$r,
-    __vue_script__$r,
-    __vue_scope_id__$r,
-    __vue_is_functional_template__$r,
-    __vue_module_identifier__$r,
+  const __vue_component__$s = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$w, staticRenderFns: __vue_staticRenderFns__$s },
+    __vue_inject_styles__$s,
+    __vue_script__$s,
+    __vue_scope_id__$s,
+    __vue_is_functional_template__$s,
+    __vue_module_identifier__$s,
     false,
     undefined,
     undefined,
@@ -989,7 +989,7 @@ __vue_render__$v._withStripped = true;
 //
 //
 
-var script$q = {
+var script$r = {
 	name: 'FInput',
 	props: {
 		value: {
@@ -1059,10 +1059,10 @@ var script$q = {
 };
 
 /* script */
-const __vue_script__$q = script$q;
+const __vue_script__$r = script$r;
 
 /* template */
-var __vue_render__$u = function () {
+var __vue_render__$v = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1086,17 +1086,17 @@ var __vue_render__$u = function () {
     },
   })
 };
-var __vue_staticRenderFns__$q = [];
-__vue_render__$u._withStripped = true;
+var __vue_staticRenderFns__$r = [];
+__vue_render__$v._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$q = undefined;
+  const __vue_inject_styles__$r = undefined;
   /* scoped */
-  const __vue_scope_id__$q = undefined;
+  const __vue_scope_id__$r = undefined;
   /* module identifier */
-  const __vue_module_identifier__$q = undefined;
+  const __vue_module_identifier__$r = undefined;
   /* functional template */
-  const __vue_is_functional_template__$q = false;
+  const __vue_is_functional_template__$r = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1105,13 +1105,13 @@ __vue_render__$u._withStripped = true;
   
 
   
-  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$q },
-    __vue_inject_styles__$q,
-    __vue_script__$q,
-    __vue_scope_id__$q,
-    __vue_is_functional_template__$q,
-    __vue_module_identifier__$q,
+  const __vue_component__$r = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$v, staticRenderFns: __vue_staticRenderFns__$r },
+    __vue_inject_styles__$r,
+    __vue_script__$r,
+    __vue_scope_id__$r,
+    __vue_is_functional_template__$r,
+    __vue_module_identifier__$r,
     false,
     undefined,
     undefined,
@@ -1147,7 +1147,7 @@ __vue_render__$u._withStripped = true;
 //
 //
 
-var script$p = {
+var script$q = {
 	name: 'FLoader',
 	props: {
 		size: {
@@ -1216,10 +1216,10 @@ var script$p = {
 };
 
 /* script */
-const __vue_script__$p = script$p;
+const __vue_script__$q = script$q;
 
 /* template */
-var __vue_render__$t = function () {
+var __vue_render__$u = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1267,17 +1267,17 @@ var __vue_render__$t = function () {
     ),
   ])
 };
-var __vue_staticRenderFns__$p = [];
-__vue_render__$t._withStripped = true;
+var __vue_staticRenderFns__$q = [];
+__vue_render__$u._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$p = undefined;
+  const __vue_inject_styles__$q = undefined;
   /* scoped */
-  const __vue_scope_id__$p = undefined;
+  const __vue_scope_id__$q = undefined;
   /* module identifier */
-  const __vue_module_identifier__$p = undefined;
+  const __vue_module_identifier__$q = undefined;
   /* functional template */
-  const __vue_is_functional_template__$p = false;
+  const __vue_is_functional_template__$q = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1286,13 +1286,13 @@ __vue_render__$t._withStripped = true;
   
 
   
-  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$p },
-    __vue_inject_styles__$p,
-    __vue_script__$p,
-    __vue_scope_id__$p,
-    __vue_is_functional_template__$p,
-    __vue_module_identifier__$p,
+  const __vue_component__$q = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$u, staticRenderFns: __vue_staticRenderFns__$q },
+    __vue_inject_styles__$q,
+    __vue_script__$q,
+    __vue_scope_id__$q,
+    __vue_is_functional_template__$q,
+    __vue_module_identifier__$q,
     false,
     undefined,
     undefined,
@@ -1320,7 +1320,7 @@ __vue_render__$t._withStripped = true;
 //
 //
 
-var script$o = {
+var script$p = {
 	name: 'FRadio',
 	model: {
 		prop: 'modelValue',
@@ -1414,10 +1414,10 @@ var script$o = {
 };
 
 /* script */
-const __vue_script__$o = script$o;
+const __vue_script__$p = script$p;
 
 /* template */
-var __vue_render__$s = function () {
+var __vue_render__$t = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1440,17 +1440,17 @@ var __vue_render__$s = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$o = [];
-__vue_render__$s._withStripped = true;
+var __vue_staticRenderFns__$p = [];
+__vue_render__$t._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$o = undefined;
+  const __vue_inject_styles__$p = undefined;
   /* scoped */
-  const __vue_scope_id__$o = undefined;
+  const __vue_scope_id__$p = undefined;
   /* module identifier */
-  const __vue_module_identifier__$o = undefined;
+  const __vue_module_identifier__$p = undefined;
   /* functional template */
-  const __vue_is_functional_template__$o = false;
+  const __vue_is_functional_template__$p = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1459,13 +1459,13 @@ __vue_render__$s._withStripped = true;
   
 
   
-  const __vue_component__$o = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$o },
-    __vue_inject_styles__$o,
-    __vue_script__$o,
-    __vue_scope_id__$o,
-    __vue_is_functional_template__$o,
-    __vue_module_identifier__$o,
+  const __vue_component__$p = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$t, staticRenderFns: __vue_staticRenderFns__$p },
+    __vue_inject_styles__$p,
+    __vue_script__$p,
+    __vue_scope_id__$p,
+    __vue_is_functional_template__$p,
+    __vue_module_identifier__$p,
     false,
     undefined,
     undefined,
@@ -1507,9 +1507,9 @@ __vue_render__$s._withStripped = true;
 //
 //
 
-let idCounter$3 = 0;
+let idCounter$4 = 0;
 
-var script$n = {
+var script$o = {
 	name: 'FTextarea',
 	props: {
 		value: {
@@ -1554,7 +1554,7 @@ var script$n = {
 		}
 	},
 	data() {
-		const id = ++idCounter$3;
+		const id = ++idCounter$4;
 		return {
 			inputId: `ftextarea-${id}`,
 			errorId: `ftextarea-error-${id}`
@@ -1596,7 +1596,9 @@ var script$n = {
 		},
 		counterClasses() {
 			const baseClasses = 'font-sans text-xs';
-			const stateClasses = this.isOverLimit ? 'text-danger-500' : 'text-neutral-500';
+			const stateClasses = this.isOverLimit
+				? 'text-danger-500'
+				: 'text-neutral-500';
 
 			return [baseClasses, stateClasses].filter(Boolean).join(' ');
 		},
@@ -1618,10 +1620,10 @@ var script$n = {
 };
 
 /* script */
-const __vue_script__$n = script$n;
+const __vue_script__$o = script$o;
 
 /* template */
-var __vue_render__$r = function () {
+var __vue_render__$s = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1687,17 +1689,17 @@ var __vue_render__$r = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$n = [];
-__vue_render__$r._withStripped = true;
+var __vue_staticRenderFns__$o = [];
+__vue_render__$s._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$n = undefined;
+  const __vue_inject_styles__$o = undefined;
   /* scoped */
-  const __vue_scope_id__$n = undefined;
+  const __vue_scope_id__$o = undefined;
   /* module identifier */
-  const __vue_module_identifier__$n = undefined;
+  const __vue_module_identifier__$o = undefined;
   /* functional template */
-  const __vue_is_functional_template__$n = false;
+  const __vue_is_functional_template__$o = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1706,13 +1708,13 @@ __vue_render__$r._withStripped = true;
   
 
   
-  const __vue_component__$n = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$n },
-    __vue_inject_styles__$n,
-    __vue_script__$n,
-    __vue_scope_id__$n,
-    __vue_is_functional_template__$n,
-    __vue_module_identifier__$n,
+  const __vue_component__$o = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$s, staticRenderFns: __vue_staticRenderFns__$o },
+    __vue_inject_styles__$o,
+    __vue_script__$o,
+    __vue_scope_id__$o,
+    __vue_is_functional_template__$o,
+    __vue_module_identifier__$o,
     false,
     undefined,
     undefined,
@@ -1740,7 +1742,7 @@ __vue_render__$r._withStripped = true;
 //
 //
 
-var script$m = {
+var script$n = {
 	name: 'FToggle',
 	props: {
 		value: {
@@ -1828,10 +1830,10 @@ var script$m = {
 };
 
 /* script */
-const __vue_script__$m = script$m;
+const __vue_script__$n = script$n;
 
 /* template */
-var __vue_render__$q = function () {
+var __vue_render__$r = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1871,17 +1873,17 @@ var __vue_render__$q = function () {
       : _vm._e(),
   ])
 };
-var __vue_staticRenderFns__$m = [];
-__vue_render__$q._withStripped = true;
+var __vue_staticRenderFns__$n = [];
+__vue_render__$r._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$m = undefined;
+  const __vue_inject_styles__$n = undefined;
   /* scoped */
-  const __vue_scope_id__$m = undefined;
+  const __vue_scope_id__$n = undefined;
   /* module identifier */
-  const __vue_module_identifier__$m = undefined;
+  const __vue_module_identifier__$n = undefined;
   /* functional template */
-  const __vue_is_functional_template__$m = false;
+  const __vue_is_functional_template__$n = false;
   /* style inject */
   
   /* style inject SSR */
@@ -1890,13 +1892,13 @@ __vue_render__$q._withStripped = true;
   
 
   
-  const __vue_component__$m = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$m },
-    __vue_inject_styles__$m,
-    __vue_script__$m,
-    __vue_scope_id__$m,
-    __vue_is_functional_template__$m,
-    __vue_module_identifier__$m,
+  const __vue_component__$n = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$r, staticRenderFns: __vue_staticRenderFns__$n },
+    __vue_inject_styles__$n,
+    __vue_script__$n,
+    __vue_scope_id__$n,
+    __vue_is_functional_template__$n,
+    __vue_module_identifier__$n,
     false,
     undefined,
     undefined,
@@ -1910,7 +1912,7 @@ __vue_render__$q._withStripped = true;
 //
 //
 
-var script$l = {
+var script$m = {
 	name: 'FTypography',
 	props: {
 		variant: {
@@ -1982,10 +1984,10 @@ var script$l = {
 };
 
 /* script */
-const __vue_script__$l = script$l;
+const __vue_script__$m = script$m;
 
 /* template */
-var __vue_render__$p = function () {
+var __vue_render__$q = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -1996,17 +1998,17 @@ var __vue_render__$p = function () {
     2
   )
 };
-var __vue_staticRenderFns__$l = [];
-__vue_render__$p._withStripped = true;
+var __vue_staticRenderFns__$m = [];
+__vue_render__$q._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$l = undefined;
+  const __vue_inject_styles__$m = undefined;
   /* scoped */
-  const __vue_scope_id__$l = undefined;
+  const __vue_scope_id__$m = undefined;
   /* module identifier */
-  const __vue_module_identifier__$l = undefined;
+  const __vue_module_identifier__$m = undefined;
   /* functional template */
-  const __vue_is_functional_template__$l = false;
+  const __vue_is_functional_template__$m = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2015,13 +2017,13 @@ __vue_render__$p._withStripped = true;
   
 
   
-  const __vue_component__$l = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$p, staticRenderFns: __vue_staticRenderFns__$l },
-    __vue_inject_styles__$l,
-    __vue_script__$l,
-    __vue_scope_id__$l,
-    __vue_is_functional_template__$l,
-    __vue_module_identifier__$l,
+  const __vue_component__$m = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$q, staticRenderFns: __vue_staticRenderFns__$m },
+    __vue_inject_styles__$m,
+    __vue_script__$m,
+    __vue_scope_id__$m,
+    __vue_is_functional_template__$m,
+    __vue_module_identifier__$m,
     false,
     undefined,
     undefined,
@@ -2031,7 +2033,7 @@ __vue_render__$p._withStripped = true;
 /* script */
 
 /* template */
-var __vue_render__$o = function () {
+var __vue_render__$p = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2090,7 +2092,7 @@ var __vue_render__$o = function () {
     ]
   )
 };
-__vue_render__$o._withStripped = true;
+__vue_render__$p._withStripped = true;
 
 //
 //
@@ -2140,12 +2142,12 @@ const VARIANT_COLORS = {
 	}
 };
 
-var script$k = {
+var script$l = {
 	name: 'FAlert',
 	components: {
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l,
-		FButton: __vue_component__$u
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m,
+		FButton: __vue_component__$v
 	},
 	props: {
 		variant: {
@@ -2198,10 +2200,10 @@ var script$k = {
 };
 
 /* script */
-const __vue_script__$k = script$k;
+const __vue_script__$l = script$l;
 
 /* template */
-var __vue_render__$n = function () {
+var __vue_render__$o = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2260,17 +2262,17 @@ var __vue_render__$n = function () {
       )
     : _vm._e()
 };
-var __vue_staticRenderFns__$k = [];
-__vue_render__$n._withStripped = true;
+var __vue_staticRenderFns__$l = [];
+__vue_render__$o._withStripped = true;
 
   /* style */
-  const __vue_inject_styles__$k = undefined;
+  const __vue_inject_styles__$l = undefined;
   /* scoped */
-  const __vue_scope_id__$k = undefined;
+  const __vue_scope_id__$l = undefined;
   /* module identifier */
-  const __vue_module_identifier__$k = undefined;
+  const __vue_module_identifier__$l = undefined;
   /* functional template */
-  const __vue_is_functional_template__$k = false;
+  const __vue_is_functional_template__$l = false;
   /* style inject */
   
   /* style inject SSR */
@@ -2279,13 +2281,13 @@ __vue_render__$n._withStripped = true;
   
 
   
-  const __vue_component__$k = /*#__PURE__*/normalizeComponent(
-    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
-    __vue_inject_styles__$k,
-    __vue_script__$k,
-    __vue_scope_id__$k,
-    __vue_is_functional_template__$k,
-    __vue_module_identifier__$k,
+  const __vue_component__$l = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$o, staticRenderFns: __vue_staticRenderFns__$l },
+    __vue_inject_styles__$l,
+    __vue_script__$l,
+    __vue_scope_id__$l,
+    __vue_is_functional_template__$l,
+    __vue_module_identifier__$l,
     false,
     undefined,
     undefined,
@@ -2329,11 +2331,11 @@ __vue_render__$n._withStripped = true;
 //
 
 
-var script$j = {
+var script$k = {
 	name: 'FBreadcrumb',
 	components: {
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m
 	},
 	props: {
 		items: {
@@ -2408,10 +2410,10 @@ var script$j = {
 };
 
 /* script */
-const __vue_script__$j = script$j;
+const __vue_script__$k = script$k;
 
 /* template */
-var __vue_render__$m = function () {
+var __vue_render__$n = function () {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
@@ -2495,6 +2497,87 @@ var __vue_render__$m = function () {
     ]
   )
 };
+var __vue_staticRenderFns__$k = [];
+__vue_render__$n._withStripped = true;
+
+  /* style */
+  const __vue_inject_styles__$k = undefined;
+  /* scoped */
+  const __vue_scope_id__$k = undefined;
+  /* module identifier */
+  const __vue_module_identifier__$k = undefined;
+  /* functional template */
+  const __vue_is_functional_template__$k = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+  /* style inject shadow dom */
+  
+
+  
+  const __vue_component__$k = /*#__PURE__*/normalizeComponent(
+    { render: __vue_render__$n, staticRenderFns: __vue_staticRenderFns__$k },
+    __vue_inject_styles__$k,
+    __vue_script__$k,
+    __vue_scope_id__$k,
+    __vue_is_functional_template__$k,
+    __vue_module_identifier__$k,
+    false,
+    undefined,
+    undefined,
+    undefined
+  );
+
+//
+//
+//
+//
+//
+//
+
+var script$j = {
+	name: 'FButtonGroup',
+	props: {
+		ariaLabel: {
+			type: String,
+			default: 'Groupe de boutons'
+		}
+	},
+	computed: {
+		containerClasses() {
+			const baseClasses = 'inline-flex';
+			const childClasses = [
+				'[&>*]:rounded-none',
+				'[&>*:first-child]:rounded-l',
+				'[&>*:last-child]:rounded-r',
+				'[&>*:not(:first-child)]:-ml-px',
+				'[&>*]:focus:z-10'
+			].join(' ');
+
+			return `${baseClasses} ${childClasses}`;
+		}
+	}
+};
+
+/* script */
+const __vue_script__$j = script$j;
+
+/* template */
+var __vue_render__$m = function () {
+  var _vm = this;
+  var _h = _vm.$createElement;
+  var _c = _vm._self._c || _h;
+  return _c(
+    "div",
+    {
+      class: _vm.containerClasses,
+      attrs: { role: "group", "aria-label": _vm.ariaLabel },
+    },
+    [_vm._t("default")],
+    2
+  )
+};
 var __vue_staticRenderFns__$j = [];
 __vue_render__$m._withStripped = true;
 
@@ -2533,27 +2616,745 @@ __vue_render__$m._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+let idCounter$3 = 0;
 
 var script$i = {
-	name: 'FButtonGroup',
+	name: 'FDatePicker',
+	components: {
+		FIcon: __vue_component__$s
+	},
 	props: {
-		ariaLabel: {
+		value: {
+			type: [String, Date, Array],
+			default: null
+		},
+		mode: {
 			type: String,
-			default: 'Groupe de boutons'
+			default: 'single',
+			validator: (value) => ['single', 'range'].includes(value)
+		},
+		placeholder: {
+			type: String,
+			default: 'Sélectionner une date'
+		},
+		format: {
+			type: String,
+			default: 'DD/MM/YYYY'
+		},
+		size: {
+			type: String,
+			default: 'medium',
+			validator: (value) => ['small', 'medium', 'large'].includes(value)
+		},
+		disabled: {
+			type: Boolean,
+			default: false
+		},
+		readonly: {
+			type: Boolean,
+			default: false
+		},
+		error: {
+			type: Boolean,
+			default: false
+		},
+		showTimePicker: {
+			type: Boolean,
+			default: false
+		},
+		minDate: {
+			type: [String, Date],
+			default: null
+		},
+		maxDate: {
+			type: [String, Date],
+			default: null
+		},
+		disabledDates: {
+			type: Array,
+			default: () => []
+		},
+		monthNames: {
+			type: Array,
+			default: () => [
+				'Janvier',
+				'Février',
+				'Mars',
+				'Avril',
+				'Mai',
+				'Juin',
+				'Juillet',
+				'Août',
+				'Septembre',
+				'Octobre',
+				'Novembre',
+				'Décembre'
+			]
+		},
+		dayNames: {
+			type: Array,
+			default: () => ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
+		},
+		firstDayOfWeek: {
+			type: Number,
+			default: 1,
+			validator: (value) => value >= 0 && value <= 6
 		}
+	},
+	data() {
+		return {
+			isOpen: false,
+			displayMonth: new Date().getMonth(),
+			displayYear: new Date().getFullYear(),
+			selectedDate: null,
+			selectedRangeStart: null,
+			selectedRangeEnd: null,
+			hoverDate: null,
+			selectedHour: 0,
+			selectedMinute: 0,
+			calendarDays: [],
+			generatedId: `f-datepicker-${++idCounter$3}`
+		};
 	},
 	computed: {
 		containerClasses() {
-			const baseClasses = 'inline-flex';
-			const childClasses = [
-				'[&>*]:rounded-none',
-				'[&>*:first-child]:rounded-l',
-				'[&>*:last-child]:rounded-r',
-				'[&>*:not(:first-child)]:-ml-px',
-				'[&>*]:focus:z-10'
-			].join(' ');
+			return 'relative w-full';
+		},
+		inputClasses() {
+			const baseClasses =
+				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 pr-10';
 
-			return `${baseClasses} ${childClasses}`;
+			const sizeClasses = {
+				small: 'py-1.5 px-2.5 text-xs',
+				medium: 'py-2.5 px-3.5 text-sm',
+				large: 'py-3.5 px-4.5 text-base'
+			};
+
+			const stateClasses = this.error
+				? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500/20'
+				: 'border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20';
+
+			const disabledClasses = this.disabled
+				? 'bg-neutral-100 cursor-not-allowed opacity-70'
+				: 'cursor-pointer';
+
+			return [
+				baseClasses,
+				sizeClasses[this.size],
+				stateClasses,
+				disabledClasses
+			]
+				.filter(Boolean)
+				.join(' ');
+		},
+		iconClasses() {
+			const baseClasses =
+				'absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400';
+			const cursorClass = this.disabled
+				? 'cursor-not-allowed'
+				: 'cursor-pointer';
+			return `${baseClasses} ${cursorClass}`;
+		},
+		calendarClasses() {
+			return 'absolute z-50 mt-2 bg-white border border-neutral-200 rounded-lg shadow-lg min-w-[320px]';
+		},
+		navButtonClasses() {
+			return 'p-1 rounded hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+		},
+		selectClasses() {
+			return 'px-2 py-1 text-sm border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+		},
+		timeButtonClasses() {
+			return 'p-1 rounded hover:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+		},
+		timeInputClasses() {
+			return 'w-12 px-2 py-1 text-center text-sm border border-neutral-300 rounded focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+		},
+		cancelButtonClasses() {
+			return 'px-3 py-1.5 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 rounded hover:bg-neutral-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+		},
+		applyButtonClasses() {
+			return 'px-3 py-1.5 text-sm font-medium text-white bg-primary-500 rounded hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500/20 disabled:opacity-50 disabled:cursor-not-allowed';
+		},
+		displayValue() {
+			if (this.mode === 'single' && this.selectedDate) {
+				return this.formatDate(this.selectedDate);
+			} else if (
+				this.mode === 'range' &&
+				this.selectedRangeStart &&
+				this.selectedRangeEnd
+			) {
+				return `${this.formatDate(this.selectedRangeStart)} - ${this.formatDate(
+					this.selectedRangeEnd
+				)}`;
+			} else if (this.mode === 'range' && this.selectedRangeStart) {
+				return this.formatDate(this.selectedRangeStart);
+			}
+			return '';
+		},
+		yearRange() {
+			const currentYear = new Date().getFullYear();
+			const years = [];
+			for (let i = currentYear - 100; i <= currentYear + 10; i++) {
+				years.push(i);
+			}
+			return years;
+		},
+		canApply() {
+			if (this.mode === 'range') {
+				return this.selectedRangeStart && this.selectedRangeEnd;
+			}
+			return this.selectedDate !== null;
+		}
+	},
+	watch: {
+		value: {
+			immediate: true,
+			handler(newValue) {
+				this.initializeFromValue(newValue);
+			}
+		},
+		isOpen(newValue) {
+			if (newValue) {
+				this.$nextTick(() => {
+					this.updateCalendar();
+					document.addEventListener('click', this.handleClickOutside);
+				});
+			} else {
+				document.removeEventListener('click', this.handleClickOutside);
+			}
+		}
+	},
+	beforeDestroy() {
+		document.removeEventListener('click', this.handleClickOutside);
+	},
+	methods: {
+		initializeFromValue(value) {
+			if (!value) {
+				this.selectedDate = null;
+				this.selectedRangeStart = null;
+				this.selectedRangeEnd = null;
+				return;
+			}
+
+			if (this.mode === 'single') {
+				this.selectedDate = this.parseDate(value);
+				if (this.selectedDate && this.showTimePicker) {
+					this.selectedHour = this.selectedDate.getHours();
+					this.selectedMinute = this.selectedDate.getMinutes();
+				}
+			} else if (
+				this.mode === 'range' &&
+				Array.isArray(value) &&
+				value.length === 2
+			) {
+				this.selectedRangeStart = this.parseDate(value[0]);
+				this.selectedRangeEnd = this.parseDate(value[1]);
+			}
+		},
+		parseDate(value) {
+			if (value instanceof Date) {
+				return value;
+			}
+			if (typeof value === 'string') {
+				return new Date(value);
+			}
+			return null;
+		},
+		formatDate(date) {
+			if (!date) return '';
+
+			const day = String(date.getDate()).padStart(2, '0');
+			const month = String(date.getMonth() + 1).padStart(2, '0');
+			const year = date.getFullYear();
+			const hours = String(date.getHours()).padStart(2, '0');
+			const minutes = String(date.getMinutes()).padStart(2, '0');
+
+			let formatted = this.format
+				.replace('DD', day)
+				.replace('MM', month)
+				.replace('YYYY', year);
+
+			if (this.showTimePicker) {
+				formatted += ` ${hours}:${minutes}`;
+			}
+
+			return formatted;
+		},
+		toggleCalendar() {
+			if (this.disabled || this.readonly) return;
+			this.isOpen = !this.isOpen;
+		},
+		openCalendar() {
+			if (this.disabled || this.readonly) return;
+			this.isOpen = true;
+		},
+		closeCalendar() {
+			this.isOpen = false;
+			this.hoverDate = null;
+		},
+		handleFocus(event) {
+			this.$emit('focus', event);
+		},
+		handleBlur(event) {
+			this.$emit('blur', event);
+		},
+		handleClickOutside(event) {
+			if (
+				this.$el &&
+				!this.$el.contains(event.target) &&
+				event.target instanceof Node
+			) {
+				this.closeCalendar();
+			}
+		},
+		updateCalendar() {
+			const year = this.displayYear;
+			const month = this.displayMonth;
+			const firstDay = new Date(year, month, 1);
+			const lastDay = new Date(year, month + 1, 0);
+			const daysInMonth = lastDay.getDate();
+
+			// Adjust first day based on firstDayOfWeek prop
+			let firstDayOfWeek = firstDay.getDay();
+			firstDayOfWeek = (firstDayOfWeek - this.firstDayOfWeek + 7) % 7;
+
+			const days = [];
+
+			// Add previous month days
+			const prevMonthLastDay = new Date(year, month, 0).getDate();
+			for (let i = firstDayOfWeek - 1; i >= 0; i--) {
+				days.push({
+					date: prevMonthLastDay - i,
+					month: month - 1,
+					year: month === 0 ? year - 1 : year,
+					isCurrentMonth: false
+				});
+			}
+
+			// Add current month days
+			for (let i = 1; i <= daysInMonth; i++) {
+				days.push({
+					date: i,
+					month: month,
+					year: year,
+					isCurrentMonth: true
+				});
+			}
+
+			// Add next month days to complete the grid
+			const remainingDays = 42 - days.length;
+			for (let i = 1; i <= remainingDays; i++) {
+				days.push({
+					date: i,
+					month: month + 1,
+					year: month === 11 ? year + 1 : year,
+					isCurrentMonth: false
+				});
+			}
+
+			this.calendarDays = days;
+		},
+		previousMonth() {
+			if (this.displayMonth === 0) {
+				this.displayMonth = 11;
+				this.displayYear--;
+			} else {
+				this.displayMonth--;
+			}
+			this.updateCalendar();
+		},
+		nextMonth() {
+			if (this.displayMonth === 11) {
+				this.displayMonth = 0;
+				this.displayYear++;
+			} else {
+				this.displayMonth++;
+			}
+			this.updateCalendar();
+		},
+		getDayClasses(day) {
+			const baseClasses =
+				'h-8 w-8 text-sm rounded-full transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-primary-500/20';
+
+			const classes = [baseClasses];
+
+			if (!day.isCurrentMonth) {
+				classes.push('text-neutral-300');
+			}
+
+			if (this.isDateSelected(day)) {
+				classes.push(
+					'bg-primary-500 text-white font-semibold hover:bg-primary-600'
+				);
+			} else if (this.isDateInRange(day)) {
+				classes.push('bg-primary-100 text-primary-700');
+			} else if (this.isToday(day)) {
+				classes.push(
+					'border-2 border-primary-500 text-primary-600 font-medium'
+				);
+			} else if (day.isCurrentMonth) {
+				classes.push('hover:bg-neutral-100 text-neutral-700');
+			}
+
+			if (this.isDayDisabled(day)) {
+				classes.push('cursor-not-allowed opacity-40');
+			} else {
+				classes.push('cursor-pointer');
+			}
+
+			return classes.join(' ');
+		},
+		isToday(day) {
+			const today = new Date();
+			return (
+				day.date === today.getDate() &&
+				day.month === today.getMonth() &&
+				day.year === today.getFullYear()
+			);
+		},
+		isDateSelected(day) {
+			if (this.mode === 'single' && this.selectedDate) {
+				return (
+					day.date === this.selectedDate.getDate() &&
+					day.month === this.selectedDate.getMonth() &&
+					day.year === this.selectedDate.getFullYear()
+				);
+			} else if (this.mode === 'range') {
+				const isStart =
+					this.selectedRangeStart &&
+					day.date === this.selectedRangeStart.getDate() &&
+					day.month === this.selectedRangeStart.getMonth() &&
+					day.year === this.selectedRangeStart.getFullYear();
+
+				const isEnd =
+					this.selectedRangeEnd &&
+					day.date === this.selectedRangeEnd.getDate() &&
+					day.month === this.selectedRangeEnd.getMonth() &&
+					day.year === this.selectedRangeEnd.getFullYear();
+
+				return isStart || isEnd;
+			}
+			return false;
+		},
+		isDateInRange(day) {
+			if (this.mode !== 'range') return false;
+
+			const date = new Date(day.year, day.month, day.date);
+
+			if (this.selectedRangeStart && this.selectedRangeEnd) {
+				return date > this.selectedRangeStart && date < this.selectedRangeEnd;
+			} else if (this.selectedRangeStart && this.hoverDate) {
+				const start = this.selectedRangeStart;
+				const end = this.hoverDate;
+				return (date > start && date < end) || (date < start && date > end);
+			}
+
+			return false;
+		},
+		isDayDisabled(day) {
+			const date = new Date(day.year, day.month, day.date);
+
+			if (this.minDate) {
+				const min = this.parseDate(this.minDate);
+				if (min && date < min) return true;
+			}
+
+			if (this.maxDate) {
+				const max = this.parseDate(this.maxDate);
+				if (max && date > max) return true;
+			}
+
+			if (this.disabledDates.length > 0) {
+				return this.disabledDates.some((disabledDate) => {
+					const disabled = this.parseDate(disabledDate);
+					return (
+						disabled &&
+						date.getDate() === disabled.getDate() &&
+						date.getMonth() === disabled.getMonth() &&
+						date.getFullYear() === disabled.getFullYear()
+					);
+				});
+			}
+
+			return false;
+		},
+		selectDate(day) {
+			if (this.isDayDisabled(day)) return;
+
+			const selectedDate = new Date(day.year, day.month, day.date);
+
+			if (this.showTimePicker) {
+				selectedDate.setHours(this.selectedHour);
+				selectedDate.setMinutes(this.selectedMinute);
+			}
+
+			if (this.mode === 'single') {
+				this.selectedDate = selectedDate;
+				if (!this.showTimePicker) {
+					this.emitValue();
+					this.closeCalendar();
+				}
+			} else if (this.mode === 'range') {
+				if (
+					!this.selectedRangeStart ||
+					(this.selectedRangeStart && this.selectedRangeEnd)
+				) {
+					this.selectedRangeStart = selectedDate;
+					this.selectedRangeEnd = null;
+				} else {
+					if (selectedDate < this.selectedRangeStart) {
+						this.selectedRangeEnd = this.selectedRangeStart;
+						this.selectedRangeStart = selectedDate;
+					} else {
+						this.selectedRangeEnd = selectedDate;
+					}
+				}
+			}
+		},
+		handleDayHover(day) {
+			if (
+				this.mode === 'range' &&
+				this.selectedRangeStart &&
+				!this.selectedRangeEnd
+			) {
+				this.hoverDate = new Date(day.year, day.month, day.date);
+			}
+		},
+		incrementHour() {
+			this.selectedHour = (this.selectedHour + 1) % 24;
+		},
+		decrementHour() {
+			this.selectedHour = (this.selectedHour - 1 + 24) % 24;
+		},
+		incrementMinute() {
+			this.selectedMinute = (this.selectedMinute + 1) % 60;
+		},
+		decrementMinute() {
+			this.selectedMinute = (this.selectedMinute - 1 + 60) % 60;
+		},
+		updateTime() {
+			if (this.selectedDate && this.mode === 'single') {
+				this.selectedDate.setHours(this.selectedHour);
+				this.selectedDate.setMinutes(this.selectedMinute);
+			}
+		},
+		applySelection() {
+			this.emitValue();
+			this.closeCalendar();
+		},
+		emitValue() {
+			if (this.mode === 'single') {
+				this.$emit('input', this.selectedDate);
+				this.$emit('change', this.selectedDate);
+			} else if (
+				this.mode === 'range' &&
+				this.selectedRangeStart &&
+				this.selectedRangeEnd
+			) {
+				this.$emit('input', [this.selectedRangeStart, this.selectedRangeEnd]);
+				this.$emit('change', [this.selectedRangeStart, this.selectedRangeEnd]);
+			}
 		}
 	}
 };
@@ -2570,10 +3371,463 @@ var __vue_render__$l = function () {
     "div",
     {
       class: _vm.containerClasses,
-      attrs: { role: "group", "aria-label": _vm.ariaLabel },
+      on: {
+        keydown: function ($event) {
+          if (
+            !$event.type.indexOf("key") &&
+            _vm._k($event.keyCode, "escape", undefined, $event.key, undefined)
+          ) {
+            return null
+          }
+          return _vm.closeCalendar.apply(null, arguments)
+        },
+      },
     },
-    [_vm._t("default")],
-    2
+    [
+      _c(
+        "div",
+        { staticClass: "relative" },
+        [
+          _c("input", {
+            ref: "input",
+            class: _vm.inputClasses,
+            attrs: {
+              type: "text",
+              placeholder: _vm.placeholder,
+              disabled: _vm.disabled,
+              readonly: _vm.readonly,
+              "aria-expanded": String(_vm.isOpen),
+              "aria-haspopup": "dialog",
+            },
+            domProps: { value: _vm.displayValue },
+            on: {
+              click: _vm.toggleCalendar,
+              focus: _vm.handleFocus,
+              blur: _vm.handleBlur,
+              keydown: function ($event) {
+                if (
+                  !$event.type.indexOf("key") &&
+                  _vm._k($event.keyCode, "down", 40, $event.key, [
+                    "Down",
+                    "ArrowDown",
+                  ])
+                ) {
+                  return null
+                }
+                $event.preventDefault();
+                return _vm.openCalendar.apply(null, arguments)
+              },
+            },
+          }),
+          _vm._v(" "),
+          _c("f-icon", {
+            class: _vm.iconClasses,
+            attrs: { name: "calendar", size: "sm" },
+            nativeOn: {
+              click: function ($event) {
+                !_vm.disabled && _vm.toggleCalendar();
+              },
+            },
+          }),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.isOpen,
+              expression: "isOpen",
+            },
+          ],
+          ref: "calendar",
+          class: _vm.calendarClasses,
+          attrs: { role: "dialog", "aria-label": "Sélecteur de date" },
+        },
+        [
+          _c("div", { staticClass: "p-3 border-b border-neutral-200" }, [
+            _c(
+              "div",
+              { staticClass: "flex items-center justify-between mb-2" },
+              [
+                _c(
+                  "button",
+                  {
+                    class: _vm.navButtonClasses,
+                    attrs: { type: "button", "aria-label": "Mois précédent" },
+                    on: { click: _vm.previousMonth },
+                  },
+                  [
+                    _c("f-icon", {
+                      attrs: { name: "chevron-left", size: "sm" },
+                    }),
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "flex items-center gap-2" }, [
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.displayMonth,
+                          expression: "displayMonth",
+                        },
+                      ],
+                      class: _vm.selectClasses,
+                      on: {
+                        change: [
+                          function ($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function (o) {
+                                return o.selected
+                              })
+                              .map(function (o) {
+                                var val = "_value" in o ? o._value : o.value;
+                                return val
+                              });
+                            _vm.displayMonth = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0];
+                          },
+                          _vm.updateCalendar,
+                        ],
+                      },
+                    },
+                    _vm._l(_vm.monthNames, function (month, index) {
+                      return _c(
+                        "option",
+                        { key: index, domProps: { value: index } },
+                        [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t" +
+                              _vm._s(month) +
+                              "\n\t\t\t\t\t\t"
+                          ),
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.displayYear,
+                          expression: "displayYear",
+                        },
+                      ],
+                      class: _vm.selectClasses,
+                      on: {
+                        change: [
+                          function ($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function (o) {
+                                return o.selected
+                              })
+                              .map(function (o) {
+                                var val = "_value" in o ? o._value : o.value;
+                                return val
+                              });
+                            _vm.displayYear = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0];
+                          },
+                          _vm.updateCalendar,
+                        ],
+                      },
+                    },
+                    _vm._l(_vm.yearRange, function (year) {
+                      return _c(
+                        "option",
+                        { key: year, domProps: { value: year } },
+                        [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t" + _vm._s(year) + "\n\t\t\t\t\t\t"
+                          ),
+                        ]
+                      )
+                    }),
+                    0
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    class: _vm.navButtonClasses,
+                    attrs: { type: "button", "aria-label": "Mois suivant" },
+                    on: { click: _vm.nextMonth },
+                  },
+                  [
+                    _c("f-icon", {
+                      attrs: { name: "chevron-right", size: "sm" },
+                    }),
+                  ],
+                  1
+                ),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "p-3" }, [
+            _c(
+              "div",
+              { staticClass: "grid grid-cols-7 gap-1 mb-2" },
+              _vm._l(_vm.dayNames, function (day) {
+                return _c(
+                  "div",
+                  {
+                    key: day,
+                    staticClass:
+                      "text-xs font-medium text-neutral-600 text-center py-1",
+                  },
+                  [_vm._v("\n\t\t\t\t\t" + _vm._s(day) + "\n\t\t\t\t")]
+                )
+              }),
+              0
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "grid grid-cols-7 gap-1" },
+              _vm._l(_vm.calendarDays, function (day, index) {
+                return _c(
+                  "button",
+                  {
+                    key: index,
+                    class: _vm.getDayClasses(day),
+                    attrs: { type: "button", disabled: _vm.isDayDisabled(day) },
+                    on: {
+                      click: function ($event) {
+                        return _vm.selectDate(day)
+                      },
+                      mouseenter: function ($event) {
+                        return _vm.handleDayHover(day)
+                      },
+                    },
+                  },
+                  [_vm._v("\n\t\t\t\t\t" + _vm._s(day.date) + "\n\t\t\t\t")]
+                )
+              }),
+              0
+            ),
+          ]),
+          _vm._v(" "),
+          _vm.showTimePicker
+            ? _c("div", { staticClass: "p-3 border-t border-neutral-200" }, [
+                _c(
+                  "div",
+                  { staticClass: "flex items-center justify-center gap-2" },
+                  [
+                    _c("div", { staticClass: "flex flex-col items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "text-xs font-medium text-neutral-600 mb-1",
+                        },
+                        [_vm._v("Heures")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "flex items-center gap-1" }, [
+                        _c(
+                          "button",
+                          {
+                            class: _vm.timeButtonClasses,
+                            attrs: {
+                              type: "button",
+                              "aria-label": "Diminuer les heures",
+                            },
+                            on: { click: _vm.decrementHour },
+                          },
+                          [
+                            _c("f-icon", {
+                              attrs: { name: "chevron-up", size: "sm" },
+                            }),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model.number",
+                              value: _vm.selectedHour,
+                              expression: "selectedHour",
+                              modifiers: { number: true },
+                            },
+                          ],
+                          class: _vm.timeInputClasses,
+                          attrs: { type: "number", min: "0", max: "23" },
+                          domProps: { value: _vm.selectedHour },
+                          on: {
+                            change: _vm.updateTime,
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.selectedHour = _vm._n($event.target.value);
+                            },
+                            blur: function ($event) {
+                              return _vm.$forceUpdate()
+                            },
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            class: _vm.timeButtonClasses,
+                            attrs: {
+                              type: "button",
+                              "aria-label": "Augmenter les heures",
+                            },
+                            on: { click: _vm.incrementHour },
+                          },
+                          [
+                            _c("f-icon", {
+                              attrs: { name: "chevron-down", size: "sm" },
+                            }),
+                          ],
+                          1
+                        ),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "text-lg font-bold text-neutral-400 mt-6",
+                      },
+                      [_vm._v(":")]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "flex flex-col items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass:
+                            "text-xs font-medium text-neutral-600 mb-1",
+                        },
+                        [_vm._v("Minutes")]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "flex items-center gap-1" }, [
+                        _c(
+                          "button",
+                          {
+                            class: _vm.timeButtonClasses,
+                            attrs: {
+                              type: "button",
+                              "aria-label": "Diminuer les minutes",
+                            },
+                            on: { click: _vm.decrementMinute },
+                          },
+                          [
+                            _c("f-icon", {
+                              attrs: { name: "chevron-up", size: "sm" },
+                            }),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model.number",
+                              value: _vm.selectedMinute,
+                              expression: "selectedMinute",
+                              modifiers: { number: true },
+                            },
+                          ],
+                          class: _vm.timeInputClasses,
+                          attrs: { type: "number", min: "0", max: "59" },
+                          domProps: { value: _vm.selectedMinute },
+                          on: {
+                            change: _vm.updateTime,
+                            input: function ($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.selectedMinute = _vm._n($event.target.value);
+                            },
+                            blur: function ($event) {
+                              return _vm.$forceUpdate()
+                            },
+                          },
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            class: _vm.timeButtonClasses,
+                            attrs: {
+                              type: "button",
+                              "aria-label": "Augmenter les minutes",
+                            },
+                            on: { click: _vm.incrementMinute },
+                          },
+                          [
+                            _c("f-icon", {
+                              attrs: { name: "chevron-down", size: "sm" },
+                            }),
+                          ],
+                          1
+                        ),
+                      ]),
+                    ]),
+                  ]
+                ),
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.mode === "range" || _vm.showTimePicker
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 border-t border-neutral-200 flex justify-end gap-2",
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      class: _vm.cancelButtonClasses,
+                      attrs: { type: "button" },
+                      on: { click: _vm.closeCalendar },
+                    },
+                    [_vm._v("\n\t\t\t\tAnnuler\n\t\t\t")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      class: _vm.applyButtonClasses,
+                      attrs: { type: "button", disabled: !_vm.canApply },
+                      on: { click: _vm.applySelection },
+                    },
+                    [_vm._v("\n\t\t\t\tAppliquer\n\t\t\t")]
+                  ),
+                ]
+              )
+            : _vm._e(),
+        ]
+      ),
+    ]
   )
 };
 var __vue_staticRenderFns__$i = [];
@@ -2634,9 +3888,9 @@ __vue_render__$l._withStripped = true;
 var script$h = {
 	name: 'FEmptyState',
 	components: {
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l,
-		FButton: __vue_component__$u
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m,
+		FButton: __vue_component__$v
 	},
 	props: {
 		icon: {
@@ -2833,10 +4087,10 @@ const FILE_TYPE_ICONS = {
 var script$g = {
 	name: 'FFilePreview',
 	components: {
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l,
-		FLoader: __vue_component__$p,
-		FButton: __vue_component__$u
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m,
+		FLoader: __vue_component__$q,
+		FButton: __vue_component__$v
 	},
 	props: {
 		fileName: {
@@ -3036,7 +4290,7 @@ let idCounter$2 = 0;
 var script$f = {
 	name: 'FFormField',
 	components: {
-		FInput: __vue_component__$q
+		FInput: __vue_component__$r
 	},
 	props: {
 		id: {
@@ -3226,7 +4480,7 @@ __vue_render__$i._withStripped = true;
 var script$e = {
 	name: 'FCard',
 	components: {
-		FTypography: __vue_component__$l
+		FTypography: __vue_component__$m
 	},
 	props: {
 		title: {
@@ -3405,8 +4659,8 @@ __vue_render__$h._withStripped = true;
 var script$d = {
 	name: 'FSearchBar',
 	components: {
-		FIcon: __vue_component__$r,
-		FButton: __vue_component__$u
+		FIcon: __vue_component__$s,
+		FButton: __vue_component__$v
 	},
 	props: {
 		value: {
@@ -3696,7 +4950,7 @@ __vue_render__$g._withStripped = true;
 var script$c = {
 	name: 'FListItem',
 	components: {
-		FTypography: __vue_component__$l
+		FTypography: __vue_component__$m
 	},
 	props: {
 		title: {
@@ -3937,8 +5191,8 @@ __vue_render__$f._withStripped = true;
 var script$b = {
 	name: 'FPagination',
 	components: {
-		FButton: __vue_component__$u,
-		FIcon: __vue_component__$r
+		FButton: __vue_component__$v,
+		FIcon: __vue_component__$s
 	},
 	props: {
 		value: {
@@ -4399,9 +5653,6 @@ __vue_render__$d._withStripped = true;
 //
 //
 //
-//
-//
-//
 
 
 let selectCounter = 0;
@@ -4409,9 +5660,9 @@ let selectCounter = 0;
 var script$a = {
 	name: 'FSelect',
 	components: {
-		FIcon: __vue_component__$r,
-		FLoader: __vue_component__$p,
-		FCheckbox: __vue_component__$t
+		FIcon: __vue_component__$s,
+		FLoader: __vue_component__$q,
+		FCheckbox: __vue_component__$u
 	},
 	props: {
 		/**
@@ -4581,12 +5832,17 @@ var script$a = {
 		},
 		valueClasses() {
 			const baseClasses = 'flex-1 truncate';
-			const placeholderClasses = !this.hasValue ? 'text-neutral-400' : 'text-neutral-900';
+			const placeholderClasses = !this.hasValue
+				? 'text-neutral-400'
+				: 'text-neutral-900';
 			return [baseClasses, placeholderClasses].join(' ');
 		},
 		iconClasses() {
-			const baseClasses = 'ml-2 flex-shrink-0 transition-transform duration-200';
-			const colorClasses = this.disabled ? 'text-neutral-400' : 'text-neutral-500';
+			const baseClasses =
+				'ml-2 flex-shrink-0 transition-transform duration-200';
+			const colorClasses = this.disabled
+				? 'text-neutral-400'
+				: 'text-neutral-500';
 			return [baseClasses, colorClasses].join(' ');
 		},
 		dropdownClasses() {
@@ -4605,7 +5861,9 @@ var script$a = {
 			if (this.multiple) {
 				return Array.isArray(this.value) && this.value.length > 0;
 			}
-			return this.value !== null && this.value !== undefined && this.value !== '';
+			return (
+				this.value !== null && this.value !== undefined && this.value !== ''
+			);
 		},
 		displayValue() {
 			if (!this.hasValue) {
@@ -4617,7 +5875,9 @@ var script$a = {
 					const option = this.options.find(
 						(opt) => this.getOptionValue(opt) === this.getOptionValue(val)
 					);
-					return option ? this.getOptionLabel(option) : this.getOptionLabel(val);
+					return option
+						? this.getOptionLabel(option)
+						: this.getOptionLabel(val);
 				});
 				return labels.join(', ');
 			}
@@ -4706,8 +5966,11 @@ var script$a = {
 			const baseClasses =
 				'flex items-center gap-2 px-3 py-2 cursor-pointer transition-colors duration-150';
 			const hoverClasses = 'hover:bg-neutral-50';
-			const focusedClasses = this.focusedIndex === index ? 'bg-neutral-100' : '';
-			const selectedClasses = this.isSelected(option) ? 'bg-primary-50 text-primary-700' : '';
+			const focusedClasses =
+				this.focusedIndex === index ? 'bg-neutral-100' : '';
+			const selectedClasses = this.isSelected(option)
+				? 'bg-primary-50 text-primary-700'
+				: '';
 			const disabledClasses = this.isDisabled(option)
 				? 'opacity-50 cursor-not-allowed'
 				: '';
@@ -4762,15 +6025,20 @@ var script$a = {
 			const maxIndex = this.filteredOptions.length - 1;
 
 			if (direction === 'down') {
-				this.focusedIndex = this.focusedIndex < maxIndex ? this.focusedIndex + 1 : 0;
+				this.focusedIndex =
+					this.focusedIndex < maxIndex ? this.focusedIndex + 1 : 0;
 			} else if (direction === 'up') {
-				this.focusedIndex = this.focusedIndex > 0 ? this.focusedIndex - 1 : maxIndex;
+				this.focusedIndex =
+					this.focusedIndex > 0 ? this.focusedIndex - 1 : maxIndex;
 			}
 
 			this.scrollToFocusedOption();
 		},
 		handleEnterKey() {
-			if (this.focusedIndex >= 0 && this.focusedIndex < this.filteredOptions.length) {
+			if (
+				this.focusedIndex >= 0 &&
+				this.focusedIndex < this.filteredOptions.length
+			) {
 				const option = this.filteredOptions[this.focusedIndex];
 				this.handleOptionClick(option);
 			}
@@ -4778,6 +6046,7 @@ var script$a = {
 		scrollToFocusedOption() {
 			this.$nextTick(() => {
 				const optionsList = this.$refs.optionsList;
+				// Dynamic refs in v-for return an array, so we access [0]
 				const focusedOption = this.$refs[`option-${this.focusedIndex}`];
 
 				if (optionsList && focusedOption && focusedOption[0]) {
@@ -4799,12 +6068,14 @@ var script$a = {
 			this.clickOutsideHandler = (event) => {
 				const dropdown = this.$refs.dropdown;
 				const trigger = this.$refs.trigger;
+				const target = event.target;
 
 				if (
+					target instanceof Node &&
 					dropdown &&
-					!dropdown.contains(event.target) &&
+					!dropdown.contains(target) &&
 					trigger &&
-					!trigger.contains(event.target)
+					!trigger.contains(target)
 				) {
 					this.closeDropdown();
 				}
@@ -5269,10 +6540,10 @@ var script$9 = {
 	components: {
 		FListItem: __vue_component__$c,
 		FEmptyState: __vue_component__$h,
-		FTypography: __vue_component__$l,
-		FIcon: __vue_component__$r,
-		FBadge: __vue_component__$v,
-		FLoader: __vue_component__$p
+		FTypography: __vue_component__$m,
+		FIcon: __vue_component__$s,
+		FBadge: __vue_component__$w,
+		FLoader: __vue_component__$q
 	},
 	props: {
 		/**
@@ -6145,9 +7416,9 @@ var script$7 = {
 		FSearchBar: __vue_component__$d,
 		FPagination: __vue_component__$b,
 		FEmptyState: __vue_component__$h,
-		FCheckbox: __vue_component__$t,
-		FIcon: __vue_component__$r,
-		FLoader: __vue_component__$p
+		FCheckbox: __vue_component__$u,
+		FIcon: __vue_component__$s,
+		FLoader: __vue_component__$q
 	},
 	props: {
 		/**
@@ -7072,10 +8343,10 @@ const FILE_STATUS = {
 var script$6 = {
 	name: 'FFileUpload',
 	components: {
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l,
-		FButton: __vue_component__$u,
-		FAlert: __vue_component__$k,
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m,
+		FButton: __vue_component__$v,
+		FAlert: __vue_component__$l,
 		FFilePreview: __vue_component__$g
 	},
 	props: {
@@ -8510,9 +9781,9 @@ __vue_render__$6._withStripped = true;
 var script$5 = {
 	name: 'FPageHeader',
 	components: {
-		FBreadcrumb: __vue_component__$j,
-		FTypography: __vue_component__$l,
-		FAvatar: __vue_component__$w
+		FBreadcrumb: __vue_component__$k,
+		FTypography: __vue_component__$m,
+		FAvatar: __vue_component__$x
 	},
 	props: {
 		/**
@@ -8646,7 +9917,9 @@ var script$5 = {
 		headerClasses() {
 			const baseClasses = 'w-full';
 			const paddingClasses = 'pb-4';
-			const separatorClasses = this.separator ? 'border-b border-neutral-200' : '';
+			const separatorClasses = this.separator
+				? 'border-b border-neutral-200'
+				: '';
 
 			return [baseClasses, paddingClasses, separatorClasses]
 				.filter(Boolean)
@@ -8885,9 +10158,9 @@ let idCounter = 0;
 var script$4 = {
 	name: 'FModal',
 	components: {
-		FTypography: __vue_component__$l,
-		FButton: __vue_component__$u,
-		FIcon: __vue_component__$r
+		FTypography: __vue_component__$m,
+		FButton: __vue_component__$v,
+		FIcon: __vue_component__$s
 	},
 	props: {
 		/**
@@ -9318,15 +10591,19 @@ __vue_render__$4._withStripped = true;
 //
 //
 //
+//
+//
+//
+//
 
 
 var script$3 = {
 	name: 'FUserMenu',
 	components: {
-		FAvatar: __vue_component__$w,
-		FIcon: __vue_component__$r,
-		FTypography: __vue_component__$l,
-		FDivider: __vue_component__$s,
+		FAvatar: __vue_component__$x,
+		FIcon: __vue_component__$s,
+		FTypography: __vue_component__$m,
+		FDivider: __vue_component__$t,
 		FListItem: __vue_component__$c
 	},
 	props: {
@@ -10188,8 +11465,8 @@ var script$1 = {
 	name: 'FOnboardingStepper',
 	components: {
 		FCard: __vue_component__$e,
-		FButton: __vue_component__$u,
-		FIcon: __vue_component__$r,
+		FButton: __vue_component__$v,
+		FIcon: __vue_component__$s,
 		FStepperProgress: __vue_component__$2
 	},
 	props: {
@@ -10740,14 +12017,14 @@ var script = {
 	name: 'FProfileSection',
 	components: {
 		FCard: __vue_component__$e,
-		FTypography: __vue_component__$l,
-		FButton: __vue_component__$u,
-		FLoader: __vue_component__$p,
-		FAlert: __vue_component__$k,
+		FTypography: __vue_component__$m,
+		FButton: __vue_component__$v,
+		FLoader: __vue_component__$q,
+		FAlert: __vue_component__$l,
 		FForm: __vue_component__$8,
 		FFormField: __vue_component__$f,
-		FTextarea: __vue_component__$n,
-		FAvatar: __vue_component__$w
+		FTextarea: __vue_component__$o,
+		FAvatar: __vue_component__$x
 	},
 	props: {
 		/**
@@ -11567,31 +12844,32 @@ __vue_render__._withStripped = true;
 
 const components = {
     FActivityFeed: __vue_component__$9,
-    FAlert: __vue_component__$k,
-    FAvatar: __vue_component__$w,
-    FBadge: __vue_component__$v,
-    FBreadcrumb: __vue_component__$j,
-    FButton: __vue_component__$u,
-    FButtonGroup: __vue_component__$i,
-    FCheckbox: __vue_component__$t,
+    FAlert: __vue_component__$l,
+    FAvatar: __vue_component__$x,
+    FBadge: __vue_component__$w,
+    FBreadcrumb: __vue_component__$k,
+    FButton: __vue_component__$v,
+    FButtonGroup: __vue_component__$j,
+    FCheckbox: __vue_component__$u,
     FDataTable: __vue_component__$7,
-    FDivider: __vue_component__$s,
+    FDatePicker: __vue_component__$i,
+    FDivider: __vue_component__$t,
     FEmptyState: __vue_component__$h,
     FFilePreview: __vue_component__$g,
     FFileUpload: __vue_component__$6,
-    FIcon: __vue_component__$r,
-    FInput: __vue_component__$q,
+    FIcon: __vue_component__$s,
+    FInput: __vue_component__$r,
     FListItem: __vue_component__$c,
-    FLoader: __vue_component__$p,
+    FLoader: __vue_component__$q,
     FModal: __vue_component__$4,
     FOnboardingStepper: __vue_component__$1,
     FPageHeader: __vue_component__$5,
     FProfileSection: __vue_component__,
-    FRadio: __vue_component__$o,
+    FRadio: __vue_component__$p,
     FSelect: __vue_component__$a,
-    FTextarea: __vue_component__$n,
-    FToggle: __vue_component__$m,
-    FTypography: __vue_component__$l,
+    FTextarea: __vue_component__$o,
+    FToggle: __vue_component__$n,
+    FTypography: __vue_component__$m,
     FFormField: __vue_component__$f,
     FCard: __vue_component__$e,
     FForm: __vue_component__$8,
@@ -11615,35 +12893,36 @@ var index = {
 };
 
 exports.FActivityFeed = __vue_component__$9;
-exports.FAlert = __vue_component__$k;
-exports.FAvatar = __vue_component__$w;
-exports.FBadge = __vue_component__$v;
-exports.FBreadcrumb = __vue_component__$j;
-exports.FButton = __vue_component__$u;
-exports.FButtonGroup = __vue_component__$i;
+exports.FAlert = __vue_component__$l;
+exports.FAvatar = __vue_component__$x;
+exports.FBadge = __vue_component__$w;
+exports.FBreadcrumb = __vue_component__$k;
+exports.FButton = __vue_component__$v;
+exports.FButtonGroup = __vue_component__$j;
 exports.FCard = __vue_component__$e;
-exports.FCheckbox = __vue_component__$t;
+exports.FCheckbox = __vue_component__$u;
 exports.FDataTable = __vue_component__$7;
-exports.FDivider = __vue_component__$s;
+exports.FDatePicker = __vue_component__$i;
+exports.FDivider = __vue_component__$t;
 exports.FEmptyState = __vue_component__$h;
 exports.FFilePreview = __vue_component__$g;
 exports.FFileUpload = __vue_component__$6;
 exports.FForm = __vue_component__$8;
 exports.FFormField = __vue_component__$f;
-exports.FIcon = __vue_component__$r;
-exports.FInput = __vue_component__$q;
+exports.FIcon = __vue_component__$s;
+exports.FInput = __vue_component__$r;
 exports.FListItem = __vue_component__$c;
-exports.FLoader = __vue_component__$p;
+exports.FLoader = __vue_component__$q;
 exports.FModal = __vue_component__$4;
 exports.FOnboardingStepper = __vue_component__$1;
 exports.FPageHeader = __vue_component__$5;
 exports.FPagination = __vue_component__$b;
 exports.FProfileSection = __vue_component__;
-exports.FRadio = __vue_component__$o;
+exports.FRadio = __vue_component__$p;
 exports.FSearchBar = __vue_component__$d;
 exports.FSelect = __vue_component__$a;
-exports.FTextarea = __vue_component__$n;
-exports.FToggle = __vue_component__$m;
-exports.FTypography = __vue_component__$l;
+exports.FTextarea = __vue_component__$o;
+exports.FToggle = __vue_component__$n;
+exports.FTypography = __vue_component__$m;
 exports.FUserMenu = __vue_component__$3;
 exports.default = index;

@@ -154,7 +154,7 @@ export const Interactive = () => ({
 						id: Date.now(),
 						type: 'create',
 						title: 'Nouvel événement chargé',
-						description: 'Cet événement vient d\'être chargé.',
+						description: "Cet événement vient d'être chargé.",
 						actor: 'Système',
 						timestamp: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString()
 					}

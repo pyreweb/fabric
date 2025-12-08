@@ -4,9 +4,24 @@ import FActivityFeed from './FActivityFeed.vue';
 
 describe('FActivityFeed', () => {
 	const events = [
-		{ id: 1, type: 'create', title: 'Created item', timestamp: new Date().toISOString() },
-		{ id: 2, type: 'update', title: 'Updated item', timestamp: new Date().toISOString() },
-		{ id: 3, type: 'comment', title: 'New comment', timestamp: new Date().toISOString() }
+		{
+			id: 1,
+			type: 'create',
+			title: 'Created item',
+			timestamp: new Date().toISOString()
+		},
+		{
+			id: 2,
+			type: 'update',
+			title: 'Updated item',
+			timestamp: new Date().toISOString()
+		},
+		{
+			id: 3,
+			type: 'comment',
+			title: 'New comment',
+			timestamp: new Date().toISOString()
+		}
 	];
 
 	it('renders correctly with default props', () => {

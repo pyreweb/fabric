@@ -71,7 +71,8 @@ export const DifferentFileTypes = () => ({
 
 export const LongFileName = Template.bind({});
 LongFileName.args = {
-	fileName: 'un-nom-de-fichier-tres-long-qui-devrait-etre-tronque-dans-linterface.pdf'
+	fileName:
+		'un-nom-de-fichier-tres-long-qui-devrait-etre-tronque-dans-linterface.pdf'
 };
 
 export const Interactive = () => ({
@@ -87,7 +88,7 @@ export const Interactive = () => ({
 	},
 	methods: {
 		removeFile(id) {
-			this.files = this.files.filter(f => f.id !== id);
+			this.files = this.files.filter((f) => f.id !== id);
 		}
 	},
 	template: `

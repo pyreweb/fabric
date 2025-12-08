@@ -20,7 +20,14 @@ describe('FButton', () => {
 	});
 
 	it('applies correct variant classes', () => {
-		const variants = ['primary', 'secondary', 'outline', 'ghost', 'danger', 'link'] as const;
+		const variants = [
+			'primary',
+			'secondary',
+			'outline',
+			'ghost',
+			'danger',
+			'link'
+		] as const;
 		variants.forEach((variant) => {
 			const wrapper = mount(FButton, {
 				propsData: { variant }

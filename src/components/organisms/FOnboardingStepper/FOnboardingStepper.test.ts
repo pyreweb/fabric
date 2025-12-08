@@ -51,8 +51,10 @@ describe('FOnboardingStepper', () => {
 			propsData: { steps, value: 0 }
 		});
 		const buttons = wrapper.findAllComponents({ name: 'FButton' });
-		const prevButton = buttons.filter(b => 
-			b.text().toLowerCase().includes('précédent') || b.text().toLowerCase().includes('retour')
+		const prevButton = buttons.filter(
+			(b) =>
+				b.text().toLowerCase().includes('précédent') ||
+				b.text().toLowerCase().includes('retour')
 		)[0];
 		if (prevButton) {
 			expect(prevButton.props('disabled')).toBe(true);
@@ -70,9 +72,13 @@ describe('FOnboardingStepper', () => {
 		const wrapper = mount(FOnboardingStepper, {
 			propsData: { steps, value: 0 }
 		});
-		const nextButton = wrapper.findAllComponents({ name: 'FButton' }).filter(b => 
-			b.text().toLowerCase().includes('suivant') || b.text().toLowerCase().includes('next')
-		)[0];
+		const nextButton = wrapper
+			.findAllComponents({ name: 'FButton' })
+			.filter(
+				(b) =>
+					b.text().toLowerCase().includes('suivant') ||
+					b.text().toLowerCase().includes('next')
+			)[0];
 		if (nextButton) {
 			await nextButton.trigger('click');
 			expect(wrapper.emitted('input')).toBeTruthy();
@@ -83,9 +89,13 @@ describe('FOnboardingStepper', () => {
 		const wrapper = mount(FOnboardingStepper, {
 			propsData: { steps, value: 2 }
 		});
-		const finishButton = wrapper.findAllComponents({ name: 'FButton' }).filter(b => 
-			b.text().toLowerCase().includes('terminer') || b.text().toLowerCase().includes('valider')
-		)[0];
+		const finishButton = wrapper
+			.findAllComponents({ name: 'FButton' })
+			.filter(
+				(b) =>
+					b.text().toLowerCase().includes('terminer') ||
+					b.text().toLowerCase().includes('valider')
+			)[0];
 		if (finishButton) {
 			await finishButton.trigger('click');
 			expect(wrapper.emitted('complete')).toBeTruthy();

@@ -23,21 +23,27 @@ describe('FFileUpload', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: { accept: '.pdf,.doc' }
 		});
-		expect(wrapper.find('input[type="file"]').attributes('accept')).toBe('.pdf,.doc');
+		expect(wrapper.find('input[type="file"]').attributes('accept')).toBe(
+			'.pdf,.doc'
+		);
 	});
 
 	it('allows multiple files when multiple is true', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: { multiple: true }
 		});
-		expect(wrapper.find('input[type="file"]').attributes('multiple')).toBeDefined();
+		expect(
+			wrapper.find('input[type="file"]').attributes('multiple')
+		).toBeDefined();
 	});
 
 	it('disables input when disabled', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: { disabled: true }
 		});
-		expect(wrapper.find('input[type="file"]').attributes('disabled')).toBeDefined();
+		expect(
+			wrapper.find('input[type="file"]').attributes('disabled')
+		).toBeDefined();
 	});
 
 	it('shows upload button when showButton is true', () => {
@@ -57,9 +63,7 @@ describe('FFileUpload', () => {
 	it('displays file previews when files are present', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: {
-				value: [
-					{ id: 1, name: 'test.pdf', status: 'success' }
-				]
+				value: [{ id: 1, name: 'test.pdf', status: 'success' }]
 			}
 		});
 		expect(wrapper.findComponent({ name: 'FFilePreview' }).exists()).toBe(true);
@@ -68,7 +72,7 @@ describe('FFileUpload', () => {
 	it('emits input event when files are added', async () => {
 		const wrapper = mount(FFileUpload);
 		const input = wrapper.find('input[type="file"]');
-		
+
 		// Create a mock file
 		const file = new File(['content'], 'test.txt', { type: 'text/plain' });
 		const mockFileList = {
@@ -83,7 +87,7 @@ describe('FFileUpload', () => {
 			writable: false
 		});
 		await input.trigger('change');
-		
+
 		expect(wrapper.emitted('input')).toBeTruthy();
 	});
 
@@ -91,9 +95,7 @@ describe('FFileUpload', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: {
 				showProgress: true,
-				value: [
-					{ id: 1, name: 'test.pdf', status: 'uploading', progress: 50 }
-				]
+				value: [{ id: 1, name: 'test.pdf', status: 'uploading', progress: 50 }]
 			}
 		});
 		expect(wrapper.exists()).toBe(true);

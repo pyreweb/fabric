@@ -107,6 +107,8 @@ describe('FModal', () => {
 		const wrapper = mount(FModal, {
 			propsData: { value: true, bordered: true }
 		});
-		expect(wrapper.find('[role="dialog"]').classes().join(' ')).toContain('border');
+		expect(wrapper.find('[role="dialog"]').classes().join(' ')).toContain(
+			'border'
+		);
 	});
 });

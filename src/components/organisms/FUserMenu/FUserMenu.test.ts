@@ -48,8 +48,9 @@ describe('FUserMenu', () => {
 		const wrapper = mount(FUserMenu, {
 			propsData: { name: 'John', showLogout: true }
 		});
-		const hasLogout = wrapper.text().toLowerCase().includes('déconnexion') || 
-		                  wrapper.text().toLowerCase().includes('logout');
+		const hasLogout =
+			wrapper.text().toLowerCase().includes('déconnexion') ||
+			wrapper.text().toLowerCase().includes('logout');
 		expect(hasLogout).toBe(true);
 	});
 
@@ -57,9 +58,13 @@ describe('FUserMenu', () => {
 		const wrapper = mount(FUserMenu, {
 			propsData: { name: 'John', showLogout: true }
 		});
-		const logoutBtn = wrapper.findAllComponents({ name: 'FButton' }).filter(b => 
-			b.text().toLowerCase().includes('déconnexion') || b.text().toLowerCase().includes('logout')
-		)[0];
+		const logoutBtn = wrapper
+			.findAllComponents({ name: 'FButton' })
+			.filter(
+				(b) =>
+					b.text().toLowerCase().includes('déconnexion') ||
+					b.text().toLowerCase().includes('logout')
+			)[0];
 		if (logoutBtn) {
 			await logoutBtn.trigger('click');
 			expect(wrapper.emitted('logout')).toBeTruthy();

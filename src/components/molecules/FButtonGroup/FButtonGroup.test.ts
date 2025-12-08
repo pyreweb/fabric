@@ -25,12 +25,16 @@ describe('FButtonGroup', () => {
 		const wrapper = mount(FButtonGroup, {
 			propsData: { ariaLabel: 'Custom Label' }
 		});
-		expect(wrapper.find('[role="group"]').attributes('aria-label')).toBe('Custom Label');
+		expect(wrapper.find('[role="group"]').attributes('aria-label')).toBe(
+			'Custom Label'
+		);
 	});
 
 	it('has default aria-label', () => {
 		const wrapper = mount(FButtonGroup);
-		expect(wrapper.find('[role="group"]').attributes('aria-label')).toBe('Groupe de boutons');
+		expect(wrapper.find('[role="group"]').attributes('aria-label')).toBe(
+			'Groupe de boutons'
+		);
 	});
 
 	it('applies container classes', () => {

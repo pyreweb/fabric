@@ -36,11 +36,15 @@ describe('FForm', () => {
 		const wrapper = mount(FForm);
 		const form = wrapper.find('form');
 		let defaultPrevented = false;
-		
-		form.element.addEventListener('submit', (e) => {
-			defaultPrevented = e.defaultPrevented;
-		}, { once: true });
-		
+
+		form.element.addEventListener(
+			'submit',
+			(e) => {
+				defaultPrevented = e.defaultPrevented;
+			},
+			{ once: true }
+		);
+
 		await form.trigger('submit');
 		// The form component handles prevention internally
 		expect(wrapper.emitted('submit')).toBeTruthy();

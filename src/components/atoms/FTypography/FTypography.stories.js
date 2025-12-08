@@ -7,7 +7,17 @@ export default {
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
-			options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'caption', 'overline'],
+			options: [
+				'h1',
+				'h2',
+				'h3',
+				'h4',
+				'h5',
+				'h6',
+				'body',
+				'caption',
+				'overline'
+			],
 			description: 'Variante typographique'
 		},
 		tag: {
@@ -52,7 +62,8 @@ export const Headings = () => ({
 export const Body = Template.bind({});
 Body.args = {
 	variant: 'body',
-	content: 'Ceci est un paragraphe de texte standard. Il utilise la variante body qui est adaptée au contenu principal.'
+	content:
+		'Ceci est un paragraphe de texte standard. Il utilise la variante body qui est adaptée au contenu principal.'
 };
 
 export const Caption = Template.bind({});

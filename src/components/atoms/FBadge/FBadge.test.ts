@@ -27,7 +27,13 @@ describe('FBadge', () => {
 	});
 
 	it('applies correct variant classes', () => {
-		const variants = ['primary', 'success', 'warning', 'error', 'neutral'] as const;
+		const variants = [
+			'primary',
+			'success',
+			'warning',
+			'error',
+			'neutral'
+		] as const;
 		variants.forEach((variant) => {
 			const wrapper = mount(FBadge, {
 				propsData: { variant, content: 'Test' }

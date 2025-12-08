@@ -56,7 +56,11 @@ describe('FEmptyState', () => {
 
 	it('applies correct action variant', () => {
 		const wrapper = mount(FEmptyState, {
-			propsData: { title: 'Title', actionLabel: 'Action', actionVariant: 'secondary' }
+			propsData: {
+				title: 'Title',
+				actionLabel: 'Action',
+				actionVariant: 'secondary'
+			}
 		});
 		expect(wrapper.findComponent({ name: 'FButton' }).exists()).toBe(true);
 	});
