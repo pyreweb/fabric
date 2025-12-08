@@ -140,6 +140,7 @@ export default {
 			isVisible: true,
 			timer: null,
 			remainingTime: this.duration,
+			startTime: null,
 			pausedAt: null
 		};
 	},
@@ -184,6 +185,7 @@ export default {
 	methods: {
 		startTimer() {
 			this.clearTimer();
+			this.startTime = Date.now();
 			this.timer = setTimeout(() => {
 				this.handleClose();
 			}, this.remainingTime);
@@ -195,21 +197,19 @@ export default {
 			}
 		},
 		pauseTimer() {
-			if (this.timer && this.duration > 0) {
+			if (this.timer && this.duration > 0 && this.startTime) {
+				const elapsed = Date.now() - this.startTime;
+				this.remainingTime = Math.max(0, this.remainingTime - elapsed);
 				this.clearTimer();
 				this.pausedAt = Date.now();
 			}
 		},
 		resumeTimer() {
-			if (this.pausedAt && this.duration > 0) {
-				const elapsed = Date.now() - this.pausedAt;
-				this.remainingTime = Math.max(0, this.remainingTime - elapsed);
+			if (this.pausedAt && this.duration > 0 && this.remainingTime > 0) {
 				this.pausedAt = null;
-				if (this.remainingTime > 0) {
-					this.startTimer();
-				} else {
-					this.handleClose();
-				}
+				this.startTimer();
+			} else if (this.pausedAt && this.remainingTime <= 0) {
+				this.handleClose();
 			}
 		},
 		handleClose() {

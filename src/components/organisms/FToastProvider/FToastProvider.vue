@@ -80,7 +80,9 @@ export default {
 		}
 	},
 	created() {
-		// Expose API globally via provide/inject pattern
+		// Expose API globally via $root for Vue 2 compatibility
+		// Note: In Vue 3, this should be replaced with provide/inject or a plugin
+		// This approach is acceptable for Vue 2 applications for convenience
 		if (this.$root && !this.$root.$toast) {
 			this.$root.$toast = {
 				show: this.show,
