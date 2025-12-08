@@ -50,6 +50,9 @@ import type { VueConstructor, Component } from 'vue';
 // Export all types
 export * from './types';
 
+// Export composables
+export * from './composables';
+
 // Type for components record
 type ComponentsRecord = Record<string, Component>;
 
