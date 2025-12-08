@@ -51,9 +51,9 @@ export default {
 	},
 	computed: {
 		cardClasses() {
-			const baseClasses =
-				'bg-white rounded-lg overflow-hidden';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'bg-white rounded-lg overflow-hidden';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 			const clickableClasses = this.clickable
 				? 'cursor-pointer hover:shadow-lg hover:-translate-y-0.5'

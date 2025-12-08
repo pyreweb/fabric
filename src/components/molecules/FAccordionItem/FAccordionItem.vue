@@ -64,9 +64,9 @@ export default {
 			return 'w-full flex items-center justify-between gap-3 p-4 bg-neutral-50 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset cursor-pointer transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 		},
 		iconClasses() {
-			const baseClasses =
-				'transform text-neutral-500';
-			const transitionClasses = 'transition-transform duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
+			const baseClasses = 'transform text-neutral-500';
+			const transitionClasses =
+				'transition-transform duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
 			const rotateClasses = this.isOpen ? 'rotate-180' : 'rotate-0';
 			return `${baseClasses} ${transitionClasses} ${rotateClasses}`;
 		},

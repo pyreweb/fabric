@@ -308,12 +308,14 @@ export default {
 		 * Main sidebar container classes
 		 */
 		sidebarClasses() {
-			const baseClasses =
-				'flex flex-col h-full bg-white border-neutral-200';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'flex flex-col h-full bg-white border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]';
 			const borderClasses = this.position === 'left' ? 'border-r' : 'border-l';
 
-			return [baseClasses, transitionClasses, borderClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, borderClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		/**
 		 * Sidebar inline styles
@@ -327,14 +329,16 @@ export default {
 		 * Branding section classes
 		 */
 		brandingClasses() {
-			const baseClasses =
-				'flex items-center border-b border-neutral-200';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'flex items-center border-b border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed
 				? 'justify-center p-3'
 				: 'justify-between p-4';
 
-			return [baseClasses, transitionClasses, paddingClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, paddingClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		/**
 		 * Group label classes
@@ -346,12 +350,14 @@ export default {
 		 * Footer section classes
 		 */
 		footerClasses() {
-			const baseClasses =
-				'border-t border-neutral-200';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'border-t border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed ? 'p-2' : 'p-4';
 
-			return [baseClasses, transitionClasses, paddingClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, paddingClasses]
+				.filter(Boolean)
+				.join(' ');
 		}
 	},
 	watch: {
@@ -463,9 +469,9 @@ export default {
 			const isActive = this.isItemActive(item) || this.hasActiveChild(item);
 			const isDisabled = item.disabled;
 
-			const baseClasses =
-				'flex items-center w-full gap-3 text-sm font-medium';
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'flex items-center w-full gap-3 text-sm font-medium';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed
 				? 'justify-center px-3 py-3'
 				: 'px-4 py-3';
@@ -500,7 +506,8 @@ export default {
 
 			const baseClasses =
 				'flex items-center w-full gap-3 pl-11 pr-4 py-2 text-sm';
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const hoverClasses = !isDisabled ? 'hover:bg-neutral-50' : '';
 			const activeClasses = isActive
 				? 'bg-primary-50 text-primary-600 font-medium'
@@ -535,7 +542,8 @@ export default {
 		getChevronClasses(item) {
 			const isOpen = this.isSubmenuOpen(item);
 			const baseClasses = 'text-neutral-400';
-			const transitionClasses = 'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const transitionClasses =
+				'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const rotateClasses = isOpen ? 'rotate-180' : 'rotate-0';
 
 			return `${baseClasses} ${transitionClasses} ${rotateClasses}`;

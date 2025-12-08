@@ -193,7 +193,8 @@ export default {
 		drawerClasses() {
 			const baseClasses =
 				'relative bg-white shadow-xl pointer-events-auto flex flex-col';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
 			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 
 			const sizeClasses = {
@@ -225,7 +226,13 @@ export default {
 					? 'h-full'
 					: 'w-full';
 
-			return [baseClasses, transitionClasses, borderedClasses, heightWidthClass, fullHeightWidth]
+			return [
+				baseClasses,
+				transitionClasses,
+				borderedClasses,
+				heightWidthClass,
+				fullHeightWidth
+			]
 				.filter(Boolean)
 				.join(' ');
 		}

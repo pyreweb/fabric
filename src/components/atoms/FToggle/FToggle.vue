@@ -55,8 +55,9 @@ export default {
 		switchClasses() {
 			const baseClasses =
 				'relative inline-flex items-center h-6 w-11 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 flex-shrink-0';
-			
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			const colorClasses = {
 				blue: this.value
@@ -80,19 +81,27 @@ export default {
 				? 'cursor-not-allowed'
 				: 'cursor-pointer';
 
-			return [baseClasses, transitionClasses, colorClasses[this.color], disabledClasses]
+			return [
+				baseClasses,
+				transitionClasses,
+				colorClasses[this.color],
+				disabledClasses
+			]
 				.filter(Boolean)
 				.join(' ');
 		},
 		thumbClasses() {
 			const baseClasses =
 				'inline-block w-4 h-4 rounded-full bg-white shadow transform';
-			
-			const transitionClasses = 'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+
+			const transitionClasses =
+				'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			const positionClasses = this.value ? 'translate-x-6' : 'translate-x-1';
 
-			return [baseClasses, transitionClasses, positionClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, positionClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		labelClasses() {
 			const baseClasses = 'ml-2 text-sm text-neutral-800 select-none';

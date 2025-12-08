@@ -69,8 +69,9 @@ export default {
 		radioClasses() {
 			const baseClasses =
 				'inline-flex items-center justify-center w-5 h-5 rounded-full border-2 flex-shrink-0';
-			
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			let stateClasses;
 			if (this.error) {
@@ -87,7 +88,9 @@ export default {
 					: 'border-neutral-300 bg-white hover:border-primary-400';
 			}
 
-			return [baseClasses, transitionClasses, stateClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, stateClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		dotClasses() {
 			return 'w-2 h-2 rounded-full bg-white';

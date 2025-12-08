@@ -80,26 +80,39 @@ export default {
 		stepCircleClasses(index) {
 			const baseClasses =
 				'flex items-center justify-center w-8 h-8 rounded-full ring-4 ring-white';
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Completed step
-				return [baseClasses, transitionClasses, 'bg-success-600 text-white'].join(' ');
+				return [
+					baseClasses,
+					transitionClasses,
+					'bg-success-600 text-white'
+				].join(' ');
 			} else if (index === this.currentStep) {
 				// Current step
-				return [baseClasses, transitionClasses, 'bg-primary-600 text-white'].join(' ');
+				return [
+					baseClasses,
+					transitionClasses,
+					'bg-primary-600 text-white'
+				].join(' ');
 			} else {
 				// Future step
-				return [baseClasses, transitionClasses, 'bg-neutral-200 text-neutral-500'].join(' ');
+				return [
+					baseClasses,
+					transitionClasses,
+					'bg-neutral-200 text-neutral-500'
+				].join(' ');
 			}
 		},
 		/**
 		 * Get classes for step title
 		 */
 		stepTitleClasses(index) {
-			const baseClasses =
-				'ml-2 text-sm font-medium';
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const baseClasses = 'ml-2 text-sm font-medium';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Completed step
@@ -117,7 +130,8 @@ export default {
 		 */
 		connectorClasses(index) {
 			const baseClasses = 'flex-1 h-0.5 mx-4';
-			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Connector before current step (completed)

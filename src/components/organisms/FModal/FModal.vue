@@ -167,7 +167,8 @@ export default {
 		modalClasses() {
 			const baseClasses =
 				'relative bg-white rounded-lg overflow-hidden shadow-xl';
-			const transitionClasses = 'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
 			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 
 			const sizeClasses = {
@@ -177,7 +178,12 @@ export default {
 				full: 'w-full max-w-full m-4'
 			};
 
-			return [baseClasses, transitionClasses, borderedClasses, sizeClasses[this.size]]
+			return [
+				baseClasses,
+				transitionClasses,
+				borderedClasses,
+				sizeClasses[this.size]
+			]
 				.filter(Boolean)
 				.join(' ');
 		}
