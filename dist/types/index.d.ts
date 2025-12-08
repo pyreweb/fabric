@@ -4,6 +4,7 @@ import { FAlert, FBreadcrumb, FButtonGroup, FDatePicker, FEmptyState, FFilePrevi
 import { FActivityFeed, FForm, FDataTable, FDrawer, FFileUpload, FPageHeader, FModal, FUserMenu, FOnboardingStepper, FProfileSection, FToastProvider } from './components/organisms';
 import type { VueConstructor } from 'vue';
 export * from './types';
+export * from './components';
 declare global {
     interface Window {
         Vue?: VueConstructor;

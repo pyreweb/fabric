@@ -450,9 +450,6 @@
   .block {
     display: block;
   }
-  .contents {
-    display: contents;
-  }
   .flex {
     display: flex;
   }
@@ -1440,12 +1437,6 @@
     &::after {
       content: var(--tw-content);
       color: var(--color-danger-500);
-    }
-  }
-  .after\:content-\[\'_\*\'\] {
-    &::after {
-      --tw-content: ' *';
-      content: var(--tw-content);
     }
   }
   .after\:content-\[\\\'_\*\\\'\] {
