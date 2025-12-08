@@ -6,3 +6,9 @@ declare module '*.vue' {
 	const component: DefineComponent<{}, {}, any>;
 	export default component;
 }
+
+// Déclaration du module principal avec types enrichis
+declare module '@pyreweb/fabric' {
+	export * from './components';
+	export * from './types';
+}
