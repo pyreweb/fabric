@@ -23,7 +23,8 @@ import {
 	FCard,
 	FSearchBar,
 	FListItem,
-	FPagination
+	FPagination,
+	FSelect
 } from './components/molecules';
 import {
 	FActivityFeed,
@@ -67,6 +68,7 @@ const components: ComponentsRecord = {
 	FPageHeader,
 	FProfileSection,
 	FRadio,
+	FSelect,
 	FTextarea,
 	FToggle,
 	FTypography,
@@ -125,6 +127,7 @@ export {
 	FPageHeader,
 	FProfileSection,
 	FRadio,
+	FSelect,
 	FTextarea,
 	FToggle,
 	FTypography,

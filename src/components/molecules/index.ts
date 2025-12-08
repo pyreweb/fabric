@@ -10,6 +10,7 @@ import FSearchBar from './FSearchBar/FSearchBar.vue';
 import FListItem from './FListItem/FListItem.vue';
 import FPagination from './FPagination/FPagination.vue';
 import FStatCard from './FStatCard/FStatCard.vue';
+import FSelect from './FSelect/FSelect.vue';
 
 export {
 	FAccordionItem,
@@ -23,5 +24,6 @@ export {
 	FSearchBar,
 	FListItem,
 	FPagination,
-	FStatCard
+	FStatCard,
+	FSelect
 };

@@ -112,3 +112,50 @@ export interface FDataTableEvents<T = Record<string, unknown>> {
 	'update:page': (page: number) => void;
 	'update:selected': (keys: RowKey[]) => void;
 }
+
+// =============================================================================
+// FSelect Types
+// =============================================================================
+
+/** Tailles disponibles pour FSelect */
+export type FSelectSize = 'small' | 'medium' | 'large';
+
+/** Type pour une option de sélection */
+export type FSelectOption = string | number | Record<string, unknown>;
+
+/** Fonction de filtrage personnalisée pour FSelect */
+export type FSelectFilterMethod = (
+	query: string,
+	options: FSelectOption[]
+) => FSelectOption[];
+
+/** Props du composant FSelect */
+export interface FSelectProps {
+	value?: FSelectOption | FSelectOption[] | null;
+	options?: FSelectOption[];
+	optionKey?: string;
+	optionLabel?: string;
+	optionDisabled?: string;
+	placeholder?: string;
+	size?: FSelectSize;
+	multiple?: boolean;
+	searchable?: boolean;
+	searchPlaceholder?: string;
+	emptyText?: string;
+	loading?: boolean;
+	loadingText?: string;
+	disabled?: boolean;
+	error?: boolean;
+	labelId?: string | null;
+	filterMethod?: FSelectFilterMethod | null;
+}
+
+/** Événements émis par FSelect */
+export interface FSelectEvents {
+	input: (value: FSelectOption | FSelectOption[]) => void;
+	change: (value: FSelectOption | FSelectOption[]) => void;
+	open: () => void;
+	close: () => void;
+	focus: (event: FocusEvent) => void;
+	blur: (event: FocusEvent) => void;
+}
