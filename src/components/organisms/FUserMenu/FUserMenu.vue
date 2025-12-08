@@ -42,7 +42,11 @@
 		>
 			<!-- User Info Header -->
 			<div v-if="showUserInfo" class="px-4 py-3">
-				<f-typography variant="body" class="font-medium text-neutral-900" truncate>
+				<f-typography
+					variant="body"
+					class="font-medium text-neutral-900"
+					truncate
+				>
 					{{ userName }}
 				</f-typography>
 				<f-typography

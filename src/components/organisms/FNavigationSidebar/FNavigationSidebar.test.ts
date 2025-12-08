@@ -26,7 +26,7 @@ describe('FNavigationSidebar', () => {
 
 	it('marks active item', () => {
 		const itemsWithActive = [
-			...items.slice(0, 1).map(i => ({ ...i, active: true })),
+			...items.slice(0, 1).map((i) => ({ ...i, active: true })),
 			...items.slice(1)
 		];
 		const wrapper = mount(FNavigationSidebar, {

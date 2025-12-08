@@ -65,7 +65,12 @@ describe('FIcon', () => {
 	});
 
 	it('renders navigation icons correctly', () => {
-		const navIcons = ['chevron-up', 'chevron-down', 'chevron-left', 'chevron-right'];
+		const navIcons = [
+			'chevron-up',
+			'chevron-down',
+			'chevron-left',
+			'chevron-right'
+		];
 		navIcons.forEach((name) => {
 			const wrapper = mount(FIcon, {
 				propsData: { name }
@@ -75,7 +80,15 @@ describe('FIcon', () => {
 	});
 
 	it('renders action icons correctly', () => {
-		const actionIcons = ['check', 'x', 'plus', 'minus', 'search', 'edit', 'trash'];
+		const actionIcons = [
+			'check',
+			'x',
+			'plus',
+			'minus',
+			'search',
+			'edit',
+			'trash'
+		];
 		actionIcons.forEach((name) => {
 			const wrapper = mount(FIcon, {
 				propsData: { name }

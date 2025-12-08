@@ -64,7 +64,17 @@ describe('FTypography', () => {
 	});
 
 	it('applies correct variant classes', () => {
-		const variants = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'caption', 'overline'] as const;
+		const variants = [
+			'h1',
+			'h2',
+			'h3',
+			'h4',
+			'h5',
+			'h6',
+			'body',
+			'caption',
+			'overline'
+		] as const;
 		variants.forEach((variant) => {
 			const wrapper = mount(FTypography, {
 				propsData: { variant },

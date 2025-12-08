@@ -26,14 +26,18 @@ describe('FCheckbox', () => {
 
 	it('is unchecked by default', () => {
 		const wrapper = mount(FCheckbox);
-		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(false);
+		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(
+			false
+		);
 	});
 
 	it('respects checked prop', () => {
 		const wrapper = mount(FCheckbox, {
 			propsData: { checked: true }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(true);
+		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(
+			true
+		);
 	});
 
 	it('emits change event when toggled', async () => {
@@ -57,5 +61,4 @@ describe('FCheckbox', () => {
 		const input = wrapper.find('input');
 		expect(input.classes().join(' ')).toContain('border-danger');
 	});
-
 });

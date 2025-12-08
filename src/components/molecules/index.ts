@@ -2,6 +2,7 @@ import FAccordionItem from './FAccordionItem/FAccordionItem.vue';
 import FAlert from './FAlert/FAlert.vue';
 import FBreadcrumb from './FBreadcrumb/FBreadcrumb.vue';
 import FButtonGroup from './FButtonGroup/FButtonGroup.vue';
+import FDatePicker from './FDatePicker/FDatePicker.vue';
 import FEmptyState from './FEmptyState/FEmptyState.vue';
 import FFilePreview from './FFilePreview/FFilePreview.vue';
 import FFormField from './FFormField/FFormField.vue';
@@ -17,6 +18,7 @@ export {
 	FAlert,
 	FBreadcrumb,
 	FButtonGroup,
+	FDatePicker,
 	FEmptyState,
 	FFilePreview,
 	FFormField,

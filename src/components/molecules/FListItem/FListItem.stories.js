@@ -43,7 +43,7 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-	title: 'Titre de l\'élément',
+	title: "Titre de l'élément",
 	subtitle: 'Description secondaire'
 };
 

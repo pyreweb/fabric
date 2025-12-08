@@ -93,7 +93,12 @@ export const WithSections = () => ({
 		return {
 			items: [
 				{ type: 'section', label: 'Principal' },
-				{ label: 'Tableau de bord', href: '/dashboard', icon: 'home', active: true },
+				{
+					label: 'Tableau de bord',
+					href: '/dashboard',
+					icon: 'home',
+					active: true
+				},
 				{ label: 'Projets', href: '/projects', icon: 'folder' },
 				{ type: 'section', label: 'Équipe' },
 				{ label: 'Membres', href: '/members', icon: 'user' },
@@ -147,7 +152,7 @@ export const Interactive = () => ({
 	},
 	methods: {
 		handleNavigate(data) {
-			this.items = this.items.map(item => ({
+			this.items = this.items.map((item) => ({
 				...item,
 				active: item.href === data.item.href
 			}));

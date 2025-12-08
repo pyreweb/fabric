@@ -1,8 +1,5 @@
 <template>
-	<div
-		:class="containerClasses"
-		@keydown.escape="closeDropdown"
-	>
+	<div :class="containerClasses" @keydown.escape="closeDropdown">
 		<!-- Trigger Button -->
 		<button
 			:id="triggerId"
@@ -286,12 +283,17 @@ export default {
 		},
 		valueClasses() {
 			const baseClasses = 'flex-1 truncate';
-			const placeholderClasses = !this.hasValue ? 'text-neutral-400' : 'text-neutral-900';
+			const placeholderClasses = !this.hasValue
+				? 'text-neutral-400'
+				: 'text-neutral-900';
 			return [baseClasses, placeholderClasses].join(' ');
 		},
 		iconClasses() {
-			const baseClasses = 'ml-2 flex-shrink-0 transition-transform duration-200';
-			const colorClasses = this.disabled ? 'text-neutral-400' : 'text-neutral-500';
+			const baseClasses =
+				'ml-2 flex-shrink-0 transition-transform duration-200';
+			const colorClasses = this.disabled
+				? 'text-neutral-400'
+				: 'text-neutral-500';
 			return [baseClasses, colorClasses].join(' ');
 		},
 		dropdownClasses() {
@@ -310,7 +312,9 @@ export default {
 			if (this.multiple) {
 				return Array.isArray(this.value) && this.value.length > 0;
 			}
-			return this.value !== null && this.value !== undefined && this.value !== '';
+			return (
+				this.value !== null && this.value !== undefined && this.value !== ''
+			);
 		},
 		displayValue() {
 			if (!this.hasValue) {
@@ -322,7 +326,9 @@ export default {
 					const option = this.options.find(
 						(opt) => this.getOptionValue(opt) === this.getOptionValue(val)
 					);
-					return option ? this.getOptionLabel(option) : this.getOptionLabel(val);
+					return option
+						? this.getOptionLabel(option)
+						: this.getOptionLabel(val);
 				});
 				return labels.join(', ');
 			}
@@ -411,8 +417,11 @@ export default {
 			const baseClasses =
 				'flex items-center gap-2 px-3 py-2 cursor-pointer transition-colors duration-150';
 			const hoverClasses = 'hover:bg-neutral-50';
-			const focusedClasses = this.focusedIndex === index ? 'bg-neutral-100' : '';
-			const selectedClasses = this.isSelected(option) ? 'bg-primary-50 text-primary-700' : '';
+			const focusedClasses =
+				this.focusedIndex === index ? 'bg-neutral-100' : '';
+			const selectedClasses = this.isSelected(option)
+				? 'bg-primary-50 text-primary-700'
+				: '';
 			const disabledClasses = this.isDisabled(option)
 				? 'opacity-50 cursor-not-allowed'
 				: '';
@@ -467,15 +476,20 @@ export default {
 			const maxIndex = this.filteredOptions.length - 1;
 
 			if (direction === 'down') {
-				this.focusedIndex = this.focusedIndex < maxIndex ? this.focusedIndex + 1 : 0;
+				this.focusedIndex =
+					this.focusedIndex < maxIndex ? this.focusedIndex + 1 : 0;
 			} else if (direction === 'up') {
-				this.focusedIndex = this.focusedIndex > 0 ? this.focusedIndex - 1 : maxIndex;
+				this.focusedIndex =
+					this.focusedIndex > 0 ? this.focusedIndex - 1 : maxIndex;
 			}
 
 			this.scrollToFocusedOption();
 		},
 		handleEnterKey() {
-			if (this.focusedIndex >= 0 && this.focusedIndex < this.filteredOptions.length) {
+			if (
+				this.focusedIndex >= 0 &&
+				this.focusedIndex < this.filteredOptions.length
+			) {
 				const option = this.filteredOptions[this.focusedIndex];
 				this.handleOptionClick(option);
 			}

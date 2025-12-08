@@ -59,5 +59,4 @@ describe('FToggle', () => {
 			expect(wrapper.find('button').exists()).toBe(true);
 		});
 	});
-
 });

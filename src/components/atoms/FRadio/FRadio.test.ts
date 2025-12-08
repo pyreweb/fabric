@@ -28,21 +28,27 @@ describe('FRadio', () => {
 		const wrapper = mount(FRadio, {
 			propsData: { name: 'test', value: 'opt' }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(false);
+		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(
+			false
+		);
 	});
 
 	it('is checked when modelValue matches value', () => {
 		const wrapper = mount(FRadio, {
 			propsData: { name: 'test', value: 'opt1', modelValue: 'opt1' }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(true);
+		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(
+			true
+		);
 	});
 
 	it('is unchecked when modelValue does not match value', () => {
 		const wrapper = mount(FRadio, {
 			propsData: { name: 'test', value: 'opt1', modelValue: 'opt2' }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(false);
+		expect((wrapper.find('input').element as HTMLInputElement).checked).toBe(
+			false
+		);
 	});
 
 	it('emits change event when selected', async () => {

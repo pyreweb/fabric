@@ -22,14 +22,18 @@ describe('FInput', () => {
 		const wrapper = mount(FInput, {
 			propsData: { placeholder: 'Enter text...' }
 		});
-		expect(wrapper.find('input').attributes('placeholder')).toBe('Enter text...');
+		expect(wrapper.find('input').attributes('placeholder')).toBe(
+			'Enter text...'
+		);
 	});
 
 	it('displays value', () => {
 		const wrapper = mount(FInput, {
 			propsData: { value: 'Test value' }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).value).toBe('Test value');
+		expect((wrapper.find('input').element as HTMLInputElement).value).toBe(
+			'Test value'
+		);
 	});
 
 	it('emits input event when typing', async () => {
@@ -68,7 +72,8 @@ describe('FInput', () => {
 		const wrapper = mount(FInput, {
 			propsData: { error: true }
 		});
-		expect(wrapper.find('input').classes().join(' ')).toContain('border-danger');
+		expect(wrapper.find('input').classes().join(' ')).toContain(
+			'border-danger'
+		);
 	});
-
 });

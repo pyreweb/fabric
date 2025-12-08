@@ -66,10 +66,7 @@ CustomSeparator.args = {
 
 export const TwoLevels = Template.bind({});
 TwoLevels.args = {
-	items: [
-		{ label: 'Tableau de bord', href: '/' },
-		{ label: 'Paramètres' }
-	]
+	items: [{ label: 'Tableau de bord', href: '/' }, { label: 'Paramètres' }]
 };
 
 export const Interactive = () => ({

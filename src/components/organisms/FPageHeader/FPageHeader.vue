@@ -195,7 +195,9 @@ export default {
 		headerClasses() {
 			const baseClasses = 'w-full';
 			const paddingClasses = 'pb-4';
-			const separatorClasses = this.separator ? 'border-b border-neutral-200' : '';
+			const separatorClasses = this.separator
+				? 'border-b border-neutral-200'
+				: '';
 
 			return [baseClasses, paddingClasses, separatorClasses]
 				.filter(Boolean)

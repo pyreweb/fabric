@@ -19,14 +19,18 @@ describe('FTextarea', () => {
 		const wrapper = mount(FTextarea, {
 			propsData: { placeholder: 'Enter text...' }
 		});
-		expect(wrapper.find('textarea').attributes('placeholder')).toBe('Enter text...');
+		expect(wrapper.find('textarea').attributes('placeholder')).toBe(
+			'Enter text...'
+		);
 	});
 
 	it('displays value', () => {
 		const wrapper = mount(FTextarea, {
 			propsData: { value: 'Test content' }
 		});
-		expect((wrapper.find('textarea').element as HTMLTextAreaElement).value).toBe('Test content');
+		expect(
+			(wrapper.find('textarea').element as HTMLTextAreaElement).value
+		).toBe('Test content');
 	});
 
 	it('emits input event when typing', async () => {
@@ -62,7 +66,9 @@ describe('FTextarea', () => {
 		const wrapper = mount(FTextarea, {
 			propsData: { error: true }
 		});
-		expect(wrapper.find('textarea').classes().join(' ')).toContain('border-danger');
+		expect(wrapper.find('textarea').classes().join(' ')).toContain(
+			'border-danger'
+		);
 	});
 
 	it('displays error message', () => {
@@ -85,5 +91,4 @@ describe('FTextarea', () => {
 		});
 		expect(wrapper.find('textarea').attributes('maxlength')).toBe('200');
 	});
-
 });

@@ -61,7 +61,7 @@ export const NoDocuments = Template.bind({});
 NoDocuments.args = {
 	icon: 'document',
 	title: 'Aucun document',
-	description: "Téléversez un document pour commencer.",
+	description: 'Téléversez un document pour commencer.',
 	actionLabel: 'Téléverser un fichier'
 };
 
@@ -69,7 +69,7 @@ export const NoNotifications = Template.bind({});
 NoNotifications.args = {
 	icon: 'bell',
 	title: 'Pas de notifications',
-	description: "Vous êtes à jour ! Aucune nouvelle notification."
+	description: 'Vous êtes à jour ! Aucune nouvelle notification.'
 };
 
 export const WithSlot = () => ({

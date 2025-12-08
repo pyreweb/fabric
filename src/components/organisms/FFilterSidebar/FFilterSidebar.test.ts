@@ -58,7 +58,9 @@ describe('FFilterSidebar', () => {
 		const checkbox = wrapper.find('input[type="checkbox"]');
 		if (checkbox.exists()) {
 			await checkbox.setChecked(true);
-			expect(wrapper.emitted('input') || wrapper.emitted('update')).toBeTruthy();
+			expect(
+				wrapper.emitted('input') || wrapper.emitted('update')
+			).toBeTruthy();
 		}
 	});
 
@@ -66,9 +68,13 @@ describe('FFilterSidebar', () => {
 		const wrapper = mount(FFilterSidebar, {
 			propsData: { filters, showClear: true }
 		});
-		const clearBtn = wrapper.findAllComponents({ name: 'FButton' }).filter(b => 
-			b.text().toLowerCase().includes('effacer') || b.text().toLowerCase().includes('réinitialiser')
-		)[0];
+		const clearBtn = wrapper
+			.findAllComponents({ name: 'FButton' })
+			.filter(
+				(b) =>
+					b.text().toLowerCase().includes('effacer') ||
+					b.text().toLowerCase().includes('réinitialiser')
+			)[0];
 		if (clearBtn) {
 			await clearBtn.trigger('click');
 			expect(wrapper.emitted('clear')).toBeTruthy();
@@ -79,6 +85,8 @@ describe('FFilterSidebar', () => {
 		const wrapper = mount(FFilterSidebar, {
 			propsData: { filters }
 		});
-		expect(wrapper.findComponent({ name: 'FAccordionItem' }).exists()).toBe(true);
+		expect(wrapper.findComponent({ name: 'FAccordionItem' }).exists()).toBe(
+			true
+		);
 	});
 });

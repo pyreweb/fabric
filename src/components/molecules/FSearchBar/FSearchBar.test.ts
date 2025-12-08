@@ -19,7 +19,9 @@ describe('FSearchBar', () => {
 		const wrapper = mount(FSearchBar, {
 			propsData: { value: 'test query' }
 		});
-		expect((wrapper.find('input').element as HTMLInputElement).value).toBe('test query');
+		expect((wrapper.find('input').element as HTMLInputElement).value).toBe(
+			'test query'
+		);
 	});
 
 	it('emits input event when typing', async () => {

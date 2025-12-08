@@ -11,7 +11,7 @@ export default {
 		},
 		currentStep: {
 			control: { type: 'number', min: 0 },
-			description: 'Index de l\'étape actuelle (base 0)'
+			description: "Index de l'étape actuelle (base 0)"
 		}
 	}
 };

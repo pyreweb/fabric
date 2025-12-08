@@ -19,7 +19,7 @@ export default {
 		},
 		name: {
 			control: 'text',
-			description: "Nom complet pour générer les initiales automatiquement"
+			description: 'Nom complet pour générer les initiales automatiquement'
 		},
 		size: {
 			control: { type: 'select' },
@@ -34,7 +34,7 @@ export default {
 		status: {
 			control: { type: 'select' },
 			options: [null, 'online', 'busy', 'away', 'offline'],
-			description: "Indicateur de statut"
+			description: 'Indicateur de statut'
 		}
 	}
 };

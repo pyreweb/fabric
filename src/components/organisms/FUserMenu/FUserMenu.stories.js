@@ -85,7 +85,12 @@ export const FullFeatured = () => ({
 			items: [
 				{ label: 'Mon profil', href: '/profile', icon: 'user' },
 				{ label: 'Mes projets', href: '/projects', icon: 'folder' },
-				{ label: 'Notifications', href: '/notifications', icon: 'bell', badge: 3 },
+				{
+					label: 'Notifications',
+					href: '/notifications',
+					icon: 'bell',
+					badge: 3
+				},
 				{ type: 'divider' },
 				{ label: 'Paramètres', href: '/settings', icon: 'cog' },
 				{ label: 'Aide', href: '/help', icon: 'question' }

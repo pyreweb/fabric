@@ -159,3 +159,40 @@ export interface FSelectEvents {
 	focus: (event: FocusEvent) => void;
 	blur: (event: FocusEvent) => void;
 }
+
+// =============================================================================
+// FDatePicker Types
+// =============================================================================
+
+/** Modes disponibles pour FDatePicker */
+export type FDatePickerMode = 'single' | 'range';
+
+/** Tailles disponibles pour FDatePicker */
+export type FDatePickerSize = 'small' | 'medium' | 'large';
+
+/** Props du composant FDatePicker */
+export interface FDatePickerProps {
+	value?: string | Date | Array<string | Date> | null;
+	mode?: FDatePickerMode;
+	placeholder?: string;
+	format?: string;
+	size?: FDatePickerSize;
+	disabled?: boolean;
+	readonly?: boolean;
+	error?: boolean;
+	showTimePicker?: boolean;
+	minDate?: string | Date | null;
+	maxDate?: string | Date | null;
+	disabledDates?: Array<string | Date>;
+	monthNames?: string[];
+	dayNames?: string[];
+	firstDayOfWeek?: number;
+}
+
+/** Événements émis par FDatePicker */
+export interface FDatePickerEvents {
+	input: (value: Date | Array<Date> | null) => void;
+	change: (value: Date | Array<Date> | null) => void;
+	focus: (event: FocusEvent) => void;
+	blur: (event: FocusEvent) => void;
+}

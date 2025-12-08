@@ -47,11 +47,41 @@ export default {
 };
 
 const sampleData = [
-	{ id: 1, name: 'Alice Martin', email: 'alice@example.com', role: 'Admin', status: 'active' },
-	{ id: 2, name: 'Bob Dupont', email: 'bob@example.com', role: 'User', status: 'active' },
-	{ id: 3, name: 'Claire Durand', email: 'claire@example.com', role: 'User', status: 'inactive' },
-	{ id: 4, name: 'David Petit', email: 'david@example.com', role: 'Editor', status: 'active' },
-	{ id: 5, name: 'Emma Bernard', email: 'emma@example.com', role: 'User', status: 'pending' }
+	{
+		id: 1,
+		name: 'Alice Martin',
+		email: 'alice@example.com',
+		role: 'Admin',
+		status: 'active'
+	},
+	{
+		id: 2,
+		name: 'Bob Dupont',
+		email: 'bob@example.com',
+		role: 'User',
+		status: 'active'
+	},
+	{
+		id: 3,
+		name: 'Claire Durand',
+		email: 'claire@example.com',
+		role: 'User',
+		status: 'inactive'
+	},
+	{
+		id: 4,
+		name: 'David Petit',
+		email: 'david@example.com',
+		role: 'Editor',
+		status: 'active'
+	},
+	{
+		id: 5,
+		name: 'Emma Bernard',
+		email: 'emma@example.com',
+		role: 'User',
+		status: 'pending'
+	}
 ];
 
 const columns = [
@@ -94,7 +124,8 @@ export const WithPagination = () => ({
 			}))
 		};
 	},
-	template: '<FDataTable :data="data" :columns="columns" paginated :perPage="10" />'
+	template:
+		'<FDataTable :data="data" :columns="columns" paginated :perPage="10" />'
 });
 
 export const WithSelection = () => ({
@@ -280,7 +311,8 @@ export const MobileCardView = () => ({
 MobileCardView.parameters = {
 	docs: {
 		description: {
-			story: 'Sur les écrans mobiles (< 640px), le tableau se transforme automatiquement en mode "Card View" où chaque ligne devient une carte avec les labels de colonnes affichés comme étiquettes.'
+			story:
+				'Sur les écrans mobiles (< 640px), le tableau se transforme automatiquement en mode "Card View" où chaque ligne devient une carte avec les labels de colonnes affichés comme étiquettes.'
 		}
 	}
 };

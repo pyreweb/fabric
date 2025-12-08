@@ -50,13 +50,17 @@ describe('FLoader', () => {
 
 	it('has correct aria-label', () => {
 		const wrapper = mount(FLoader);
-		expect(wrapper.find('[role="status"]').attributes('aria-label')).toBe('Chargement en cours');
+		expect(wrapper.find('[role="status"]').attributes('aria-label')).toBe(
+			'Chargement en cours'
+		);
 	});
 
 	it('accepts custom aria-label', () => {
 		const wrapper = mount(FLoader, {
 			propsData: { label: 'Loading data...' }
 		});
-		expect(wrapper.find('[role="status"]').attributes('aria-label')).toBe('Loading data...');
+		expect(wrapper.find('[role="status"]').attributes('aria-label')).toBe(
+			'Loading data...'
+		);
 	});
 });
