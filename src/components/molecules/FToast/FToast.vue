@@ -48,7 +48,7 @@ const VARIANT_STYLES = {
 		title: 'text-success-800',
 		message: 'text-success-700',
 		closeButton: 'text-success-600 hover:text-success-800',
-		icon: 'check_circle'
+		icon: 'success'
 	},
 	error: {
 		container: 'bg-danger-50 border-danger-200 text-danger-800',

@@ -121,7 +121,7 @@ describe('FToast', () => {
 
 	it('uses correct icon for each variant', () => {
 		const variants = {
-			success: 'check_circle',
+			success: 'success',
 			error: 'error',
 			info: 'info',
 			warning: 'warning'
