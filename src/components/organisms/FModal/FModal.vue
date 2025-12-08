@@ -2,7 +2,7 @@
 	<div v-if="isOpen" class="fixed inset-0 z-50 overflow-y-auto">
 		<!-- Overlay -->
 		<div
-			class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+			class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]"
 			@click="handleOverlayClick"
 		></div>
 
@@ -166,7 +166,8 @@ export default {
 		 */
 		modalClasses() {
 			const baseClasses =
-				'relative bg-white rounded-lg overflow-hidden shadow-xl transition-all';
+				'relative bg-white rounded-lg overflow-hidden shadow-xl';
+			const transitionClasses = 'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
 			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 
 			const sizeClasses = {
@@ -176,7 +177,7 @@ export default {
 				full: 'w-full max-w-full m-4'
 			};
 
-			return [baseClasses, borderedClasses, sizeClasses[this.size]]
+			return [baseClasses, transitionClasses, borderedClasses, sizeClasses[this.size]]
 				.filter(Boolean)
 				.join(' ');
 		}

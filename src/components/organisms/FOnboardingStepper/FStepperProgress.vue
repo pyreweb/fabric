@@ -79,17 +79,18 @@ export default {
 		 */
 		stepCircleClasses(index) {
 			const baseClasses =
-				'flex items-center justify-center w-8 h-8 rounded-full ring-4 ring-white transition-colors duration-200';
+				'flex items-center justify-center w-8 h-8 rounded-full ring-4 ring-white';
+			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Completed step
-				return [baseClasses, 'bg-success-600 text-white'].join(' ');
+				return [baseClasses, transitionClasses, 'bg-success-600 text-white'].join(' ');
 			} else if (index === this.currentStep) {
 				// Current step
-				return [baseClasses, 'bg-primary-600 text-white'].join(' ');
+				return [baseClasses, transitionClasses, 'bg-primary-600 text-white'].join(' ');
 			} else {
 				// Future step
-				return [baseClasses, 'bg-neutral-200 text-neutral-500'].join(' ');
+				return [baseClasses, transitionClasses, 'bg-neutral-200 text-neutral-500'].join(' ');
 			}
 		},
 		/**
@@ -97,31 +98,33 @@ export default {
 		 */
 		stepTitleClasses(index) {
 			const baseClasses =
-				'ml-2 text-sm font-medium transition-colors duration-200';
+				'ml-2 text-sm font-medium';
+			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Completed step
-				return [baseClasses, 'text-success-600'].join(' ');
+				return [baseClasses, transitionClasses, 'text-success-600'].join(' ');
 			} else if (index === this.currentStep) {
 				// Current step
-				return [baseClasses, 'text-primary-600'].join(' ');
+				return [baseClasses, transitionClasses, 'text-primary-600'].join(' ');
 			} else {
 				// Future step
-				return [baseClasses, 'text-neutral-500'].join(' ');
+				return [baseClasses, transitionClasses, 'text-neutral-500'].join(' ');
 			}
 		},
 		/**
 		 * Get classes for connector line between steps
 		 */
 		connectorClasses(index) {
-			const baseClasses = 'flex-1 h-0.5 mx-4 transition-colors duration-200';
+			const baseClasses = 'flex-1 h-0.5 mx-4';
+			const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			if (index < this.currentStep) {
 				// Connector before current step (completed)
-				return [baseClasses, 'bg-success-600'].join(' ');
+				return [baseClasses, transitionClasses, 'bg-success-600'].join(' ');
 			} else {
 				// Connector at or after current step
-				return [baseClasses, 'bg-neutral-200'].join(' ');
+				return [baseClasses, transitionClasses, 'bg-neutral-200'].join(' ');
 			}
 		}
 	}

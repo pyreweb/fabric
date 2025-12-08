@@ -20,6 +20,15 @@
  */
 
 @theme {
+	/* Transition durations for consistent micro-interactions */
+	--transition-duration-fast: 100ms;
+	--transition-duration-base: 200ms;
+	--transition-duration-slow: 300ms;
+
+	/* Transition easing functions for smooth animations */
+	--transition-easing-standard: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out with slight emphasis */
+	--transition-easing-emphasized: cubic-bezier(0.2, 0, 0, 1); /* ease-out for emphasized movements */
+
 	/* Primary color palette - Blue by default */
 	--color-primary-50: oklch(0.97 0.01 250);
 	--color-primary-100: oklch(0.93 0.03 250);

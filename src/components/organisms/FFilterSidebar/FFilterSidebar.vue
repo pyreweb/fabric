@@ -264,7 +264,7 @@ export default {
 				baseClasses,
 				positionClasses,
 				this.isMobile ? visibilityClasses : '',
-				'transition-transform duration-300 ease-in-out'
+				'transition-transform duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]'
 			]
 				.filter(Boolean)
 				.join(' ');

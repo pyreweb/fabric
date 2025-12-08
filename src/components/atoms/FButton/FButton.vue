@@ -62,7 +62,9 @@ export default {
 		};
 
 		const baseClasses =
-			'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+			'inline-flex items-center justify-center font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+		
+		const transitionClasses = 'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 		const variantClasses = computed(() => {
 			const variants = {
@@ -96,12 +98,13 @@ export default {
 
 		const classes = computed(() => [
 			baseClasses,
+			transitionClasses,
 			variantClasses.value,
 			sizeClasses.value,
 			props.block ? 'w-full flex' : '',
 			props.rounded ? 'rounded-full' : 'rounded-md',
 			props.loading
-				? 'cursor-wait relative text-transparent hover:text-transparent transition-none'
+				? 'cursor-wait relative text-transparent hover:text-transparent !transition-none'
 				: ''
 		]);
 

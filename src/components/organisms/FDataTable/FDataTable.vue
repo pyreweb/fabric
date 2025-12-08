@@ -620,7 +620,7 @@ export default {
 			);
 		},
 		getRowClasses(row) {
-			const baseClasses = 'transition-colors duration-150';
+			const baseClasses = 'transition-colors duration-[var(--transition-duration-fast)] ease-[var(--transition-easing-standard)]';
 			const hoverClasses = this.hoverable ? 'hover:bg-neutral-50' : '';
 			const selectedClasses = this.isRowSelected(row) ? 'bg-primary-50' : '';
 			const stripedClasses = this.striped ? 'even:bg-neutral-50/50' : '';

@@ -50,7 +50,8 @@ export default {
 		},
 		inputClasses() {
 			return [
-				'shrink-0 w-4 h-4 rounded border transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-1',
+				'shrink-0 w-4 h-4 rounded border focus:outline-none focus:ring-2 focus:ring-offset-1',
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]',
 				this.error
 					? 'border-danger-500 text-danger-500 focus:ring-danger-500/20'
 					: 'border-neutral-300 text-primary-600 focus:border-primary-600 focus:ring-primary-600/20',

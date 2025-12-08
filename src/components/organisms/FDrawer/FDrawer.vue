@@ -2,7 +2,7 @@
 	<div v-if="isOpen" class="fixed inset-0 z-50 overflow-hidden">
 		<!-- Overlay -->
 		<div
-			class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
+			class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]"
 			@click="handleOverlayClick"
 		></div>
 
@@ -192,7 +192,8 @@ export default {
 		 */
 		drawerClasses() {
 			const baseClasses =
-				'relative bg-white shadow-xl transition-all duration-300 ease-in-out pointer-events-auto flex flex-col';
+				'relative bg-white shadow-xl pointer-events-auto flex flex-col';
+			const transitionClasses = 'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-emphasized)]';
 			const borderedClasses = this.bordered ? 'border border-neutral-200' : '';
 
 			const sizeClasses = {
@@ -224,7 +225,7 @@ export default {
 					? 'h-full'
 					: 'w-full';
 
-			return [baseClasses, borderedClasses, heightWidthClass, fullHeightWidth]
+			return [baseClasses, transitionClasses, borderedClasses, heightWidthClass, fullHeightWidth]
 				.filter(Boolean)
 				.join(' ');
 		}
