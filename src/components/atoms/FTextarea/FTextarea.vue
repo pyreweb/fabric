@@ -98,7 +98,10 @@ export default {
 		},
 		textareaClasses() {
 			const baseClasses =
-				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 resize-y';
+				'block w-full font-sans border rounded box-border focus:outline-none focus:ring-2 resize-y';
+
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			const stateClasses = this.error
 				? 'border-danger-500 focus:border-danger-500 focus:ring-danger-500/20'
@@ -110,7 +113,13 @@ export default {
 
 			const paddingClasses = 'py-2.5 px-3.5 text-sm';
 
-			return [baseClasses, paddingClasses, stateClasses, disabledClasses]
+			return [
+				baseClasses,
+				transitionClasses,
+				paddingClasses,
+				stateClasses,
+				disabledClasses
+			]
 				.filter(Boolean)
 				.join(' ');
 		},

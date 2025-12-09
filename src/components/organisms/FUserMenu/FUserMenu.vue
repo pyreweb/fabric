@@ -301,7 +301,7 @@ export default {
 			return [
 				'inline-flex items-center',
 				'px-2 py-1 rounded-lg',
-				'transition-colors duration-200',
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]',
 				'hover:bg-neutral-100',
 				'focus:outline-none focus:ring-2 focus:ring-primary-500/20',
 				'cursor-pointer'

@@ -73,8 +73,9 @@ export default {
 	},
 	computed: {
 		listItemClasses() {
-			const baseClasses =
-				'flex items-center gap-3 px-4 py-3 transition-all duration-200';
+			const baseClasses = 'flex items-center gap-3 px-4 py-3';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const clickableClasses =
 				this.clickable && !this.disabled
 					? 'cursor-pointer hover:bg-neutral-50 focus:outline-none focus:ring-2 focus:ring-primary-500/20'
@@ -84,7 +85,13 @@ export default {
 				? 'opacity-50 cursor-not-allowed'
 				: '';
 
-			return [baseClasses, clickableClasses, selectedClasses, disabledClasses]
+			return [
+				baseClasses,
+				transitionClasses,
+				clickableClasses,
+				selectedClasses,
+				disabledClasses
+			]
 				.filter(Boolean)
 				.join(' ');
 		},

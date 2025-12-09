@@ -28,6 +28,7 @@
 - ✅ **TypeScript** - Support TypeScript complet avec types stricts pour les événements et les slots
 - ✅ **Design System** - Architecture Atomic Design (Atoms, Molecules, Organisms)
 - ✅ **Thématisation** - Système de thèmes avec support Dark/Light Mode intégré
+- ✅ **Transitions harmonisées** - Micro-interactions cohérentes avec durées et courbes standardisées
 - ✅ **Documentation** - Storybook interactif avec exemples
 - ✅ **Accessibilité** - Composants conformes aux standards WCAG
 - ✅ **Tailwind CSS** - Styling moderne et personnalisable
@@ -62,6 +63,23 @@ Fabric intègre un **système de thématisation complet** avec :
 ```
 
 📚 Consultez le [Guide de Thématisation](./docs/THEMING.md) pour plus de détails.
+
+## ✨ Système de Transitions et Micro-interactions
+
+Fabric implémente un **système de transitions harmonisées** pour une expérience utilisateur cohérente :
+
+- **Durées standardisées** (fast: 100ms, base: 200ms, slow: 300ms)
+- **Courbes d'animation** optimisées pour différents types d'interactions
+- **Variables CSS** centralisées pour une personnalisation facile
+- **Performance optimisée** avec des transitions GPU-accelerated
+
+```vue
+<button class="transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]">
+  Cliquez-moi
+</button>
+```
+
+📚 Consultez le [Guide des Transitions](./docs/TRANSITIONS.md) pour plus de détails.
 
 ## Développement
 

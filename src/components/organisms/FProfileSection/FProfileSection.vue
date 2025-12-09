@@ -56,7 +56,7 @@
 							<button
 								v-if="avatarEditable"
 								type="button"
-								class="absolute bottom-0 right-0 bg-primary-600 text-white rounded-full p-1.5 hover:bg-primary-700 transition-colors"
+								class="absolute bottom-0 right-0 bg-primary-600 text-white rounded-full p-1.5 hover:bg-primary-700 transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]"
 								@click="handleAvatarEdit"
 							>
 								<svg

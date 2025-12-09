@@ -13,7 +13,7 @@
 					<f-typography
 						v-if="title && !collapsed"
 						variant="h6"
-						class="transition-opacity duration-200"
+						class="transition-opacity duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]"
 					>
 						{{ title }}
 					</f-typography>
@@ -82,7 +82,7 @@
 							/>
 							<span
 								v-if="!collapsed"
-								class="truncate transition-opacity duration-200"
+								class="truncate transition-opacity duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]"
 							>
 								{{ item.label }}
 							</span>
@@ -148,7 +148,7 @@
 						/>
 						<span
 							v-if="!collapsed"
-							class="truncate transition-opacity duration-200"
+							class="truncate transition-opacity duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]"
 						>
 							{{ item.label }}
 						</span>
@@ -308,11 +308,14 @@ export default {
 		 * Main sidebar container classes
 		 */
 		sidebarClasses() {
-			const baseClasses =
-				'flex flex-col h-full bg-white border-neutral-200 transition-all duration-300';
+			const baseClasses = 'flex flex-col h-full bg-white border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]';
 			const borderClasses = this.position === 'left' ? 'border-r' : 'border-l';
 
-			return [baseClasses, borderClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, borderClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		/**
 		 * Sidebar inline styles
@@ -326,13 +329,16 @@ export default {
 		 * Branding section classes
 		 */
 		brandingClasses() {
-			const baseClasses =
-				'flex items-center border-b border-neutral-200 transition-all duration-200';
+			const baseClasses = 'flex items-center border-b border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed
 				? 'justify-center p-3'
 				: 'justify-between p-4';
 
-			return [baseClasses, paddingClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, paddingClasses]
+				.filter(Boolean)
+				.join(' ');
 		},
 		/**
 		 * Group label classes
@@ -344,11 +350,14 @@ export default {
 		 * Footer section classes
 		 */
 		footerClasses() {
-			const baseClasses =
-				'border-t border-neutral-200 transition-all duration-200';
+			const baseClasses = 'border-t border-neutral-200';
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed ? 'p-2' : 'p-4';
 
-			return [baseClasses, paddingClasses].filter(Boolean).join(' ');
+			return [baseClasses, transitionClasses, paddingClasses]
+				.filter(Boolean)
+				.join(' ');
 		}
 	},
 	watch: {
@@ -460,8 +469,9 @@ export default {
 			const isActive = this.isItemActive(item) || this.hasActiveChild(item);
 			const isDisabled = item.disabled;
 
-			const baseClasses =
-				'flex items-center w-full gap-3 transition-colors duration-200 text-sm font-medium';
+			const baseClasses = 'flex items-center w-full gap-3 text-sm font-medium';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const paddingClasses = this.collapsed
 				? 'justify-center px-3 py-3'
 				: 'px-4 py-3';
@@ -477,6 +487,7 @@ export default {
 
 			return [
 				baseClasses,
+				transitionClasses,
 				paddingClasses,
 				hoverClasses,
 				activeClasses,
@@ -494,7 +505,9 @@ export default {
 			const isDisabled = item.disabled;
 
 			const baseClasses =
-				'flex items-center w-full gap-3 pl-11 pr-4 py-2 transition-colors duration-200 text-sm';
+				'flex items-center w-full gap-3 pl-11 pr-4 py-2 text-sm';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const hoverClasses = !isDisabled ? 'hover:bg-neutral-50' : '';
 			const activeClasses = isActive
 				? 'bg-primary-50 text-primary-600 font-medium'
@@ -507,6 +520,7 @@ export default {
 
 			return [
 				baseClasses,
+				transitionClasses,
 				hoverClasses,
 				activeClasses,
 				disabledClasses,
@@ -527,10 +541,12 @@ export default {
 		 */
 		getChevronClasses(item) {
 			const isOpen = this.isSubmenuOpen(item);
-			const baseClasses = 'transition-transform duration-200 text-neutral-400';
+			const baseClasses = 'text-neutral-400';
+			const transitionClasses =
+				'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const rotateClasses = isOpen ? 'rotate-180' : 'rotate-0';
 
-			return `${baseClasses} ${rotateClasses}`;
+			return `${baseClasses} ${transitionClasses} ${rotateClasses}`;
 		},
 		/**
 		 * Handle navigation item click

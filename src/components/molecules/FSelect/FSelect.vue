@@ -256,7 +256,10 @@ export default {
 		},
 		triggerClasses() {
 			const baseClasses =
-				'flex items-center justify-between w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2 text-left';
+				'flex items-center justify-between w-full font-sans border rounded box-border focus:outline-none focus:ring-2 text-left';
+
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			const sizeClasses = {
 				small: 'py-1.5 px-2.5 text-xs',
@@ -274,6 +277,7 @@ export default {
 
 			return [
 				baseClasses,
+				transitionClasses,
 				sizeClasses[this.size],
 				stateClasses,
 				disabledClasses
@@ -289,12 +293,13 @@ export default {
 			return [baseClasses, placeholderClasses].join(' ');
 		},
 		iconClasses() {
-			const baseClasses =
-				'ml-2 flex-shrink-0 transition-transform duration-200';
+			const baseClasses = 'ml-2 flex-shrink-0';
+			const transitionClasses =
+				'transition-transform duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 			const colorClasses = this.disabled
 				? 'text-neutral-400'
 				: 'text-neutral-500';
-			return [baseClasses, colorClasses].join(' ');
+			return [baseClasses, transitionClasses, colorClasses].join(' ');
 		},
 		dropdownClasses() {
 			return 'absolute z-50 w-full mt-1 bg-white border border-neutral-200 rounded shadow-lg max-h-60 overflow-hidden';
@@ -414,8 +419,9 @@ export default {
 			return this.getOptionValue(this.value) === optionValue;
 		},
 		getOptionClasses(option, index) {
-			const baseClasses =
-				'flex items-center gap-2 px-3 py-2 cursor-pointer transition-colors duration-150';
+			const baseClasses = 'flex items-center gap-2 px-3 py-2 cursor-pointer';
+			const transitionClasses =
+				'transition-colors duration-[var(--transition-duration-fast)] ease-[var(--transition-easing-standard)]';
 			const hoverClasses = 'hover:bg-neutral-50';
 			const focusedClasses =
 				this.focusedIndex === index ? 'bg-neutral-100' : '';
@@ -428,6 +434,7 @@ export default {
 
 			return [
 				baseClasses,
+				transitionClasses,
 				!this.isDisabled(option) && hoverClasses,
 				focusedClasses,
 				selectedClasses,

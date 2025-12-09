@@ -49,7 +49,10 @@ export default {
 	computed: {
 		inputClasses() {
 			const baseClasses =
-				'block w-full font-sans border rounded transition-all duration-200 box-border focus:outline-none focus:ring-2';
+				'block w-full font-sans border rounded box-border focus:outline-none focus:ring-2';
+
+			const transitionClasses =
+				'transition-all duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]';
 
 			const sizeClasses = {
 				small: 'py-1.5 px-2.5 text-xs',
@@ -67,6 +70,7 @@ export default {
 
 			return [
 				baseClasses,
+				transitionClasses,
 				sizeClasses[this.size],
 				stateClasses,
 				disabledClasses

@@ -71,6 +71,11 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --transition-duration-fast: 100ms;
+    --transition-duration-base: 200ms;
+    --transition-duration-slow: 300ms;
+    --transition-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
     --color-primary-50: oklch(0.97 0.01 250);
     --color-primary-100: oklch(0.93 0.03 250);
     --color-primary-200: oklch(0.87 0.06 250);
@@ -1426,6 +1431,9 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .\!transition-none {
+    transition-property: none !important;
+  }
   .transition-none {
     transition-property: none;
   }
@@ -1440,6 +1448,26 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .duration-\[var\(--transition-duration-base\)\] {
+    --tw-duration: var(--transition-duration-base);
+    transition-duration: var(--transition-duration-base);
+  }
+  .duration-\[var\(--transition-duration-fast\)\] {
+    --tw-duration: var(--transition-duration-fast);
+    transition-duration: var(--transition-duration-fast);
+  }
+  .duration-\[var\(--transition-duration-slow\)\] {
+    --tw-duration: var(--transition-duration-slow);
+    transition-duration: var(--transition-duration-slow);
+  }
+  .ease-\[var\(--transition-easing-emphasized\)\] {
+    --tw-ease: var(--transition-easing-emphasized);
+    transition-timing-function: var(--transition-easing-emphasized);
+  }
+  .ease-\[var\(--transition-easing-standard\)\] {
+    --tw-ease: var(--transition-easing-standard);
+    transition-timing-function: var(--transition-easing-standard);
   }
   .ease-in {
     --tw-ease: var(--ease-in);
