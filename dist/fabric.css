@@ -1434,9 +1434,6 @@
   .\!transition-none {
     transition-property: none !important;
   }
-  .transition-none {
-    transition-property: none;
-  }
   .duration-150 {
     --tw-duration: 150ms;
     transition-duration: 150ms;

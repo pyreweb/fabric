@@ -2,7 +2,7 @@
 	<div v-if="isOpen" class="fixed inset-0 z-50 overflow-hidden">
 		<!-- Overlay -->
 		<div
-			class="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]"
+			class="fixed inset-0 bg-black opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]"
 			@click="handleOverlayClick"
 		></div>
 
