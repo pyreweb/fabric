@@ -12182,7 +12182,7 @@ var __vue_render__$b = function () {
     ? _c("div", { staticClass: "fixed inset-0 z-50 overflow-hidden" }, [
         _c("div", {
           staticClass:
-            "fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]",
+            "fixed inset-0 bg-black opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]",
           on: { click: _vm.handleOverlayClick },
         }),
         _vm._v(" "),
@@ -14506,7 +14506,7 @@ var __vue_render__$6 = function () {
     ? _c("div", { staticClass: "fixed inset-0 z-50 overflow-y-auto" }, [
         _c("div", {
           staticClass:
-            "fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]",
+            "fixed inset-0 bg-black opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]",
           on: { click: _vm.handleOverlayClick },
         }),
         _vm._v(" "),
