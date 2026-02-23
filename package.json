@@ -10,13 +10,16 @@
 	},
 	"main": "dist/fabric.cjs.js",
 	"repository": {
-	    "type": "git",
-	    "url": "git+https://github.com/pyreweb/fabric.git"
-	  },
-	  "bugs": {
-	    "url": "https://github.com/pyreweb/fabric/issues"
-	  },
-	  "homepage": "https://github.com/pyreweb/fabric#readme"
+	  "type": "git",
+	  "url": "git+https://github.com/pyreweb/fabric.git"
+    },
+    "bugs": {
+	  "url": "https://github.com/pyreweb/fabric/issues"
+    },
+    "homepage": "https://github.com/pyreweb/fabric#readme",
+	"publishConfig": {
+      "access": "public"
+    },
 	"module": "dist/fabric.esm.js",
 	"types": "dist/types/index.d.ts",
 	"unpkg": "dist/fabric.min.js",
