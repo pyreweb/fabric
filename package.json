@@ -57,6 +57,11 @@
 	],
 	"author": "Pyréweb",
 	"license": "MIT",
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	],
 	"peerDependencies": {
 		"vue": "^2.6.0 || ^2.7.0"
 	},
