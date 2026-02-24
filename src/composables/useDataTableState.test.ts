@@ -1,4 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
+import { effectScope } from 'vue';
 import { useDataTableState } from './useDataTableState';
 
 describe('useDataTableState', () => {
@@ -373,6 +374,40 @@ describe('useDataTableState', () => {
 			state.handleSort('name');
 
 			expect(state.processedData.value).toEqual(data);
+		});
+	});
+
+	describe('scope cleanup', () => {
+		it('stops watchers when the parent effect scope is disposed', async () => {
+			const emit = vi.fn();
+			const scope = effectScope();
+
+			let state: ReturnType<typeof useDataTableState> | undefined;
+			scope.run(() => {
+				state = useDataTableState({ data, columns }, emit);
+			});
+
+			// Verify watcher fires normally before scope disposal
+			state!.internalPage.value = 2;
+			await new Promise((resolve) => setTimeout(resolve, 0));
+			expect(emit).toHaveBeenCalledWith('update:page', 2);
+
+			// Stop the scope, which should also stop all child watchers
+			scope.stop();
+			emit.mockClear();
+
+			// Changes after scope disposal must not trigger watchers
+			state!.internalPage.value = 3;
+			await new Promise((resolve) => setTimeout(resolve, 0));
+			expect(emit).not.toHaveBeenCalledWith('update:page', 3);
+
+			state!.searchQuery.value = 'alice';
+			await new Promise((resolve) => setTimeout(resolve, 0));
+			expect(state!.internalPage.value).toBe(3); // page must not reset
+
+			state!.selectedKeys.value = [1];
+			await new Promise((resolve) => setTimeout(resolve, 0));
+			expect(emit).not.toHaveBeenCalledWith('update:selected', [1]);
 		});
 	});
 });

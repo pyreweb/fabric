@@ -1,5 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ref, computed, watch, Ref, ComputedRef } from 'vue';
+import {
+	ref,
+	computed,
+	watch,
+	effectScope,
+	getCurrentScope,
+	onScopeDispose,
+	Ref,
+	ComputedRef
+} from 'vue';
 
 /**
  * Configuration options for useDataTableState
@@ -301,26 +310,36 @@ export function useDataTableState(
 		selectedKeys.value = [];
 	};
 
-	// Watch: Reset to first page when search changes (client-side only)
-	watch(searchQuery, () => {
-		if (!serverMode) {
-			internalPage.value = 1;
-		}
+	// Create a child effect scope so all watchers can be stopped together on cleanup
+	const scope = effectScope();
+
+	scope.run(() => {
+		// Watch: Reset to first page when search changes (client-side only)
+		watch(searchQuery, () => {
+			if (!serverMode) {
+				internalPage.value = 1;
+			}
+		});
+
+		// Watch: Emit page changes
+		watch(internalPage, (newVal) => {
+			emit('update:page', newVal);
+		});
+
+		// Watch: Emit selection changes
+		watch(
+			selectedKeys,
+			(newVal) => {
+				emit('update:selected', newVal);
+			},
+			{ deep: true }
+		);
 	});
 
-	// Watch: Emit page changes
-	watch(internalPage, (newVal) => {
-		emit('update:page', newVal);
-	});
-
-	// Watch: Emit selection changes
-	watch(
-		selectedKeys,
-		(newVal) => {
-			emit('update:selected', newVal);
-		},
-		{ deep: true }
-	);
+	// Stop the child scope when the current scope (component or parent effectScope) is disposed
+	if (getCurrentScope()) {
+		onScopeDispose(() => scope.stop());
+	}
 
 	return {
 		// Search state
