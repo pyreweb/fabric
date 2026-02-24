@@ -1,4 +1,6 @@
 import './styles/tailwind.css';
+import { addIcons } from './components/atoms/FIcon/iconRegistry';
+import { allIcons } from './components/atoms/FIcon/icons';
 import {
 	FAvatar,
 	FBadge,
@@ -53,6 +55,10 @@ export * from './types';
 // Export composables
 export * from './composables';
 
+// Export icon utilities for tree-shakeable icon registration
+export { addIcons } from './components/atoms/FIcon/iconRegistry';
+export { allIcons } from './components/atoms/FIcon/icons';
+
 // Type for components record
 type ComponentsRecord = Record<string, Component>;
 
@@ -100,6 +106,7 @@ const components: ComponentsRecord = {
 };
 
 const install = (Vue: VueConstructor): void => {
+	addIcons(allIcons);
 	Object.keys(components).forEach((name) => {
 		// Type assertion is necessary because Vue 2's component registration
 		// doesn't have perfect TypeScript support for dynamic component maps

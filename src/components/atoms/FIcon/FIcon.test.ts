@@ -1,6 +1,12 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import { mount } from '@vue/test-utils';
 import FIcon from './FIcon.vue';
+import { addIcons } from './iconRegistry';
+import { allIcons } from './icons';
+
+beforeAll(() => {
+	addIcons(allIcons);
+});
 
 describe('FIcon', () => {
 	it('renders correctly with default props', () => {
