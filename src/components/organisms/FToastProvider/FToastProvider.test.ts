@@ -212,4 +212,35 @@ describe('FToastProvider', () => {
 		expect(typeof wrapper.vm.$root.$toast.warning).toBe('function');
 		expect(typeof wrapper.vm.$root.$toast.clear).toBe('function');
 	});
+
+	it('applies default zIndex of 9999 to container divs', async () => {
+		const wrapper = mount(FToastProvider, { localVue });
+		const vm = wrapper.vm;
+
+		vm.show({ message: 'Test' });
+		await wrapper.vm.$nextTick();
+
+		const containers = wrapper.findAll('.fixed');
+		expect(containers.length).toBeGreaterThan(0);
+		containers.wrappers.forEach((container) => {
+			expect(container.element.style.zIndex).toBe('9999');
+		});
+	});
+
+	it('applies custom zIndex prop to container divs', async () => {
+		const wrapper = mount(FToastProvider, {
+			localVue,
+			propsData: { zIndex: 1500 }
+		});
+		const vm = wrapper.vm;
+
+		vm.show({ message: 'Test' });
+		await wrapper.vm.$nextTick();
+
+		const containers = wrapper.findAll('.fixed');
+		expect(containers.length).toBeGreaterThan(0);
+		containers.wrappers.forEach((container) => {
+			expect(container.element.style.zIndex).toBe('1500');
+		});
+	});
 });

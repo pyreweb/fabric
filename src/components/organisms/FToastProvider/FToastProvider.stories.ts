@@ -22,6 +22,11 @@ export default {
 		maxToasts: {
 			control: 'number',
 			description: 'Nombre maximum de toasts affichés simultanément'
+		},
+		zIndex: {
+			control: 'number',
+			description:
+				'Z-index des conteneurs de toasts pour éviter les conflits d\'empilement avec FModal ou FDrawer'
 		}
 	}
 } as Meta<typeof FToastProvider>;
