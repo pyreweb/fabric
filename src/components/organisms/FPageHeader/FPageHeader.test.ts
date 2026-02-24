@@ -80,4 +80,29 @@ describe('FPageHeader', () => {
 		});
 		expect(wrapper.classes().join(' ')).toContain('border');
 	});
+
+	it('applies dark mode background and text classes to header', () => {
+		const wrapper = mount(FPageHeader, {
+			propsData: { title: 'Title' }
+		});
+		const header = wrapper.find('header');
+		expect(header.classes()).toContain('dark:bg-slate-900');
+		expect(header.classes()).toContain('dark:text-white');
+	});
+
+	it('applies dark mode border class to separator', () => {
+		const wrapper = mount(FPageHeader, {
+			propsData: { title: 'Title', separator: true }
+		});
+		const header = wrapper.find('header');
+		expect(header.classes()).toContain('dark:border-neutral-700');
+	});
+
+	it('applies dark mode text class to subtitle', () => {
+		const wrapper = mount(FPageHeader, {
+			propsData: { title: 'Title', subtitle: 'A subtitle' }
+		});
+		const subtitleEl = wrapper.find('.dark\\:text-neutral-400');
+		expect(subtitleEl.exists()).toBe(true);
+	});
 });
