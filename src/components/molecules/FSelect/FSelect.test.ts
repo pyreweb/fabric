@@ -228,6 +228,60 @@ describe('FSelect', () => {
 
 			expect(wrapper.find('button').text()).toContain('First');
 		});
+
+		it('emits primitive value (optionKey) instead of full object on single selection', async () => {
+			wrapper = mount(FSelect, {
+				propsData: {
+					options: objectOptions
+				}
+			});
+
+			await wrapper.find('button[type="button"]').trigger('click');
+			await wrapper.vm.$nextTick();
+
+			const options = wrapper.findAll('[role="option"]');
+			await options.at(1).trigger('click');
+
+			expect(wrapper.emitted('input')).toBeTruthy();
+			expect(wrapper.emitted('input')[0][0]).toBe(2);
+		});
+
+		it('emits array of primitive values on multiple selection', async () => {
+			wrapper = mount(FSelect, {
+				propsData: {
+					options: objectOptions,
+					multiple: true,
+					value: []
+				}
+			});
+
+			await wrapper.find('button[type="button"]').trigger('click');
+			await wrapper.vm.$nextTick();
+
+			const options = wrapper.findAll('[role="option"]');
+			await options.at(0).trigger('click');
+
+			expect(wrapper.emitted('input')[0][0]).toEqual([1]);
+		});
+
+		it('deselects primitive value in multiple selection', async () => {
+			wrapper = mount(FSelect, {
+				propsData: {
+					options: objectOptions,
+					multiple: true,
+					value: [1]
+				}
+			});
+
+			await wrapper.find('button[type="button"]').trigger('click');
+			await wrapper.vm.$nextTick();
+
+			const options = wrapper.findAll('[role="option"]');
+			await options.at(0).trigger('click');
+
+			const emittedValue = wrapper.emitted('input')[0][0];
+			expect(emittedValue).toHaveLength(0);
+		});
 	});
 
 	describe('States', () => {
