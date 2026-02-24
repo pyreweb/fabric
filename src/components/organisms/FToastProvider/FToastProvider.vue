@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<slot />
-		<div v-for="pos in positions" :key="pos" :class="containerClasses(pos)">
+		<div v-for="pos in positions" :key="pos" :class="containerClasses(pos)" :style="{ zIndex: zIndex }">
 			<f-toast
 				v-for="toast in toastsByPosition[pos]"
 				:key="toast.id"
@@ -50,6 +50,13 @@ export default {
 		maxToasts: {
 			type: Number,
 			default: 5
+		},
+		/**
+		 * Z-index des conteneurs de toasts pour éviter les conflits d'empilement avec FModal ou FDrawer
+		 */
+		zIndex: {
+			type: Number,
+			default: 9999
 		}
 	},
 	data() {
@@ -104,7 +111,7 @@ export default {
 	methods: {
 		containerClasses(position) {
 			const baseClasses =
-				'fixed z-50 flex flex-col gap-3 p-4 pointer-events-none';
+				'fixed flex flex-col gap-3 p-4 pointer-events-none';
 			const positionClasses = {
 				'top-left': 'top-0 left-0',
 				'top-center': 'top-0 left-1/2 -translate-x-1/2',
