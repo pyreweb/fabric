@@ -468,14 +468,14 @@ export default {
 				if (index > -1) {
 					newValue.splice(index, 1);
 				} else {
-					newValue.push(option);
+					newValue.push(optionValue);
 				}
 
 				this.$emit('input', newValue);
 				this.$emit('change', newValue);
 			} else {
-				this.$emit('input', option);
-				this.$emit('change', option);
+				this.$emit('input', optionValue);
+				this.$emit('change', optionValue);
 				this.closeDropdown();
 			}
 		},
