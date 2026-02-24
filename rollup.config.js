@@ -7,7 +7,6 @@ import typescript from '@rollup/plugin-typescript';
 import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
-import { dirname } from 'path';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -42,50 +41,77 @@ function copyTypesPlugin() {
 	};
 }
 
-export default {
-	input: 'src/index.ts',
-	output: [
-		{
-			file: 'dist/fabric.cjs.js',
-			format: 'cjs',
-			exports: 'named'
-		},
-		{
-			file: 'dist/fabric.esm.js',
-			format: 'es',
-			exports: 'named'
-		},
-		{
-			file: 'dist/fabric.min.js',
-			format: 'iife',
-			name: 'Fabric',
-			exports: 'named',
-			globals: {
-				vue: 'Vue'
+const sharedPlugins = [
+	resolve({
+		extensions: ['.js', '.ts', '.vue']
+	}),
+	commonjs(),
+	vue({
+		css: true,
+		compileTemplate: true
+	})
+];
+
+export default [
+	// CJS + IIFE builds (with TypeScript declarations and CSS extraction)
+	{
+		input: 'src/index.ts',
+		output: [
+			{
+				file: 'dist/fabric.cjs.js',
+				format: 'cjs',
+				exports: 'named'
+			},
+			{
+				file: 'dist/fabric.min.js',
+				format: 'iife',
+				name: 'Fabric',
+				exports: 'named',
+				globals: {
+					vue: 'Vue'
+				}
 			}
-		}
-	],
-	external: ['vue'],
-	plugins: [
-		resolve({
-			extensions: ['.js', '.ts', '.vue']
-		}),
-		commonjs(),
-		typescript({
-			tsconfig: './tsconfig.json',
-			declaration: true,
-			declarationDir: 'dist/types',
-			exclude: ['**/*.spec.ts', '**/*.stories.ts']
-		}),
-		vue({
-			css: true,
-			compileTemplate: true
-		}),
-		postcss({
-			extract: 'fabric.css',
-			plugins: [tailwindcss(), autoprefixer()]
-		}),
-		copyTypesPlugin(),
-		isProduction && terser()
-	].filter(Boolean)
-};
+		],
+		external: ['vue'],
+		plugins: [
+			...sharedPlugins,
+			typescript({
+				tsconfig: './tsconfig.json',
+				declaration: true,
+				declarationDir: 'dist/types',
+				exclude: ['**/*.spec.ts', '**/*.stories.ts']
+			}),
+			postcss({
+				extract: 'fabric.css',
+				plugins: [tailwindcss(), autoprefixer()]
+			}),
+			copyTypesPlugin(),
+			isProduction && terser()
+		].filter(Boolean)
+	},
+	// ESM build with preserveModules for tree shaking
+	{
+		input: 'src/index.ts',
+		output: {
+			dir: 'dist/esm',
+			format: 'es',
+			exports: 'named',
+			preserveModules: true,
+			preserveModulesRoot: 'src'
+		},
+		external: ['vue'],
+		plugins: [
+			...sharedPlugins,
+			typescript({
+				tsconfig: './tsconfig.json',
+				declaration: false,
+				declarationDir: undefined,
+				exclude: ['**/*.spec.ts', '**/*.stories.ts']
+			}),
+			postcss({
+				extract: false,
+				plugins: [tailwindcss(), autoprefixer()]
+			})
+		]
+	}
+];

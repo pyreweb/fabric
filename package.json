@@ -20,9 +20,10 @@
 	"publishConfig": {
       "access": "public"
     },
-	"module": "dist/fabric.esm.js",
+	"module": "dist/esm/index.js",
 	"types": "dist/types/index.d.ts",
 	"unpkg": "dist/fabric.min.js",
+	"sideEffects": ["**/*.css"],
 	"files": [
 		"dist",
 		"src"
