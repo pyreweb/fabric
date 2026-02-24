@@ -76,4 +76,26 @@ describe('FInput', () => {
 			'border-danger'
 		);
 	});
+
+	it('uses provided id prop', () => {
+		const wrapper = mount(FInput, {
+			propsData: { id: 'my-input' }
+		});
+		expect(wrapper.find('input').attributes('id')).toBe('my-input');
+	});
+
+	it('auto-generates an id when none is provided', () => {
+		const wrapper = mount(FInput);
+		const id = wrapper.find('input').attributes('id');
+		expect(id).toBeTruthy();
+		expect(id).toMatch(/^f-input-\d+$/);
+	});
+
+	it('generates unique ids for different instances', () => {
+		const wrapper1 = mount(FInput);
+		const wrapper2 = mount(FInput);
+		const id1 = wrapper1.find('input').attributes('id');
+		const id2 = wrapper2.find('input').attributes('id');
+		expect(id1).not.toBe(id2);
+	});
 });
