@@ -7,6 +7,8 @@
 			:aria-expanded="String(isOpen)"
 			:aria-controls="contentId"
 			@click="toggle"
+			@keydown.enter="toggle"
+			@keydown.space.prevent="toggle"
 		>
 			<f-typography variant="h6" class="flex-1 text-left">
 				{{ title }}
