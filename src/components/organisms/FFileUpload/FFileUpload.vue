@@ -88,7 +88,8 @@
 	</div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import FIcon from '../../atoms/FIcon/FIcon.vue';
 import FTypography from '../../atoms/FTypography/FTypography.vue';
 import FButton from '../../atoms/FButton/FButton.vue';
@@ -105,9 +106,22 @@ const FILE_STATUS = {
 	UPLOADING: 'uploading',
 	SUCCESS: 'success',
 	ERROR: 'error'
-};
+} as const;
 
-export default {
+export type FileStatus = (typeof FILE_STATUS)[keyof typeof FILE_STATUS];
+
+export interface FFileUploadItem {
+	id: string;
+	name: string;
+	size: number;
+	type: string;
+	extension: string;
+	file: File;
+	status: FileStatus;
+	progress: number;
+}
+
+export default defineComponent({
 	name: 'FFileUpload',
 	components: {
 		FIcon,
@@ -116,13 +130,27 @@ export default {
 		FAlert,
 		FFilePreview
 	},
+	emits: {
+		'update:modelValue': (files: FFileUploadItem[]) => Array.isArray(files),
+		'files-selected': (files: FFileUploadItem[]) => Array.isArray(files),
+		'file-removed': (file: FFileUploadItem) => !!file,
+		'upload-start': (file: FFileUploadItem) => !!file,
+		'upload-progress': (payload: { file: FFileUploadItem; progress: number }) =>
+			!!payload,
+		'upload-success': (file: FFileUploadItem) => !!file,
+		'upload-complete': (files: FFileUploadItem[]) => Array.isArray(files),
+		'upload-error': (payload: { file: FFileUploadItem; error: string }) =>
+			!!payload,
+		'files-cleared': () => true,
+		'upload-all': (files: FFileUploadItem[]) => Array.isArray(files)
+	},
 	props: {
 		/**
 		 * Array of files (for v-model support)
 		 * Each file object should have: { id, name, file, status, progress }
 		 */
-		value: {
-			type: Array,
+		modelValue: {
+			type: Array as () => FFileUploadItem[],
 			default: () => []
 		},
 		/**
@@ -252,11 +280,11 @@ export default {
 		 * Internal files list synced with v-model
 		 */
 		internalFiles: {
-			get() {
-				return this.value;
+			get(): FFileUploadItem[] {
+				return this.modelValue;
 			},
-			set(val) {
-				this.$emit('input', val);
+			set(val: FFileUploadItem[]) {
+				this.$emit('update:modelValue', val);
 			}
 		},
 		/**
@@ -612,5 +640,5 @@ export default {
 			this.$emit('upload-all', pendingFiles);
 		}
 	}
-};
+});
 </script>

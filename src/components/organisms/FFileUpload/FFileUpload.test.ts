@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
-import FFileUpload from './FFileUpload.vue';
+import FFileUpload, { type FFileUploadItem } from './FFileUpload.vue';
 
 describe('FFileUpload', () => {
 	it('renders correctly with default props', () => {
@@ -63,13 +63,13 @@ describe('FFileUpload', () => {
 	it('displays file previews when files are present', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: {
-				value: [{ id: 1, name: 'test.pdf', status: 'success' }]
+				modelValue: [{ id: '1', name: 'test.pdf', status: 'success' }]
 			}
 		});
 		expect(wrapper.findComponent({ name: 'FFilePreview' }).exists()).toBe(true);
 	});
 
-	it('emits input event when files are added', async () => {
+	it('emits update:modelValue event with typed FFileUploadItem[] when files are added', async () => {
 		const wrapper = mount(FFileUpload);
 		const input = wrapper.find('input[type="file"]');
 
@@ -88,14 +88,20 @@ describe('FFileUpload', () => {
 		});
 		await input.trigger('change');
 
-		expect(wrapper.emitted('input')).toBeTruthy();
+		const emitted = wrapper.emitted('update:modelValue');
+		expect(emitted).toBeTruthy();
+		const payload = emitted![0][0] as FFileUploadItem[];
+		expect(Array.isArray(payload)).toBe(true);
+		expect(payload[0].file).toBe(file);
+		expect(typeof payload[0].id).toBe('string');
+		expect(payload[0].status).toBe('pending');
 	});
 
 	it('shows progress bar when uploading', () => {
 		const wrapper = mount(FFileUpload, {
 			propsData: {
 				showProgress: true,
-				value: [{ id: 1, name: 'test.pdf', status: 'uploading', progress: 50 }]
+				modelValue: [{ id: '1', name: 'test.pdf', status: 'uploading', progress: 50 }]
 			}
 		});
 		expect(wrapper.exists()).toBe(true);
