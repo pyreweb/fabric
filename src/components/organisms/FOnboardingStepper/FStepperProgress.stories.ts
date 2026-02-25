@@ -7,12 +7,12 @@ export default {
 	tags: ['autodocs'],
 	argTypes: {
 		steps: {
-			control: 'object',
+			control: { type: 'object' },
 			description: 'Liste des titres des étapes'
 		},
 		currentStep: {
-			control: { type: 'number', min: 0 },
-			description: "Index de l'étape actuelle (base 0)"
+			control: { type: 'range', min: 0, max: 10, step: 1 },
+			description: "Index de l'étape actuelle (base 0, jusqu'à steps.length pour tout compléter)"
 		}
 	}
 } as Meta<typeof FStepperProgress>;
