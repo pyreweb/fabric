@@ -15,7 +15,7 @@ export { useSidebarState } from './useSidebarState';
 export type {
 	NavigationItem,
 	SidebarStateOptions,
-	SidebarState
+	UseSidebarStateReturn
 } from './useSidebarState';
 
 export { useFormValidation } from './useFormValidation';
