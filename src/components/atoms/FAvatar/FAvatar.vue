@@ -49,30 +49,46 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, type PropType } from 'vue';
 
-const props = withDefaults(
-	defineProps<{
-		src?: string;
-		alt?: string;
-		initials?: string;
-		name?: string;
-		size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-		shape?: 'circle' | 'square';
-		status?: 'online' | 'busy' | 'away' | 'offline' | null;
-		placeholderClass?: string;
-	}>(),
-	{
-		src: '',
-		alt: '',
-		initials: '',
-		name: '',
-		size: 'md',
-		shape: 'circle',
-		status: null,
-		placeholderClass: 'bg-neutral-400 text-white'
+const props = defineProps({
+	src: {
+		type: String,
+		default: ''
+	},
+	alt: {
+		type: String,
+		default: ''
+	},
+	initials: {
+		type: String,
+		default: ''
+	},
+	name: {
+		type: String,
+		default: ''
+	},
+	size: {
+		type: String as PropType<'xs' | 'sm' | 'md' | 'lg' | 'xl'>,
+		default: 'md',
+		validator: (value: string) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
+	},
+	shape: {
+		type: String as PropType<'circle' | 'square'>,
+		default: 'circle',
+		validator: (value: string) => ['circle', 'square'].includes(value)
+	},
+	status: {
+		type: String as PropType<'online' | 'busy' | 'away' | 'offline'>,
+		default: null,
+		validator: (value: string | null) =>
+			value === null || ['online', 'busy', 'away', 'offline'].includes(value)
+	},
+	placeholderClass: {
+		type: String,
+		default: 'bg-neutral-400 text-white'
 	}
-);
+});
 
 const emit = defineEmits<{
 	(e: 'click', event: MouseEvent): void;

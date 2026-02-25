@@ -36,7 +36,7 @@
 						v-if="subtitle || $slots.subtitle"
 						variant="body"
 						tag="p"
-						class="text-neutral-500 mt-1"
+						class="text-neutral-500 dark:text-neutral-400 mt-1"
 					>
 						<slot name="subtitle">{{ subtitle }}</slot>
 					</f-typography>
@@ -193,10 +193,10 @@ export default {
 		 * Main header container classes
 		 */
 		headerClasses() {
-			const baseClasses = 'w-full';
+			const baseClasses = 'w-full dark:bg-slate-900 dark:text-white';
 			const paddingClasses = 'pb-4';
 			const separatorClasses = this.separator
-				? 'border-b border-neutral-200'
+				? 'border-b border-neutral-200 dark:border-neutral-700'
 				: '';
 
 			return [baseClasses, paddingClasses, separatorClasses]

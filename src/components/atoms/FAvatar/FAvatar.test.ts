@@ -92,4 +92,32 @@ describe('FAvatar', () => {
 		await img.trigger('error');
 		expect(wrapper.find('img').exists()).toBe(false);
 	});
+
+	it('shows initials fallback when image fails and name is provided', async () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'invalid-url.jpg', name: 'Jane Doe' }
+		});
+		await wrapper.find('img').trigger('error');
+		expect(wrapper.find('img').exists()).toBe(false);
+		expect(wrapper.text()).toContain('JD');
+	});
+
+	it('shows generic icon fallback when image fails and no initials or name', async () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'invalid-url.jpg' }
+		});
+		await wrapper.find('img').trigger('error');
+		expect(wrapper.find('img').exists()).toBe(false);
+		expect(wrapper.find('svg').exists()).toBe(true);
+	});
+
+	it('resets image error state when src prop changes', async () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'invalid-url.jpg' }
+		});
+		await wrapper.find('img').trigger('error');
+		expect(wrapper.find('img').exists()).toBe(false);
+		await wrapper.setProps({ src: 'https://example.com/new-avatar.jpg' });
+		expect(wrapper.find('img').exists()).toBe(true);
+	});
 });

@@ -49,6 +49,22 @@ describe('FAccordionItem', () => {
 		expect(wrapper.html()).toContain('Accordion content');
 	});
 
+	it('toggles when Enter key is pressed', async () => {
+		const wrapper = mount(FAccordionItem, {
+			propsData: { title: 'Title' }
+		});
+		await wrapper.find('button').trigger('keydown.enter');
+		expect(wrapper.find('[aria-expanded="true"]').exists()).toBe(true);
+	});
+
+	it('toggles when Space key is pressed', async () => {
+		const wrapper = mount(FAccordionItem, {
+			propsData: { title: 'Title' }
+		});
+		await wrapper.find('button').trigger('keydown.space');
+		expect(wrapper.find('[aria-expanded="true"]').exists()).toBe(true);
+	});
+
 	it('has accessible structure', () => {
 		const wrapper = mount(FAccordionItem, {
 			propsData: { title: 'Title' }

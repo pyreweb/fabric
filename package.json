@@ -1,6 +1,6 @@
 {
 	"name": "@pyreweb/fabric",
-	"version": "1.2.6",
+	"version": "1.2.7",
 	"description": "Système de design et bibliothèque de composants VueJS de la société Pyréweb",
 	"type": "module",
 	"overrides": {
@@ -20,9 +20,10 @@
 	"publishConfig": {
       "access": "public"
     },
-	"module": "dist/fabric.esm.js",
+	"module": "dist/esm/index.js",
 	"types": "dist/types/index.d.ts",
 	"unpkg": "dist/fabric.min.js",
+	"sideEffects": ["**/*.css"],
 	"files": [
 		"dist",
 		"src"
@@ -56,6 +57,11 @@
 	],
 	"author": "Pyréweb",
 	"license": "MIT",
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	],
 	"peerDependencies": {
 		"vue": "^2.6.0 || ^2.7.0"
 	},
@@ -86,10 +92,11 @@
 		"rollup": "^3.29.5",
 		"rollup-plugin-postcss": "^4.0.2",
 		"rollup-plugin-vue": "^5.1.9",
-		"storybook": "^7.6.20",
+		"storybook": "^10.2.11",
 		"tailwindcss": "^4.1.17",
 		"typescript": "^5.9.3",
-		"vitest": "^3.2.4",
+		"vite": "^7.3.1",
+		"vitest": "^4.0.18",
 		"vue": "^2.7.16",
 		"vue-template-compiler": "^2.7.16",
 		"vue-tsc": "^3.1.5"

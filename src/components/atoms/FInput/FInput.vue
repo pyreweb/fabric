@@ -1,5 +1,6 @@
 <template>
 	<input
+		:id="computedId"
 		:class="inputClasses"
 		:type="type"
 		:value="value"
@@ -13,9 +14,15 @@
 </template>
 
 <script>
+let idCounter = 0;
+
 export default {
 	name: 'FInput',
 	props: {
+		id: {
+			type: String,
+			default: undefined
+		},
 		value: {
 			type: [String, Number],
 			default: ''
@@ -46,7 +53,15 @@ export default {
 			default: false
 		}
 	},
+	data() {
+		return {
+			generatedId: ''
+		};
+	},
 	computed: {
+		computedId() {
+			return this.id || this.generatedId;
+		},
 		inputClasses() {
 			const baseClasses =
 				'block w-full font-sans border rounded box-border focus:outline-none focus:ring-2';
@@ -82,6 +97,11 @@ export default {
 	methods: {
 		handleInput(event) {
 			this.$emit('input', event.target.value);
+		}
+	},
+	created() {
+		if (!this.id) {
+			this.generatedId = `f-input-${++idCounter}`;
 		}
 	}
 };

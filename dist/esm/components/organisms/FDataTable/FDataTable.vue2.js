@@ -1,0 +1,710 @@
+import FSearchBar from '../../molecules/FSearchBar/FSearchBar.vue.js';
+import FPagination from '../../molecules/FPagination/FPagination.vue.js';
+import FEmptyState from '../../molecules/FEmptyState/FEmptyState.vue.js';
+import FCheckbox from '../../atoms/FCheckbox/FCheckbox.vue.js';
+import FIcon from '../../atoms/FIcon/FIcon.vue.js';
+import FLoader from '../../atoms/FLoader/FLoader.vue.js';
+import { RecycleScroller as __vue_component__$2 } from '../../../node_modules/vue-virtual-scroller/dist/vue-virtual-scroller.esm.js';
+import '../../../node_modules/vue-virtual-scroller/dist/vue-virtual-scroller.css.js';
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var script = {
+	name: 'FDataTable',
+	components: {
+		FSearchBar,
+		FPagination,
+		FEmptyState,
+		FCheckbox,
+		FIcon,
+		FLoader,
+		RecycleScroller: __vue_component__$2
+	},
+	props: {
+		/**
+		 * Array of data objects to display
+		 */
+		data: {
+			type: Array,
+			default: () => []
+		},
+		/**
+		 * Column definitions
+		 * Each column: { key: string, label: string, sortable?: boolean, align?: 'left'|'center'|'right' }
+		 */
+		columns: {
+			type: Array,
+			required: true,
+			validator: (columns) => columns.every((col) => col.key && col.label)
+		},
+		/**
+		 * Unique key property in data objects
+		 */
+		rowKey: {
+			type: String,
+			default: 'id'
+		},
+		/**
+		 * Enable row selection with checkboxes
+		 */
+		selectable: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Selected row keys (v-model:selected)
+		 */
+		selected: {
+			type: Array,
+			default: () => []
+		},
+		/**
+		 * Enable search functionality
+		 */
+		searchable: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Search input placeholder
+		 */
+		searchPlaceholder: {
+			type: String,
+			default: 'Rechercher...'
+		},
+		/**
+		 * Enable pagination
+		 */
+		paginated: {
+			type: Boolean,
+			default: true
+		},
+		/**
+		 * Number of items per page
+		 */
+		perPage: {
+			type: Number,
+			default: 10
+		},
+		/**
+		 * Current page (v-model:page)
+		 */
+		page: {
+			type: Number,
+			default: 1
+		},
+		/**
+		 * Total items count for server-side pagination
+		 */
+		totalItems: {
+			type: Number,
+			default: null
+		},
+		/**
+		 * Server mode - data fetching is handled externally
+		 */
+		serverMode: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Loading state
+		 */
+		loading: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Default sort column key
+		 */
+		defaultSortKey: {
+			type: String,
+			default: null
+		},
+		/**
+		 * Default sort direction
+		 */
+		defaultSortDirection: {
+			type: String,
+			default: 'asc',
+			validator: (value) => ['asc', 'desc'].includes(value)
+		},
+		/**
+		 * Component size
+		 */
+		size: {
+			type: String,
+			default: 'medium',
+			validator: (value) => ['small', 'medium', 'large'].includes(value)
+		},
+		/**
+		 * Empty state icon
+		 */
+		emptyIcon: {
+			type: String,
+			default: 'folder'
+		},
+		/**
+		 * Empty state title
+		 */
+		emptyTitle: {
+			type: String,
+			default: 'Aucune donnée'
+		},
+		/**
+		 * Empty state description
+		 */
+		emptyDescription: {
+			type: String,
+			default: "Il n'y a aucun élément à afficher."
+		},
+		/**
+		 * Empty state action button label
+		 */
+		emptyActionLabel: {
+			type: String,
+			default: ''
+		},
+		/**
+		 * Striped row style
+		 */
+		striped: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Hoverable rows
+		 */
+		hoverable: {
+			type: Boolean,
+			default: true
+		},
+		/**
+		 * Bordered table
+		 */
+		bordered: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Enable virtualization for large datasets (improves performance with 1000+ rows)
+		 * When enabled, only visible rows are rendered. Pagination is automatically disabled.
+		 */
+		virtual: {
+			type: Boolean,
+			default: false
+		},
+		/**
+		 * Height of each virtualized row in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualItemHeight: {
+			type: Number,
+			default: null
+		},
+		/**
+		 * Height of the virtual scroller container in pixels
+		 * Used only when virtual is enabled
+		 */
+		virtualHeight: {
+			type: Number,
+			default: 500
+		}
+	},
+	data() {
+		return {
+			searchQuery: '',
+			sortKey: this.defaultSortKey,
+			sortDirection: this.defaultSortDirection,
+			internalPage: this.page,
+			selectedKeys: [...this.selected]
+		};
+	},
+	computed: {
+		containerClasses() {
+			return 'flex flex-col gap-4 bg-white rounded-lg';
+		},
+		toolbarClasses() {
+			return 'flex items-center gap-4 flex-wrap';
+		},
+		tableWrapperClasses() {
+			const baseClasses = 'relative overflow-x-auto';
+			const borderClasses = this.bordered
+				? 'border border-neutral-200 rounded-lg'
+				: '';
+			return [baseClasses, borderClasses].filter(Boolean).join(' ');
+		},
+		loadingOverlayClasses() {
+			return 'absolute inset-0 bg-white/80 flex items-center justify-center z-10';
+		},
+		tableClasses() {
+			return 'w-full text-left';
+		},
+		headerCellClasses() {
+			const sizeClasses = {
+				small: 'px-3 py-2 text-xs',
+				medium: 'px-4 py-3 text-sm',
+				large: 'px-6 py-4 text-base'
+			};
+			return [
+				'font-semibold text-neutral-700 bg-neutral-50 border-b border-neutral-200',
+				sizeClasses[this.size]
+			].join(' ');
+		},
+		cellClasses() {
+			const sizeClasses = {
+				small: 'px-3 py-2 text-xs',
+				medium: 'px-4 py-3 text-sm',
+				large: 'px-6 py-4 text-base'
+			};
+			return [
+				'text-neutral-600 border-b border-neutral-100',
+				sizeClasses[this.size]
+			].join(' ');
+		},
+		footerClasses() {
+			return 'flex items-center justify-between gap-4 flex-wrap';
+		},
+		infoClasses() {
+			const sizeClasses = {
+				small: 'text-xs',
+				medium: 'text-sm',
+				large: 'text-base'
+			};
+			return ['text-neutral-500', sizeClasses[this.size]].join(' ');
+		},
+		showToolbar() {
+			return this.searchable || this.$slots.actions;
+		},
+		showFooter() {
+			return this.effectivePaginated || this.selectable;
+		},
+		// Filter data based on search query (client-side only)
+		filteredData() {
+			if (this.serverMode || !this.searchQuery) {
+				return this.data;
+			}
+			const query = this.searchQuery.toLowerCase();
+			return this.data.filter((row) => {
+				return this.columns.some((column) => {
+					const value = this.getCellValue(row, column.key);
+					return String(value).toLowerCase().includes(query);
+				});
+			});
+		},
+		// Sort filtered data (client-side only)
+		sortedData() {
+			if (this.serverMode || !this.sortKey) {
+				return this.filteredData;
+			}
+			return [...this.filteredData].sort((a, b) => {
+				const aValue = this.getCellValue(a, this.sortKey);
+				const bValue = this.getCellValue(b, this.sortKey);
+
+				let comparison = 0;
+				if (aValue === null || aValue === undefined) comparison = 1;
+				else if (bValue === null || bValue === undefined) comparison = -1;
+				else if (typeof aValue === 'string') {
+					comparison = aValue.localeCompare(bValue);
+				} else {
+					comparison = aValue < bValue ? -1 : aValue > bValue ? 1 : 0;
+				}
+
+				return this.sortDirection === 'desc' ? -comparison : comparison;
+			});
+		},
+		// Processed data after filtering and sorting
+		processedData() {
+			return this.sortedData;
+		},
+		// Calculate total items for pagination
+		computedTotalItems() {
+			if (this.serverMode && this.totalItems !== null) {
+				return this.totalItems;
+			}
+			return this.processedData.length;
+		},
+		// Total pages
+		totalPages() {
+			if (!this.effectivePaginated) return 1;
+			return Math.max(1, Math.ceil(this.computedTotalItems / this.perPage));
+		},
+		// Data for current page (client-side pagination only)
+		paginatedData() {
+			if (this.serverMode || !this.effectivePaginated) {
+				return this.processedData;
+			}
+			const start = (this.internalPage - 1) * this.perPage;
+			const end = start + this.perPage;
+			return this.processedData.slice(start, end);
+		},
+		// Pagination info text
+		paginationInfo() {
+			if (!this.effectivePaginated) {
+				return `${this.computedTotalItems} élément(s)`;
+			}
+			const start = Math.min(
+				(this.internalPage - 1) * this.perPage + 1,
+				this.computedTotalItems
+			);
+			const end = Math.min(
+				this.internalPage * this.perPage,
+				this.computedTotalItems
+			);
+			return `${start} - ${end} sur ${this.computedTotalItems}`;
+		},
+		// Set for efficient key lookups
+		selectedKeysSet() {
+			return new Set(this.selectedKeys);
+		},
+		// Selection state
+		selectedItems() {
+			return this.data.filter((row) =>
+				this.selectedKeysSet.has(this.getRowKey(row))
+			);
+		},
+		isAllSelected() {
+			if (this.paginatedData.length === 0) return false;
+			return this.paginatedData.every((row) => this.isRowSelected(row));
+		},
+		// Calculate virtual item height based on size
+		computedVirtualItemHeight() {
+			if (this.virtualItemHeight !== null) {
+				return this.virtualItemHeight;
+			}
+			// Auto-calculate based on size prop
+			const sizeHeights = {
+				small: 40,
+				medium: 52,
+				large: 64
+			};
+			return sizeHeights[this.size] || sizeHeights.medium;
+		},
+		// When virtual mode is enabled, don't paginate
+		effectivePaginated() {
+			return this.virtual ? false : this.paginated;
+		}
+	},
+	watch: {
+		page: {
+			handler(newVal) {
+				this.internalPage = newVal;
+			},
+			immediate: true
+		},
+		internalPage(newVal) {
+			this.$emit('update:page', newVal);
+		},
+		selected: {
+			handler(newVal) {
+				this.selectedKeys = [...newVal];
+			},
+			deep: true,
+			immediate: true
+		},
+		selectedKeys: {
+			handler(newVal) {
+				this.$emit('update:selected', newVal);
+			},
+			deep: true
+		},
+		searchQuery() {
+			// Reset to first page when search changes
+			if (!this.serverMode) {
+				this.internalPage = 1;
+			}
+		}
+	},
+	methods: {
+		getCellValue(row, key) {
+			// Support nested keys like 'user.name'
+			return key.split('.').reduce((obj, k) => obj?.[k], row);
+		},
+		getRowKey(row, index) {
+			return row[this.rowKey] ?? index;
+		},
+		getHeaderCellClasses(column) {
+			const alignClasses = {
+				left: 'text-left',
+				center: 'text-center',
+				right: 'text-right'
+			};
+			const sortableClasses =
+				column.sortable !== false
+					? 'cursor-pointer select-none hover:bg-neutral-100'
+					: '';
+			return [
+				this.headerCellClasses,
+				alignClasses[column.align] || 'text-left',
+				sortableClasses
+			]
+				.filter(Boolean)
+				.join(' ');
+		},
+		getCellClasses(column) {
+			const alignClasses = {
+				left: 'text-left',
+				center: 'text-center',
+				right: 'text-right'
+			};
+			return [this.cellClasses, alignClasses[column.align] || 'text-left'].join(
+				' '
+			);
+		},
+		getRowClasses(row) {
+			const baseClasses =
+				'transition-colors duration-[var(--transition-duration-fast)] ease-[var(--transition-easing-standard)]';
+			const hoverClasses = this.hoverable ? 'hover:bg-neutral-50' : '';
+			const selectedClasses = this.isRowSelected(row) ? 'bg-primary-50' : '';
+			const stripedClasses = this.striped ? 'even:bg-neutral-50/50' : '';
+			return [baseClasses, hoverClasses, selectedClasses, stripedClasses]
+				.filter(Boolean)
+				.join(' ');
+		},
+		getSortIcon(key) {
+			if (this.sortKey !== key) return 'chevron-down';
+			return this.sortDirection === 'asc' ? 'chevron-up' : 'chevron-down';
+		},
+		getSortIconClasses(key) {
+			const isActive = this.sortKey === key;
+			return isActive ? 'text-primary-500' : 'text-neutral-400';
+		},
+		getAriaSort(key, sortable) {
+			// Don't add aria-sort if column is not sortable
+			if (sortable === false) {
+				return undefined;
+			}
+			// If this column is currently sorted, indicate direction
+			if (this.sortKey === key) {
+				return this.sortDirection === 'asc' ? 'ascending' : 'descending';
+			}
+			// Column is sortable but not currently sorted
+			return 'none';
+		},
+		handleSort(key) {
+			if (this.sortKey === key) {
+				this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
+			} else {
+				this.sortKey = key;
+				this.sortDirection = 'asc';
+			}
+			this.$emit('sort', { key: this.sortKey, direction: this.sortDirection });
+		},
+		handleSearch(query) {
+			this.$emit('search', query);
+		},
+		handlePageChange(page) {
+			this.$emit('page-change', page);
+		},
+		handleRowClick(row) {
+			this.$emit('row-click', row);
+		},
+		isRowSelected(row) {
+			return this.selectedKeysSet.has(this.getRowKey(row));
+		},
+		handleRowSelect(row, checked) {
+			const key = this.getRowKey(row);
+			if (checked) {
+				if (!this.selectedKeysSet.has(key)) {
+					this.selectedKeys = [...this.selectedKeys, key];
+				}
+			} else {
+				this.selectedKeys = this.selectedKeys.filter((k) => k !== key);
+			}
+			this.$emit('select', { row, selected: checked });
+		},
+		handleSelectAll(checked) {
+			if (checked) {
+				const currentKeys = this.paginatedData.map((row) =>
+					this.getRowKey(row)
+				);
+				const newKeys = currentKeys.filter(
+					(k) => !this.selectedKeys.includes(k)
+				);
+				this.selectedKeys = [...this.selectedKeys, ...newKeys];
+			} else {
+				const currentKeys = this.paginatedData.map((row) =>
+					this.getRowKey(row)
+				);
+				this.selectedKeys = this.selectedKeys.filter(
+					(k) => !currentKeys.includes(k)
+				);
+			}
+			this.$emit('select-all', checked);
+		},
+		clearSelection() {
+			this.selectedKeys = [];
+		}
+	}
+};
+
+export { script as default };
