@@ -74,20 +74,60 @@ export default {
 			];
 		},
 		baseLineClasses() {
-			const thicknessMap = {
-				thin: 'px',
-				medium: '0.5',
-				thick: '1'
+			const bgColorMap = {
+				'gray-100': 'bg-gray-100',
+				'gray-200': 'bg-gray-200',
+				'gray-300': 'bg-gray-300',
+				'gray-400': 'bg-gray-400',
+				'gray-500': 'bg-gray-500',
+				'neutral-100': 'bg-neutral-100',
+				'neutral-200': 'bg-neutral-200',
+				'neutral-300': 'bg-neutral-300',
+				'neutral-400': 'bg-neutral-400',
+				'neutral-500': 'bg-neutral-500'
 			};
-			const size = thicknessMap[this.thickness];
 
-			return [`bg-${this.color}`, this.isVertical ? `w-${size}` : `h-${size}`];
+			const thicknessHorizontalMap = {
+				thin: 'h-px',
+				medium: 'h-0.5',
+				thick: 'h-1'
+			};
+
+			const thicknessVerticalMap = {
+				thin: 'w-px',
+				medium: 'w-0.5',
+				thick: 'w-1'
+			};
+
+			return [
+				bgColorMap[this.color] ?? 'bg-gray-300',
+				this.isVertical
+					? (thicknessVerticalMap[this.thickness] ?? 'w-px')
+					: (thicknessHorizontalMap[this.thickness] ?? 'h-px')
+			];
 		},
 		textClasses() {
+			const textSizeMap = {
+				xs: 'text-xs',
+				sm: 'text-sm',
+				base: 'text-base',
+				lg: 'text-lg',
+				xl: 'text-xl'
+			};
+
+			const textColorMap = {
+				'gray-400': 'text-gray-400',
+				'gray-500': 'text-gray-500',
+				'gray-600': 'text-gray-600',
+				'neutral-400': 'text-neutral-400',
+				'neutral-500': 'text-neutral-500',
+				'neutral-600': 'text-neutral-600'
+			};
+
 			return [
 				'font-sans',
-				`text-${this.textSize}`,
-				`text-${this.textColor}`,
+				textSizeMap[this.textSize] ?? 'text-sm',
+				textColorMap[this.textColor] ?? 'text-gray-500',
 				this.isVertical ? 'py-2' : 'px-3'
 			];
 		}
