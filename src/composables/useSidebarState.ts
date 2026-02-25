@@ -38,7 +38,7 @@ export interface SidebarStateOptions {
 /**
  * Return type for useSidebarState
  */
-export interface SidebarState {
+export interface UseSidebarStateReturn {
 	// Collapse state
 	collapsed: Ref<boolean>;
 
@@ -77,7 +77,7 @@ export interface SidebarState {
 export function useSidebarState(
 	options: SidebarStateOptions,
 	emit: (event: string, ...args: any[]) => void
-): SidebarState {
+): UseSidebarStateReturn {
 	const { items, initialCollapsed = false, activeRoute = '' } = options;
 
 	// Reactive state
