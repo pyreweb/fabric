@@ -1,10 +1,19 @@
 <template>
-	<aside
-		:class="sidebarClasses"
-		:style="sidebarStyle"
-		role="navigation"
-		aria-label="Navigation principale"
-	>
+	<div>
+		<!-- Mobile overlay -->
+		<div
+			v-if="isMobile && mobileOpen"
+			class="fixed inset-0 bg-black opacity-50 z-40"
+			aria-hidden="true"
+			data-testid="mobile-overlay"
+			@click="closeMobile"
+		/>
+		<aside
+			:class="sidebarClasses"
+			:style="sidebarStyle"
+			role="navigation"
+			aria-label="Navigation principale"
+		>
 		<!-- Branding/Logo Section -->
 		<div :class="brandingClasses">
 			<slot name="branding">
@@ -186,7 +195,8 @@
 				</div>
 			</slot>
 		</div>
-	</aside>
+		</aside>
+	</div>
 </template>
 
 <script>
@@ -288,11 +298,20 @@ export default {
 			type: String,
 			default: 'left',
 			validator: (value) => ['left', 'right'].includes(value)
+		},
+		/**
+		 * Controls the mobile drawer visibility.
+		 * Use v-model:mobileOpen for two-way binding.
+		 */
+		mobileOpen: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data() {
 		return {
-			openSubmenus: []
+			openSubmenus: [],
+			isMobile: false
 		};
 	},
 	computed: {
@@ -308,6 +327,31 @@ export default {
 		 * Main sidebar container classes
 		 */
 		sidebarClasses() {
+			if (this.isMobile) {
+				const baseClasses =
+					'fixed inset-y-0 z-50 flex flex-col bg-white border-neutral-200';
+				const positionClasses =
+					this.position === 'left'
+						? 'left-0 border-r'
+						: 'right-0 border-l';
+				const transitionClasses =
+					'transition-transform duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]';
+				const visibilityClasses = this.mobileOpen
+					? 'translate-x-0'
+					: this.position === 'left'
+						? '-translate-x-full'
+						: 'translate-x-full';
+
+				return [
+					baseClasses,
+					positionClasses,
+					transitionClasses,
+					visibilityClasses
+				]
+					.filter(Boolean)
+					.join(' ');
+			}
+
 			const baseClasses = 'flex flex-col h-full bg-white border-neutral-200';
 			const transitionClasses =
 				'transition-all duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]';
@@ -321,6 +365,9 @@ export default {
 		 * Sidebar inline styles
 		 */
 		sidebarStyle() {
+			if (this.isMobile) {
+				return { width: this.width };
+			}
 			return {
 				width: this.collapsed ? this.collapsedWidth : this.width
 			};
@@ -372,6 +419,13 @@ export default {
 	},
 	created() {
 		this.initializeOpenSubmenus();
+	},
+	mounted() {
+		this.checkMobile();
+		window.addEventListener('resize', this.checkMobile);
+	},
+	beforeDestroy() {
+		window.removeEventListener('resize', this.checkMobile);
 	},
 	methods: {
 		/**
@@ -571,6 +625,19 @@ export default {
 		handleThemeToggle(value) {
 			this.$emit('update:isDarkMode', value);
 			this.$emit('theme-change', value);
+		},
+		/**
+		 * Check if the viewport is mobile-sized (below md breakpoint: 768px)
+		 */
+		checkMobile() {
+			this.isMobile = window.innerWidth < 768;
+		},
+		/**
+		 * Close the mobile drawer
+		 */
+		closeMobile() {
+			this.$emit('update:mobileOpen', false);
+			this.$emit('close');
 		}
 	}
 };
