@@ -99,3 +99,9 @@ export const WithStatus = () => ({
 
 export const Placeholder = Template.bind({});
 Placeholder.args = {};
+
+export const WithBrokenImage = Template.bind({});
+WithBrokenImage.args = {
+	src: 'https://broken-image.example.com/nonexistent-avatar.jpg',
+	name: 'Jane Doe'
+};
