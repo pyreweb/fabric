@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import FDatePicker from './FDatePicker.vue';
 
@@ -7,6 +7,10 @@ describe('FDatePicker', () => {
 
 	beforeEach(() => {
 		wrapper = mount(FDatePicker);
+	});
+
+	afterEach(() => {
+		wrapper.destroy();
 	});
 
 	it('renders correctly with default props', () => {
