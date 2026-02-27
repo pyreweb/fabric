@@ -89,6 +89,16 @@ describe('FButton', () => {
 		expect(wrapper.find('button').classes()).toContain('rounded-full');
 	});
 
+	it('applies square padding when iconOnly is true', () => {
+		const wrapper = mount(FButton, {
+			propsData: { iconOnly: true }
+		});
+		const buttonClasses = wrapper.find('button').classes();
+		expect(buttonClasses).toContain('px-2');
+		expect(buttonClasses).toContain('py-2');
+		expect(buttonClasses).not.toContain('px-4');
+	});
+
 	it('sets correct button type', () => {
 		const wrapper = mount(FButton, {
 			propsData: { type: 'submit' }

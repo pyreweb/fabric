@@ -32,6 +32,7 @@ export interface FButtonProps {
 	loading?: boolean;
 	loadingText?: string;
 	block?: boolean;
+	iconOnly?: boolean;
 	to?: string | RouteLocation | null;
 	href?: string | null;
 	target?: string | null;
