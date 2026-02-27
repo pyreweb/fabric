@@ -32,7 +32,7 @@ export default {
 	props: {
 		size: {
 			type: String,
-			default: 'md',
+			default: 'sm',
 			validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
 		},
 		color: {
@@ -82,7 +82,7 @@ export default {
 
 			const colorClasses = this.color ? '' : 'text-primary-500';
 
-			return [baseClasses, sizeClasses[this.size], colorClasses]
+			return [baseClasses, sizeClasses[this.size] || 'w-5 h-5', colorClasses]
 				.filter(Boolean)
 				.join(' ');
 		},
