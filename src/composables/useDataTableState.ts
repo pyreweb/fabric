@@ -11,6 +11,11 @@ import {
 } from 'vue';
 
 /**
+ * Sort direction type
+ */
+export type SortDirection = 'asc' | 'desc' | null;
+
+/**
  * Configuration options for useDataTableState
  */
 export interface DataTableStateOptions {
@@ -78,7 +83,7 @@ export interface DataTableState {
 
 	// Sort state
 	sortKey: Ref<string | null>;
-	sortDirection: Ref<'asc' | 'desc'>;
+	sortDirection: Ref<SortDirection>;
 
 	// Pagination state
 	internalPage: Ref<number>;
@@ -149,7 +154,7 @@ export function useDataTableState(
 	// Reactive state
 	const searchQuery = ref('');
 	const sortKey = ref<string | null>(defaultSortKey);
-	const sortDirection = ref<'asc' | 'desc'>(defaultSortDirection);
+	const sortDirection = ref<SortDirection>(defaultSortDirection);
 	const internalPage = ref(initialPage);
 	const selectedKeys = ref([...selected]);
 
