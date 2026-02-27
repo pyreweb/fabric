@@ -87,6 +87,7 @@ const computedClasses = computed(() => {
 
 	return [
 		base,
+		'truncate max-w-[12rem]',
 		variantStyles[props.variant],
 		sizeStyles[props.size],
 		shapeStyles[props.shape]
