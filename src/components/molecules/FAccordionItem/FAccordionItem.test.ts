@@ -74,4 +74,33 @@ describe('FAccordionItem', () => {
 		expect(contentId).toBeDefined();
 		expect(wrapper.find(`#${contentId}`).exists()).toBe(true);
 	});
+
+	it('applies will-change only while animating max-height', async () => {
+		const wrapper = mount(FAccordionItem, {
+			propsData: { title: 'Title' }
+		});
+		const content = wrapper.find('[role="region"]');
+		expect(content.element.style.willChange).toBe('auto');
+
+		await wrapper.find('button').trigger('click');
+		expect(content.element.style.willChange).toBe('max-height');
+
+		await content.trigger('transitionend', { propertyName: 'max-height' });
+		expect(content.element.style.willChange).toBe('auto');
+	});
+
+	it('ignores transitionend events bubbling from inner content', async () => {
+		const wrapper = mount(FAccordionItem, {
+			propsData: { title: 'Title' },
+			slots: { default: '<span class="inner">Content</span>' }
+		});
+		await wrapper.find('button').trigger('click');
+
+		const content = wrapper.find('[role="region"]');
+		await wrapper
+			.find('.inner')
+			.trigger('transitionend', { propertyName: 'max-height' });
+
+		expect(content.element.style.willChange).toBe('max-height');
+	});
 });
