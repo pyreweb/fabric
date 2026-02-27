@@ -50,11 +50,11 @@ export default {
 		},
 		inputClasses() {
 			return [
-				'shrink-0 w-4 h-4 rounded border focus:outline-none focus:ring-2 focus:ring-offset-1',
+				'shrink-0 w-4 h-4 rounded border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
 				'transition-colors duration-[var(--transition-duration-base)] ease-[var(--transition-easing-standard)]',
 				this.error
-					? 'border-danger-500 text-danger-500 focus:ring-danger-500/20'
-					: 'border-neutral-300 text-primary-600 focus:border-primary-600 focus:ring-primary-600/20',
+					? 'border-danger-500 text-danger-500 focus-visible:ring-danger-500/20'
+					: 'border-neutral-300 text-primary-600 focus:border-primary-600 focus-visible:ring-primary-600/20',
 				this.disabled ? 'cursor-not-allowed' : 'cursor-pointer'
 			];
 		},
