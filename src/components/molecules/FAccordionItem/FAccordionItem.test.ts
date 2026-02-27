@@ -74,4 +74,13 @@ describe('FAccordionItem', () => {
 		expect(contentId).toBeDefined();
 		expect(wrapper.find(`#${contentId}`).exists()).toBe(true);
 	});
+
+	it('hints max-height animation optimization with will-change', () => {
+		const wrapper = mount(FAccordionItem, {
+			propsData: { title: 'Title' }
+		});
+		expect(wrapper.find('[role="region"]').element.style.willChange).toBe(
+			'max-height'
+		);
+	});
 });

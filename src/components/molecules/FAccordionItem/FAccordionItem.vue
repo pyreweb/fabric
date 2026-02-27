@@ -77,7 +77,8 @@ export default {
 		},
 		contentStyle() {
 			return {
-				maxHeight: this.isOpen ? `${this.contentHeight}px` : '0px'
+				maxHeight: this.isOpen ? `${this.contentHeight}px` : '0px',
+				willChange: 'max-height'
 			};
 		}
 	},
