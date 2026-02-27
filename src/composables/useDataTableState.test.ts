@@ -197,6 +197,14 @@ describe('useDataTableState', () => {
 			// Nulls should be sorted to the end
 			expect(state.sortedData.value[2].name).toBe(null);
 		});
+
+		it('accepts null as a valid sortDirection value', () => {
+			const emit = vi.fn();
+			const state = useDataTableState({ data, columns }, emit);
+
+			state.sortDirection.value = null;
+			expect(state.sortDirection.value).toBe(null);
+		});
 	});
 
 	describe('pagination', () => {
