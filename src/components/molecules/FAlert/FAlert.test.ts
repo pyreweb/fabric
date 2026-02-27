@@ -37,6 +37,11 @@ describe('FAlert', () => {
 		expect(wrapper.findComponent({ name: 'FButton' }).exists()).toBe(true);
 	});
 
+	it('adds an aria-label to the close button', () => {
+		const wrapper = mount(FAlert);
+		expect(wrapper.find('button[aria-label="Fermer"]').exists()).toBe(true);
+	});
+
 	it('hides close button when closable is false', () => {
 		const wrapper = mount(FAlert, {
 			propsData: { closable: false }
