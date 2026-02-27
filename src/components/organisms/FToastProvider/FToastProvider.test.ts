@@ -201,6 +201,12 @@ describe('FToastProvider', () => {
 		expect(vm.toastsByPosition['bottom-center'].length).toBe(1);
 	});
 
+	it('includes vertical spacing class on toast containers', () => {
+		const wrapper = mount(FToastProvider, { localVue });
+
+		expect(wrapper.vm.containerClasses('top-right')).toContain('space-y-2');
+	});
+
 	it('exposes global API on root instance', () => {
 		const wrapper = mount(FToastProvider, { localVue });
 
