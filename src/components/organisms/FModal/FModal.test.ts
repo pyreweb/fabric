@@ -93,6 +93,15 @@ describe('FModal', () => {
 		expect(wrapper.emitted('close')).toBeFalsy();
 	});
 
+	it('emits close when Escape key is pressed', async () => {
+		const wrapper = mount(FModal, {
+			propsData: { value: true }
+		});
+		document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+		await wrapper.vm.$nextTick();
+		expect(wrapper.emitted('close')).toBeTruthy();
+	});
+
 	it('applies correct size classes', () => {
 		const sizes = ['small', 'medium', 'large', 'full'] as const;
 		sizes.forEach((size) => {
