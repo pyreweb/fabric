@@ -105,10 +105,22 @@ describe('FActivityFeed', () => {
 	});
 
 	it('applies break-words class to description to prevent long URL overflow', () => {
+		const eventsWithDescription = [
+			{
+				...events[0],
+				description:
+					'https://example.com/' +
+					'a'.repeat(200) +
+					'/very-long-unbroken-url-path-that-should-wrap-correctly'
+			}
+		];
+
 		const wrapper = mount(FActivityFeed, {
-			propsData: { events }
+			propsData: { events: eventsWithDescription }
 		});
-		expect(wrapper.vm.descriptionClasses).toContain('break-words');
+
+		const descriptionElement = wrapper.find('.break-words');
+		expect(descriptionElement.exists()).toBe(true);
 	});
 
 	it('renders RecycleScroller when virtual is enabled', () => {
