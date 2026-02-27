@@ -41,4 +41,106 @@ describe('FButtonGroup', () => {
 		const wrapper = mount(FButtonGroup);
 		expect(wrapper.find('[role="group"]').classes()).toContain('inline-flex');
 	});
+
+	it('moves focus to next button on ArrowRight', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button>Button 2</button><button>Button 3</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(0).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'ArrowRight' });
+
+		expect(document.activeElement).toBe(buttons.at(1).element);
+		wrapper.destroy();
+	});
+
+	it('moves focus to previous button on ArrowLeft', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button>Button 2</button><button>Button 3</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(1).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'ArrowLeft' });
+
+		expect(document.activeElement).toBe(buttons.at(0).element);
+		wrapper.destroy();
+	});
+
+	it('wraps focus to last button on ArrowLeft from first', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button>Button 2</button><button>Button 3</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(0).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'ArrowLeft' });
+
+		expect(document.activeElement).toBe(buttons.at(2).element);
+		wrapper.destroy();
+	});
+
+	it('wraps focus to first button on ArrowRight from last', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button>Button 2</button><button>Button 3</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(2).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'ArrowRight' });
+
+		expect(document.activeElement).toBe(buttons.at(0).element);
+		wrapper.destroy();
+	});
+
+	it('skips disabled buttons on ArrowRight', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button disabled>Button 2</button><button>Button 3</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(0).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'ArrowRight' });
+
+		expect(document.activeElement).toBe(buttons.at(2).element);
+		wrapper.destroy();
+	});
+
+	it('does not move focus on unrelated keys', async () => {
+		const wrapper = mount(FButtonGroup, {
+			attachTo: document.body,
+			slots: {
+				default: '<button>Button 1</button><button>Button 2</button>'
+			}
+		});
+
+		const buttons = wrapper.findAll('button');
+		buttons.at(0).element.focus();
+
+		await wrapper.trigger('keydown', { key: 'Tab' });
+
+		expect(document.activeElement).toBe(buttons.at(0).element);
+		wrapper.destroy();
+	});
 });
