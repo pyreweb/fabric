@@ -14,6 +14,7 @@
 			v-if="closable"
 			variant="text"
 			size="small"
+			aria-label="Fermer"
 			:class="closeButtonClasses"
 			@click="handleClose"
 		>
