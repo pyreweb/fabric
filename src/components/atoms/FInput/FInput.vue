@@ -80,7 +80,7 @@ export default {
 				: 'border-neutral-300 focus:border-primary-500 focus:ring-primary-500/20';
 
 			const disabledClasses = this.disabled
-				? 'bg-neutral-100 cursor-not-allowed opacity-70'
+				? 'bg-neutral-100 text-gray-500 cursor-not-allowed'
 				: '';
 
 			return [
