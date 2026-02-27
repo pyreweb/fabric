@@ -22,6 +22,7 @@
 			:style="contentStyle"
 			:aria-labelledby="headerId"
 			role="region"
+			@transitionend="handleTransitionEnd"
 		>
 			<div ref="contentInner" class="p-4">
 				<slot />
@@ -56,6 +57,7 @@ export default {
 		const id = ++accordionItemId;
 		return {
 			isOpen: this.defaultOpen,
+			isTransitioning: false,
 			contentHeight: 0,
 			headerId: `accordion-header-${id}`,
 			contentId: `accordion-content-${id}`
@@ -78,7 +80,7 @@ export default {
 		contentStyle() {
 			return {
 				maxHeight: this.isOpen ? `${this.contentHeight}px` : '0px',
-				willChange: 'max-height'
+				willChange: this.isTransitioning ? 'max-height' : 'auto'
 			};
 		}
 	},
@@ -94,9 +96,18 @@ export default {
 	},
 	methods: {
 		toggle() {
+			this.isTransitioning = true;
 			this.isOpen = !this.isOpen;
 			this.$emit('toggle', this.isOpen);
 			this.$emit('input', this.isOpen);
+		},
+		handleTransitionEnd(event) {
+			if (
+				event.target === this.$refs.content &&
+				event.propertyName === 'max-height'
+			) {
+				this.isTransitioning = false;
+			}
 		},
 		updateContentHeight() {
 			if (this.$refs.contentInner) {
