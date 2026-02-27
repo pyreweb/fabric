@@ -279,4 +279,57 @@ describe('FDatePicker', () => {
 		expect(wrapper.vm.calendarDays.length).toBeGreaterThan(0);
 		expect(wrapper.vm.calendarDays.length).toBe(42); // 6 weeks * 7 days
 	});
+
+	it('generates 29 days for February on a leap year', () => {
+		wrapper.vm.displayMonth = 1; // February
+		wrapper.vm.displayYear = 2024; // leap year
+		wrapper.vm.updateCalendar();
+
+		const feb29 = wrapper.vm.calendarDays.find(
+			(d: { date: number; month: number; year: number; isCurrentMonth: boolean }) =>
+				d.date === 29 && d.month === 1 && d.year === 2024 && d.isCurrentMonth
+		);
+		expect(feb29).toBeDefined();
+	});
+
+	it('allows selecting February 29 on a leap year', () => {
+		wrapper.vm.displayMonth = 1; // February
+		wrapper.vm.displayYear = 2024; // leap year
+		wrapper.vm.updateCalendar();
+
+		const feb29 = wrapper.vm.calendarDays.find(
+			(d: { date: number; month: number; year: number; isCurrentMonth: boolean }) =>
+				d.date === 29 && d.month === 1 && d.year === 2024 && d.isCurrentMonth
+		);
+
+		expect(wrapper.vm.isDayDisabled(feb29)).toBe(false);
+
+		wrapper.vm.selectDate(feb29);
+
+		expect(wrapper.vm.selectedDate).not.toBeNull();
+		expect(wrapper.vm.selectedDate.getDate()).toBe(29);
+		expect(wrapper.vm.selectedDate.getMonth()).toBe(1);
+		expect(wrapper.vm.selectedDate.getFullYear()).toBe(2024);
+		expect(wrapper.emitted('input')).toBeTruthy();
+	});
+
+	it('parses ISO date string 2024-02-29 as local time (leap year)', () => {
+		wrapper = mount(FDatePicker, {
+			propsData: { value: '2024-02-29' }
+		});
+
+		expect(wrapper.vm.selectedDate).not.toBeNull();
+		expect(wrapper.vm.selectedDate.getDate()).toBe(29);
+		expect(wrapper.vm.selectedDate.getMonth()).toBe(1);
+		expect(wrapper.vm.selectedDate.getFullYear()).toBe(2024);
+		expect(wrapper.vm.displayValue).toBe('29/02/2024');
+	});
+
+	it('returns null when parsing invalid date 2023-02-29 (non-leap year)', () => {
+		wrapper = mount(FDatePicker, {
+			propsData: { value: '2023-02-29' }
+		});
+
+		expect(wrapper.vm.selectedDate).toBeNull();
+	});
 });
