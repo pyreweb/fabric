@@ -199,17 +199,16 @@ export default {
 					this.lockBodyScroll();
 					this.$nextTick(() => {
 						this.setupFocusTrap();
-						if (this.closeOnEscape) {
-							document.addEventListener('keydown', this.handleKeydown);
-						}
 					});
 				} else {
 					this.unlockBodyScroll();
 					this.removeFocusTrap();
-					document.removeEventListener('keydown', this.handleKeydown);
 				}
 			}
 		}
+	},
+	mounted() {
+		document.addEventListener('keydown', this.handleKeydown);
 	},
 	beforeDestroy() {
 		this.unlockBodyScroll();
@@ -236,6 +235,7 @@ export default {
 		 * Handle keyboard events
 		 */
 		handleKeydown(event) {
+			if (!this.isOpen) return;
 			if (event.key === 'Escape' && this.closeOnEscape) {
 				this.handleClose();
 			} else if (event.key === 'Tab') {

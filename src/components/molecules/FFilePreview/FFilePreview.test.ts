@@ -67,4 +67,28 @@ describe('FFilePreview', () => {
 		});
 		expect(wrapper.classes().join(' ')).toContain('opacity-50');
 	});
+
+	it('shows img with object-contain when previewUrl is provided for an image file', () => {
+		const wrapper = mount(FFilePreview, {
+			propsData: { fileName: 'image.svg', previewUrl: 'https://example.com/image.svg' }
+		});
+		const img = wrapper.find('img');
+		expect(img.exists()).toBe(true);
+		expect(img.classes()).toContain('object-contain');
+		expect(img.classes()).not.toContain('object-cover');
+	});
+
+	it('does not show img when previewUrl is provided for a non-image file', () => {
+		const wrapper = mount(FFilePreview, {
+			propsData: { fileName: 'doc.pdf', previewUrl: 'https://example.com/doc.pdf' }
+		});
+		expect(wrapper.find('img').exists()).toBe(false);
+	});
+
+	it('does not show img when previewUrl is absent', () => {
+		const wrapper = mount(FFilePreview, {
+			propsData: { fileName: 'image.png' }
+		});
+		expect(wrapper.find('img').exists()).toBe(false);
+	});
 });

@@ -90,4 +90,12 @@ describe('FTypography', () => {
 		});
 		expect(wrapper.classes()).toContain('font-sans');
 	});
+
+	it('applies leading-tight to h1 variant', () => {
+		const wrapper = mount(FTypography, {
+			propsData: { variant: 'h1' },
+			slots: { default: 'Heading' }
+		});
+		expect(wrapper.classes()).toContain('leading-tight');
+	});
 });

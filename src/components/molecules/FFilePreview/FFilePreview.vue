@@ -1,6 +1,12 @@
 <template>
 	<div :class="containerClasses">
-		<f-icon :name="fileIcon" size="md" :class="iconClasses" />
+		<img
+			v-if="previewUrl && isImageType"
+			:src="previewUrl"
+			:alt="fileName"
+			class="w-10 h-10 object-contain flex-shrink-0 rounded"
+		/>
+		<f-icon v-else :name="fileIcon" size="md" :class="iconClasses" />
 
 		<div class="flex-1 min-w-0">
 			<f-typography variant="body" :truncate="true" :class="fileNameClasses">
@@ -87,9 +93,16 @@ export default {
 		removeLabel: {
 			type: String,
 			default: 'Supprimer le fichier'
+		},
+		previewUrl: {
+			type: String,
+			default: null
 		}
 	},
 	computed: {
+		isImageType() {
+			return this.fileIcon === 'image';
+		},
 		fileExtension() {
 			if (this.fileType) {
 				return this.fileType.toLowerCase();

@@ -61,4 +61,11 @@ describe('FCheckbox', () => {
 		const input = wrapper.find('input');
 		expect(input.classes().join(' ')).toContain('border-danger');
 	});
+
+	it('applies focus-visible ring styles for keyboard navigation', () => {
+		const wrapper = mount(FCheckbox);
+		const input = wrapper.find('input');
+		expect(input.classes()).toContain('focus-visible:ring-2');
+		expect(input.classes()).toContain('focus-visible:ring-offset-2');
+	});
 });

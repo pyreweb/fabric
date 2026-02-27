@@ -59,6 +59,7 @@ describe('FInput', () => {
 		});
 		expect(wrapper.find('input').attributes('disabled')).toBeDefined();
 		expect(wrapper.find('input').classes()).toContain('cursor-not-allowed');
+		expect(wrapper.find('input').classes()).toContain('text-gray-500');
 	});
 
 	it('applies readonly state', () => {

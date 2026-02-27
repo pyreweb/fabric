@@ -446,7 +446,23 @@ export default {
 				return value;
 			}
 			if (typeof value === 'string') {
-				return new Date(value);
+				const isoMatch = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+				if (isoMatch) {
+					const year = parseInt(isoMatch[1], 10);
+					const monthNum = parseInt(isoMatch[2], 10);
+					const day = parseInt(isoMatch[3], 10);
+					if (monthNum < 1 || monthNum > 12) {
+						return null;
+					}
+					const month = monthNum - 1;
+					const daysInMonth = new Date(year, month + 1, 0).getDate();
+					if (day < 1 || day > daysInMonth) {
+						return null;
+					}
+					return new Date(year, month, day);
+				}
+				const date = new Date(value);
+				return isNaN(date.getTime()) ? null : date;
 			}
 			return null;
 		},

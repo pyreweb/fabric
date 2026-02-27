@@ -42,6 +42,10 @@ export default {
 			type: Boolean,
 			default: false
 		},
+		iconOnly: {
+			type: Boolean,
+			default: false
+		},
 		iconLeft: {
 			type: String,
 			default: undefined
@@ -86,6 +90,7 @@ export default {
 
 		const sizeClasses = computed(() => {
 			if (props.variant === 'link') return '';
+			if (props.iconOnly) return 'px-2 py-2';
 
 			const sizes = {
 				xs: 'text-xs px-2.5 py-1.5',

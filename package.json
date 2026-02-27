@@ -1,6 +1,6 @@
 {
 	"name": "@pyreweb/fabric",
-	"version": "1.2.7",
+	"version": "1.2.8",
 	"description": "Système de design et bibliothèque de composants VueJS de la société Pyréweb",
 	"type": "module",
 	"overrides": {
@@ -78,7 +78,7 @@
 		"@tailwindcss/postcss": "^4.1.17",
 		"@typescript-eslint/eslint-plugin": "^8.48.1",
 		"@typescript-eslint/parser": "^8.48.1",
-		"@vitejs/plugin-vue2": "^2.3.4",
+		"@vitejs/plugin-vue2": "2.3.4",
 		"@vue/test-utils": "^1.3.6",
 		"autoprefixer": "^10.4.22",
 		"eslint": "^8.57.1",
@@ -95,7 +95,7 @@
 		"storybook": "^10.2.11",
 		"tailwindcss": "^4.1.17",
 		"typescript": "^5.9.3",
-		"vite": "^7.3.1",
+		"vite": "7.3.1",
 		"vitest": "^4.0.18",
 		"vue": "^2.7.16",
 		"vue-template-compiler": "^2.7.16",

@@ -90,4 +90,23 @@ describe('FBadge', () => {
 		});
 		expect(wrapper.attributes('aria-label')).toBe('Status: success');
 	});
+
+	it('applies truncate and max-w classes to prevent text overflow', () => {
+		const wrapper = mount(FBadge, {
+			slots: {
+				default: 'Texte beaucoup trop long pour un badge'
+			}
+		});
+		const classes = wrapper.classes().join(' ');
+		expect(classes).toContain('truncate');
+		expect(classes).toContain('max-w-[12rem]');
+	});
+
+	it('does not apply truncate classes to dot variant', () => {
+		const wrapper = mount(FBadge, {
+			propsData: { dot: true }
+		});
+		const classes = wrapper.classes().join(' ');
+		expect(classes).not.toContain('truncate');
+	});
 });
