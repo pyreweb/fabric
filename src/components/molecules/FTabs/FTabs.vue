@@ -1,7 +1,12 @@
 <template>
 	<div class="f-tabs">
 		<!-- Tab buttons -->
-		<div :class="tabListClasses" role="tablist" :aria-label="ariaLabel">
+		<div
+			ref="tabList"
+			:class="tabListClasses"
+			role="tablist"
+			:aria-label="ariaLabel"
+		>
 			<button
 				v-for="tab in tabItems"
 				:id="getTabId(tab.name)"
@@ -18,6 +23,13 @@
 			>
 				{{ tab.label }}
 			</button>
+			<!-- Animated active indicator (default and underline variants only) -->
+			<span
+				v-if="variant !== 'pills'"
+				aria-hidden="true"
+				class="absolute bottom-0 h-0.5 bg-primary-600 transition-all duration-200"
+				:style="indicatorStyle"
+			/>
 		</div>
 
 		<!-- Tab panels (content) -->
@@ -80,7 +92,9 @@ export default {
 			tabItems: [],
 			uid: idCounter++,
 			initialTabSet: false,
-			internalActiveTab: ''
+			internalActiveTab: '',
+			indicatorStyle: { left: '0px', width: '0px' },
+			resizeObserver: null
 		};
 	},
 	computed: {
@@ -95,7 +109,7 @@ export default {
 			}
 		},
 		tabListClasses() {
-			const baseClasses = 'flex gap-1';
+			const baseClasses = 'relative flex gap-1';
 			const variantClasses = {
 				default: 'border-b border-neutral-200',
 				pills: '',
@@ -132,9 +146,47 @@ export default {
 				}
 			},
 			immediate: true
+		},
+		activeTabName() {
+			this.$nextTick(() => {
+				this.updateIndicator();
+			});
+		}
+	},
+	mounted() {
+		this.$nextTick(() => {
+			this.updateIndicator();
+		});
+		if (typeof ResizeObserver !== 'undefined' && this.$refs.tabList) {
+			this.resizeObserver = new ResizeObserver(() => {
+				this.updateIndicator();
+			});
+			this.resizeObserver.observe(this.$refs.tabList);
+		}
+	},
+	beforeDestroy() {
+		if (this.resizeObserver) {
+			this.resizeObserver.disconnect();
+			this.resizeObserver = null;
 		}
 	},
 	methods: {
+		/**
+		 * Update the position and width of the active indicator bar
+		 */
+		updateIndicator() {
+			if (this.variant === 'pills' || !this.activeTabName) return;
+			const tabRef = this.$refs[`tab-${this.activeTabName}`];
+			const tabEl = tabRef && tabRef[0] ? tabRef[0] : tabRef;
+			const container = this.$refs.tabList;
+			if (!tabEl || !container) return;
+			const containerRect = container.getBoundingClientRect();
+			const tabRect = tabEl.getBoundingClientRect();
+			this.indicatorStyle = {
+				left: `${tabRect.left - containerRect.left}px`,
+				width: `${tabRect.width}px`
+			};
+		},
 		/**
 		 * Register a tab from FTab component
 		 */

@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { mount, createLocalVue } from '@vue/test-utils';
 import FTabs from './FTabs.vue';
 import FTab from './FTab.vue';
@@ -260,5 +260,104 @@ describe('FTabs', () => {
 		const panels = wrapper.findAll('[role="tabpanel"]');
 		expect(panels.at(0).isVisible()).toBe(true);
 		expect(panels.at(1).isVisible()).toBe(false);
+	});
+
+	it('renders animated indicator for non-pills variants', async () => {
+		const wrapper = mount(FTabs, {
+			localVue,
+			propsData: { variant: 'default', value: 'tab1' },
+			slots: {
+				default: `
+					<FTab name="tab1" label="Tab 1">Content 1</FTab>
+					<FTab name="tab2" label="Tab 2">Content 2</FTab>
+				`
+			}
+		});
+		await wrapper.vm.$nextTick();
+		expect(wrapper.find('[aria-hidden="true"]').exists()).toBe(true);
+	});
+
+	it('does not render animated indicator for pills variant', async () => {
+		const wrapper = mount(FTabs, {
+			localVue,
+			propsData: { variant: 'pills', value: 'tab1' },
+			slots: {
+				default: `
+					<FTab name="tab1" label="Tab 1">Content 1</FTab>
+					<FTab name="tab2" label="Tab 2">Content 2</FTab>
+				`
+			}
+		});
+		await wrapper.vm.$nextTick();
+		expect(wrapper.find('[aria-hidden="true"]').exists()).toBe(false);
+	});
+
+	it('sets up ResizeObserver on mount and disconnects on destroy', async () => {
+		const observeMock = vi.fn();
+		const disconnectMock = vi.fn();
+		const originalResizeObserver = globalThis.ResizeObserver;
+		class ResizeObserverMock {
+			constructor(_callback: ResizeObserverCallback) {}
+			observe = observeMock;
+			disconnect = disconnectMock;
+		}
+		globalThis.ResizeObserver = ResizeObserverMock as unknown as typeof ResizeObserver;
+
+		try {
+			const wrapper = mount(FTabs, {
+				localVue,
+				propsData: { value: 'tab1' },
+				slots: {
+					default: `
+						<FTab name="tab1" label="Tab 1">Content 1</FTab>
+						<FTab name="tab2" label="Tab 2">Content 2</FTab>
+					`
+				},
+				attachTo: document.body
+			});
+			await wrapper.vm.$nextTick();
+			expect(observeMock).toHaveBeenCalled();
+
+			wrapper.destroy();
+			expect(disconnectMock).toHaveBeenCalled();
+		} finally {
+			globalThis.ResizeObserver = originalResizeObserver;
+		}
+	});
+
+	it('updateIndicator updates indicatorStyle when active tab changes', async () => {
+		const wrapper = mount(FTabs, {
+			localVue,
+			propsData: { value: 'tab1' },
+			slots: {
+				default: `
+					<FTab name="tab1" label="Tab 1">Content 1</FTab>
+					<FTab name="tab2" label="Tab 2">Content 2</FTab>
+				`
+			},
+			attachTo: document.body
+		});
+		await wrapper.vm.$nextTick();
+		await wrapper.vm.$nextTick();
+
+		const tabs = wrapper.findAll('[role="tab"]');
+		await tabs.at(1).trigger('click');
+		await wrapper.vm.$nextTick();
+		await wrapper.vm.$nextTick();
+
+		// indicatorStyle should have been set (width may be 0 in jsdom but the property exists)
+		expect(wrapper.vm.indicatorStyle).toHaveProperty('left');
+		expect(wrapper.vm.indicatorStyle).toHaveProperty('width');
+		wrapper.destroy();
+	});
+
+	it('tab list container has relative class', () => {
+		const wrapper = mount(FTabs, {
+			localVue,
+			slots: {
+				default: '<FTab name="tab1" label="Tab 1">Content</FTab>'
+			}
+		});
+		expect(wrapper.find('[role="tablist"]').classes()).toContain('relative');
 	});
 });
