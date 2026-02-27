@@ -14,15 +14,31 @@ describe('FLoader', () => {
 		expect(wrapper.find('svg').classes()).toContain('animate-spin');
 	});
 
-	it('applies correct size classes', () => {
-		const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const;
+	it('applies default w-5 h-5 size classes when size prop is not passed', () => {
+		const wrapper = mount(FLoader);
+		expect(wrapper.find('svg').classes()).toContain('w-5');
+		expect(wrapper.find('svg').classes()).toContain('h-5');
+	});
 
-		sizes.forEach((size) => {
-			const wrapper = mount(FLoader, {
-				propsData: { size }
-			});
-			expect(wrapper.find('svg').exists()).toBe(true);
-		});
+	it('applies correct size classes', () => {
+		const sizeMap = {
+			xs: ['w-4', 'h-4'],
+			sm: ['w-5', 'h-5'],
+			md: ['w-6', 'h-6'],
+			lg: ['w-8', 'h-8'],
+			xl: ['w-12', 'h-12']
+		} as const;
+
+		(Object.entries(sizeMap) as [keyof typeof sizeMap, string[]][]).forEach(
+			([size, classes]) => {
+				const wrapper = mount(FLoader, {
+					propsData: { size }
+				});
+				classes.forEach((cls) => {
+					expect(wrapper.find('svg').classes()).toContain(cls);
+				});
+			}
+		);
 	});
 
 	it('applies custom color', () => {
