@@ -378,6 +378,13 @@ describe('FSelect', () => {
 			expect(trigger.attributes('aria-expanded')).toBe('true');
 		});
 
+		it('updates aria-expanded when closed', async () => {
+			const trigger = wrapper.find('button[type="button"]');
+			await trigger.trigger('click');
+			await trigger.trigger('click');
+			expect(trigger.attributes('aria-expanded')).toBe('false');
+		});
+
 		it('has listbox role on dropdown', async () => {
 			await wrapper.find('button[type="button"]').trigger('click');
 			await wrapper.vm.$nextTick();
