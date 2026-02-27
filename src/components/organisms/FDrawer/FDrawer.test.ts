@@ -10,6 +10,13 @@ describe('FDrawer', () => {
 		expect(wrapper.find('[role="dialog"]').exists()).toBe(true);
 	});
 
+	it('applies z-50 on the fixed overlay container', () => {
+		const wrapper = mount(FDrawer, {
+			propsData: { value: true }
+		});
+		expect(wrapper.classes()).toContain('z-50');
+	});
+
 	it('does not render when closed', () => {
 		const wrapper = mount(FDrawer, {
 			propsData: { value: false }
