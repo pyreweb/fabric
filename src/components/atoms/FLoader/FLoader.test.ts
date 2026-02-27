@@ -14,7 +14,7 @@ describe('FLoader', () => {
 		expect(wrapper.find('svg').classes()).toContain('animate-spin');
 	});
 
-	it('applies default w-5 h-5 size classes when size prop is not passed', () => {
+	it('applies default w-5 h-5 size classes (size="sm") when size prop is not passed', () => {
 		const wrapper = mount(FLoader);
 		expect(wrapper.find('svg').classes()).toContain('w-5');
 		expect(wrapper.find('svg').classes()).toContain('h-5');

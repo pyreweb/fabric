@@ -32,9 +32,8 @@ export default {
 	props: {
 		size: {
 			type: String,
-			default: null,
-			validator: (value) =>
-				value === null || ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
+			default: 'sm',
+			validator: (value) => ['xs', 'sm', 'md', 'lg', 'xl'].includes(value)
 		},
 		color: {
 			type: String,
