@@ -104,6 +104,13 @@ describe('FActivityFeed', () => {
 		expect(wrapper.text()).toContain('Custom Title');
 	});
 
+	it('applies break-words class to description to prevent long URL overflow', () => {
+		const wrapper = mount(FActivityFeed, {
+			propsData: { events }
+		});
+		expect(wrapper.vm.descriptionClasses).toContain('break-words');
+	});
+
 	it('renders RecycleScroller when virtual is enabled', () => {
 		const wrapper = mount(FActivityFeed, {
 			propsData: { events, virtual: true }
