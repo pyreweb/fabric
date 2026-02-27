@@ -446,7 +446,7 @@ export default {
 			return 'flex flex-col gap-2 mt-1';
 		},
 		descriptionClasses() {
-			return 'text-neutral-600 text-sm';
+			return 'text-neutral-600 text-sm break-words';
 		},
 		metadataClasses() {
 			return 'flex items-center gap-2 flex-wrap';

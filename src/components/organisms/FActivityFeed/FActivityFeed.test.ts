@@ -104,6 +104,25 @@ describe('FActivityFeed', () => {
 		expect(wrapper.text()).toContain('Custom Title');
 	});
 
+	it('applies break-words class to description to prevent long URL overflow', () => {
+		const eventsWithDescription = [
+			{
+				...events[0],
+				description:
+					'https://example.com/' +
+					'a'.repeat(200) +
+					'/very-long-unbroken-url-path-that-should-wrap-correctly'
+			}
+		];
+
+		const wrapper = mount(FActivityFeed, {
+			propsData: { events: eventsWithDescription }
+		});
+
+		const descriptionElement = wrapper.find('.break-words');
+		expect(descriptionElement.exists()).toBe(true);
+	});
+
 	it('renders RecycleScroller when virtual is enabled', () => {
 		const wrapper = mount(FActivityFeed, {
 			propsData: { events, virtual: true }
