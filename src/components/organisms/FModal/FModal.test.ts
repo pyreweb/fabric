@@ -120,13 +120,15 @@ describe('FModal', () => {
 
 		document.body.addEventListener('click', bodyClickHandler, { once: true });
 
-		await overlay.trigger('click');
+		try {
+			await overlay.trigger('click');
 
-		expect(propagated).toBe(false);
-		expect(defaultPrevented).toBe(true);
-
-		document.body.removeEventListener('click', bodyClickHandler);
-		wrapper.destroy();
+			expect(propagated).toBe(false);
+			expect(defaultPrevented).toBe(true);
+		} finally {
+			document.body.removeEventListener('click', bodyClickHandler);
+			wrapper.destroy();
+		}
 	});
 
 	it('emits close when Escape key is pressed', async () => {
