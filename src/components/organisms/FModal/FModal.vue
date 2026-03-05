@@ -3,7 +3,7 @@
 		<!-- Overlay -->
 		<div
 			class="fixed inset-0 bg-black opacity-50 transition-opacity duration-[var(--transition-duration-slow)] ease-[var(--transition-easing-standard)]"
-			@click="handleOverlayClick"
+			@click.stop.prevent="handleOverlayClick"
 		></div>
 
 		<!-- Modal Container -->

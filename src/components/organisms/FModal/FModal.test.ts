@@ -93,6 +93,42 @@ describe('FModal', () => {
 		expect(wrapper.emitted('close')).toBeFalsy();
 	});
 
+	it('stops propagation and prevents default on overlay click', async () => {
+		const wrapper = mount(FModal, {
+			propsData: { value: true, closeOnOverlay: true },
+			attachTo: document.body
+		});
+
+		const overlay = wrapper.find('.bg-black');
+		let propagated = false;
+		let defaultPrevented = false;
+
+		// Capture defaultPrevented from the overlay element itself (fires after
+		// Vue's handler, which calls preventDefault before stopPropagation)
+		overlay.element.addEventListener(
+			'click',
+			(e) => {
+				defaultPrevented = e.defaultPrevented;
+			},
+			{ once: true }
+		);
+
+		// Listen on a parent to confirm the event never bubbles up
+		document.body.addEventListener(
+			'click',
+			() => {
+				propagated = true;
+			},
+			{ once: true }
+		);
+
+		await overlay.trigger('click');
+
+		expect(propagated).toBe(false);
+		expect(defaultPrevented).toBe(true);
+		wrapper.destroy();
+	});
+
 	it('emits close when Escape key is pressed', async () => {
 		const wrapper = mount(FModal, {
 			propsData: { value: true }
