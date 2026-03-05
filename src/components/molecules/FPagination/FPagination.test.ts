@@ -76,4 +76,65 @@ describe('FPagination', () => {
 		});
 		expect(wrapper.find('nav').attributes('aria-label')).toBe('Pagination');
 	});
+
+	it('renders a direct page input', () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, value: 1 }
+		});
+		expect(wrapper.find('input[type="number"]').exists()).toBe(true);
+	});
+
+	it('emits a number type when direct input is submitted via Enter', async () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, value: 1 }
+		});
+		const input = wrapper.find('input[type="number"]');
+		await input.setValue(5);
+		await input.trigger('keydown.enter');
+		expect(wrapper.emitted('input')).toBeTruthy();
+		expect(wrapper.emitted('change')).toBeTruthy();
+		const inputValue = wrapper.emitted('input')![0][0];
+		const changeValue = wrapper.emitted('change')![0][0];
+		expect(typeof inputValue).toBe('number');
+		expect(inputValue).toBe(5);
+		expect(changeValue).toBe(5);
+	});
+
+	it('clamps direct input to valid page range', async () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, value: 1 }
+		});
+		const input = wrapper.find('input[type="number"]');
+		await input.setValue(99);
+		await input.trigger('keydown.enter');
+		expect(wrapper.emitted('input')![0][0]).toBe(10);
+		expect(wrapper.emitted('change')![0][0]).toBe(10);
+	});
+
+	it('does not navigate when input is cleared', async () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, value: 3 }
+		});
+		const input = wrapper.find('input[type="number"]');
+		await input.setValue('');
+		await input.trigger('keydown.enter');
+		expect(wrapper.emitted('input')).toBeFalsy();
+		expect(wrapper.emitted('change')).toBeFalsy();
+	});
+
+	it('uses directPageLabel prop as aria-label on the input', () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, directPageLabel: 'Aller à la page' }
+		});
+		expect(wrapper.find('input[type="number"]').attributes('aria-label')).toBe('Aller à la page');
+	});
+
+	it('syncs input value when value prop changes', async () => {
+		const wrapper = mount(FPagination, {
+			propsData: { totalPages: 10, value: 1 }
+		});
+		await wrapper.setProps({ value: 7 });
+		const input = wrapper.find('input[type="number"]');
+		expect(Number(input.element.value)).toBe(7);
+	});
 });
