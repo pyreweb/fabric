@@ -50,9 +50,8 @@
 			:min="1"
 			:max="totalPages"
 			class="w-12 rounded border border-neutral-300 px-1 text-center text-sm"
-			aria-label="Page directe"
+			:aria-label="directPageLabel"
 			@keydown.enter="goToInputPage"
-			@blur="goToInputPage"
 		/>
 
 		<f-button
@@ -115,6 +114,10 @@ export default {
 		showLabels: {
 			type: Boolean,
 			default: true
+		},
+		directPageLabel: {
+			type: String,
+			default: 'Go to page'
 		}
 	},
 	data() {
@@ -207,7 +210,17 @@ export default {
 			return result;
 		},
 		goToInputPage() {
-			const raw = Math.floor(this.inputPage) || 1;
+			if (
+				this.inputPage === '' ||
+				this.inputPage === null ||
+				this.inputPage === undefined ||
+				Number.isNaN(this.inputPage)
+			) {
+				this.inputPage = this.currentPage;
+				return;
+			}
+
+			const raw = Math.floor(this.inputPage);
 			const page = raw < 1 ? 1 : raw > this.totalPages ? this.totalPages : raw;
 			this.inputPage = page;
 			this.goToPage(page);
