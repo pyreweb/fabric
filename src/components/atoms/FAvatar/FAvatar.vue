@@ -58,7 +58,7 @@ const props = defineProps({
 		default: ''
 	},
 	alt: {
-		type: String as PropType<string>,
+		type: String as PropType<string | null>,
 		default: null
 	},
 	initials: {

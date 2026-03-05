@@ -51,7 +51,7 @@
 			:max="totalPages"
 			class="w-12 rounded border border-neutral-300 px-1 text-center text-sm"
 			:aria-label="directPageLabel"
-			@keydown.enter="goToInputPage"
+			@keydown.enter.prevent="goToInputPage"
 		/>
 
 		<f-button
@@ -117,7 +117,7 @@ export default {
 		},
 		directPageLabel: {
 			type: String,
-			default: 'Go to page'
+			default: 'Aller à la page'
 		}
 	},
 	data() {

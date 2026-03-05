@@ -96,6 +96,8 @@ describe('FToast', () => {
 		vi.advanceTimersByTime(10000);
 		await wrapper.vm.$nextTick();
 		expect(wrapper.emitted('close')).toHaveLength(1);
+
+		wrapper.destroy();
 	});
 
 	it('auto-closes after duration', async () => {

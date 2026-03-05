@@ -114,18 +114,18 @@ describe('FModal', () => {
 		);
 
 		// Listen on a parent to confirm the event never bubbles up
-		document.body.addEventListener(
-			'click',
-			() => {
-				propagated = true;
-			},
-			{ once: true }
-		);
+		const bodyClickHandler = () => {
+			propagated = true;
+		};
+
+		document.body.addEventListener('click', bodyClickHandler, { once: true });
 
 		await overlay.trigger('click');
 
 		expect(propagated).toBe(false);
 		expect(defaultPrevented).toBe(true);
+
+		document.body.removeEventListener('click', bodyClickHandler);
 		wrapper.destroy();
 	});
 
