@@ -78,6 +78,26 @@ describe('FToast', () => {
 		expect(wrapper.html()).toContain('Custom content');
 	});
 
+	it('clears the timer when closed manually before duration expires', async () => {
+		const clearTimeoutSpy = vi.spyOn(globalThis, 'clearTimeout');
+		const wrapper = mount(FToast, {
+			localVue,
+			propsData: { duration: 10000 }
+		});
+
+		// Timer should be active; manually close before duration expires
+		await wrapper.findComponent({ name: 'FButton' }).trigger('click');
+		expect(wrapper.emitted('close')).toBeTruthy();
+
+		// clearTimeout should have been called during manual close
+		expect(clearTimeoutSpy).toHaveBeenCalled();
+
+		// Advancing time should NOT emit another close event
+		vi.advanceTimersByTime(10000);
+		await wrapper.vm.$nextTick();
+		expect(wrapper.emitted('close')).toHaveLength(1);
+	});
+
 	it('auto-closes after duration', async () => {
 		const wrapper = mount(FToast, {
 			localVue,
