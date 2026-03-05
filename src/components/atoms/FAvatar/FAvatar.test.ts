@@ -16,6 +16,7 @@ describe('FAvatar', () => {
 		expect(img.exists()).toBe(true);
 		expect(img.attributes('src')).toBe('https://example.com/avatar.jpg');
 		expect(img.attributes('alt')).toBe('Test Avatar');
+		expect(img.attributes('title')).toBe('Test Avatar');
 	});
 
 	it('uses name as alt when src is provided but alt is not', () => {
@@ -35,6 +36,17 @@ describe('FAvatar', () => {
 		const img = wrapper.find('img');
 		expect(img.exists()).toBe(true);
 		expect(img.attributes('alt')).toBe('');
+		expect(img.attributes('title')).toBeUndefined();
+	});
+
+	it('respects explicit empty alt even when name is provided', () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'https://example.com/avatar.jpg', alt: '', name: 'Jane Doe' }
+		});
+		const img = wrapper.find('img');
+		expect(img.exists()).toBe(true);
+		expect(img.attributes('alt')).toBe('');
+		expect(img.attributes('title')).toBeUndefined();
 	});
 
 	it('displays initials when provided', () => {

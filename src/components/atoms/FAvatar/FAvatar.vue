@@ -58,8 +58,8 @@ const props = defineProps({
 		default: ''
 	},
 	alt: {
-		type: String,
-		default: ''
+		type: String as PropType<string>,
+		default: null
 	},
 	initials: {
 		type: String,
@@ -129,14 +129,14 @@ const displayInitials = computed(() => {
 });
 
 const computedAriaLabel = computed(() => {
-	if (props.alt) return props.alt;
+	if (props.alt !== null) return props.alt;
 	if (props.name) return props.name;
 	if (props.initials) return `Avatar ${props.initials}`;
 	return 'Avatar';
 });
 
 const computedAlt = computed(() => {
-	if (props.alt) return props.alt;
+	if (props.alt !== null) return props.alt;
 	if (props.name) return props.name;
 	return '';
 });
