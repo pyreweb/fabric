@@ -114,19 +114,21 @@ describe('FModal', () => {
 		);
 
 		// Listen on a parent to confirm the event never bubbles up
-		document.body.addEventListener(
-			'click',
-			() => {
-				propagated = true;
-			},
-			{ once: true }
-		);
+		const bodyClickHandler = () => {
+			propagated = true;
+		};
 
-		await overlay.trigger('click');
+		document.body.addEventListener('click', bodyClickHandler, { once: true });
 
-		expect(propagated).toBe(false);
-		expect(defaultPrevented).toBe(true);
-		wrapper.destroy();
+		try {
+			await overlay.trigger('click');
+
+			expect(propagated).toBe(false);
+			expect(defaultPrevented).toBe(true);
+		} finally {
+			document.body.removeEventListener('click', bodyClickHandler);
+			wrapper.destroy();
+		}
 	});
 
 	it('emits close when Escape key is pressed', async () => {
