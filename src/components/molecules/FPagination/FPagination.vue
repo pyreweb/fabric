@@ -44,6 +44,17 @@
 			</template>
 		</div>
 
+		<input
+			v-model.number="inputPage"
+			type="number"
+			:min="1"
+			:max="totalPages"
+			class="w-12 rounded border border-neutral-300 px-1 text-center text-sm"
+			aria-label="Page directe"
+			@keydown.enter="goToInputPage"
+			@blur="goToInputPage"
+		/>
+
 		<f-button
 			:variant="buttonVariant"
 			:size="size"
@@ -104,6 +115,16 @@ export default {
 		showLabels: {
 			type: Boolean,
 			default: true
+		}
+	},
+	data() {
+		return {
+			inputPage: this.value
+		};
+	},
+	watch: {
+		value(newValue) {
+			this.inputPage = newValue;
 		}
 	},
 	computed: {
@@ -184,6 +205,12 @@ export default {
 				result.push(i);
 			}
 			return result;
+		},
+		goToInputPage() {
+			const raw = Math.floor(this.inputPage) || 1;
+			const page = raw < 1 ? 1 : raw > this.totalPages ? this.totalPages : raw;
+			this.inputPage = page;
+			this.goToPage(page);
 		},
 		goToPage(page) {
 			if (page !== this.currentPage && page >= 1 && page <= this.totalPages) {
