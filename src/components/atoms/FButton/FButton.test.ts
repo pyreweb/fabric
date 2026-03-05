@@ -75,6 +75,17 @@ describe('FButton', () => {
 		expect(wrapper.findComponent({ name: 'FLoader' }).exists()).toBe(true);
 	});
 
+	it('loader wrapper has correct alignment classes when loading', () => {
+		const wrapper = mount(FButton, {
+			propsData: { loading: true }
+		});
+		const loaderWrapper = wrapper.find('.absolute.inset-0');
+		expect(loaderWrapper.classes()).toContain('flex');
+		expect(loaderWrapper.classes()).toContain('items-center');
+		expect(loaderWrapper.classes()).toContain('justify-center');
+		expect(loaderWrapper.classes()).toContain('leading-none');
+	});
+
 	it('applies block class when block prop is true', () => {
 		const wrapper = mount(FButton, {
 			propsData: { block: true }
