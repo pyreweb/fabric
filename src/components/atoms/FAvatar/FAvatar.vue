@@ -12,7 +12,8 @@
 			<img
 				v-if="showImage"
 				:src="src"
-				:alt="alt"
+				:alt="computedAlt"
+				:title="computedAlt ? computedAlt : undefined"
 				class="w-full h-full object-cover"
 				loading="lazy"
 				@error="handleImageError"
@@ -57,8 +58,8 @@ const props = defineProps({
 		default: ''
 	},
 	alt: {
-		type: String,
-		default: ''
+		type: String as PropType<string | null>,
+		default: null
 	},
 	initials: {
 		type: String,
@@ -128,10 +129,16 @@ const displayInitials = computed(() => {
 });
 
 const computedAriaLabel = computed(() => {
-	if (props.alt) return props.alt;
+	if (props.alt !== null) return props.alt;
 	if (props.name) return props.name;
 	if (props.initials) return `Avatar ${props.initials}`;
 	return 'Avatar';
+});
+
+const computedAlt = computed(() => {
+	if (props.alt !== null) return props.alt;
+	if (props.name) return props.name;
+	return '';
 });
 
 const sizeClasses = computed(() => {

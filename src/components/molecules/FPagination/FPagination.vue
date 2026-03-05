@@ -44,6 +44,16 @@
 			</template>
 		</div>
 
+		<input
+			v-model.number="inputPage"
+			type="number"
+			:min="1"
+			:max="totalPages"
+			class="w-12 rounded border border-neutral-300 px-1 text-center text-sm"
+			:aria-label="directPageLabel"
+			@keydown.enter.prevent="goToInputPage"
+		/>
+
 		<f-button
 			:variant="buttonVariant"
 			:size="size"
@@ -104,6 +114,20 @@ export default {
 		showLabels: {
 			type: Boolean,
 			default: true
+		},
+		directPageLabel: {
+			type: String,
+			default: 'Aller à la page'
+		}
+	},
+	data() {
+		return {
+			inputPage: this.value
+		};
+	},
+	watch: {
+		value(newValue) {
+			this.inputPage = newValue;
 		}
 	},
 	computed: {
@@ -184,6 +208,22 @@ export default {
 				result.push(i);
 			}
 			return result;
+		},
+		goToInputPage() {
+			if (
+				this.inputPage === '' ||
+				this.inputPage === null ||
+				this.inputPage === undefined ||
+				Number.isNaN(this.inputPage)
+			) {
+				this.inputPage = this.currentPage;
+				return;
+			}
+
+			const raw = Math.floor(this.inputPage);
+			const page = raw < 1 ? 1 : raw > this.totalPages ? this.totalPages : raw;
+			this.inputPage = page;
+			this.goToPage(page);
 		},
 		goToPage(page) {
 			if (page !== this.currentPage && page >= 1 && page <= this.totalPages) {
