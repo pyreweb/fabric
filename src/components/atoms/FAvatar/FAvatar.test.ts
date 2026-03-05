@@ -18,6 +18,25 @@ describe('FAvatar', () => {
 		expect(img.attributes('alt')).toBe('Test Avatar');
 	});
 
+	it('uses name as alt when src is provided but alt is not', () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'https://example.com/avatar.jpg', name: 'Jane Doe' }
+		});
+		const img = wrapper.find('img');
+		expect(img.exists()).toBe(true);
+		expect(img.attributes('alt')).toBe('Jane Doe');
+		expect(img.attributes('title')).toBe('Jane Doe');
+	});
+
+	it('renders img with empty alt attribute when only src is provided', () => {
+		const wrapper = mount(FAvatar, {
+			propsData: { src: 'https://example.com/avatar.jpg' }
+		});
+		const img = wrapper.find('img');
+		expect(img.exists()).toBe(true);
+		expect(img.attributes('alt')).toBe('');
+	});
+
 	it('displays initials when provided', () => {
 		const wrapper = mount(FAvatar, {
 			propsData: { initials: 'JD' }
