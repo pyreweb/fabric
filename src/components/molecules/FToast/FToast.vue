@@ -213,6 +213,7 @@ export default {
 			}
 		},
 		handleClose() {
+			this.clearTimer();
 			this.isVisible = false;
 			this.$emit('close');
 		},
