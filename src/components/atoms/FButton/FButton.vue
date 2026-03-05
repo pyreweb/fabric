@@ -132,9 +132,9 @@ export default {
 	>
 		<div
 			v-if="loading"
-			class="absolute inset-0 flex items-center justify-center text-current"
+			class="absolute inset-0 flex items-center justify-center leading-none"
 		>
-			<FLoader size="sm" class="text-current opacity-100" />
+			<FLoader size="sm" />
 		</div>
 
 		<span :class="{ 'opacity-0': loading }" class="flex items-center gap-2">
